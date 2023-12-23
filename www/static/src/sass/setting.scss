@@ -1,0 +1,43 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+@use "core/reset";
+@use "core/resetModify";
+
+// ----------------------------------------
+// モジュール
+@use "module/animation";
+@use "module/box";
+@use "module/button";
+// @use "module/cms";
+@use "module/form";
+@use "module/icon";
+@use "module/keyframe";
+@use "module/list";
+@use "module/table";
+@use "module/text";
+
+// ----------------------------------------
+// ベンダー
+// @use "vender/swiper-bundle";
+// @use "vender/swiper";
+
+// ----------------------------------------
+// helper
+.pc-hide {
+  display: none;
+
+  @media #{$breakS} {
+    display: block;
+  }
+}
+
+.sp-hide {
+  display: block;
+
+  @media #{$breakS} {
+    display: none;
+  }
+}

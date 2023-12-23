@@ -1,0 +1,14 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// レイアウト
+// @use "layout/animation";
+@use "layout/container";
+@use "layout/footer";
+@use "layout/header";
+
+.bodyWrap {}

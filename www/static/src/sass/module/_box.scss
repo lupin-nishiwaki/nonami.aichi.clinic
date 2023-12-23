@@ -1,0 +1,10 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+.m_box_fixed {
+  position: relative;
+  width: $width;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
