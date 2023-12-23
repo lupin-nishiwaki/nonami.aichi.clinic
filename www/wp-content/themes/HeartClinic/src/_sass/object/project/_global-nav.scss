@@ -1,0 +1,578 @@
+@charset 'UTF-8';
+/*
+  Global Nav
+*/
+$position: right; // right or left
+
+// position
+$translate: 110%;
+$shadow-position: -1px;
+$left: auto;
+$right: 0;
+@if $position == left {
+  $translate: -110%;
+  $shadow-position: 2px;
+  $left: 0;
+  $right: auto;
+}
+
+.p-globalNav {
+  position: fixed;
+  top: 0;
+  right: $right;
+  bottom: 0;
+  left: $left;
+  padding: 7rem 0 4rem;
+  width: 100%;
+  height: 105%;
+  background-color: #fff;
+
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition: 0.5s $easing-heart;
+  @include mq(lap) {
+    opacity: 1;
+    visibility: visible;
+    overflow-y: visible;
+    position: static;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    background-color: transparent;
+    transform: translate(0);
+    font-size: 0;
+
+    text-align: right;
+  }
+
+  & > li {
+    display: block;
+    @include mq(lap) {
+      display: inline-block;
+      font-size: medium;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    &.current-menu-item a {
+      background-color: #1a2327;
+      color: #fff;
+
+      @include mq(lap) {
+        background-color: transparent;
+        color: $hint-text-color;
+      }
+
+      &::after {
+        @include mq(lap) {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    margin: 0 1rem;
+    border-bottom: 1px solid $color-lightBeige;
+    @include mq(lap) {
+      border-bottom: none;
+      margin: 0;
+    }
+
+    & > p {
+      position: relative;
+
+      @include mq(lap) {
+      }
+
+      i {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 0.75rem;
+        height: 0.75rem;
+        @include mq(lap) {
+          display: none;
+        }
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          display: inline-block;
+          background-color: $color-gray;
+          width: 0.75rem;
+          height: 1px;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          opacity: 1;
+          transition: 0.4s $easing-heart;
+        }
+        &::after {
+          transform: rotate(90deg);
+        }
+
+        &.is-active {
+          &::after {
+            transition: 0.4s $easing-heart;
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    & > * {
+      display: block;
+      padding: 1.125rem 0;
+      color: $primary-text-color;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      position: relative;
+      @include mq(lap) {
+        display: block;
+        padding: 0.75rem 0;
+        margin: 0 0.75rem;
+        text-decoration: none;
+        overflow: hidden;
+      }
+      @include mq(l-lap) {
+        margin: 0 1.5rem;
+      }
+    }
+
+    &.-megaMenu {
+      position: relative;
+      transition: background-color 0.4s $easing-heart;
+      @include mq(lap) {
+        position: static;
+      }
+
+      &:hover {
+        // transition: background-color 0.4s $easing-heart;
+        background-color: $color-white;
+
+        & > a {
+          @include mq(lap) {
+            color: $accent-color;
+          }
+        }
+        .p-header {
+          background-color: $color-beige;
+        }
+
+        .p-globalNav__content {
+          @include mq(lap) {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    &.-underLine {
+      & > a {
+        &:after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          bottom: 5px;
+          width: 100%;
+          height: 1px;
+          background-color: $accent-color;
+          transition: $easing-heart transform 0.3s;
+          transform: scale(0, 1);
+          transform-origin: right top;
+        }
+
+        @include mq(lap) {
+          &:hover:after {
+            transform-origin: left top;
+            transform: scale(1, 1);
+          }
+        }
+      }
+    }
+
+    &.-megaMenu,
+    &.-underLine {
+      @include mq(lap) {
+        transition: all 0.4s $easing-heart;
+        min-height: 120px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        backface-visibility: hidden;
+        padding: 2rem 0;
+      }
+    }
+
+    &.-insta {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $accent-color;
+      margin: 1.5rem 0.75rem;
+      transition: opacity 0.4s $easing-heart;
+      &:hover {
+        transition: opacity 0.4s $easing-heart;
+        opacity: 0.5;
+      }
+
+      @include mq(lap) {
+        bottom: auto;
+        position: relative;
+        margin: 0 0.75rem;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          background: url(/wp-content/themes/HeartClinic/assets/images/icon-insta-wh.svg) no-repeat;
+          background-size: contain;
+          width: 1.125rem;
+          height: 1.125rem;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          display: inline-block;
+        }
+      }
+    }
+
+    &.-tel {
+      display: none;
+
+      @include mq(lap) {
+        display: inline-block;
+        text-align: left;
+      }
+      a {
+        line-height: 1.3;
+        position: relative;
+        margin-right: 0;
+
+        @include mq(lap) {
+          padding: 0 0 0 1.5rem;
+        }
+
+        @include mq(l-lap) {
+          padding: 0 0 0 2.5rem;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+
+          @include mq(lap) {
+            width: 22px;
+            height: 22px;
+            background: url(/wp-content/themes/HeartClinic/assets/images/icon-tel.svg) no-repeat;
+            background-size: contain;
+            top: 10px;
+            left: 0;
+          }
+          @include mq(l-lap) {
+            padding: 0 0 0 2.5rem;
+            width: 28px;
+            height: 28px;
+            background: url(/wp-content/themes/HeartClinic/assets/images/icon-tel.svg) no-repeat;
+            background-size: contain;
+            top: 10px;
+          }
+        }
+        .en {
+          display: inline-block;
+          font-family: $font-set-en;
+          color: $accent-color;
+
+          @include mq(lap) {
+            font-size: 1.25rem;
+          }
+
+          @include mq(l-lap) {
+            font-size: 2rem;
+          }
+        }
+
+        .text {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+
+  &__itemButtonWrap {
+    margin-top: 2.5rem;
+  }
+
+  &__content {
+    background-color: #fff;
+    width: 100%;
+    cursor: auto;
+    display: none;
+    @include mq(lap) {
+      transition-property: opacity background-color transform top;
+      transition: 0.3s $easing-heart;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 120px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 785px;
+      border-radius: $border-radius;
+    }
+  }
+
+  &__inner {
+    @include mq(lap) {
+      display: flex;
+      justify-content: space-between;
+      padding: 1.5rem;
+      min-height: 265px;
+    }
+  }
+
+  &__innerBlock {
+    text-align: left;
+    margin-top: -1.5rem;
+    @include mq(lap) {
+      margin-top: 0;
+      width: 73%;
+      position: relative;
+    }
+
+    &-menu {
+      @include mq(lap) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 7px 0;
+        margin: 0.75rem 0 1rem;
+      }
+    }
+
+    &-item {
+      text-align: left;
+      padding-left: 1.25rem;
+      position: relative;
+      margin-top: 1rem;
+      @include mq(lap) {
+        margin-top: 0;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        left: 0;
+        transform: rotate(45deg);
+      }
+
+      &::before {
+        border-top: 1px solid $accent-color;
+      }
+
+      &::after {
+        border-right: 1px solid $accent-color;
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-text-color;
+        position: relative;
+        font-size: 0.75rem;
+
+        @include mq(lap) {
+          font-size: 0.875rem;
+          display: inline-block;
+          transition: all $easing-heart;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          bottom: -2px;
+          width: 100%;
+          height: 1px;
+          background-color: $accent-color;
+          transition: transform 0.4s $easing-heart;
+          transform: scale(0, 1);
+          transform-origin: right top;
+        }
+
+        &:hover::after {
+          transform-origin: left top;
+          transform: scale(1, 1);
+        }
+      }
+    }
+
+    .p-globalNav__title {
+      display: block;
+      color: $primary-text-color;
+      @include mq(lap) {
+        display: inline-block;
+      }
+      &:not(:first-child) {
+        margin: 1rem 0;
+        @include mq(lap) {
+          margin: 0;
+          margin-bottom: 1rem;
+        }
+      }
+
+      &.-mega-menu {
+        @include mq(lap) {
+          margin-bottom: -1rem;
+          margin-top: 0.25rem;
+        }
+      }
+    }
+  }
+
+  &__titleWrap {
+    @include mq(lap) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .p-globalNav__title {
+      @include mq(lap) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__title {
+    text-decoration: underline;
+    text-align: left;
+    transition: color 0.4s $easing-heart;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1rem;
+    @include mq(lap) {
+      font-size: 1rem;
+      // margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+
+  &__image {
+    display: none;
+    @include mq(lap) {
+      display: block;
+      width: 23%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__linkWrap {
+    text-align: right;
+  }
+
+  &__link {
+    display: none;
+
+    @include mq(lap) {
+      width: auto;
+      text-decoration: none;
+      color: $accent-color;
+      display: inline-block;
+      font-size: 0.875rem;
+      padding-right: 2rem;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    span {
+      overflow: hidden;
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      right: 0;
+      svg.arrow {
+        position: static;
+      }
+    }
+
+    &:hover {
+      span {
+        svg {
+          animation: slide1 0.6s $easing-heart 0.2s;
+        }
+      }
+    }
+  }
+
+  &__itemButton {
+    &.button02 {
+      margin-top: 0.75rem;
+      @include mq(lap) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+.is-drawerActive .p-globalNav {
+  // transform: translateY(0);
+  transform-origin: center bottom;
+  // transform: scale(1, 1);
+  @include mq(lap) {
+  }
+}
+
+.p-globalNav {
+  .p-globalNav__itemButton {
+    margin: 1rem 1rem 0;
+    @include mq(lap) {
+      display: none;
+    }
+  }
+}
+
+.p-header.is-scroll {
+  .p-globalNav__content {
+    @include mq(lap) {
+      top: 80px;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@charset 'UTF-8';
+/*
+  Pagination
+*/
+
+.pagination {
+  margin: 2rem 0;
+  text-align: center;
+  @include mq(lap) {
+    margin: 5rem 0;
+  }
+}
+
+.page-numbers {
+  text-align: center;
+  display: inline-block;
+  width: set-size(32px);
+  height: set-size(32px);
+  padding: set-size((32px - 12px) /2);
+  background-color: #fff;
+  text-decoration: none;
+  color: $accent-color;
+  line-height: 1;
+
+  vertical-align: top;
+  font-family: $font-set-en;
+  border: 1px solid $color-lightGray;
+  border-radius: $border-radius;
+
+  @include mq(lap) {
+    width: set-size(40px);
+    height: set-size(40px);
+    padding: set-size((40px - 17px) /2);
+  }
+
+  &[href]:hover {
+    opacity: 0.5;
+  }
+  &.current {
+    background-color: $accent-color;
+    color: $color-white;
+    border: none;
+  }
+
+  &.prev,
+  &.next {
+    position: relative;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      margin: auto;
+
+      transition: all 0.3s $easing-heart;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.prev {
+    border: none;
+
+    &:before {
+      left: set-size(4px);
+      background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL-gold.svg) no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      right: set-size(4px);
+    }
+  }
+
+  &.next {
+    border: none;
+
+    &:before {
+      background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonR-gold.svg) no-repeat;
+      background-size: contain;
+      width: 24px;
+      height: 24px;
+      right: set-size(4px);
+      left: 0;
+    }
+  }
+
+  & + & {
+    margin-left: 0.5rem;
+
+    @include mq(lap) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.nav {
+  &-links {
+    overflow: hidden;
+  }
+
+  &-previous,
+  &-next {
+    width: 49%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    a:first-line {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-previous {
+    float: left;
+  }
+  &-next {
+    float: right;
+    text-align: right;
+  }
+}
+
+.beauty {
+  .page-numbers {
+    color: $color-purple;
+
+    &.current {
+      color: $color-white;
+      background-color: $color-purple;
+    }
+
+    &.prev {
+      &:before {
+        left: set-size(4px);
+        background: url(/wp-content/themes/HeartClinic/assets/images/common/buttonL-purple.svg) no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        right: set-size(4px);
+      }
+    }
+
+    &.next {
+      border: none;
+
+      &:before {
+        background: url(/wp-content/themes/HeartClinic/assets/images/common/buttonR-purple.svg) no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        right: set-size(4px);
+        left: 0;
+      }
+    }
+  }
+}

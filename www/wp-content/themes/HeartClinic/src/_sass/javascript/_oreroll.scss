@@ -1,0 +1,200 @@
+// ==============================
+//  Settings
+// ==============================
+$duration-fast: 0.3s;
+$duration-normal: 1s;
+$duration-slow: 2s;
+
+$transration: 2.5rem;
+
+.oreroll {
+  transition: all $duration-normal ease-out;
+  // ==============================
+  //  Option Duration
+  // ==============================
+  &[data-duration="fast"] {
+    transition-duration: $duration-fast;
+  }
+
+  &[data-duration="normal"] {
+    transition-duration: $duration-normal;
+  }
+
+  &[data-duration="slow"] {
+    transition-duration: $duration-slow;
+  }
+
+  // ==============================
+  //  Option Easing
+  // ==============================
+  &[data-easing="linear"] {
+    transition-timing-function: linear;
+  }
+
+  &[data-easing="ease"] {
+    transition-timing-function: ease;
+  }
+
+  &[data-easing="ease-in"] {
+    transition-timing-function: ease-in;
+  }
+
+  &[data-easing="ease-out"] {
+    transition-timing-function: ease-out;
+  }
+
+  &[data-easing="$easing-heart"] {
+    transition-timing-function: $easing-heart;
+  }
+
+  &[data-easing="ease-in-expo"] {
+    transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+  }
+
+  &[data-easing="ease-out-expo"] {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  &[data-easing="$easing-heart-expo"] {
+    transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  &[data-easing="in-back"] {
+    transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+  }
+
+  &[data-easing="out-back"] {
+    transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  }
+
+  // ==============================
+  //  Option Type
+  // ==============================
+
+  // FadeIn
+  &[data-type~="fadeIn"] {
+    &.is-orerollReady {
+      opacity: 0;
+    }
+    &.is-orerollActive {
+      opacity: 1;
+    }
+  }
+
+  // slideUpIn
+  &[data-type~="slideUpIn"] {
+    &.is-orerollReady {
+      opacity: 0;
+      transform: translateY($transration);
+    }
+    &.is-orerollActive {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  // slideLeftIn
+  &[data-type~="slideLeftIn"] {
+    &.is-orerollReady {
+      opacity: 0;
+      transform: translateX($transration);
+    }
+
+    &.is-orerollActive {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // slideRightIn
+  &[data-type~="slideRightIn"] {
+    &.is-orerollReady {
+      opacity: 0;
+      transform: translateX($transration);
+    }
+
+    &.is-orerollActive {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  // zoomIn
+  &[data-type~="zoomIn"] {
+    &.is-orerollReady {
+      transform: scale(0);
+    }
+    &.is-orerollActive {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  // Text Shadow In
+  &[data-type~="textShadowIn"] {
+    &.is-orerollReady {
+      color: transparent;
+      text-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
+    }
+    &.is-orerollActive {
+      color: inherit;
+      text-shadow: 0 0 0 transparent;
+    }
+  }
+
+  // text maker
+  &[data-type~="textMaker"] {
+    &.is-orerollReady {
+      background: linear-gradient(#fff1a3) no-repeat;
+      background-position: bottom left;
+      background-size: 0 30%;
+    }
+    &.is-orerollActive {
+      background: linear-gradient(#fff1a3) no-repeat;
+      background-position: bottom left;
+      background-size: 100% 30%;
+    }
+  }
+
+  // bgColorChange
+  &[data-type~="bgColorChange"] {
+    opacity: 0;
+    &.is-orerollReady {
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: rgb(189, 63, 63);
+        opacity: 1;
+        pointer-events: none;
+
+        transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: 1000ms;
+      }
+    }
+    &.is-orerollActive {
+      opacity: 1;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background-color: rgb(189, 63, 63);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition-delay: 1000ms;
+      }
+    }
+  }
+}
