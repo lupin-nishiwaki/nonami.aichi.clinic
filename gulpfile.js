@@ -1,7 +1,7 @@
 // * ----------------------------------------
 // * 設定
 // * 作業用ディレクトリ
-var baseDir = 'www/';
+var baseDir = 'www/wp-content/themes/HeartClinic/';
 
 // * プラグイン読み込み
 const path = require('path');                       // パス
@@ -58,7 +58,7 @@ const siteReload = (done) => {
 // * gulpPug
 // const sourcePath = path.resolve(__dirname, 'www/');
 // const pug = (done) => {
-//   gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/pug/**/*.pug'])
+//   gulp.src([baseDir + '_src/pug/**/*.pug'])
 //     .pipe(plumber({                                                   // plumberを咬ますとエラー時にgulpが止まらない
 //       errorHandler: notify.onError('Error: <%= error.message %>')     // エラー通知
 //     }))
@@ -99,18 +99,18 @@ const siteReload = (done) => {
 // * ----------------------------------------
 // * dartSass
 const dartSass = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/sass/**/*.scss'])
+  gulp.src([baseDir + '_src/scss/**/*.scss'])
     .pipe(plumber({                                                   // plumberを咬ますとエラー時にgulpが止まらない
       errorHandler: notify.onError('Error: <%= error.message %>')     // エラー通知
     }))
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/css/'))                            // 変更ファイルのみ出力対象にする
+    .pipe(changed(baseDir + 'assets/css/'))                            // 変更ファイルのみ出力対象にする
     .pipe(sass())                                                     // コンパイル
     .pipe(cmq())                                                      // メディアクエリーをまとめる
     .pipe(csscomb())                                                  // cssを整形
     .pipe(cleanCSS({ format: 'keep-breaks' }))                     // cssを圧縮(!から始まるコメントは残す)
     // .pipe(cleanCSS())                                                 // cssを圧縮(!から始まるコメントは残す)
     .pipe(cache('css-cache'))                                         // cssをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/css/'))                          // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/css/'))                          // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -118,26 +118,26 @@ const dartSass = (done) => {
 // * ----------------------------------------
 // * js
 const jsVender = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/js/vender/*.js'])
+  gulp.src([baseDir + '_src/js/vender/*.js'])
     .pipe(plumber())                                                  // plumberを咬ますとエラー時にgulpが止まらない
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/js/'))                             // 変更ファイルのみ出力対象にする
+    .pipe(changed(baseDir + 'assets/js/'))                             // 変更ファイルのみ出力対象にする
     .pipe(concat('vender.js'))                                        // 1つのjsにまとめる
     // .pipe(uglify({ output: { comments: /^!/ } }))                  // jsを圧縮(!から始まるコメントは残す)
     .pipe(uglify())                                                   // jsを圧縮
     .pipe(cache('js-cache'))                                          // jsをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/js/'))                           // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/js/'))                           // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
 
 const jsApp = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/js/*.js'])
+  gulp.src([baseDir + '_src/js/*.js'])
     .pipe(plumber())                                                  // plumberを咬ますとエラー時にgulpが止まらない
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/js/'))                             // 変更ファイルのみ出力対象にする
+    .pipe(changed(baseDir + 'assets/js/'))                             // 変更ファイルのみ出力対象にする
     .pipe(concat('app.js'))                                           // 1つのjsにまとめる
     .pipe(uglify())                                                   // jsを圧縮
     .pipe(cache('js-cache'))                                          // jsをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/js/'))                           // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/js/'))                           // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -145,9 +145,9 @@ const jsApp = (done) => {
 // * ----------------------------------------
 // * img
 const img = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/img/**/*.+(jpg|jpeg|png|gif|svg|ico)'])
+  gulp.src([baseDir + '_src/img/**/*.+(jpg|jpeg|png|gif|svg|ico)'])
     .pipe(plumber())                                                  // plumberを咬ますとエラー時にgulpが止まらない
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/img/'))                            // 変更ファイルのみ出力対象にする
+    .pipe(changed(baseDir + 'assets/img/'))                            // 変更ファイルのみ出力対象にする
     .pipe(imagemin([                                                  // pngを圧縮
       // pngquant({ quality: [0.8, 0.9], speed: 1, }),
       // mozjpeg({ quality: 90 }),
@@ -157,7 +157,7 @@ const img = (done) => {
     ]))
     .pipe(webp({ quality: 95 }))                                      // webp変換
     .pipe(cache('img-cache'))                                         // imgをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/img/'))                          // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/img/'))                          // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -165,10 +165,10 @@ const img = (done) => {
 // * ----------------------------------------
 // * doc（ファイルのコピーだけ）
 const doc = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/doc/**/*.+(pdf)'])
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/doc/'))                            // 変更ファイルのみ出力対象にする
+  gulp.src([baseDir + '_src/doc/**/*.+(pdf)'])
+    .pipe(changed(baseDir + 'assets/doc/'))                            // 変更ファイルのみ出力対象にする
     .pipe(cache('doc-cache'))                                         // docをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/doc/'))                          // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/doc/'))                          // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -176,10 +176,10 @@ const doc = (done) => {
 // * ----------------------------------------
 // * video（ファイルのコピーだけ）
 const video = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/video/**/*.+(mp4)'])
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/video/'))                          // 変更ファイルのみ出力対象にする
+  gulp.src([baseDir + '_src/video/**/*.+(mp4)'])
+    .pipe(changed(baseDir + 'assets/video/'))                          // 変更ファイルのみ出力対象にする
     .pipe(cache('video-cache'))                                       // videoをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/video/'))                        // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/video/'))                        // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -187,10 +187,10 @@ const video = (done) => {
 // * ----------------------------------------
 // * audio（ファイルのコピーだけ）
 const audio = (done) => {
-  gulp.src([baseDir + 'wp-content/themes/HeartClinic/_src/audio/**/*.+(mp3)'])
-    .pipe(changed(baseDir + 'wp-content/themes/HeartClinic/assets/audio/'))                          // 変更ファイルのみ出力対象にする
+  gulp.src([baseDir + '_src/audio/**/*.+(mp3)'])
+    .pipe(changed(baseDir + 'assets/audio/'))                          // 変更ファイルのみ出力対象にする
     .pipe(cache('audio-cache'))                                       // audioをキャッシュ
-    .pipe(gulp.dest(baseDir + 'wp-content/themes/HeartClinic/assets/audio/'))                        // baseDirに出力
+    .pipe(gulp.dest(baseDir + 'assets/audio/'))                        // baseDirに出力
     .pipe(browserSync.stream())                                       // ブラウザに反映
   done();
 }
@@ -211,14 +211,14 @@ exports.audio = audio;
 // * ファイルの監視
 const watchFiles = (done) => {
   gulp.watch(baseDir + '**/*.+(html|php|htaccess|htpasswd)', siteReload);
-  // gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/pug/**/*.pug', pug);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/sass/**/*.scss', dartSass);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/js/vender/*.js', jsVender);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/js/*.js', jsApp);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/img/**/*.*', img);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/doc/**/*.*', doc);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/video/**/*.*', video);
-  gulp.watch(baseDir + 'wp-content/themes/HeartClinic/_src/audio/**/*.*', audio);
+  // gulp.watch(baseDir + '_src/pug/**/*.pug', pug);
+  gulp.watch(baseDir + '_src/scss/**/*.scss', dartSass);
+  gulp.watch(baseDir + '_src/js/vender/*.js', jsVender);
+  gulp.watch(baseDir + '_src/js/*.js', jsApp);
+  gulp.watch(baseDir + '_src/img/**/*.*', img);
+  gulp.watch(baseDir + '_src/doc/**/*.*', doc);
+  gulp.watch(baseDir + '_src/video/**/*.*', video);
+  gulp.watch(baseDir + '_src/audio/**/*.*', audio);
   done();
 };
 
