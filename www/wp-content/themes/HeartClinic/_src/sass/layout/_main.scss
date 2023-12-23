@@ -1,0 +1,43 @@
+@use "sass:math";
+@use "../inc/color-book" as *;
+@use "../inc/setting" as *;
+@use "../inc/functions" as *;
+@use "../inc/mixin" as *;
+@use "../inc/mixlupin" as *;
+
+/*
+  Main
+-----------------------------------------------------*/
+
+.l-main {
+  clear: both;
+}
+
+@include mq(tab) {
+  .l-main {
+    width: percentage(824px / $content-width);
+    float: left;
+  }
+
+  .l-main.-single {
+    width: auto;
+    float: none;
+  }
+}
+
+// sp,pcの切り替え
+.sp-hide {
+  display: none;
+
+  @include mq(lap) {
+    display: inline-block;
+  }
+}
+
+.pc-hide {
+  display: inline-block;
+
+  @include mq(lap) {
+    display: none;
+  }
+}

@@ -1,0 +1,30 @@
+@use "sass:math";
+@use "../../inc/color-book" as *;
+@use "../../inc/setting" as *;
+@use "../../inc/functions" as *;
+@use "../../inc/mixin" as *;
+@use "../../inc/mixlupin" as *;
+
+/*
+  Media
+*/
+
+.c-media {
+  overflow: hidden;
+  display: block;
+
+
+  &__body {
+    float: right;
+    width: percentage(512px/ 776px);
+  }
+
+  &__thumbnail {
+    width: percentage(248px/ 776px);
+    float: left;
+
+    img {
+      width: 100%;
+    }
+  }
+}

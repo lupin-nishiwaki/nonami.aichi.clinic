@@ -1,0 +1,29 @@
+@use "sass:math";
+@use "../inc/color-book" as *;
+@use "../inc/setting" as *;
+@use "../inc/functions" as *;
+@use "../inc/mixin" as *;
+@use "../inc/mixlupin" as *;
+
+/*
+  Centering
+-----------------------------------------------------*/
+
+.l-container {
+  margin: 0 auto;
+  max-width: $content-width;
+  width: 85%;
+
+  &.-sizeS {
+    max-width: 1040px;
+  }
+
+  &.-header {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+.l-button-wrap {
+  text-align: center;
+}

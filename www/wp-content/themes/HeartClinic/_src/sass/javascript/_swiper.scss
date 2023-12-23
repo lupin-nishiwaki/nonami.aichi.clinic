@@ -1,0 +1,411 @@
+@use "sass:math";
+@use "../inc/color-book" as *;
+@use "../inc/setting" as *;
+@use "../inc/functions" as *;
+@use "../inc/mixin" as *;
+@use "../inc/mixlupin" as *;
+
+.wrap {
+  width: 80%;
+}
+
+.swiper-container {
+  &.-top {
+    position: relative;
+    margin-right: 0;
+    text-align: right;
+  }
+
+  &.-topNews {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5rem 0 0.25rem 0.75rem;
+    background-color: $accent-color;
+    height: 36px;
+    z-index: 1;
+    width: 100%;
+
+    @include mq(lap) {
+      height: 50px;
+      padding: 0.8rem 1rem 0.5rem 1.75rem;
+      width: calc(100% - 516px);
+    }
+
+    @include mq(l-lap) {
+      width: calc(100% - 643px);
+    }
+  }
+
+  &.-gallery {
+    position: relative;
+
+    padding-bottom: 3.5rem;
+
+    @include mq(lap) {
+      overflow: hidden;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &.-thumb {
+    display: none;
+
+    @include mq(lap) {
+      display: block;
+    }
+  }
+}
+
+.swiper-wrapper {
+  &.-topNews {
+    width: 85%;
+
+    @include mq(lap) {
+      width: 90%;
+    }
+  }
+}
+
+//アイテムのサイズ
+.swiper-slide {
+  &.-top {
+    border-radius: 5px 0 0 0;
+
+    a {
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &.-topNews {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 0.75rem;
+      margin-right: auto;
+
+      display: block;
+
+      @include mq(lap) {
+        font-size: 0.875rem;
+      }
+
+      .inner {
+        display: flex;
+        align-items: center;
+      }
+
+      h3 {
+        max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      time {
+        display: inline-block;
+        margin-right: 0.75rem;
+        font-family: $font-set-en;
+
+        @include mq(la-) {
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+
+  &.-gallery {
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &.-galleryThumb {
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: $border-radius;
+      transition-property: background-color;
+      transition: 0.2s $easing-heart;
+    }
+
+    &.swiper-slide-thumb-active {
+      &::before {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+}
+
+.swiper-button__container {
+  position: relative;
+
+  &.-top {
+    @include mq(lap) {
+      max-width: 320px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.swiper-button__wrap {
+  position: absolute;
+  width: 100%;
+
+  &.-info {
+    @include mq(lap) {
+      bottom: auto;
+      top: -373px;
+      right: 0;
+      padding-top: 0;
+
+      max-width: 320px;
+      margin-left: auto;
+      margin-top: 0;
+    }
+  }
+}
+
+// ドットの調整
+.swiper-pagination {
+  z-index: 1;
+
+  &.-top {
+    left: -14px;
+    bottom: -30px;
+    width: 3rem;
+    display: flex;
+    justify-content: space-between;
+    transform: rotate(90deg);
+
+    @include mq(lap) {
+      left: -10px;
+    }
+
+    span {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &.-gellery {
+    @include mq(lap) {
+      display: none;
+    }
+  }
+}
+
+// ドットのカラー
+.swiper-pagination-bullet {
+  background-color: #ebe4dc;
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+}
+
+// アクティブなドットのカラー
+.swiper-pagination-bullet-active {
+  background: $accent-color;
+}
+
+//ボタンの位置
+.swiper-button-prev {
+  &.-topnews {
+    right: 7%;
+    left: auto;
+  }
+
+  &.-gallery {}
+}
+
+.swiper-button-next {
+  &.-topnews {
+    right: 2%;
+
+    @include mq(lap) {
+      right: 4%;
+    }
+  }
+
+  &.-gallery {}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+
+  &.-topnews {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 1;
+    width: 24px;
+    height: 24px;
+
+    @include mq(lap) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &.-gallery {
+    top: auto;
+    bottom: 0;
+    width: 32px;
+    height: 32px;
+
+    @include mq(lap) {
+      width: 40px;
+      height: 40px;
+      top: 0;
+      margin: auto 0;
+    }
+  }
+}
+
+// ボタンを画像で表示
+.swiper-button-prev {
+  &.-topnews {
+    background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &.-gallery {
+    background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL-beige.svg) no-repeat;
+    background-size: contain;
+  }
+}
+
+.swiper-button-next {
+  &.-topnews {
+    background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonR.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &.-gallery {
+    background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonR-beige.svg) no-repeat;
+    background-size: contain;
+  }
+
+  &.-topnews {}
+}
+
+.swiper-button-prev::after {
+  content: "";
+}
+
+.swiper-button-next::after {
+  content: "";
+}
+
+// サムネつきスライダー
+.swiper-my-pagination .swiper-pagination-bullet {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+.swiper-container-horizontal>.swiper-my-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.swiper-my-pagination img {
+  box-shadow: none;
+  // margin: 0;
+  vertical-align: bottom;
+}
+
+.swiper-my-pagination {
+  display: table;
+}
+
+.swiper-my-pagination {
+  display: table;
+  table-layout: fixed;
+}
+
+.swiper-my-pagination .swiper-pagination-bullet {
+  display: table-cell;
+  border: transparent;
+  background: transparent;
+  opacity: 1;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+  }
+}
+
+.swiper-my-pagination .swiper-pagination-bullet-active {
+  border: 1px solid $accent-color;
+
+  &::before {
+    background: transparent;
+  }
+}
+
+.swiper-my-pagination {
+  &.pagination-single {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 15.1%;
+    width: 100%;
+
+    span {
+      display: block;
+      width: auto;
+      position: relative;
+
+      &:first-child {}
+
+      &:not(:first-child) {
+        margin-top: 9%;
+      }
+    }
+  }
+}
+
+.swiper-slide-active .p-hero__swiperImage,
+.swiper-slide-duplicate-active .p-hero__swiperImage,
+.swiper-slide-prev .p-hero__swiperImage {
+  animation: zoom 60s linear;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.8);
+  }
+}
+
+.swiper-pagination.-top span {
+  margin-right: 0px !important;
+}

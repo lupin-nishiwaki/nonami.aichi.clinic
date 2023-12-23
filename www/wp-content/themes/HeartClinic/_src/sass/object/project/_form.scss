@@ -1,0 +1,598 @@
+@use "sass:math";
+@use "../../inc/color-book" as *;
+@use "../../inc/setting" as *;
+@use "../../inc/functions" as *;
+@use "../../inc/mixin" as *;
+@use "../../inc/mixlupin" as *;
+
+/*
+  Card
+*/
+
+.p-form {
+  margin-top: 1rem;
+
+  :focus:not(:focus-visible) {
+    outline: 0;
+    /* キーボード操作"以外"でフォーカスされた際はoutlineを消す */
+  }
+
+  dl {
+    padding-top: 1.5rem;
+
+    @include mq(lap) {
+      display: flex;
+      padding-top: 2rem;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 1.5rem;
+
+      @include mq(lap) {
+        padding-bottom: 2rem;
+      }
+    }
+
+    dt {
+      margin-right: 1rem;
+      font-weight: 700;
+
+      @include mq(lap) {
+        width: 35%;
+      }
+    }
+
+    dd {
+      margin-top: 1rem;
+
+      @include mq(lap) {
+        margin-top: 0;
+        width: 65%;
+      }
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      background-color: #fcfcfc;
+      border: 1px solid $color-lightBeige;
+      padding: 1rem;
+    }
+
+    //セレクトボックスのデフォルト矢印を消す
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+
+    ::placeholder {
+      color: #b6b6b6;
+    }
+  }
+
+  .req {
+    background-color: $accent-color;
+    color: $color-white;
+    display: inline-block;
+    margin-left: 1rem;
+    padding: 2px 0.75rem;
+    font-size: 0.75rem;
+    font-weight: normal;
+  }
+
+  .note {
+    color: #8d8d8d;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+
+    @include mq(lap) {
+      font-size: 0.875rem;
+    }
+  }
+
+  .image {
+    color: $accent-color;
+    border: 1px solid $accent-color;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+  }
+
+  .post-adress {
+    dd {
+      display: flex;
+      align-items: center;
+
+      p {
+        font-size: 1.25rem;
+        margin-right: 10px;
+
+        @include mq(lap) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .radio-button {
+    dd {
+
+      // mw wp-formでclass付与
+      .radio-btns__item {
+        &+span {
+          // mw wp-formボタンカスタマイズ
+          position: relative;
+          padding-left: 2em;
+          display: inline-block;
+          cursor: pointer;
+
+          &:before,
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            border: 1px solid $color-lightGray;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            left: 0;
+          }
+
+          &::after {
+            opacity: 0;
+            width: 12px;
+            height: 12px;
+            top: 0;
+            left: 4px;
+            border: none;
+            background: $accent-color;
+          }
+        }
+
+        &:checked+span::after {
+          opacity: 1;
+        }
+      }
+
+      span {
+        display: inline-block;
+        position: relative;
+
+        &:checked+span {
+          color: $accent-color;
+        }
+
+        &:checked+span::after {
+          opacity: 1;
+        }
+
+        &:not(:last-child) {
+          @include mq(lap) {
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+
+    input {
+      width: auto;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+    }
+  }
+
+  .check-block {
+    p {
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    dd {
+      &>div {
+        &>div {
+          display: flex;
+          flex-wrap: wrap;
+
+          span {
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-top: 0.5rem;
+
+            @include mq(lap) {
+              margin-top: 0;
+            }
+          }
+        }
+
+        &:not(:first-child) {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    input {
+      width: auto;
+    }
+  }
+
+  .select-box {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      right: 1rem;
+      pointer-events: none;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 9.5px 5.5px 0 5.5px;
+      border-color: $color-gray transparent transparent transparent;
+    }
+  }
+
+  .checkbox {
+    input[type="checkbox"].checkbox__item {
+      border: 0;
+      position: absolute;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    label {
+      display: inline-block;
+    }
+
+    /* spanの左側にボタンを配置するスペースを作る */
+    .checkbox__item+span {
+      padding-left: 2em;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 1px solid $color-lightGray;
+        width: 1.125rem;
+        height: 1.125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 3px;
+      }
+
+      &::after {
+        opacity: 0;
+        width: 8px;
+        height: 13px;
+        transform: rotate(45deg);
+        left: 9px;
+        top: 6px;
+        border: none;
+        border-right: 3px solid $accent-color;
+        border-bottom: 3px solid $accent-color;
+      }
+    }
+
+    .checkbox__item:checked+span::after {
+      opacity: 1;
+    }
+  }
+
+  .terms-box {
+    text-align: center;
+    border: 1px solid $primary-text-color;
+    margin: 2rem 0 2rem;
+    padding: 1rem;
+
+    @include mq(lap) {
+      padding: 1.5rem;
+      max-width: 850px;
+      margin: 2rem auto 4rem;
+    }
+
+    a {
+      color: $primary-text-color;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .rental {
+    dd {
+      display: flex;
+      align-items: center;
+
+      span {
+        display: inline-block;
+        margin-right: 1rem;
+      }
+
+      input {
+        width: 100px;
+      }
+    }
+  }
+
+  .period {
+    dd {
+      &>span {
+        display: flex;
+        align-items: center;
+
+        &>span {
+          position: relative;
+          display: inline-block;
+
+          &::before {
+            content: "~";
+            position: absolute;
+            display: inline-block;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: auto 0;
+            left: 189px;
+          }
+
+          &>span {
+            margin-right: 3rem;
+            position: relative;
+            display: inline-block;
+
+            @include mq(lap) {
+              margin-right: 6rem;
+            }
+
+            &:nth-of-type(1) {
+              margin-top: 1rem;
+
+              @include mq(lap) {
+                margin-top: 0;
+              }
+            }
+
+            &:nth-of-type(2) {
+              margin-top: 1rem;
+
+              @include mq(lap) {
+                margin-top: 0;
+              }
+            }
+
+            &::before {
+              position: absolute;
+              content: "";
+              height: 100%;
+              display: inline-block;
+              width: 3rem;
+              background-color: $accent-color;
+              right: -3rem;
+              top: 50%;
+              transform: translateY(-50%);
+              z-index: 0;
+            }
+
+            &::after {
+              position: absolute;
+              content: "";
+              background: url(../../wp-content/themes/HeartClinic/assets/images/under/form-icon-calendar.svg) no-repeat center center;
+              background-size: contain;
+              width: 18px;
+              height: 19px;
+              top: 50%;
+              transform: translateY(-50%);
+              z-index: 1;
+              right: -33px;
+            }
+          }
+        }
+      }
+
+      input {
+        width: 120px;
+      }
+
+      .check {
+        display: inline-block;
+        margin-top: 1rem;
+
+        input {
+          width: auto;
+        }
+      }
+    }
+  }
+
+  .button-wrap {
+    text-align: center;
+  }
+
+  .contact-button {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+
+    @include mq(lap) {
+      max-width: 420px;
+      padding: 1.5rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      background: url(../../wp-content/themes/HeartClinic/assets/images/common/arrow-white.svg) no-repeat;
+      background-size: contain;
+      width: 12px;
+      height: 9px;
+      right: 2.5rem;
+    }
+  }
+
+  .inner-form {
+    margin-top: 2rem;
+
+    @include mq(lap) {
+      margin-top: 2.5rem;
+    }
+
+    &>h3 {
+      @include mq(lap) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    dl:nth-of-type(1) {
+      border-top: none;
+    }
+  }
+
+  .button-wrap {
+    margin: 1.5rem auto 0;
+    text-align: center;
+    width: 100%;
+
+    @include mq(lap) {
+      max-width: 360px;
+      margin: 4rem auto 0;
+    }
+  }
+
+  .terms-box {
+    text-align: center;
+    padding: 0.5rem;
+    border: 1px solid $primary-text-color;
+    margin-top: 1.5rem;
+
+    @include mq(lap) {
+      margin-top: 4rem;
+      padding: 2rem;
+    }
+  }
+
+  .privacy-box {
+    text-align: center;
+    margin-top: 1.5rem;
+
+    @include mq(lap) {
+      margin-top: 4rem;
+    }
+
+    a {
+      color: $primary-text-color;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    .inner.checkbox {
+      @include mq(lap) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .contact-text {
+    margin-top: 2rem;
+
+    @include mq(lap) {
+      margin-top: 4rem;
+    }
+  }
+}
+
+/* ==============================
+   mw wp form
+  ============================== */
+//エラーメッセージのカスタマイズ
+.p-form .error {
+  font-size: 0.75rem;
+  display: block;
+  margin-top: 10px;
+  font-weight: 500;
+  color: #e62374;
+}
+
+//個人情報同意のテキスト非表示、リンク先を指定したい場合
+.mwform-checkbox-field-text {
+  vertical-align: top;
+  text-indent: -999px;
+  overflow: hidden;
+}
+
+/* ==============================
+   mw wp form確認画面
+  ============================== */
+.mw_wp_form_confirm {
+  .conf-hide {
+    display: none;
+  }
+
+  //セレクトボックスの矢印消す
+  .select-box {
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  // .button-wrap {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   max-width: 100%;
+  //   & > * {
+  //     width: calc(50% - 1rem) !important;
+  //   }
+  // }
+
+  .mw-button-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+
+    &>* {
+      width: calc(50% - 1.25rem);
+    }
+  }
+}
+
+/* ==============================
+   mw wp form完了画面
+  ============================== */
+
+.button-wrap {
+  &.-thanks {
+    margin: 2.5rem auto 0;
+
+    @include mq(lap) {
+      max-width: 360px;
+      margin: 4rem auto 0;
+    }
+  }
+}

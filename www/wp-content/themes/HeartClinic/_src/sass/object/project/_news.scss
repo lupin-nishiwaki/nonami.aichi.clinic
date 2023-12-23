@@ -1,0 +1,211 @@
+@use "sass:math";
+@use "../../inc/color-book" as *;
+@use "../../inc/setting" as *;
+@use "../../inc/functions" as *;
+@use "../../inc/mixin" as *;
+@use "../../inc/mixlupin" as *;
+
+/*
+  news
+*/
+
+.p-news {
+  &__inner {
+    position: relative;
+
+    &.-sub {
+      .p-news__listItem a::after {
+        display: none;
+      }
+
+      .p-news__listItem a>span {
+        margin-bottom: 0.5rem;
+      }
+
+      .p-news__listItem a {
+        padding: 0;
+      }
+
+      .p-news__list {
+        margin-top: 2rem;
+
+        @include mq(lap) {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+
+  &__cat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 2rem 0;
+
+    @include mq(lap) {
+      padding: 3.5rem 0 1rem;
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid #e2e0e0;
+    }
+  }
+
+  &__catItem {
+    border: 1px solid #e2e0e0;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+
+    @include mq(lap) {
+      border: none;
+      padding: 0 1.25rem;
+    }
+
+    &.is-tab {
+      &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background-color: $accent-color;
+        display: inline-block;
+
+        @include mq(lap) {
+          top: auto;
+          bottom: -1rem;
+        }
+      }
+    }
+
+    span {
+      color: $primary-text-color;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: $primary-text-color;
+      font-weight: 700;
+      display: block;
+
+      &:hover {
+        opacity: 0.5;
+        transition: 0.3s $easing-heart;
+      }
+    }
+  }
+
+  &__button {
+    position: absolute;
+    display: block;
+    color: $accent-color;
+    text-decoration: none;
+    right: 0;
+    top: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      left: -1.25rem;
+      background-size: contain;
+      background: url(../../wp-content/themes/HeartClinic/assets/images/top/news-icon.svg) no-repeat;
+      background-size: contain;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+    }
+  }
+
+  &__list {}
+
+  &__listItem {
+    border-bottom: 1px solid #e2e0e0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    a {
+      color: $primary-text-color;
+      text-decoration: none;
+      position: relative;
+      display: block;
+      cursor: pointer;
+
+      @include mq(lap) {
+        padding: 0 1rem;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        right: 0;
+        background: url(../../wp-content/themes/HeartClinic/assets/images/common/arrow-orange.svg) no-repeat;
+        background-size: contain;
+        width: 20px;
+        height: 16px;
+        display: inline-block;
+
+        @include mq(lap) {
+          right: 1rem;
+        }
+      }
+
+      &>span {
+        @include mq(lap) {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      time {
+        @include mq(lap) {
+          display: block;
+          margin-right: 0.5rem;
+        }
+      }
+
+      .cat {
+        display: inline-block;
+        margin-left: 0.5rem;
+
+        @include mq(lap) {
+          margin: 0 0.5rem 0 0;
+        }
+      }
+
+      h3 {
+        font-weight: 700;
+        margin-top: 1rem;
+        width: 92%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include mq(lap) {
+          width: 65%;
+          margin-top: 0;
+        }
+      }
+    }
+
+    @include mq(lap) {}
+
+    &:not(:first-child) {}
+  }
+
+  &__listContent {
+    margin-top: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}

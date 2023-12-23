@@ -1,0 +1,1187 @@
+@use "sass:math";
+@use "../../inc/color-book" as *;
+@use "../../inc/setting" as *;
+@use "../../inc/functions" as *;
+@use "../../inc/mixin" as *;
+@use "../../inc/mixlupin" as *;
+
+/*
+  Button
+*/
+
+.p-main {
+  &__lead {
+    margin-top: 2rem;
+
+    @include mq(lap) {
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+
+    &.-center {
+      @include mq(lap) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__map {
+    &Contents {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include mq(lap) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    &Body {
+      margin-top: 1.5rem;
+
+      @include mq(lap) {
+        margin-top: 0;
+        width: 48%;
+      }
+
+      address {
+        display: inline-block;
+        margin-top: 0.5rem;
+
+        @include mq(lap) {
+          margin-top: 1.25rem;
+        }
+      }
+
+      .tel {
+        font-size: 2rem;
+        color: $accent-color;
+        font-family: $font-set-en;
+        padding-left: 2.125rem;
+        position: relative;
+
+        @include mq(lap) {
+          margin-top: -0.25rem;
+        }
+
+        &::before {
+          position: absolute;
+          content: "";
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          background: url(/wp-content/themes/HeartClinic/assets/images/icon-tel.svg) no-repeat;
+          background-size: contain;
+          width: 1.75rem;
+          height: 1.75rem;
+          margin-bottom: 12px;
+          display: inline-block;
+        }
+
+        &.-purple {
+          color: $color-purple;
+
+          &::before {
+            background: url(/wp-content/themes/HeartClinic/assets/images/beauty/icon-tel-purple.svg) no-repeat;
+            background-size: contain;
+            width: 1.75rem;
+            height: 1.75rem;
+          }
+        }
+      }
+
+      .fax {
+        font-family: $font-set-en;
+        margin-top: -0.25rem;
+
+        @include mq(lap) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .note {
+        font-size: 0.75rem;
+        margin-top: 1rem;
+
+        @include mq(lap) {
+          margin-top: 1rem;
+        }
+
+        a {
+          color: $primary-text-color;
+        }
+      }
+
+      &-inner {
+        @include mq(tab) {
+          display: flex;
+        }
+
+        @include mq(lap) {
+          display: block;
+        }
+      }
+    }
+
+    &Head {
+      @include mq(tab) {
+        margin-right: 3rem;
+      }
+
+      @include mq(lap) {
+        margin-right: 0;
+      }
+
+      h2 {
+        width: 72%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    &Image {
+      @include mq(lap) {
+        width: 54%;
+      }
+
+      img {
+        border-radius: $border-radius;
+        width: 100%;
+      }
+    }
+
+    &Google {
+      text-align: center;
+      margin-top: 2.5rem;
+
+      @include mq(lap) {
+        margin-top: 3rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+
+        @include mq(lap) {
+          height: 356px;
+          max-width: 1080px;
+        }
+      }
+    }
+  }
+
+  /*
+  =====================
+  treatment
+  =====================
+*/
+
+  &__treatment {
+    &List {
+      display: grid;
+      gap: 20px 0;
+      margin-top: 2rem;
+
+      @include mq(lap) {
+        margin-top: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px 26px;
+      }
+    }
+
+    &Head {
+      @include mq(lap) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+      }
+
+      &Text {
+        @include mq(lap) {
+          margin: 0 0 0 1rem;
+          width: 78%;
+        }
+      }
+    }
+
+    &Heading {
+      @include mq(lap) {
+        width: 30%;
+      }
+    }
+
+    &Item {
+      border: 1px solid $color-lightGray2;
+      border-radius: $border-radius;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: 0.3s $easing-heart box-shadow;
+
+      @include mq(lap) {}
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 5px;
+        width: 100%;
+        background-color: $accent-color;
+        display: inline-block;
+        transform: scale(0, 1);
+
+        transform-origin: right top;
+        transition: 0.3s $easing-heart transform;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 15px #f0ece4;
+
+        .p-main__treatmentTitle {
+          transition: 0.3s $easing-heart;
+          color: $accent-color;
+        }
+
+        &::before {
+          transform: scale(1, 1);
+          transform-origin: left top;
+          transition: 0.3s $easing-heart transform;
+        }
+      }
+
+      &>a {
+        display: flex;
+        align-items: center;
+        padding: 1.25rem 0.5rem;
+        text-decoration: none;
+        color: $primary-text-color;
+
+        @include mq(lap) {
+          padding: 4.5rem 2rem;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+
+    &Icon {
+      width: 4.5rem;
+      margin-right: 0.5rem;
+
+      @include mq(lap) {
+        margin: 0 auto 1.5rem;
+        width: 5.5rem;
+      }
+    }
+
+    &Title {
+      font-size: 1.125rem;
+      font-family: $font-set-serif;
+      transition: 0.3s $easing-heart;
+
+      @include mq(lap) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &Text {
+      font-size: 0.75rem;
+
+      @include mq(lap) {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+      }
+    }
+
+    &Arrow {
+      position: absolute;
+      stroke: $accent-color;
+      width: 23px;
+      height: 7px;
+      right: 1.25rem;
+      top: 2rem;
+
+      @include mq(lap) {
+        display: none;
+      }
+    }
+  }
+
+  /*
+  =====================
+  beauty
+  =====================
+*/
+
+  &__beauty {
+    @include mq(lap) {
+      background: url(/wp-content/themes/HeartClinic/assets/images/beauty-pc@2x.jpg) no-repeat;
+      background-size: cover;
+      border-radius: 5px;
+      margin-top: 90px;
+    }
+
+    &Inner {
+      margin: 20px auto 0;
+      max-width: 540px;
+
+      @include mq(lap) {
+        margin: 0;
+      }
+    }
+
+    &Image {
+      img {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+
+        @include mq(lap) {
+          border-radius: 0;
+        }
+      }
+
+      @include mq(lap) {
+        display: none;
+      }
+    }
+
+    &Body {
+      background-color: $accent-color;
+      color: $color-white;
+      padding: 30px 20px;
+      border-radius: 0 0 5px 5px;
+
+      @include mq(lap) {
+        background-color: transparent;
+        padding: 90px 20px 90px 120px;
+        border-radius: 0px;
+      }
+    }
+
+    &Title {
+      text-align: center;
+      font-family: $font-set-serif;
+      // font-size: ;
+      $font-size: 26px;
+      font-size: set-size($font-size);
+
+      @include mq(lap) {
+        text-align: left;
+        font-size: 2rem;
+      }
+    }
+
+    &Text {
+      margin: 1.125rem 0 1rem;
+      font-size: 0.75rem;
+
+      @include mq(lap) {
+        font-size: 0.875rem;
+        margin: 1.3rem 0 1.5rem;
+      }
+    }
+  }
+
+  /*
+  =====================
+  about
+  =====================
+*/
+
+  &__about {
+    &List {
+      display: grid;
+      gap: 40px 0;
+      margin-top: 2rem;
+
+      @include mq(lap) {
+        margin-top: 5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 30px;
+      }
+    }
+
+    &Thumb {
+      img {
+        border-radius: 5px;
+        width: 100%;
+      }
+    }
+
+    &Item {
+      &Text {
+        text-align: center;
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+
+        @include mq(lap) {
+          margin-top: 1.125vvrem;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+
+  /*
+  =====================
+  Intro
+  =====================
+*/
+
+  &__Intro {
+    display: flex;
+    border-top: 1px solid $color-lightGray2;
+    border-bottom: 1px solid $color-lightGray2;
+    position: relative;
+
+    @include mq(lap) {
+      justify-content: center;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 100%;
+      background-color: $color-lightGray2;
+    }
+
+    &Inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+
+      @include mq(lap) {
+        max-width: 540px;
+        // width: 100%;
+      }
+    }
+
+    &Link {
+      text-decoration: none;
+      color: $primary-text-color;
+
+      @include mq(lap) {
+        max-width: 320px;
+        width: 100%;
+        margin: 1px;
+      }
+
+      &:hover {
+        i {
+          background-color: $color-white;
+
+          .arrow-wrap {
+            width: 100%;
+            height: 100%;
+            animation: slide1 0.6s ease-in-out 0.2s;
+          }
+
+          .arrow {
+            &.-whiteBrown {
+              stroke: $accent-color;
+            }
+          }
+        }
+      }
+    }
+
+    &Icon {
+      width: 4rem;
+      height: 3rem;
+      margin: 0 auto 0.5rem;
+
+      @include mq(lap) {
+        width: 6rem;
+        height: 4rem;
+      }
+    }
+
+    i {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background-color: $accent-color;
+      border: 1px solid $accent-color;
+      transition: 0.3s $easing-heart;
+      display: block;
+      margin: 1.25rem auto 0;
+      position: relative;
+      overflow: hidden;
+
+      @include mq(lap) {
+        margin: 2rem auto 0;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 18px;
+        height: 5px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        z-index: 5;
+        overflow: hidden;
+        transition-property: transform stroke;
+        transition: $easing-heart 0.3s;
+
+        @include mq(lap) {
+          width: 23px;
+          height: 7px;
+          left: 0;
+          transform: none;
+        }
+
+        &.-whiteBrown {
+          stroke: $color-white;
+        }
+      }
+
+      &.purple {
+        background-color: $color-purple;
+        border: 1px solid $color-purple;
+      }
+    }
+
+    &Button-sp {
+      display: block;
+
+      @include mq(lap) {
+        display: none;
+      }
+    }
+
+    &Button-pc {
+      display: none;
+
+      @include mq(lap) {
+        display: block;
+        width: 100%;
+        margin-top: 2rem;
+      }
+    }
+
+    &.-secondary {
+      border-bottom: none;
+      border-top: 1px solid $color-lightBeige;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.-beauty {
+      .p-main__IntroInner {
+        width: 100%;
+      }
+    }
+  }
+
+  /*
+  =====================
+  news
+  =====================
+*/
+
+  &__news {
+    @include mq(lap) {
+      position: relative;
+    }
+
+    &>.inner {
+      @include mq(lap) {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+      }
+    }
+
+    &Content {
+      margin-top: 0.5rem;
+
+      @include mq(lap) {
+        width: 75%;
+        margin-top: 0;
+      }
+    }
+
+    &Title {
+      @include mq(lap) {
+        width: 25%;
+        height: 78px;
+      }
+
+      &.-top {
+        @include mq(lap) {
+          height: 125px;
+        }
+      }
+    }
+
+    a {
+      color: $primary-text-color;
+    }
+
+    &Link {
+      position: relative;
+      display: block;
+      text-decoration: none;
+
+      &:hover {
+        dl {
+          &::after {
+            transform-origin: left top;
+            transform: scale(1, 1);
+          }
+
+          dd {
+            color: $accent-color;
+            transition: 0.4s $easing-heart;
+          }
+        }
+
+        .arrow {
+          animation: slide1 0.6s $easing-heart 0.2s;
+        }
+      }
+
+      &.-purple {
+        &:hover {
+          dl {
+            dd {
+              color: $color-purple;
+            }
+          }
+        }
+      }
+
+      dl {
+        padding: 1.5rem 0;
+
+        letter-spacing: 0.1rem;
+        position: relative;
+
+        @include mq(lap) {
+          display: flex;
+          padding: 2.5rem 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: $primary-text-color;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          transform-origin: right top;
+          transform: scale(0, 1);
+
+          background-color: $accent-color;
+          display: inline-block;
+          transition: transform 0.3s $easing-heart;
+        }
+
+        &.purple {
+          &::after {
+            background-color: $color-purple;
+          }
+        }
+
+        dt {
+          time {
+            font-family: $font-set-en;
+            color: $color-lightGray2;
+
+            @include mq(lap) {
+              font-size: 1rem;
+              display: inline-block;
+              margin-right: 1rem;
+            }
+
+            &.purple {
+              color: $color-purple;
+            }
+          }
+        }
+
+        dd {
+          transition: 0.3s $easing-heart;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: calc(100% - 50px);
+
+          @include mq(lap) {
+            font-size: 1rem;
+            width: calc(100% - 210px);
+          }
+        }
+      }
+
+      i {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 23px;
+        height: 7px;
+        right: 1rem;
+        z-index: 5;
+        overflow: hidden;
+      }
+
+      .arrow {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        width: 23px;
+        height: 7px;
+        right: 0;
+        z-index: 5;
+        overflow: hidden;
+
+        &.-whiteBrown,
+        &.-whiteGray,
+        &.-Brown {
+          stroke: $accent-color;
+        }
+
+        &.-purple {
+          stroke: $color-purple;
+        }
+      }
+    }
+
+    &ButtonWrap {
+      text-align: right;
+      margin-top: 2rem;
+
+      @include mq(lap) {
+        text-align: left;
+        top: 100px;
+        left: 0;
+        font-size: 0.875rem;
+        display: inline-block;
+        position: absolute;
+      }
+
+      &.-top {
+        @include mq(lap) {
+          top: 150px;
+        }
+      }
+    }
+
+    &Button {
+      text-decoration: underline;
+      color: $primary-text-color;
+
+      &:hover {
+        color: $accent-color;
+      }
+
+      &.-purple {
+        &:hover {
+          color: $color-purple;
+        }
+      }
+    }
+
+    @keyframes slide1 {
+      0% {
+        transform: translateX(0);
+      }
+
+      50% {
+        transform: translateX(100%);
+      }
+
+      50.1% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__timeTableWrap {
+    @include mq(lap) {
+      display: none;
+    }
+  }
+
+  &__timeTable {
+    background-color: $color-white;
+    font-size: 0.75rem;
+
+    &.-top {
+      table {
+        margin: 0 auto;
+      }
+    }
+
+    &.-info {
+
+      .circle::before,
+      .note::before {
+        margin: 12px 0 0 0;
+
+        @include mq(lap) {
+          margin: 16px 0 0 0;
+        }
+      }
+
+      .table-r02 {
+
+        .circle::before,
+        .note::before {
+          margin: 12px 0 0 0;
+
+          @include mq(lap) {
+            margin: 24px 0 0 0;
+          }
+        }
+      }
+
+      th,
+      td {
+        padding: 7px 7px 18px 7px;
+
+        @include mq(lap) {
+          padding: 7px 37px 18px 37px;
+        }
+      }
+
+      .time {
+        text-align: center;
+        vertical-align: top;
+      }
+
+      span {
+        &.name {
+          display: inline-block;
+          margin-top: 20px;
+          margin-bottom: -11px;
+          writing-mode: vertical-rl;
+
+          @include mq(lap) {
+            writing-mode: horizontal-tb;
+            width: 40px;
+            margin-top: 26px;
+            text-align: center;
+          }
+        }
+
+        &.info-time {
+          margin-bottom: 1px;
+          display: block;
+        }
+      }
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+
+      @include mq(lap) {
+        padding: 0.75rem 0.875rem;
+      }
+
+      @include mq(l-lap) {
+        padding: 0.75rem 1.125rem;
+      }
+    }
+
+    th {
+      &:first-child {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+
+        text-align: left;
+
+        @include mq(lap) {
+          padding-right: 1.25rem;
+        }
+
+        @include mq(l-lap) {
+          padding-right: 1.75rem;
+        }
+      }
+
+      &:not(:first-child) {
+        width: 36px;
+      }
+
+      &.en {
+        font-family: $font-set-en;
+        font-size: 0.875rem;
+      }
+    }
+
+    tr {
+      &:nth-child(2) {
+        border-bottom: solid 1px #e6e5e4;
+      }
+
+      &.heading {
+        th {
+          &:first-child {
+            padding: 0.5rem 0.5rem 0.5rem 0;
+          }
+        }
+      }
+
+      .line-left {
+        border-left: 1px solid #e6e5e4;
+      }
+    }
+
+    .time {
+      letter-spacing: 0.04rem;
+    }
+
+    .circle,
+    .none,
+    .triangle {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        left: 50%;
+        transform: translateX(-50%);
+        content: "";
+        display: block;
+      }
+    }
+
+    .circle {
+      &::before {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 50%;
+        background-color: $primary-text-color;
+      }
+    }
+
+    .none {
+      &::before {
+        width: 0.75rem;
+        height: 1px;
+        background-color: $primary-text-color;
+      }
+    }
+
+    .triangle {
+      &::before {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 6px 10.4px 6px;
+        border-color: transparent transparent $primary-text-color transparent;
+      }
+    }
+
+    &.-hero {
+      display: none;
+
+      @include mq(lap) {
+        font-size: 0.875rem;
+        display: block;
+      }
+
+      @include mq(lap) {
+        padding: 2.25rem;
+      }
+
+      @include mq(l-lap) {
+        padding: 2.5rem 5rem;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1.125rem;
+
+        @include mq(lap) {
+          padding: 0.75rem 0.875rem;
+        }
+
+        @include mq(l-lap) {
+          padding: 0.75rem 1.125rem;
+        }
+      }
+
+      tr {
+        &.heading {
+          th {
+            &:first-child {
+              padding-left: 8px;
+            }
+          }
+        }
+      }
+
+      th {
+        &:first-child {
+          text-align: left;
+          padding-left: 8px;
+
+          @include mq(lap) {
+            padding-right: 1.25rem;
+          }
+
+          @include mq(l-lap) {
+            padding-right: 1.75rem;
+          }
+        }
+
+        &:not(:first-child) {
+          width: 44px;
+        }
+      }
+    }
+
+    .table-r02 {
+      @include mq(lap) {
+        font-size: 1rem;
+      }
+
+      tbody {
+        tr {
+          td {
+            vertical-align: top;
+            text-align: center;
+            white-space: nowrap;
+
+            @include mq(lap) {
+              white-space: normal;
+              vertical-align: baseline;
+            }
+
+            span {
+              display: block;
+              /* [1]Safariで幅が広がるのを防止 */
+              margin: 0 auto;
+              -webkit-writing-mode: vertical-rl;
+              writing-mode: vertical-rl;
+              width: 21px;
+
+              @include mq(lap) {
+                width: auto;
+                writing-mode: inherit;
+              }
+            }
+          }
+        }
+      }
+
+      th {
+        padding: 10px;
+
+        &:first-child {
+          padding: 0.5rem 0.25rem 0.5rem 0;
+
+          @include mq(lap) {
+            padding: 1.5rem 3rem 0.5rem 0;
+          }
+        }
+      }
+
+      td {
+        padding: 8px;
+
+        @include mq(lap) {
+          padding: 24px;
+        }
+      }
+
+      .line-left {
+        text-align: center;
+      }
+
+      .left-last {
+        @include mq(lap) {
+          padding: 40px 44px 32px 44px;
+        }
+      }
+
+      .text {
+        padding: 32px 8px 8px 8px;
+
+        @include mq(lap) {
+          padding: 50px 32px 32px 32px;
+        }
+      }
+
+      // .last td:last-child {
+      //   @include mq(lap) {
+      //     width: 100%;
+      //   }
+      // }
+    }
+
+    .table-note {
+      text-align: right;
+      max-width: 344px;
+
+      @include mq(lap) {
+        max-width: 396px;
+      }
+
+      span {
+        position: relative;
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+        display: inline-block;
+
+        &::before {
+          position: absolute;
+          content: "";
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 6px 10.4px 6px;
+          border-color: transparent transparent #48453a transparent;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+}
+
+.p-main__newsContent-postText {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
