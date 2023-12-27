@@ -1,6 +1,13 @@
+@use "sass:math";
+@use "../inc/setting" as *;
+@use "../inc/functions" as *;
+@use "../inc/mixin" as *;
+@use "../inc/mixlupin" as *;
+
 .wrap {
   width: 80%;
 }
+
 .swiper-container {
   &.-top {
     position: relative;
@@ -17,6 +24,7 @@
     height: 36px;
     z-index: 1;
     width: 100%;
+
     @include mq(lap) {
       height: 50px;
       padding: 0.8rem 1rem 0.5rem 1.75rem;
@@ -32,6 +40,7 @@
     position: relative;
 
     padding-bottom: 3.5rem;
+
     @include mq(lap) {
       overflow: hidden;
       padding-bottom: 1rem;
@@ -40,6 +49,7 @@
 
   &.-thumb {
     display: none;
+
     @include mq(lap) {
       display: block;
     }
@@ -49,6 +59,7 @@
 .swiper-wrapper {
   &.-topNews {
     width: 85%;
+
     @include mq(lap) {
       width: 90%;
     }
@@ -59,6 +70,7 @@
 .swiper-slide {
   &.-top {
     border-radius: 5px 0 0 0;
+
     a {
       display: block;
 
@@ -76,6 +88,7 @@
       margin-right: auto;
 
       display: block;
+
       @include mq(lap) {
         font-size: 0.875rem;
       }
@@ -91,10 +104,12 @@
         white-space: nowrap;
         overflow: hidden;
       }
+
       time {
         display: inline-block;
         margin-right: 0.75rem;
         font-family: $font-set-en;
+
         @include mq(la-) {
           margin-right: 1rem;
         }
@@ -113,6 +128,7 @@
     width: 100%;
     max-width: 100%;
     position: relative;
+
     &::before {
       content: "";
       position: absolute;
@@ -138,6 +154,7 @@
 
 .swiper-button__container {
   position: relative;
+
   &.-top {
     @include mq(lap) {
       max-width: 320px;
@@ -175,6 +192,7 @@
     display: flex;
     justify-content: space-between;
     transform: rotate(90deg);
+
     @include mq(lap) {
       left: -10px;
     }
@@ -194,6 +212,7 @@
     }
   }
 }
+
 // ドットのカラー
 .swiper-pagination-bullet {
   background-color: #ebe4dc;
@@ -201,6 +220,7 @@
   width: 6px;
   height: 6px;
 }
+
 // アクティブなドットのカラー
 .swiper-pagination-bullet-active {
   background: $accent-color;
@@ -212,19 +232,22 @@
     right: 7%;
     left: auto;
   }
-  &.-gallery {
-  }
+
+  &.-gallery {}
 }
+
 .swiper-button-next {
   &.-topnews {
     right: 2%;
+
     @include mq(lap) {
       right: 4%;
     }
   }
-  &.-gallery {
-  }
+
+  &.-gallery {}
 }
+
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
@@ -236,6 +259,7 @@
     z-index: 1;
     width: 24px;
     height: 24px;
+
     @include mq(lap) {
       width: 30px;
       height: 30px;
@@ -247,6 +271,7 @@
     bottom: 0;
     width: 32px;
     height: 32px;
+
     @include mq(lap) {
       width: 40px;
       height: 40px;
@@ -255,6 +280,7 @@
     }
   }
 }
+
 // ボタンを画像で表示
 .swiper-button-prev {
   &.-topnews {
@@ -279,12 +305,13 @@
     background-size: contain;
   }
 
-  &.-topnews {
-  }
+  &.-topnews {}
 }
+
 .swiper-button-prev::after {
   content: "";
 }
+
 .swiper-button-next::after {
   content: "";
 }
@@ -295,21 +322,26 @@
   height: auto;
   border-radius: 0;
 }
-.swiper-container-horizontal > .swiper-my-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
+
+.swiper-container-horizontal>.swiper-my-pagination.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0;
 }
+
 .swiper-my-pagination img {
   box-shadow: none;
   // margin: 0;
   vertical-align: bottom;
 }
+
 .swiper-my-pagination {
   display: table;
 }
+
 .swiper-my-pagination {
   display: table;
   table-layout: fixed;
 }
+
 .swiper-my-pagination .swiper-pagination-bullet {
   display: table-cell;
   border: transparent;
@@ -325,8 +357,10 @@
     display: inline-block;
   }
 }
+
 .swiper-my-pagination .swiper-pagination-bullet-active {
   border: 1px solid $accent-color;
+
   &::before {
     background: transparent;
   }
@@ -340,13 +374,13 @@
     left: 0;
     max-width: 15.1%;
     width: 100%;
+
     span {
       display: block;
       width: auto;
       position: relative;
 
-      &:first-child {
-      }
+      &:first-child {}
 
       &:not(:first-child) {
         margin-top: 9%;
@@ -365,6 +399,7 @@
   0% {
     transform: scale(1);
   }
+
   100% {
     transform: scale(1.8);
   }

@@ -1,10 +1,11 @@
 /* =====================================================
   1.0 - Foundation
 ===================================================== */
-@use "inc/setting";
-@use "inc/functions";
-@use "inc/mixin";
-@use "inc/mixlupin";
+@use "sass:math";
+@use "inc/setting" as *;
+@use "inc/functions" as *;
+@use "inc/mixin" as *;
+@use "inc/mixlupin" as *;
 @use "foundation/reset";
 @use "foundation/base";
 

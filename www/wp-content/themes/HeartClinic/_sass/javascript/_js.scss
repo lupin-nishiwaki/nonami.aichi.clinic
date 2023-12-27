@@ -1,3 +1,9 @@
+@use "sass:math";
+@use "../inc/setting" as *;
+@use "../inc/functions" as *;
+@use "../inc/mixin" as *;
+@use "../inc/mixlupin" as *;
+
 //====================================
 //  JS
 //====================================
@@ -5,7 +11,7 @@
   position: relative;
 }
 
-.js_tab .js_tab_content > * {
+.js_tab .js_tab_content>* {
   position: absolute;
   top: 0;
   width: 100%;
@@ -19,7 +25,7 @@
   transition: all 0.5s;
 }
 
-.js_tab .js_tab_content > *.is-tab {
+.js_tab .js_tab_content>*.is-tab {
   position: relative;
   opacity: 1;
   z-index: 2;
@@ -42,6 +48,7 @@
   -webkit-transition: opacity 0.4s $easing-heart;
   transition: opacity 0.4s $easing-heart;
 }
+
 .js-pageFade.is-fadeout::before {
   opacity: 1;
 }
