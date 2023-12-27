@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+/*
+  Logo
+*/
+.p-logo,
+.custom-logo-link {
+  display: inline-block;
+  padding: 0.5em 0;
+  text-decoration: none;
+  font-weight: bold;
+  color: $main-color;
+  font-size: 1.5em;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  max-width: 144px;
+
+  @include mq(l-lap) {
+    max-width: 100%;
+  }
+
+  img {
+    transition: 0.4s $easing-heart;
+  }
+}

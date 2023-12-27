@@ -1,0 +1,23 @@
+@charset 'UTF-8';
+/*
+  Centering
+-----------------------------------------------------*/
+
+.l-container {
+  margin: 0 auto;
+  max-width: $content-width;
+  width: 85%;
+
+  &.-sizeS {
+    max-width: 1040px;
+  }
+
+  &.-header {
+    width: 90%;
+    max-width: 100%;
+  }
+}
+
+.l-button-wrap {
+  text-align: center;
+}

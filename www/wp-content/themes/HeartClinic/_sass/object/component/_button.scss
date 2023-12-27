@@ -1,0 +1,303 @@
+@charset 'UTF-8';
+/*
+  Buttonn
+*/
+.c-button {
+  display: inline-block;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  font-size: 0.875rem;
+  transition: $easing-heart transform 0.4s;
+  border-radius: $border-radius;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+
+  @include mq(lap) {
+    font-size: 1.125rem;
+  }
+
+  & > span.inner {
+    border-radius: $border-radius;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    transition: $easing-heart color 0.4s;
+    z-index: 1;
+    backface-visibility: hidden;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 101%;
+      left: 0;
+      top: 0;
+      transform: scale(0, 1);
+      transform-origin: right top;
+      transition: $easing-heart transform 0.4s;
+      z-index: -1;
+    }
+  }
+
+  &:hover {
+    .inner {
+      &::before {
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+    }
+    .svg-wrap {
+      .arrow {
+        animation: slide1 0.6s $easing-heart 0.2s;
+      }
+    }
+  }
+
+  &.-primary {
+    width: 100%;
+    @include mq(lap) {
+      max-width: 320px;
+      font-size: 0.875rem;
+    }
+
+    & > span {
+      padding: 0.875rem;
+
+      @include mq(lap) {
+        padding: 1rem;
+      }
+    }
+  }
+
+  &.-secondary {
+    @include mq(lap) {
+      font-size: 1.125rem;
+    }
+
+    & > span {
+      padding: 1rem;
+
+      @include mq(lap) {
+        padding: 1.75rem;
+      }
+    }
+  }
+
+  &.-colorAccent {
+    // border: 1px solid $color-white;
+    span {
+      background-color: $accent-color;
+      color: $color-white;
+
+      &::before {
+        background-color: $color-white;
+      }
+    }
+
+    &:hover {
+      span {
+        color: $accent-color;
+      }
+
+      .arrow.-whiteBrown {
+        stroke: $accent-color;
+      }
+    }
+  }
+
+  &.-colorAccentWhite {
+    & > span.inner {
+      border: 1px solid $accent-color;
+    }
+
+    span {
+      background-color: $color-white;
+      color: $accent-color;
+
+      &::before {
+        background-color: $accent-color;
+      }
+    }
+
+    &:hover {
+      span {
+        color: $color-white;
+      }
+
+      .arrow.-brown {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &.-colorPurple {
+    & > span.inner {
+      border: 1px solid $color-purple;
+    }
+
+    span {
+      background-color: $color-white;
+      color: $color-purple;
+
+      &::before {
+        background-color: $color-purple;
+      }
+    }
+
+    &:hover {
+      span {
+        color: $color-white;
+      }
+
+      .arrow.-brown {
+        stroke: $color-white;
+      }
+    }
+  }
+
+  &.-colorGray {
+    span {
+      background-color: $color-lightGray;
+      color: $color-white;
+
+      &::before {
+        background-color: $color-white;
+      }
+    }
+
+    &:hover {
+      span {
+        color: $color-lightGray;
+      }
+      .arrow.-whiteGray {
+        stroke: $color-lightGray;
+      }
+    }
+  }
+
+  &.-shadow {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  &.-center {
+    text-align: center;
+  }
+
+  .arrow {
+    position: absolute;
+    margin: auto 0;
+    width: 23px;
+    height: 7px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    transition-property: transform stroke;
+    transition: $easing-heart 0.3s;
+    @include mq(lap) {
+    }
+
+    &.-whiteBrown,
+    &.-whiteGray {
+      stroke: $color-white;
+    }
+    &.-brown {
+      stroke: $accent-color;
+    }
+  }
+
+  &__wrap {
+    margin-top: 2rem;
+    @include mq(lap) {
+      margin-top: 3.5rem;
+    }
+
+    &.-center {
+      text-align: center;
+    }
+
+    &.-secondary {
+      @include mq(lap) {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      & > * {
+        @include mq(lap) {
+          width: 47.6%;
+        }
+      }
+      .c-button:not(:first-child) {
+        margin-top: 1.125rem;
+        @include mq(lap) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &.-wrap003 {
+      @include mq(lap) {
+        margin-top: 32px;
+        gap: 0 24px;
+        display: flex;
+      }
+
+      > * + * {
+        margin-top: 24px;
+        @include mq(lap) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .svg-wrap {
+    display: inline-block;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 24px;
+    height: 24px;
+    right: 1rem;
+    z-index: 2;
+    &.-secondary {
+      @include mq(lap) {
+        border-radius: 0;
+        background-color: transparent;
+        border: none;
+      }
+    }
+  }
+}
+
+.p-main__IntroLink:hover {
+  .c-button.-colorAccentWhite {
+    span {
+      color: $color-white;
+    }
+
+    .arrow.-brown {
+      stroke: $color-white;
+    }
+
+    span {
+      &::before {
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+    }
+  }
+
+  .svg-wrap {
+    .arrow {
+      @include mq(lap) {
+        animation: slide1 0.6s $easing-heart 0.2s;
+      }
+    }
+  }
+}
