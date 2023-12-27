@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions";
 @use "../../inc/mixin" as *;
 
 /*
@@ -28,12 +27,12 @@
 
   @include mq(tab) {
     $font-size: 28px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
   }
 
   @include mq(lap) {
     $font-size: 45px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
   }
 
   &.-primary {
@@ -83,11 +82,11 @@
 
   &.-sizeM {
     $font-size: 26px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
 
     @include mq(lap) {
       $font-size: 32px;
-      font-size: set-size($font-size);
+      font-size: sizeRem($font-size);
     }
 
     &::before {
@@ -99,7 +98,7 @@
     display: block;
     font-family: $font-set-en;
     $font-size: 13px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
     color: $accent-color;
 
     @include mq(lap) {

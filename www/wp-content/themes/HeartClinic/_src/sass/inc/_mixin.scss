@@ -2,6 +2,15 @@
 @use "setting" as *;
 
 //============================================
+//  FUNCTIONS
+//============================================
+
+// 関数の登録
+@function sizeRem($size, $base-font-size: 16px) {
+  @return math.div($size , $base-font-size) * 1rem;
+}
+
+//============================================
 //  MIXIN
 //============================================
 
@@ -158,7 +167,7 @@ $imgPath: "/images/";
 
   h2 {
     $font-size: 18px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
     margin-top: 30px;
     position: relative;
     padding-bottom: 1.25rem;
@@ -183,7 +192,7 @@ $imgPath: "/images/";
 
   h3 {
     $font-size: 18px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
     margin-top: 20px;
     padding: 4px 10px;
     position: relative;

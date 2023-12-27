@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions";
 @use "../../inc/mixin" as *;
 
 /*
@@ -19,9 +18,9 @@
 .page-numbers {
   text-align: center;
   display: inline-block;
-  width: set-size(32px);
-  height: set-size(32px);
-  padding: set-size(math.div((32px - 12px), 2));
+  width: sizeRem(32px);
+  height: sizeRem(32px);
+  padding: sizeRem(math.div((32px - 12px), 2));
   background-color: #fff;
   text-decoration: none;
   color: $accent-color;
@@ -33,9 +32,9 @@
   border-radius: $border-radius;
 
   @include mq(lap) {
-    width: set-size(40px);
-    height: set-size(40px);
-    padding: set-size(math.div((40px - 17px), 2));
+    width: sizeRem(40px);
+    height: sizeRem(40px);
+    padding: sizeRem(math.div((40px - 17px), 2));
   }
 
   &[href]:hover {
@@ -72,12 +71,12 @@
     border: none;
 
     &:before {
-      left: set-size(4px);
+      left: sizeRem(4px);
       background: url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL-gold.svg) no-repeat;
       background-size: contain;
       width: 24px;
       height: 24px;
-      right: set-size(4px);
+      right: sizeRem(4px);
     }
   }
 
@@ -89,7 +88,7 @@
       background-size: contain;
       width: 24px;
       height: 24px;
-      right: set-size(4px);
+      right: sizeRem(4px);
       left: 0;
     }
   }
@@ -141,12 +140,12 @@
 
     &.prev {
       &:before {
-        left: set-size(4px);
+        left: sizeRem(4px);
         background: url(/wp-content/themes/HeartClinic/assets/images/common/buttonL-purple.svg) no-repeat;
         background-size: contain;
         width: 24px;
         height: 24px;
-        right: set-size(4px);
+        right: sizeRem(4px);
       }
     }
 
@@ -158,7 +157,7 @@
         background-size: contain;
         width: 24px;
         height: 24px;
-        right: set-size(4px);
+        right: sizeRem(4px);
         left: 0;
       }
     }

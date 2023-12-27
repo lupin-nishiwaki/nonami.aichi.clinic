@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions";
 @use "../../inc/mixin" as *;
 
 /*
@@ -761,11 +760,11 @@
       .main {
         font-family: $font-set-serif;
         $font-size: 26px;
-        font-size: set-size($font-size);
+        font-size: sizeRem($font-size);
 
         @include mq(lap) {
           $font-size: 30px;
-          font-size: set-size($font-size);
+          font-size: sizeRem($font-size);
         }
       }
 
@@ -966,11 +965,11 @@
     &Title {
       font-family: $font-set-serif;
       $font-size: 26px;
-      font-size: set-size($font-size);
+      font-size: sizeRem($font-size);
 
       @include mq(lap) {
         $font-size: 30px;
-        font-size: set-size($font-size);
+        font-size: sizeRem($font-size);
       }
     }
 

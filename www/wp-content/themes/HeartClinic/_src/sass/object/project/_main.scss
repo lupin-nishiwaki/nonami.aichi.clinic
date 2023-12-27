@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions";
 @use "../../inc/mixin" as *;
 
 /*
@@ -367,7 +366,7 @@
       font-family: $font-set-serif;
       // font-size: ;
       $font-size: 26px;
-      font-size: set-size($font-size);
+      font-size: sizeRem($font-size);
 
       @include mq(lap) {
         text-align: left;

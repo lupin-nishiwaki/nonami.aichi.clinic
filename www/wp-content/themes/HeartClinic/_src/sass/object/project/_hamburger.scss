@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions";
 @use "../../inc/mixin" as *;
 
 /*
@@ -96,7 +95,7 @@ $hambLeft: auto;
     display: inline-block;
     letter-spacing: 0.01rem;
     $font-size: 11px;
-    font-size: set-size($font-size);
+    font-size: sizeRem($font-size);
 
     position: absolute;
     top: 2rem;

@@ -1,6 +1,5 @@
 @use "sass:math";
 @use "../inc/setting" as *;
-@use "../inc/functions";
 @use "../inc/mixin" as *;
 
 /*
@@ -28,19 +27,19 @@ body {
   height: 100%;
   color: $primary-text-color;
   text-rendering: optimizeLegibility;
-  font: #{set-size(13px)}/ 1.75 $font-set-primary; //$base-font-sizeでスマホのサイズ指定 line-height指定
+  font: #{sizeRem(13px)}/ 1.75 $font-set-primary; //$base-font-sizeでスマホのサイズ指定 line-height指定
   -webkit-font-feature-settings: "pkna";
   font-feature-settings: "pkna";
   background-color: $base-color;
-  padding-top: set-size(72px);
+  padding-top: sizeRem(72px);
   letter-spacing: 0.05rem;
   transition-property: opacity background-color;
   transition: 0.3s $easing-heart;
 
   @include mq(lap) {
     background-color: #fff;
-    padding-top: set-size(120px);
-    font: #{set-size($base-font-size)}/ 1.8 $font-set-primary;
+    padding-top: sizeRem(120px);
+    font: #{sizeRem($base-font-size)}/ 1.8 $font-set-primary;
   }
 
   &.is-drawerActive {

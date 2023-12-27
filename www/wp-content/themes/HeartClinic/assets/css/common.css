@@ -4,9 +4,9 @@
 .m_cms_wysiwyg time{font-weight:700;line-height:1}
 .m_cms_wysiwyg h1,.m_cms_wysiwyg h2,.m_cms_wysiwyg h3,.m_cms_wysiwyg h4,.m_cms_wysiwyg h5,.m_cms_wysiwyg h6{font-family:'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif;color:#48453a}
 .m_cms_wysiwyg h1{font-size:1.375rem;border-bottom:1px solid #48453a;padding-bottom:1.25rem;margin-bottom:2rem;line-height:1.25}
-.m_cms_wysiwyg h2{font-size:set-size(18px);margin-top:30px;position:relative;padding-bottom:1.25rem;font-weight:500}
+.m_cms_wysiwyg h2{font-size:1.125rem;margin-top:30px;position:relative;padding-bottom:1.25rem;font-weight:500}
 .m_cms_wysiwyg h2::before{position:absolute;content:'';background-color:#ae9373;width:100%;height:3px;bottom:0;left:0}
-.m_cms_wysiwyg h3{font-size:set-size(18px);margin-top:20px;padding:4px 10px;position:relative}
+.m_cms_wysiwyg h3{font-size:1.125rem;margin-top:20px;padding:4px 10px;position:relative}
 .m_cms_wysiwyg h3::before{position:absolute;content:'';background-color:#ae9373;width:3px;height:88%;top:11px;left:0}
 .m_cms_wysiwyg h4{margin-top:30px;padding:6px 15px 7px;border:1px solid #ae9373;font-size:1rem}
 .m_cms_wysiwyg h5{margin-top:20px;padding:10px;font-size:1rem;background-color:#ae9373;color:#fff}
@@ -63,15 +63,6 @@
 .m_cms_wysiwyg .mceTemp .wp-caption{width:auto!important}
 .m_cms_wysiwyg-time{font-family:Lato,sans-serif;font-size:.875rem}
 .m_cms_time{font-family:Lato,sans-serif}
-*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}
-html{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
-body{height:100%;color:#48453a;text-rendering:optimizeLegibility;font:set-size(13px)/1.75 'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif;-webkit-font-feature-settings:'pkna';font-feature-settings:'pkna';background-color:#fff;padding-top:set-size(72px);letter-spacing:.05rem;transition-property:opacity background-color;transition:.3s cubic-bezier(.22,0,.53,1)}
-body.is-drawerActive{overflow:hidden}
-body::after{opacity:0;transition-property:opacity background-color;transition:.3s cubic-bezier(.22,0,.53,1);visibility:hidden;position:fixed;content:'';background-color:rgba(0,0,0,.3);top:0;bottom:0;right:0;left:0;width:100%;height:100%;display:inline-block;z-index:5}
-body.is-overlayActive::after{visibility:visible;transition:opacity .3s cubic-bezier(.22,0,.53,1);opacity:1}
-img{max-width:100%;height:auto;vertical-align:bottom}
-a{-webkit-transition:all .3s cubic-bezier(.22,0,.53,1);transition:all .3s cubic-bezier(.22,0,.53,1)}
-button{cursor:pointer}
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 body{line-height:1}
@@ -81,6 +72,15 @@ blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}
 table{border-collapse:collapse;border-spacing:0}
 button{background:0 0;border:none;outline:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}
 body{-webkit-text-size-adjust:100%}
+*,:after,:before{-webkit-box-sizing:inherit;box-sizing:inherit}
+html{-webkit-box-sizing:border-box;box-sizing:border-box;height:100%;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%}
+body{height:100%;color:#48453a;text-rendering:optimizeLegibility;font:.8125rem/1.75 'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif;-webkit-font-feature-settings:'pkna';font-feature-settings:'pkna';background-color:#fff;padding-top:4.5rem;letter-spacing:.05rem;transition-property:opacity background-color;transition:.3s cubic-bezier(.22,0,.53,1)}
+body.is-drawerActive{overflow:hidden}
+body::after{opacity:0;transition-property:opacity background-color;transition:.3s cubic-bezier(.22,0,.53,1);visibility:hidden;position:fixed;content:'';background-color:rgba(0,0,0,.3);top:0;bottom:0;right:0;left:0;width:100%;height:100%;display:inline-block;z-index:5}
+body.is-overlayActive::after{visibility:visible;transition:opacity .3s cubic-bezier(.22,0,.53,1);opacity:1}
+img{max-width:100%;height:auto;vertical-align:bottom}
+a{-webkit-transition:all .3s cubic-bezier(.22,0,.53,1);transition:all .3s cubic-bezier(.22,0,.53,1)}
+button{cursor:pointer}
 .l-container{margin:0 auto;max-width:1080px;width:85%}
 .l-container.-sizeS{max-width:1040px}
 .l-container.-header{width:90%;max-width:100%}
@@ -222,9 +222,9 @@ body{-webkit-text-size-adjust:100%}
 .c-heading.-sizeS::before{display:none}
 .c-heading.-sizeS.-border{padding-bottom:1rem}
 .c-heading.-sizeS.-border::before{width:1.5rem;position:absolute;height:1px;background-color:#48453a;bottom:0}
-.c-heading.-sizeM{font-size:set-size(26px)}
+.c-heading.-sizeM{font-size:1.625rem}
 .c-heading.-sizeM::before{display:none}
-.c-heading .en{display:block;font-family:Lato,sans-serif;font-size:set-size(13px);color:#ae9373}
+.c-heading .en{display:block;font-family:Lato,sans-serif;font-size:.8125rem;color:#ae9373}
 .c-heading .en.-purple{color:#b096b2}
 .c-heading.-underPrimary{font-size:1.5rem;padding:0}
 .c-heading.-underPrimary::after,.c-heading.-underPrimary::before{display:none}
@@ -393,7 +393,7 @@ body{-webkit-text-size-adjust:100%}
 .is-drawerActive .p-hamburger__line:after,.is-drawerActive .p-hamburger__line:before{top:0;background-color:#ae9373}
 .is-drawerActive .p-hamburger__line:before{transform:rotate(-45deg)}
 .is-drawerActive .p-hamburger__line:after{transform:rotate(45deg)}
-.p-hamburger__text{color:#48453a;display:inline-block;letter-spacing:.01rem;font-size:set-size(11px);position:absolute;top:2rem;right:0;bottom:0;left:0;display:block;margin:auto;width:100%}
+.p-hamburger__text{color:#48453a;display:inline-block;letter-spacing:.01rem;font-size:.6875rem;position:absolute;top:2rem;right:0;bottom:0;left:0;display:block;margin:auto;width:100%}
 .p-hamburger__text>div{overflow:hidden;height:12px}
 .p-hamburger__text>div>span{transition-property:transform;transition:.5s cubic-bezier(.22,0,.53,1);transform:translateY(0)}
 .p-hamburger__text>div.active>span{transition-property:transform;transition:.5s cubic-bezier(.22,0,.53,1);transform:translateY(-100%)}
@@ -464,7 +464,7 @@ body{-webkit-text-size-adjust:100%}
 .p-main__beautyInner{margin:20px auto 0;max-width:540px}
 .p-main__beautyImage img{width:100%;border-radius:5px 5px 0 0}
 .p-main__beautyBody{background-color:#ae9373;color:#fff;padding:30px 20px;border-radius:0 0 5px 5px}
-.p-main__beautyTitle{text-align:center;font-family:'Noto Serif JP',serif;font-size:set-size(26px)}
+.p-main__beautyTitle{text-align:center;font-family:'Noto Serif JP',serif;font-size:1.625rem}
 .p-main__beautyText{margin:1.125rem 0 1rem;font-size:.75rem}
 .p-main__aboutList{display:grid;gap:40px 0;margin-top:2rem}
 .p-main__aboutThumb img{border-radius:5px;width:100%}
@@ -576,16 +576,16 @@ body{-webkit-text-size-adjust:100%}
 .p-news__listItem a h3{font-weight:700;margin-top:1rem;width:92%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .p-news__listContent{margin-top:1rem;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
 .pagination{margin:2rem 0;text-align:center}
-.page-numbers{text-align:center;display:inline-block;width:set-size(32px);height:set-size(32px);padding:set-size(10px);background-color:#fff;text-decoration:none;color:#ae9373;line-height:1;vertical-align:top;font-family:Lato,sans-serif;border:1px solid #8b8780;border-radius:5px}
+.page-numbers{text-align:center;display:inline-block;width:2rem;height:2rem;padding:.625rem;background-color:#fff;text-decoration:none;color:#ae9373;line-height:1;vertical-align:top;font-family:Lato,sans-serif;border:1px solid #8b8780;border-radius:5px}
 .page-numbers[href]:hover{opacity:.5}
 .page-numbers.current{background-color:#ae9373;color:#fff;border:none}
 .page-numbers.next,.page-numbers.prev{position:relative}
 .page-numbers.next:after,.page-numbers.next:before,.page-numbers.prev:after,.page-numbers.prev:before{position:absolute;content:'';top:0;bottom:0;margin:auto;transition:all .3s cubic-bezier(.22,0,.53,1)}
 .page-numbers.next:hover,.page-numbers.prev:hover{opacity:.5}
 .page-numbers.prev{border:none}
-.page-numbers.prev:before{left:set-size(4px);background:url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL-gold.svg) no-repeat;background-size:contain;width:24px;height:24px;right:set-size(4px)}
+.page-numbers.prev:before{left:.25rem;background:url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonL-gold.svg) no-repeat;background-size:contain;width:24px;height:24px;right:.25rem}
 .page-numbers.next{border:none}
-.page-numbers.next:before{background:url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonR-gold.svg) no-repeat;background-size:contain;width:24px;height:24px;right:set-size(4px);left:0}
+.page-numbers.next:before{background:url(/wp-content/themes/HeartClinic/assets/images/common/slider-buttonR-gold.svg) no-repeat;background-size:contain;width:24px;height:24px;right:.25rem;left:0}
 .page-numbers+.page-numbers{margin-left:.5rem}
 .nav-links{overflow:hidden}
 .nav-next,.nav-previous{width:49%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
@@ -594,9 +594,9 @@ body{-webkit-text-size-adjust:100%}
 .nav-next{float:right;text-align:right}
 .beauty .page-numbers{color:#b096b2}
 .beauty .page-numbers.current{color:#fff;background-color:#b096b2}
-.beauty .page-numbers.prev:before{left:set-size(4px);background:url(/wp-content/themes/HeartClinic/assets/images/common/buttonL-purple.svg) no-repeat;background-size:contain;width:24px;height:24px;right:set-size(4px)}
+.beauty .page-numbers.prev:before{left:.25rem;background:url(/wp-content/themes/HeartClinic/assets/images/common/buttonL-purple.svg) no-repeat;background-size:contain;width:24px;height:24px;right:.25rem}
 .beauty .page-numbers.next{border:none}
-.beauty .page-numbers.next:before{background:url(/wp-content/themes/HeartClinic/assets/images/common/buttonR-purple.svg) no-repeat;background-size:contain;width:24px;height:24px;right:set-size(4px);left:0}
+.beauty .page-numbers.next:before{background:url(/wp-content/themes/HeartClinic/assets/images/common/buttonR-purple.svg) no-repeat;background-size:contain;width:24px;height:24px;right:.25rem;left:0}
 .p-under__sideMenu{position:absolute;top:240px;margin:0 auto}
 .p-under__sideMenu.-info{top:230px}
 .p-under__sideList{display:flex;flex-wrap:wrap;gap:12px 8px}
@@ -656,7 +656,7 @@ body{-webkit-text-size-adjust:100%}
 .p-under__doctorBlock{display:flex;flex-direction:column}
 .p-under__doctorHead{display:contents}
 .p-under__doctorTitle .position{display:block;font-size:.875rem;margin-bottom:-.25rem}
-.p-under__doctorTitle .main{font-family:'Noto Serif JP',serif;font-size:set-size(26px)}
+.p-under__doctorTitle .main{font-family:'Noto Serif JP',serif;font-size:1.625rem}
 .p-under__doctorTitle .en{color:#ae9373;display:inline-block;margin-left:.5rem;font-family:Lato,sans-serif}
 .p-under__doctorImage{margin-top:.75rem}
 .p-under__doctorImage img{width:100%;border-radius:5px}
@@ -675,7 +675,7 @@ body{-webkit-text-size-adjust:100%}
 .p-under__doctorBanner .text{color:#fff;text-align:center;font-size:.875rem;position:absolute;left:50%;transform:translateX(-50%);bottom:10%;width:90%;font-weight:500;padding:4vw 4.25vw 4vw;display:inline-block;background-color:#1e8e43;border-radius:30px}
 .p-under__doctorBanner .text span{position:relative;padding-right:3vw}
 .p-under__doctorBanner .text span::before{content:'';position:absolute;display:inline-block;width:14px;height:14px;background:url(/wp-content/themes/HeartClinic/assets/images/common/icon-target.svg) no-repeat;background-size:contain;top:0;bottom:0;margin:auto 0;right:0}
-.p-under__partnerTitle{font-family:'Noto Serif JP',serif;font-size:set-size(26px)}
+.p-under__partnerTitle{font-family:'Noto Serif JP',serif;font-size:1.625rem}
 .p-under__partnerInner{margin-top:1.75rem}
 .p-under__partnerBlock{color:#48453a;text-decoration:none;display:flex;justify-content:space-between;align-items:center}
 .p-under__partnerBlock:hover .p-under__partnerBodyTitle .main{color:#ae9373;transition:cubic-bezier(.22,0,.53,1) .3s}
@@ -1020,7 +1020,7 @@ body{-webkit-text-size-adjust:100%}
 .l-footer__text{text-align:left}
 .l-main{width:76.2962962963%;float:left}
 .l-main.-single{width:auto;float:none}
-.c-heading{font-size:set-size(28px)}
+.c-heading{font-size:1.75rem}
 .c-heading.-primary{margin-bottom:2rem}
 .p-footer{background-position:0 0;background:url(/wp-content/themes/HeartClinic/assets/images/footer@2x.jpg) no-repeat;background-size:cover}
 .p-footer__contentTitle{font-size:1.125rem;padding:1.125rem 0}
@@ -1053,7 +1053,7 @@ body{-webkit-text-size-adjust:100%}
 .u-mb--tab--xlarge{margin-bottom:2.5em}
 }
 @media screen and (min-width:1024px){
-body{background-color:#fff;padding-top:set-size(120px);font:set-size(14px)/1.8 'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif}
+body{background-color:#fff;padding-top:7.5rem;font:.875rem/1.8 'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif}
 .sp-hide{display:inline-block}
 .pc-hide{display:none}
 .l-spacer{padding:9.5rem 0}
@@ -1097,10 +1097,10 @@ body{background-color:#fff;padding-top:set-size(120px);font:set-size(14px)/1.8 '
 .p-main__IntroLink:hover .svg-wrap .arrow{animation:slide1 .6s cubic-bezier(.22,0,.53,1) .2s}
 .c-card__cat time{font-size:1rem}
 .c-card__title{font-size:1rem}
-.c-heading{font-size:set-size(45px)}
+.c-heading{font-size:2.8125rem}
 .c-heading.-sizeS{font-size:1.5rem}
 .c-heading.-sizeS.-border::before{width:2rem}
-.c-heading.-sizeM{font-size:set-size(32px)}
+.c-heading.-sizeM{font-size:2rem}
 .c-heading .en{font-size:1.25rem}
 .c-heading.-underPrimary{font-size:3.5rem}
 .c-heading.-underSecondary{font-size:1.75rem}
@@ -1272,7 +1272,7 @@ body{background-color:#fff;padding-top:set-size(120px);font:set-size(14px)/1.8 '
 .p-news__listItem a .cat{margin:0 .5rem 0 0}
 .p-news__listItem a h3{width:65%;margin-top:0}
 .pagination{margin:5rem 0}
-.page-numbers{width:set-size(40px);height:set-size(40px);padding:set-size(11.5px)}
+.page-numbers{width:2.5rem;height:2.5rem;padding:.71875rem}
 .page-numbers+.page-numbers{margin-left:1rem}
 .p-under__main{width:calc(100% - 224px)}
 .p-under__sideMenu{position:static;width:224px}
@@ -1329,7 +1329,7 @@ body{background-color:#fff;padding-top:set-size(120px);font:set-size(14px)/1.8 '
 .p-under__doctorContent.-image{margin-top:9.5rem}
 .p-under__doctorBlock{flex-direction:row;justify-content:space-between}
 .p-under__doctorHead{display:block;width:50%}
-.p-under__doctorTitle .main{font-size:set-size(30px)}
+.p-under__doctorTitle .main{font-size:1.875rem}
 .p-under__doctorTitle .en{font-size:1rem}
 .p-under__doctorImage{order:-1;width:44%;margin-top:0}
 .p-under__doctorParagraph{font-size:1rem}
@@ -1342,7 +1342,7 @@ body{background-color:#fff;padding-top:set-size(120px);font:set-size(14px)/1.8 '
 .p-under__doctorDlWrap02{width:44%;margin-top:0}
 .p-under__doctorDlWrap02 .p-under__doctorDl:nth-of-type(2){margin-top:4rem}
 .p-under__doctorInner{display:flex;flex-direction:row-reverse;justify-content:space-between;margin-top:4rem}
-.p-under__partnerTitle{font-size:set-size(30px)}
+.p-under__partnerTitle{font-size:1.875rem}
 .p-under__equipmentList{display:grid}
 .p-under__equipmentList.-primary{grid-template-columns:repeat(2,1fr);gap:90px 50px}
 .p-under__equipmentList.-primary li:not(:first-child){margin-top:0}
