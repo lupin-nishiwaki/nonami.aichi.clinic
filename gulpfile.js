@@ -99,7 +99,7 @@ const siteReload = (done) => {
 // * ----------------------------------------
 // * dartSass
 const dartSass = (done) => {
-  gulp.src([baseDir + '_src/scss/**/*.scss'])
+  gulp.src([baseDir + '_src/sass/**/*.scss'])
     .pipe(plumber({                                                   // plumberを咬ますとエラー時にgulpが止まらない
       errorHandler: notify.onError('Error: <%= error.message %>')     // エラー通知
     }))
@@ -212,7 +212,7 @@ exports.audio = audio;
 const watchFiles = (done) => {
   gulp.watch(baseDir + '**/*.+(html|php|htaccess|htpasswd)', siteReload);
   // gulp.watch(baseDir + '_src/pug/**/*.pug', pug);
-  gulp.watch(baseDir + '_src/scss/**/*.scss', dartSass);
+  gulp.watch(baseDir + '_src/sass/**/*.scss', dartSass);
   gulp.watch(baseDir + '_src/js/vender/*.js', jsVender);
   gulp.watch(baseDir + '_src/js/*.js', jsApp);
   gulp.watch(baseDir + '_src/img/**/*.*', img);

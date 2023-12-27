@@ -1,7 +1,5 @@
 @use "sass:math";
 @use "setting" as *;
-@use "mixin" as *;
-@use "mixlupin" as *;
 
 // 関数の登録
 @function set-size($size, $base-font-size: 16px) {

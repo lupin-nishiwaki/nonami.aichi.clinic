@@ -1,13 +1,14 @@
 /* =====================================================
   1.0 - Foundation
 ===================================================== */
-@use "sass:math";
-@use "inc/setting" as *;
-@use "inc/functions" as *;
-@use "inc/mixin" as *;
-@use "inc/mixlupin" as *;
-@use "foundation/reset";
-@use "foundation/base";
+// @use "sass:math";
+// @use "inc/setting" as *;
+// @use "inc/functions";
+// @use "inc/mixin" as *;
+@use "inc";
+// @use "foundation/reset";
+// @use "foundation/base";
+@use "foundation";
 
 /* =====================================================
   2.0 - Layout
@@ -37,7 +38,7 @@
 // @use "object/component/button";
 // @use "object/component/card";
 // @use "object/component/heading";
-@use "object/component/";
+@use "object";
 
 /*
   4.2 - Project
@@ -53,7 +54,6 @@
 // @use "object/project/main";
 // @use "object/project/under";
 // @use "object/project/navigation";
-@use "object/project/";
 
 /*
   4.2 - Utility
@@ -62,4 +62,3 @@
 // @use "object/utility/break";
 // @use "object/utility/screen-reader-text";
 // @use "object/utility/item";
-@use "object/utility/";

@@ -1,8 +1,7 @@
 @use "sass:math";
 @use "../../inc/setting" as *;
-@use "../../inc/functions" as *;
+@use "../../inc/functions";
 @use "../../inc/mixin" as *;
-@use "../../inc/mixlupin" as *;
 
 /*
   Pagination
@@ -22,7 +21,7 @@
   display: inline-block;
   width: set-size(32px);
   height: set-size(32px);
-  padding: set-size((32px - 12px) /2);
+  padding: set-size(math.div((32px - 12px), 2));
   background-color: #fff;
   text-decoration: none;
   color: $accent-color;
@@ -36,7 +35,7 @@
   @include mq(lap) {
     width: set-size(40px);
     height: set-size(40px);
-    padding: set-size((40px - 17px) /2);
+    padding: set-size(math.div((40px - 17px), 2));
   }
 
   &[href]:hover {
