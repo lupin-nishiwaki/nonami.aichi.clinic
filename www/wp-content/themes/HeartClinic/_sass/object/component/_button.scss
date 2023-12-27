@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Buttonn
 */
@@ -20,7 +19,7 @@
     font-size: 1.125rem;
   }
 
-  & > span.inner {
+  &>span.inner {
     border-radius: $border-radius;
     display: block;
     position: relative;
@@ -28,6 +27,7 @@
     transition: $easing-heart color 0.4s;
     z-index: 1;
     backface-visibility: hidden;
+
     &::before {
       position: absolute;
       content: "";
@@ -49,6 +49,7 @@
         transform-origin: left top;
       }
     }
+
     .svg-wrap {
       .arrow {
         animation: slide1 0.6s $easing-heart 0.2s;
@@ -58,12 +59,13 @@
 
   &.-primary {
     width: 100%;
+
     @include mq(lap) {
       max-width: 320px;
       font-size: 0.875rem;
     }
 
-    & > span {
+    &>span {
       padding: 0.875rem;
 
       @include mq(lap) {
@@ -77,7 +79,7 @@
       font-size: 1.125rem;
     }
 
-    & > span {
+    &>span {
       padding: 1rem;
 
       @include mq(lap) {
@@ -87,6 +89,7 @@
   }
 
   &.-colorAccent {
+
     // border: 1px solid $color-white;
     span {
       background-color: $accent-color;
@@ -109,7 +112,7 @@
   }
 
   &.-colorAccentWhite {
-    & > span.inner {
+    &>span.inner {
       border: 1px solid $accent-color;
     }
 
@@ -134,7 +137,7 @@
   }
 
   &.-colorPurple {
-    & > span.inner {
+    &>span.inner {
       border: 1px solid $color-purple;
     }
 
@@ -172,6 +175,7 @@
       span {
         color: $color-lightGray;
       }
+
       .arrow.-whiteGray {
         stroke: $color-lightGray;
       }
@@ -197,13 +201,14 @@
 
     transition-property: transform stroke;
     transition: $easing-heart 0.3s;
-    @include mq(lap) {
-    }
+
+    @include mq(lap) {}
 
     &.-whiteBrown,
     &.-whiteGray {
       stroke: $color-white;
     }
+
     &.-brown {
       stroke: $accent-color;
     }
@@ -211,6 +216,7 @@
 
   &__wrap {
     margin-top: 2rem;
+
     @include mq(lap) {
       margin-top: 3.5rem;
     }
@@ -225,13 +231,15 @@
         justify-content: space-between;
       }
 
-      & > * {
+      &>* {
         @include mq(lap) {
           width: 47.6%;
         }
       }
+
       .c-button:not(:first-child) {
         margin-top: 1.125rem;
+
         @include mq(lap) {
           margin-top: 0;
         }
@@ -245,8 +253,9 @@
         display: flex;
       }
 
-      > * + * {
+      >*+* {
         margin-top: 24px;
+
         @include mq(lap) {
           margin-top: 0;
         }
@@ -265,6 +274,7 @@
     height: 24px;
     right: 1rem;
     z-index: 2;
+
     &.-secondary {
       @include mq(lap) {
         border-radius: 0;

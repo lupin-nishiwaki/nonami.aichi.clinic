@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Under
 */
@@ -13,11 +12,13 @@
       width: calc(100% - 300px);
     }
   }
+
   &__sideMenu {
     position: absolute;
     // top: 280px;
     top: 240px;
     margin: 0 auto;
+
     @include mq(lap) {
       position: static;
       width: 224px;
@@ -65,11 +66,12 @@
 
   &__sideItem {
     margin-right: 1.125rem;
+
     @include mq(lap) {
       margin-right: 0;
     }
 
-    & > a {
+    &>a {
       color: $color-lightGray;
       transition: color 0.3s $easing-heart;
 
@@ -108,34 +110,42 @@
         }
       }
     }
+
     &.-flex {
       display: flex;
+
       @include mq(lap) {
         display: block;
       }
 
-      & > a {
+      &>a {
         width: 5rem;
+
         @include mq(lap) {
           width: auto;
         }
       }
     }
 
-    & > ul {
+    &>ul {
       width: calc(100% - 5rem);
+
       @include mq(lap) {
         width: auto;
         margin-top: 0.5rem;
       }
-      & > li {
+
+      &>li {
         display: inline-block;
+
         @include mq(lap) {
           display: block;
         }
-        & > a {
+
+        &>a {
           text-decoration: none;
           color: #bab6b0;
+
           @include mq(lap) {
             padding-left: 0.75rem;
             position: relative;
@@ -181,12 +191,12 @@
     }
   }
 
-  &__headContent {
-  }
+  &__headContent {}
 
   &__container {
     margin: 0 auto;
     width: 85%;
+
     @include mq(lap) {
       margin-left: 14%;
     }
@@ -209,6 +219,7 @@
 
     &.-secondary {
       margin: 2rem 0 4rem;
+
       @include mq(lap) {
         margin: 4.5rem 0;
       }
@@ -216,6 +227,7 @@
 
     &.-tertiary {
       margin: 2rem 0 7rem;
+
       @include mq(lap) {
         margin: 4.5rem 0;
       }
@@ -223,6 +235,7 @@
 
     &.-beauty {
       margin: 2rem 0 16rem;
+
       @include mq(lap) {
         margin: 4.5rem 0;
       }
@@ -254,6 +267,7 @@
         }
       }
     }
+
     &.-bg02 {
       &::after {
         content: "";
@@ -263,12 +277,14 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/about/feature-bg02-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/about/feature-bg02@2x.jpg) no-repeat center;
           height: 429px;
         }
       }
     }
+
     &.-bg03 {
       &::before {
         content: "";
@@ -278,6 +294,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/equipment/equipment-bg01-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/equipment/equipment-bg01@2x.jpg) no-repeat center;
           height: 429px;
@@ -294,6 +311,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg01-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg01@2x.jpg) no-repeat center;
           height: 429px;
@@ -310,6 +328,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg02-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg01@2x.jpg) no-repeat center;
           height: 429px;
@@ -326,6 +345,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg03-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/cardiology-bg03-pc@2x.jpg) no-repeat center;
           background-size: cover;
@@ -342,6 +362,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/internal/internal-bg-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/internal/internal-bg-pc@2x.jpg) no-repeat center;
           background-size: cover;
@@ -358,6 +379,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/smoking/smoking-bg-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/smoking/smoking-bg-pc@2x.jpg) no-repeat center;
           background-size: cover;
@@ -374,6 +396,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/fever/fever-bg-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/fever/fever-bg-pc@2x.jpg) no-repeat center;
           background-size: cover;
@@ -390,6 +413,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/info/info-bg-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/info/info-bg-pc@2x.jpg) no-repeat center;
           background-size: cover;
@@ -406,6 +430,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-bg01-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-bg01@2x.jpg) no-repeat center;
           background-size: cover;
@@ -422,6 +447,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-bg02-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-bg02@2x.jpg) no-repeat center;
           background-size: cover;
@@ -438,6 +464,7 @@
         display: inline-block;
         background: url(/wp-content/themes/HeartClinic/assets/images/shunt/shunt-bg01-sp@2x.jpg) no-repeat center;
         background-size: cover;
+
         @include mq(lap) {
           background: url(/wp-content/themes/HeartClinic/assets/images/shunt/shunt-bg01@2x.jpg) no-repeat center;
           background-size: cover;
@@ -449,6 +476,7 @@
   &__lead {
     font-size: 1.125rem;
     font-family: $font-set-serif;
+
     @include mq(lap) {
       font-size: 1.125rem;
     }
@@ -460,9 +488,11 @@
     &.-line {
       position: relative;
       padding-bottom: 1rem;
+
       @include mq(lap) {
         padding-bottom: 1.75rem;
       }
+
       &::after {
         content: "";
         position: absolute;
@@ -479,12 +509,15 @@
   &__message {
     &Text {
       margin-top: 1.5rem;
+
       @include mq(lap) {
         margin-top: 1.75rem;
       }
     }
+
     &Paragraph {
       margin-top: 0.75rem;
+
       @include mq(lap) {
         margin-top: 1.5rem;
       }
@@ -530,6 +563,7 @@
             }
           }
         }
+
         .p-under__featureText {
           &::before {
             font-size: 2.5rem;
@@ -538,6 +572,7 @@
             display: block;
             color: #efe9e2;
             margin-bottom: -10px;
+
             @include mq(lap) {
               font-size: 3.5rem;
             }
@@ -582,6 +617,7 @@
 
         &:not(:first-child) {
           margin-top: 4.5rem;
+
           @include mq(lap) {
             margin-top: 9.5rem;
           }
@@ -596,12 +632,14 @@
         align-items: center;
       }
     }
+
     &Text {
       margin: 0 auto;
       width: 85%;
       position: relative;
 
       margin-top: 0.5rem;
+
       @include mq(lap) {
         margin-top: 0;
         width: 34%;
@@ -626,6 +664,7 @@
 
       &.-right {
         margin-left: auto;
+
         img {
           border-radius: 5px 0 0 5px;
         }
@@ -633,6 +672,7 @@
 
       &.-left {
         margin-right: auto;
+
         img {
           border-radius: 0 5px 5px 0;
         }
@@ -641,6 +681,7 @@
 
     &Paragraph {
       padding-top: 1.5rem;
+
       @include mq(lap) {
         padding-top: 1.75rem;
       }
@@ -658,6 +699,7 @@
       .p-under__doctorContent {
         &:first-child {
           margin-top: 2rem;
+
           @include mq(lap) {
             margin-top: 5.5rem;
           }
@@ -665,15 +707,18 @@
 
         &:not(:first-child) {
           margin-top: 4.5rem;
+
           @include mq(lap) {
             margin-top: 9.5rem;
           }
         }
       }
     }
+
     &Content {
       &.-image {
         margin-top: 4.5rem;
+
         @include mq(lap) {
           margin-top: 9.5rem;
         }
@@ -704,14 +749,15 @@
         display: block;
         font-size: 0.875rem;
         margin-bottom: -0.25rem;
-        @include mq(lap) {
-        }
+
+        @include mq(lap) {}
       }
 
       .main {
         font-family: $font-set-serif;
         $font-size: 26px;
         font-size: set-size($font-size);
+
         @include mq(lap) {
           $font-size: 30px;
           font-size: set-size($font-size);
@@ -723,6 +769,7 @@
         display: inline-block;
         margin-left: 0.5rem;
         font-family: $font-set-en;
+
         @include mq(lap) {
           font-size: 1rem;
         }
@@ -731,6 +778,7 @@
 
     &Image {
       margin-top: 0.75rem;
+
       @include mq(lap) {
         order: -1;
         width: 44%;
@@ -746,18 +794,20 @@
     &Paragraph {
       margin-top: 1rem;
       order: 1;
+
       @include mq(lap) {
         font-size: 1rem;
       }
     }
 
     &Dl {
-      & > dt {
+      &>dt {
         font-family: $font-set-serif;
         padding-bottom: 0.5rem;
         margin-bottom: 0.5rem;
         font-size: 1.25rem;
         border-bottom: 1px solid $color-lightBeige;
+
         @include mq(lap) {
           font-size: 1.5rem;
           padding-bottom: 0.75rem;
@@ -765,19 +815,23 @@
         }
       }
 
-      & > dd {
+      &>dd {
         font-size: 0.75rem;
+
         @include mq(lap) {
           font-size: 0.875rem;
         }
+
         dl {
           display: flex;
+
           @include mq(lap) {
             margin-top: 0.25rem;
           }
 
           dt {
             width: 5rem;
+
             @include mq(lap) {
               width: 7rem;
             }
@@ -785,6 +839,7 @@
 
           dd {
             width: calc(100% - 5rem);
+
             @include mq(lap) {
               width: calc(100% - 7rem);
             }
@@ -795,13 +850,16 @@
 
     &DlWrap01 {
       margin-top: 2rem;
+
       @include mq(lap) {
         margin-top: 0;
         width: 50%;
       }
     }
+
     &DlWrap02 {
       margin-top: 2rem;
+
       @include mq(lap) {
         width: 44%;
         margin-top: 0;
@@ -810,6 +868,7 @@
       .p-under__doctorDl {
         &:nth-of-type(2) {
           margin-top: 2rem;
+
           @include mq(lap) {
             margin-top: 4rem;
           }
@@ -856,6 +915,7 @@
         display: inline-block;
         background-color: $color-green;
         border-radius: 30px;
+
         @include mq(tab) {
           padding: 0.75rem 0 0.5rem;
           font-size: 1rem;
@@ -870,8 +930,9 @@
           position: relative;
 
           padding-right: 3vw;
-          @include mq(tab) {
-          }
+
+          @include mq(tab) {}
+
           &::before {
             content: "";
             position: absolute;
@@ -901,14 +962,14 @@
       font-family: $font-set-serif;
       $font-size: 26px;
       font-size: set-size($font-size);
+
       @include mq(lap) {
         $font-size: 30px;
         font-size: set-size($font-size);
       }
     }
 
-    .p-under__partnerInner {
-    }
+    .p-under__partnerInner {}
 
     &Content {
       @include mq(desk) {
@@ -917,6 +978,7 @@
         margin-top: 3rem;
         gap: 0 2rem;
       }
+
       @include mq(l-lap) {
         gap: 0 2.25rem;
       }
@@ -924,6 +986,7 @@
 
     &Inner {
       margin-top: 1.75rem;
+
       @include mq(desk) {
         margin-top: 0;
       }
@@ -935,9 +998,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       @include mq(desk) {
         display: block;
       }
+
       &:hover {
         .p-under__partnerBodyTitle .main {
           color: $accent-color;
@@ -963,15 +1028,18 @@
       will-change: transform;
       overflow: hidden;
       border-radius: $border-radius;
+
       @include mq(desk) {
         width: auto;
       }
+
       img {
         border-radius: $border-radius;
         width: 100%;
         object-fit: cover;
         aspect-ratio: 1/1;
         transition: transform 0.3s $easing-heart;
+
         @include mq(desk) {
           aspect-ratio: auto;
         }
@@ -980,10 +1048,12 @@
 
     &Body {
       width: 62%;
+
       @include mq(desk) {
         width: auto;
         margin-top: 1rem;
       }
+
       .tag {
         background-color: $color-lightGray;
         padding: 3px 0.5rem 4px;
@@ -991,6 +1061,7 @@
         margin-bottom: 0.5rem;
         display: inline-block;
         font-size: 0.75rem;
+
         @include mq(desk) {
           margin-bottom: 1rem;
           font-size: 0.875rem;
@@ -1007,6 +1078,7 @@
         .sub {
           display: inline-block;
           margin-right: 5px;
+
           @include mq(desk) {
             display: block;
             font-size: 1rem;
@@ -1031,6 +1103,7 @@
             font-size: 1.125rem;
             padding: 0 2rem 0.2rem 0;
           }
+
           @include mq(l-desk) {
             font-size: 1.5rem;
           }
@@ -1063,6 +1136,7 @@
             height: 16px;
             background: url(/wp-content/themes/HeartClinic/assets/images/common/icon-target-brown.svg) no-repeat;
             background-size: contain;
+
             @include mq(desk) {
               width: 22px;
               height: 22px;
@@ -1073,6 +1147,7 @@
 
       .proof {
         color: $color-lightGray;
+
         @include mq(desk) {
           font-size: 0.875rem;
         }
@@ -1101,6 +1176,7 @@
       @include mq(lap) {
         display: grid;
       }
+
       &.-primary {
         @include mq(lap) {
           grid-template-columns: repeat(2, 1fr);
@@ -1110,6 +1186,7 @@
         .p-under__equipmentBody {
           margin-top: 1.5rem;
         }
+
         li {
           &:not(:first-child) {
             margin-top: 4.5rem;
@@ -1126,25 +1203,30 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 90px 30px;
         }
+
         .p-under__equipmentBody {
           @include mq(lap) {
             margin-top: 1.5rem;
           }
         }
+
         li {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
           @include mq(lap) {
             display: block;
           }
 
           &:not(:first-child) {
             margin-top: 2rem;
+
             @include mq(lap) {
               margin-top: 0;
             }
           }
+
           &.sizeL {
             @include mq(lap) {
               grid-column-start: 1;
@@ -1155,6 +1237,7 @@
 
         .p-under__equipmentImageWrap {
           width: 38%;
+
           @include mq(lap) {
             width: 100%;
             display: flex;
@@ -1163,12 +1246,14 @@
 
           .p-under__equipmentImage {
             width: 100%;
+
             @include mq(lap) {
               width: calc(50% - 10px);
             }
 
-            & + .p-under__equipmentImage {
+            &+.p-under__equipmentImage {
               margin-top: 1.125rem;
+
               @include mq(lap) {
                 margin-top: 0;
               }
@@ -1178,6 +1263,7 @@
 
         .p-under__equipmentImage {
           width: 38%;
+
           @include mq(lap) {
             width: 100%;
           }
@@ -1185,6 +1271,7 @@
 
         .p-under__equipmentBody {
           width: 56%;
+
           @include mq(lap) {
             width: 100%;
           }
@@ -1204,6 +1291,7 @@
 
           &:not(:first-child) {
             margin-top: 2rem;
+
             @include mq(lap) {
               margin-top: 0;
             }
@@ -1229,20 +1317,24 @@
             margin-top: 1.5rem;
           }
         }
+
         li {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
           @include mq(lap) {
             display: block;
           }
 
           &:not(:first-child) {
             margin-top: 2rem;
+
             @include mq(lap) {
               margin-top: 0;
             }
           }
+
           &.sizeL {
             @include mq(lap) {
               grid-column-start: 1;
@@ -1253,12 +1345,15 @@
           &:nth-child(1) {
             grid-area: item01;
           }
+
           &:nth-child(2) {
             grid-area: item02;
           }
+
           &:nth-child(3) {
             grid-area: item03;
           }
+
           &:nth-child(4) {
             grid-area: item04;
           }
@@ -1266,6 +1361,7 @@
 
         .p-under__equipmentImageWrap {
           width: 38%;
+
           @include mq(lap) {
             width: 100%;
             display: flex;
@@ -1274,12 +1370,14 @@
 
           .p-under__equipmentImage {
             width: 100%;
+
             @include mq(lap) {
               width: calc(50% - 15px);
             }
 
-            & + .p-under__equipmentImage {
+            &+.p-under__equipmentImage {
               margin-top: 1.125rem;
+
               @include mq(lap) {
                 margin-top: 0;
               }
@@ -1289,6 +1387,7 @@
 
         .p-under__equipmentImage {
           width: 38%;
+
           @include mq(lap) {
             width: 100%;
           }
@@ -1296,12 +1395,14 @@
 
         .p-under__equipmentBody {
           width: 56%;
+
           @include mq(lap) {
             width: 100%;
           }
         }
       }
     }
+
     &Image {
       img {
         border-radius: $border-radius;
@@ -1321,6 +1422,7 @@
 
     &Paragraph {
       margin-top: 0.5rem;
+
       @include mq(lap) {
         font-size: 0.875rem;
         margin-top: 1.125rem;
@@ -1336,6 +1438,7 @@
   &__cardiology {
     &Paragraph {
       margin-top: 2rem;
+
       @include mq(tab) {
         margin-top: 1.75rem;
       }
@@ -1365,6 +1468,7 @@
 
     &InnerWrap {
       margin-top: 2rem;
+
       @include mq(lap) {
         grid-area: bottom;
         margin-top: 4rem;
@@ -1395,6 +1499,7 @@
 
       &.-iamgeCenter {
         text-align: center;
+
         p {
           text-align: left;
         }
@@ -1427,11 +1532,13 @@
           height: 32px;
           background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/start-icon.svg) no-repeat center;
           background-size: contain;
+
           @include mq(lap) {
             width: 64px;
             height: 64px;
           }
         }
+
         img {
           border-radius: $border-radius;
           width: 100%;
@@ -1439,9 +1546,11 @@
 
         &.case {
           margin: 1rem auto 0;
+
           @include mq(lap) {
             margin: 0;
           }
+
           &::before,
           &::after {
             display: none;
@@ -1464,6 +1573,7 @@
         display: inline-block;
         margin: 1rem auto 0;
         max-width: 600px;
+
         @include mq(lap) {
           margin: 2.5rem auto 0;
         }
@@ -1474,6 +1584,7 @@
           left: 0.5rem;
           color: $color-white;
           font-size: 0.75rem;
+
           @include mq(lap) {
             top: 0.75rem;
             left: 0.75rem;
@@ -1488,12 +1599,13 @@
             flex-direction: column-reverse;
           }
 
-          > .text {
+          >.text {
             @include mq(lap) {
               margin-top: 1.5rem;
             }
           }
         }
+
         &.-flex-reverse {
           @include mq(lap) {
             display: flex;
@@ -1523,7 +1635,7 @@
           }
         }
 
-        > .content {
+        >.content {
           @include mq(lap) {
             margin: 0;
             width: 35%;
@@ -1534,6 +1646,7 @@
 
     &Image {
       margin-top: 1.75rem;
+
       @include mq(lap) {
         margin-top: 0;
       }
@@ -1564,6 +1677,7 @@
 
     &TypeBlock {
       margin-top: 3rem;
+
       @include mq(lap) {
         margin-top: 4rem;
       }
@@ -1571,6 +1685,7 @@
       h4 {
         font-size: 0.875rem;
         font-family: $font-set-serif;
+
         @include mq(lap) {
           font-size: 1.125rem;
         }
@@ -1583,6 +1698,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px 10px;
+
       @include mq(lap) {
         justify-content: start;
       }
@@ -1605,6 +1721,7 @@
         align-items: center;
         justify-content: center;
         min-height: 80px;
+
         @include mq(lap) {
           font-size: 0.875rem;
           width: calc(20% - 10px);
@@ -1622,6 +1739,7 @@
         &.-tertiary {
           width: 100%;
           font-family: $font-set-serif;
+
           @include mq(lap) {
             width: calc(33.3% - 10px);
             font-size: 1.125rem;
@@ -1630,6 +1748,7 @@
 
         &.-w100 {
           width: 100%;
+
           @include mq(lap) {
             width: calc(20% - 5px);
           }
@@ -1641,6 +1760,7 @@
   &__flow {
     &HeadWrap {
       margin: 0 0 2rem 0;
+
       @include mq(lap) {
         margin: 0 0 4.5rem 0;
       }
@@ -1649,17 +1769,18 @@
     &Title {
       font-family: $font-set-serif;
       font-size: 1.25rem;
+
       @include mq(tab) {
         font-size: 1.5rem;
       }
+
       @include mq(lap) {
         font-size: 2rem;
       }
     }
 
     &Content {
-      @include mq(lap) {
-      }
+      @include mq(lap) {}
 
       &.-fever {
         margin-top: 1rem;
@@ -1671,6 +1792,7 @@
       border: 1px solid $color-lightBeige;
       border-radius: $border-radius;
       margin-top: 4.5rem;
+
       @include mq(lap) {
         margin-top: 7.5rem;
         padding: 2rem 4rem;
@@ -1707,6 +1829,7 @@
           left: 50%;
           top: -8px;
           transform: translateX(-50%) rotate(90deg);
+
           @include mq(lap) {
             width: 100px;
             top: -18px;
@@ -1720,12 +1843,14 @@
 
           span {
             display: block;
+
             @include mq(lap) {
               margin-bottom: -0.75rem;
             }
 
             &.text {
               text-align: left;
+
               @include mq(lap) {
                 text-align: center;
               }
@@ -1734,6 +1859,7 @@
 
           .text-telWrap {
             margin-top: 1.25rem;
+
             @include mq(lap) {
               margin-top: 0.75rem;
               display: flex;
@@ -1746,6 +1872,7 @@
               font-weight: 500;
               font-size: 0.875rem;
               text-align: center;
+
               @include mq(lap) {
                 text-align: left;
                 font-size: 1.125rem;
@@ -1761,6 +1888,7 @@
           font-size: 2rem;
           padding-left: 1.75rem;
           position: relative;
+
           @include mq(lap) {
             font-size: 3rem;
             padding-left: 3rem;
@@ -1776,6 +1904,7 @@
             height: 24px;
             background: url(/wp-content/themes/HeartClinic/assets/images/icon-tel.svg) no-repeat;
             background-size: contain;
+
             @include mq(lap) {
               width: 36px;
               height: 36px;
@@ -1795,19 +1924,22 @@
 
         p {
           margin-top: 0.5rem;
+
           @include mq(lap) {
             margin-top: 1rem;
           }
         }
       }
 
-      & > {
+      &> {
         div.inner {
           &:not(:first-child) {
             margin-top: 1.25rem;
+
             @include mq(lap) {
               margin-top: 2rem;
             }
+
             @include mq(l-lap) {
               margin-top: 3.5rem;
             }
@@ -1836,6 +1968,7 @@
             p {
               padding: 0;
               margin-top: 1.25rem;
+
               @include mq(lap) {
                 margin-top: 0;
                 width: 47%;
@@ -1844,6 +1977,7 @@
           }
         }
       }
+
       .text02 {
         @include mq(lap) {
           text-align: center;
@@ -1853,6 +1987,7 @@
 
     &List {
       position: relative;
+
       li {
         &.-no01 {
           &::after {
@@ -1861,10 +1996,12 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon01.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
@@ -1879,16 +2016,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon02.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no03 {
           &::after {
             @include mq(lap) {
@@ -1896,16 +2036,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon03.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no04 {
           &::after {
             @include mq(lap) {
@@ -1913,16 +2056,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon04.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no05 {
           &::after {
             @include mq(lap) {
@@ -1930,16 +2076,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon05.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no06 {
           &::after {
             @include mq(lap) {
@@ -1947,10 +2096,12 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon06.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
@@ -1970,12 +2121,14 @@
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon07.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no08 {
           &::after {
             @include mq(lap) {
@@ -1983,16 +2136,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon08.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no09 {
           &::after {
             @include mq(lap) {
@@ -2000,16 +2156,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon09.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no10 {
           &::after {
             @include mq(lap) {
@@ -2017,16 +2176,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon10.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no11 {
           &::after {
             @include mq(lap) {
@@ -2034,16 +2196,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon11.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no12 {
           &::after {
             @include mq(lap) {
@@ -2051,16 +2216,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon12.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no13 {
           &::after {
             @include mq(lap) {
@@ -2068,16 +2236,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon13.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no14 {
           &::after {
             @include mq(lap) {
@@ -2085,16 +2256,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon14.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no15 {
           &::after {
             @include mq(lap) {
@@ -2102,16 +2276,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon15.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no16 {
           &::after {
             @include mq(lap) {
@@ -2119,16 +2296,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon16.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no16 {
           &::after {
             @include mq(lap) {
@@ -2136,16 +2316,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/cardiology/flow-icon16.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no17 {
           &::after {
             @include mq(lap) {
@@ -2153,10 +2336,12 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon01.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
@@ -2171,10 +2356,12 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon02.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
@@ -2189,10 +2376,12 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon03.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
@@ -2207,16 +2396,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon04.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no21 {
           &::after {
             @include mq(lap) {
@@ -2224,16 +2416,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon05.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no22 {
           &::after {
             @include mq(lap) {
@@ -2241,16 +2436,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon06.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &.-no23 {
           &::after {
             @include mq(lap) {
@@ -2258,16 +2456,19 @@
               background-size: contain;
             }
           }
+
           dt {
             &::after {
               background: url(/wp-content/themes/HeartClinic/assets/images/beauty/beauty-icon07.svg) no-repeat;
               background-size: contain;
+
               @include mq(lap) {
                 background: none;
               }
             }
           }
         }
+
         &:not(:first-child) {
           margin-top: 3rem;
         }
@@ -2279,6 +2480,7 @@
             }
           }
         }
+
         &:nth-child(2) {
           dt {
             &::before {
@@ -2286,6 +2488,7 @@
             }
           }
         }
+
         &:nth-child(3) {
           dt {
             &::before {
@@ -2293,6 +2496,7 @@
             }
           }
         }
+
         &:nth-child(4) {
           dt {
             &::before {
@@ -2300,6 +2504,7 @@
             }
           }
         }
+
         &:nth-child(5) {
           dt {
             &::before {
@@ -2307,6 +2512,7 @@
             }
           }
         }
+
         &:nth-child(6) {
           dt {
             &::before {
@@ -2314,6 +2520,7 @@
             }
           }
         }
+
         &:nth-child(7) {
           dt {
             &::before {
@@ -2321,6 +2528,7 @@
             }
           }
         }
+
         &:nth-child(8) {
           dt {
             &::before {
@@ -2334,6 +2542,7 @@
     &Item {
       position: relative;
       z-index: 0;
+
       @include mq(lap) {
         padding-left: 6.5rem;
 
@@ -2380,6 +2589,7 @@
           }
         }
       }
+
       &:not(:last-child) {
         dl {
           @include mq(lap) {
@@ -2399,6 +2609,7 @@
           }
         }
       }
+
       dl {
         dt {
           font-family: $font-set-serif;
@@ -2410,6 +2621,7 @@
 
             font-size: 1.5rem;
           }
+
           &::before,
           &::after {
             position: absolute;
@@ -2418,6 +2630,7 @@
 
           &::before {
             left: 2.5rem;
+
             @include mq(lap) {
               left: 0;
             }
@@ -2437,6 +2650,7 @@
         dd {
           padding-top: 0.75rem;
           border-top: 1px solid $color-lightBeige;
+
           @include mq(lap) {
             padding-top: 1.125rem;
           }
@@ -2453,10 +2667,12 @@
   &__case {
     &Image {
       width: 55px;
+
       @include mq(lap) {
         text-align: center;
         margin: 0 auto;
       }
+
       img {
         width: 100%;
       }
@@ -2464,6 +2680,7 @@
 
     &Body {
       width: 80%;
+
       @include mq(lap) {
         width: 100%;
       }
@@ -2499,6 +2716,7 @@
       .p-under__radiationBlock {
         &:nth-of-type(2) {
           margin-top: 2rem;
+
           @include mq(lap) {
             margin-top: 3rem;
           }
@@ -2518,6 +2736,7 @@
         padding-right: 1.125rem;
         position: relative;
         margin-right: 0.25rem;
+
         &:hover {
           color: $accent-color;
           transition-property: color;
@@ -2557,6 +2776,7 @@
     &Container {
       dl {
         margin-top: 2.5rem;
+
         @include mq(lap) {
           margin-top: 5rem;
         }
@@ -2569,6 +2789,7 @@
 
     &Content {
       padding-top: 4rem;
+
       @include mq(lap) {
         padding-top: 4rem;
       }
@@ -2577,8 +2798,7 @@
         padding-top: 5.6rem;
       }
 
-      .title {
-      }
+      .title {}
     }
 
     &List {
@@ -2607,6 +2827,7 @@
             background-size: contain;
             width: 33px;
             height: 9px;
+
             @include mq(lap) {
               top: 0;
               bottom: 0;
@@ -2632,11 +2853,12 @@
 
       figure {
         text-align: center;
-        @include mq(lap) {
-        }
+
+        @include mq(lap) {}
 
         img {
           border-radius: $border-radius;
+
           @include mq(lap) {
             width: 100%;
           }
@@ -2646,10 +2868,12 @@
   }
 
   &__faq {
-    & > dl {
+    &>dl {
       border-bottom: 1px solid $color-lightBeige;
+
       &:first-child {
         padding-bottom: 1.25rem;
+
         @include mq(lap) {
           padding-bottom: 1.5rem;
         }
@@ -2657,21 +2881,26 @@
 
       &:not(:first-child) {
         padding: 1.25rem 0;
+
         @include mq(lap) {
           padding: 1.5rem 0;
         }
       }
-      & > dt,
-      & > dd {
+
+      &>dt,
+      &>dd {
         font-size: 0.875rem;
         padding-left: 1.5em;
         position: relative;
+
         @include mq(lap) {
           padding-left: 1.75rem;
         }
       }
-      & > dt {
+
+      &>dt {
         cursor: pointer;
+
         @include mq(lap) {
           font-size: 1.125rem;
         }
@@ -2719,13 +2948,15 @@
         }
       }
 
-      & > dd {
+      &>dd {
         display: none;
         margin-top: 0.5rem;
+
         @include mq(lap) {
           font-size: 1rem;
           margin-top: 0.75rem;
         }
+
         &::before {
           content: "A";
           font-size: 1.125rem;
@@ -2737,12 +2968,13 @@
           color: $accent-color;
         }
 
-        & > dl {
+        &>dl {
           margin-top: 1.5rem;
 
-          & > dt {
+          &>dt {
             position: relative;
             padding-left: 1em;
+
             @include mq(lap) {
               padding-left: 1.25rem;
             }
@@ -2758,6 +2990,7 @@
               width: 0.5rem;
               height: 0.5rem;
               border-radius: 50%;
+
               @include mq(lap) {
                 width: 0.75rem;
                 height: 0.75rem;
@@ -2765,8 +2998,9 @@
             }
           }
 
-          & > dd {
+          &>dd {
             margin-top: 0.25rem;
+
             @include mq(lap) {
               font-size: 0.875rem;
             }
@@ -2779,6 +3013,7 @@
   &__smoking {
     &Text {
       margin-top: 1rem;
+
       @include mq(lap) {
         margin-top: 2.5rem;
       }
@@ -2792,6 +3027,7 @@
           margin-top: 3.5rem;
         }
       }
+
       &.-secondary {
         @include mq(lap) {
           margin-top: 9.5rem;
@@ -2801,6 +3037,7 @@
 
     &InnerText {
       margin-top: 1rem;
+
       @include mq(lap) {
         margin-top: 2rem;
       }
@@ -2812,6 +3049,7 @@
       margin: 0 auto;
       max-width: $content-width;
       width: 85%;
+
       @include mq(lap) {
         max-width: 950px;
         width: 100%;
@@ -2837,9 +3075,11 @@
       margin: 2rem 0 3.5rem;
       position: relative;
       padding: 0 0.25rem;
+
       @include mq(lap) {
         margin: 2rem 0 4.5rem;
       }
+
       &::before {
         content: "";
         display: inline-block;
@@ -2861,10 +3101,12 @@
         // width: 33.3%;
         position: relative;
         padding-bottom: 0.5rem;
+
         @include mq(lap) {
           padding-bottom: 1rem;
           font-size: 1rem;
         }
+
         &::before,
         &::after {
           content: "";
@@ -2919,9 +3161,11 @@
   &__news {
     display: block;
     margin-top: 1rem;
+
     @include mq(lap) {
       margin-top: 2rem;
     }
+
     &Content {
       width: 100%;
     }
@@ -2930,8 +3174,8 @@
   &__tab {
     display: flex;
     justify-content: space-between;
-    @include mq(lap) {
-    }
+
+    @include mq(lap) {}
 
     &Item {
       text-align: center;
@@ -2945,13 +3189,13 @@
 
       &.-secondary {
         width: 50%;
-        @include mq(lap) {
-        }
+
+        @include mq(lap) {}
       }
 
       &.-purple {
         &.is-tab {
-          & > * {
+          &>* {
             &::before {
               background-color: $color-purple;
             }
@@ -2961,10 +3205,10 @@
 
       &.is-tab {
         background-color: $color-white;
-        @include mq(lap) {
-        }
 
-        & > * {
+        @include mq(lap) {}
+
+        &>* {
           position: relative;
 
           color: $primary-text-color;
@@ -2977,6 +3221,7 @@
             width: 100%;
             background-color: $accent-color;
             height: 3px;
+
             @include mq(lap) {
               content: "";
               position: absolute;
@@ -2989,7 +3234,8 @@
           }
         }
       }
-      & > * {
+
+      &>* {
         display: block;
         color: $color-lightGray;
         text-decoration: none;
@@ -3000,6 +3246,7 @@
           font-size: 0.875rem;
           padding: 1.75rem 0;
         }
+
         @include mq(l-lap) {
           font-size: 1.125rem;
         }
@@ -3008,8 +3255,8 @@
 
     &Wrap {
       margin-top: 2rem;
-      @include mq(lap) {
-      }
+
+      @include mq(lap) {}
     }
   }
 
@@ -3022,6 +3269,7 @@
       gap: 2rem;
       grid-template-columns: repeat(2, 1fr);
     }
+
     @include mq(lap) {
       margin-top: 4.5rem;
       grid-template-columns: repeat(3, 1fr);
@@ -3035,6 +3283,7 @@
 
   &__feverInnerBlock {
     margin-top: 2.5rem;
+
     @include mq(lap) {
       margin-top: 5rem;
     }
@@ -3058,11 +3307,13 @@
         display: flex;
         justify-content: space-between;
       }
+
       .inner-text {
         @include mq(lap) {
           width: 48%;
         }
-        & > dl {
+
+        &>dl {
           display: flex;
           width: 100%;
           padding-bottom: 1.25rem;
@@ -3070,36 +3321,44 @@
           &:not(:first-child) {
             padding-top: 1.125rem;
           }
+
           &:not(:last-child) {
             border-bottom: 1px solid $color-lightBeige;
           }
 
-          & > dt {
+          &>dt {
             width: 4.5rem;
+
             @include mq(lap) {
               width: 6rem;
             }
           }
-          & > dd {
+
+          &>dd {
             width: calc(100% - 4.5rem);
+
             @include mq(lap) {
               width: calc(100% - 6rem);
             }
 
             .pay {
               margin-top: 1rem;
+
               @include mq(lap) {
                 margin-top: 1.5rem;
               }
 
               dd {
                 margin-top: 0.5rem;
+
                 ul {
                   display: flex;
                   flex-wrap: wrap;
                   gap: 10px;
+
                   li {
                     width: 48px;
+
                     @include mq(lap) {
                       width: 56px;
                     }
@@ -3114,10 +3373,12 @@
       .info-image {
         margin-top: 10px;
         display: block;
+
         @include mq(lap) {
           width: 44%;
           margin-top: 0;
         }
+
         img {
           border-radius: $border-radius;
         }
@@ -3132,6 +3393,7 @@
         width: 100%;
         height: 100%;
         vertical-align: bottom;
+
         @include mq(lap) {
           height: 356px;
         }
@@ -3143,6 +3405,7 @@
         }
       }
     }
+
     .note {
       margin-top: 1rem;
     }
@@ -3152,6 +3415,7 @@
     .p-under__beautyMenuInner {
       &:not(:first-child) {
         margin-top: 4.5rem;
+
         @include mq(lap) {
           margin-top: 9rem;
         }
@@ -3163,6 +3427,7 @@
     .p-under__beautyMenuBlock {
       &:not(:first-child) {
         margin-top: 3rem;
+
         @include mq(lap) {
           margin-top: 4.5rem;
         }
@@ -3176,7 +3441,7 @@
       justify-content: space-between;
     }
 
-    & > figure {
+    &>figure {
       @include mq(lap) {
         width: 27%;
       }
@@ -3188,6 +3453,7 @@
 
     .innerWrap {
       margin-top: 1rem;
+
       @include mq(lap) {
         margin-top: 0;
         width: 68%;
@@ -3196,10 +3462,12 @@
       .innerBlock {
         &:not(:first-child) {
           margin-top: 2.5rem;
+
           @include mq(lap) {
             margin-top: 4.5rem;
           }
         }
+
         h5 {
           font-family: $font-set-serif;
           font-size: 1.125rem;
@@ -3207,28 +3475,33 @@
           border-bottom: 1px solid $color-lightBeige;
           padding-bottom: 0.5rem;
           margin-bottom: 0.75rem;
+
           @include mq(lap) {
             font-size: 1.5rem;
           }
 
           .detail {
             font-size: 0.875rem;
+
             @include mq(lap) {
               font-size: 1.125rem;
             }
           }
         }
 
-        & > dl {
+        &>dl {
           margin-top: 1rem;
-          & > dt {
+
+          &>dt {
             color: $color-purple;
             font-size: 0.875rem;
             position: relative;
             padding-left: 1rem;
+
             @include mq(lap) {
               font-size: 1.125rem;
             }
+
             &::before {
               content: "";
               position: absolute;
@@ -3240,21 +3513,25 @@
               width: 4px;
               height: 15px;
               background-color: $color-purple;
+
               @include mq(lap) {
                 font-size: 1.125rem;
                 height: 15px;
               }
             }
           }
-          & > dd {
+
+          &>dd {
             margin-top: 1.125rem;
+
             ul {
               li {
-                & > div {
+                &>div {
                   @include mq(lap) {
                     display: flex;
                     justify-content: space-between;
                     position: relative;
+
                     &::before {
                       content: "";
                       position: absolute;
@@ -3272,7 +3549,7 @@
                     }
                   }
 
-                  & > span {
+                  &>span {
                     display: block;
 
                     &.title {
@@ -3280,6 +3557,7 @@
                         padding-right: 0.5rem;
                         position: relative;
                         z-index: 1;
+
                         &::after {
                           content: "";
                           position: absolute;
@@ -3319,6 +3597,7 @@
                         display: flex;
                         justify-content: space-between;
                         width: 100%;
+
                         @include mq(lap) {
                           &::before {
                             display: none;
@@ -3350,6 +3629,7 @@
                       position: relative;
                       z-index: 1;
                       padding-left: 0.5rem;
+
                       &::after {
                         content: "";
                         position: absolute;
@@ -3365,22 +3645,24 @@
 
                   &:not(:first-child) {
                     margin-top: 0.75rem;
+
                     @include mq(lap) {
                       margin-top: 0.5rem;
                     }
                   }
                 }
 
-                & > p.text {
+                &>p.text {
                   @include mq(lap) {
                     margin-top: 0.5rem;
                   }
                 }
 
-                & > p.title {
+                &>p.title {
                   position: relative;
                   padding-left: 1rem;
                   margin-bottom: 0.5rem;
+
                   &::before {
                     content: "";
                     position: absolute;
@@ -3396,6 +3678,7 @@
 
                 &:not(:first-child) {
                   margin-top: 1.5rem;
+
                   @include mq(lap) {
                     margin-top: 1.5rem;
                   }
@@ -3415,8 +3698,10 @@
               dl {
                 display: flex;
                 justify-content: space-between;
+
                 dt {
                   width: 48px;
+
                   @include mq(lap) {
                     width: 56px;
                   }
@@ -3441,11 +3726,12 @@
         .acc {
           margin-top: 1.75rem;
           cursor: pointer;
+
           @include mq(lap) {
             margin-top: 2.5rem;
           }
 
-          & > dl {
+          &>dl {
             dt {
               font-size: 0.875rem;
               font-weight: 500;
@@ -3453,13 +3739,16 @@
               margin-bottom: 0.75rem;
               border-bottom: 1px solid $color-lightBeige;
               color: $primary-text-color;
+
               &::before,
               &::after {
                 display: none;
               }
+
               span {
                 display: inline-block;
                 position: relative;
+
                 &::before,
                 &::after {
                   content: "";
@@ -3479,6 +3768,7 @@
                 &::before {
                   border-top: 1px solid $primary-text-color;
                 }
+
                 &::after {
                   border-right: 1px solid $primary-text-color;
                 }
@@ -3486,6 +3776,7 @@
 
               &.is-active {
                 span {
+
                   &::before,
                   &::after {
                     transform: rotate(-45deg);
@@ -3496,10 +3787,12 @@
 
             dd {
               display: none;
+
               ul {
                 li {
                   padding-left: 1.25rem;
                   position: relative;
+
                   &::before {
                     position: absolute;
                     left: 0;
@@ -3514,11 +3807,13 @@
                       content: "1.";
                     }
                   }
+
                   &:nth-child(2) {
                     &::before {
                       content: "2.";
                     }
                   }
+
                   &:nth-child(3) {
                     &::before {
                       content: "3.";
@@ -3535,13 +3830,15 @@
           justify-content: space-between;
           width: 85%;
           margin: 1.5rem auto 0;
+
           @include mq(lap) {
             width: 100%;
             margin: 2rem auto 0;
           }
 
-          & > div {
+          &>div {
             width: calc(50% - 1rem);
+
             picture {
               img {
                 width: 100%;
@@ -3562,8 +3859,8 @@
 
           dl {
             margin-top: 1.5rem;
-            dt {
-            }
+
+            dt {}
 
             dd {
               margin-top: 0.5rem;
@@ -3576,8 +3873,7 @@
                 margin-top: 0.5rem;
               }
 
-              dd {
-              }
+              dd {}
             }
           }
         }
@@ -3588,19 +3884,24 @@
   &__privacyContent {
     dl:nth-of-type(1) {
       margin-top: 3rem;
+
       @include mq(lap) {
         margin-top: 5.6rem;
       }
     }
+
     dl {
       margin-top: 2rem;
+
       @include mq(lap) {
         margin-top: 3.5rem;
       }
+
       dt {
         font-size: 1rem;
         font-family: $font-set-serif;
         font-weight: 500;
+
         @include mq(lap) {
           font-size: 1.125rem;
         }
@@ -3608,6 +3909,7 @@
 
       dd {
         margin-top: 0.5rem;
+
         @include mq(lap) {
           margin-top: 1rem;
         }
@@ -3616,18 +3918,21 @@
   }
 
   &__shuntContent {
-    & > div {
+    &>div {
       &:not(:first-child) {
         margin-top: 2rem;
+
         @include mq(lap) {
           margin-top: 4rem;
         }
       }
-      & > dl {
+
+      &>dl {
         margin-top: 2rem;
 
         dt {
           font-weight: 500;
+
           @include mq(lap) {
             font-size: 1rem;
           }
@@ -3643,13 +3948,15 @@
   &__notFound {
     text-align: center;
     margin-top: 2rem;
+
     @include mq(lap) {
       margin-top: 4rem;
     }
 
     h3 {
       font-family: $font-set-serif;
-      & > * {
+
+      &>* {
         display: block;
       }
 
@@ -3672,6 +3979,7 @@
 .pan {
   ul {
     display: flex;
+
     li {
       margin-right: 1.125rem;
     }
@@ -3685,6 +3993,7 @@
 
 .p-under__innerContent {
   padding-top: 2rem;
+
   @include mq(lap) {
     padding-top: 4rem;
   }
@@ -3693,15 +4002,15 @@
     padding-top: 5.6rem;
   }
 
-  & > .inner {
+  &>.inner {
     margin-top: 1rem;
+
     @include mq(lap) {
       margin-top: 0;
     }
 
     p {
-      @include mq(lap) {
-      }
+      @include mq(lap) {}
     }
 
     figure {
@@ -3734,12 +4043,15 @@
 .graph-wrap {
   &.-side-scroll {
     overflow-x: scroll !important;
+
     @include mq(lap) {
       overflow-x: auto;
     }
-    > picture {
+
+    >picture {
       width: 700px;
       display: block;
+
       @include mq(lap) {
         width: 100%;
       }
@@ -3748,19 +4060,24 @@
     .wrap {
       width: 700px;
       margin-top: -1rem;
+
       @include mq(lap) {
         width: 100%;
       }
+
       .comment {
         margin-top: 0.5rem;
+
         @include mq(lap) {
           display: none;
         }
       }
     }
   }
+
   &.-primary {
     margin-top: 1.25rem;
+
     @include mq(lap) {
       margin-top: 2rem;
     }
@@ -3782,17 +4099,19 @@
             border-bottom: 1px solid $color-white;
           }
         }
+
         dd {
           @include mq(lap) {
             border-bottom: 1px solid $color-lightBeige;
           }
         }
       }
+
       dt,
       dd {
-        @include mq(lap) {
-        }
+        @include mq(lap) {}
       }
+
       dt {
         padding: 0.5rem 1.25rem;
         text-align: center;
@@ -3800,6 +4119,7 @@
         font-weight: 600;
         font-family: $font-set-serif;
         background-color: $color-lightBeige;
+
         @include mq(lap) {
           width: 100%;
           max-width: 253px;
@@ -3812,6 +4132,7 @@
 
       dd {
         padding: 1.25rem;
+
         @include mq(lap) {
           width: calc(100% - 253px);
           font-size: 0.875rem;
@@ -3822,6 +4143,7 @@
 
   .box {
     padding: 1.125rem;
+
     @include mq(lap) {
       padding: 2.5rem;
     }
@@ -3844,53 +4166,64 @@
             content: "①";
           }
         }
+
         &:nth-of-type(2) {
           &::before {
             content: "②";
           }
         }
+
         &:nth-of-type(3) {
           &::before {
             content: "③";
           }
         }
+
         &:nth-of-type(4) {
           &::before {
             content: "④";
           }
         }
+
         &:nth-of-type(5) {
           &::before {
             content: "⑤";
           }
         }
+
         &:nth-of-type(6) {
           &::before {
             content: "⑥";
           }
         }
+
         &:nth-of-type(7) {
           &::before {
             content: "⑦";
           }
         }
+
         &:nth-of-type(8) {
           &::before {
             content: "⑧";
           }
         }
+
         &:nth-of-type(9) {
           &::before {
             content: "⑨";
           }
         }
+
         &:nth-of-type(10) {
           &::before {
             content: "⑩";
           }
         }
+
         &:not(:first-child) {
           margin-top: 0.75rem;
+
           @include mq(lap) {
             margin-top: 0.25rem;
           }
@@ -3902,6 +4235,7 @@
   .note {
     font-size: 0.75rem;
     margin-top: 1rem;
+
     @include mq(lap) {
       text-align: right;
     }
@@ -3923,6 +4257,7 @@
 
   .inner-text {
     padding: 0 1rem 1rem 1rem;
+
     @include mq(lap) {
       padding: 0 2.5rem 2.5rem 2.5rem;
     }
@@ -3932,6 +4267,7 @@
 .br-spacer {
   display: block;
   margin-top: 0.5rem;
+
   @include mq(lap) {
     margin-top: 0.75rem;
   }
@@ -3947,6 +4283,7 @@
 .p-under__headingWrap {
   &.-primary {
     margin-bottom: 0.875rem;
+
     @include mq(lap) {
       margin-bottom: 1.25rem;
     }
@@ -3954,10 +4291,12 @@
 }
 
 .somoking-Method {
+
   dt,
   dd {
     display: flex;
-    & > span {
+
+    &>span {
       display: block;
 
       &.left {

@@ -1,13 +1,14 @@
-@charset 'UTF-8';
 /*
   navigation
 */
 
 .p-navigation {
   margin-top: 4rem;
+
   @include mq(lap) {
     margin-top: 5rem;
   }
+
   &__list {
     display: flex;
     justify-content: space-between;

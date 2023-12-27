@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Screen Reader Text
 */
@@ -31,14 +30,17 @@
       color: $primary-text-color;
       position: relative;
       transition: 0.3s $easing-heart;
+
       &:not(:last-child) {
         margin-right: 1.75rem;
         border-bottom: 1px solid $accent-color;
         color: $accent-color;
+
         @include mq(lap) {
           margin-right: 3rem;
         }
       }
+
       &:not(:last-child) ::after {
         position: absolute;
         content: "";
@@ -52,6 +54,7 @@
         margin: auto 0;
         font-size: inherit;
         right: -1.25rem;
+
         @include mq(lap) {
           right: -1.75rem;
         }
@@ -69,16 +72,19 @@
     li.current-item {
       color: $primary-text-color;
       pointer-events: none;
+
       span::after {
         display: none;
       }
     }
   }
+
   &-top {
     position: absolute;
     left: 0;
     width: 100%;
     top: 0;
+
     @include mq(lap) {
       top: 10px;
     }
@@ -88,6 +94,7 @@
     position: absolute;
     bottom: 0px;
     width: 100%;
+
     @include mq(lap) {
       bottom: 10px;
     }

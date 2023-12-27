@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Header
 */
@@ -6,6 +5,7 @@
   // padding: 0.75rem 0;
   transition: background-color 0.3s $easing-heart;
   background-color: $color-white;
+
   @include mq(lap) {
     // padding: 1.25rem 0;
     padding: 0;
@@ -21,6 +21,7 @@
     left: 5%;
     padding: 0.5rem 0;
     z-index: 11;
+
     @include mq(lap) {
       position: absolute;
       padding: 0;
@@ -45,11 +46,11 @@
     }
   }
 
-  &__nav {
-  }
+  &__nav {}
 
   &.is-scroll {
     border-bottom: 1px solid $color-lightBeige;
+
     .p-globalNav__item.-megaMenu,
     .p-globalNav__item.-underLine {
       @include mq(lap) {
@@ -74,9 +75,11 @@
     transition: 0.3s $easing-heart opacity;
     right: 66px;
     top: 14px;
+
     @include mq(lap) {
       display: none;
     }
+
     &::after {
       content: "";
       position: absolute;
@@ -106,9 +109,11 @@
     transition: 0.3s $easing-heart opacity;
     right: 112px;
     top: 14px;
+
     @include mq(lap) {
       display: none;
     }
+
     &::after {
       content: "";
       position: absolute;

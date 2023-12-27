@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Base
 -----------------------------------------------------*/
@@ -32,6 +31,7 @@ body {
   letter-spacing: 0.05rem;
   transition-property: opacity background-color;
   transition: 0.3s $easing-heart;
+
   @include mq(lap) {
     background-color: #fff;
     padding-top: set-size(120px);

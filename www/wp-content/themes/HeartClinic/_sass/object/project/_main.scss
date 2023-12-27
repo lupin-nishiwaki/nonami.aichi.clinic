@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Button
 */
@@ -6,6 +5,7 @@
 .p-main {
   &__lead {
     margin-top: 2rem;
+
     @include mq(lap) {
       margin-top: 3rem;
       font-size: 1rem;
@@ -40,6 +40,7 @@
       address {
         display: inline-block;
         margin-top: 0.5rem;
+
         @include mq(lap) {
           margin-top: 1.25rem;
         }
@@ -51,9 +52,11 @@
         font-family: $font-set-en;
         padding-left: 2.125rem;
         position: relative;
+
         @include mq(lap) {
           margin-top: -0.25rem;
         }
+
         &::before {
           position: absolute;
           content: "";
@@ -71,6 +74,7 @@
 
         &.-purple {
           color: $color-purple;
+
           &::before {
             background: url(/wp-content/themes/HeartClinic/assets/images/beauty/icon-tel-purple.svg) no-repeat;
             background-size: contain;
@@ -92,6 +96,7 @@
       .note {
         font-size: 0.75rem;
         margin-top: 1rem;
+
         @include mq(lap) {
           margin-top: 1rem;
         }
@@ -105,6 +110,7 @@
         @include mq(tab) {
           display: flex;
         }
+
         @include mq(lap) {
           display: block;
         }
@@ -115,12 +121,14 @@
       @include mq(tab) {
         margin-right: 3rem;
       }
+
       @include mq(lap) {
         margin-right: 0;
       }
 
       h2 {
         width: 72%;
+
         img {
           width: 100%;
         }
@@ -145,10 +153,12 @@
       @include mq(lap) {
         margin-top: 3rem;
       }
+
       iframe {
         width: 100%;
         height: 100%;
         vertical-align: bottom;
+
         @include mq(lap) {
           height: 356px;
           max-width: 1080px;
@@ -168,6 +178,7 @@
       display: grid;
       gap: 20px 0;
       margin-top: 2rem;
+
       @include mq(lap) {
         margin-top: 5rem;
         grid-template-columns: repeat(3, 1fr);
@@ -204,8 +215,8 @@
       cursor: pointer;
       overflow: hidden;
       transition: 0.3s $easing-heart box-shadow;
-      @include mq(lap) {
-      }
+
+      @include mq(lap) {}
 
       &::before {
         content: "";
@@ -237,12 +248,13 @@
         }
       }
 
-      & > a {
+      &>a {
         display: flex;
         align-items: center;
         padding: 1.25rem 0.5rem;
         text-decoration: none;
         color: $primary-text-color;
+
         @include mq(lap) {
           padding: 4.5rem 2rem;
           display: block;
@@ -254,6 +266,7 @@
     &Icon {
       width: 4.5rem;
       margin-right: 0.5rem;
+
       @include mq(lap) {
         margin: 0 auto 1.5rem;
         width: 5.5rem;
@@ -264,6 +277,7 @@
       font-size: 1.125rem;
       font-family: $font-set-serif;
       transition: 0.3s $easing-heart;
+
       @include mq(lap) {
         font-size: 1.5rem;
       }
@@ -271,6 +285,7 @@
 
     &Text {
       font-size: 0.75rem;
+
       @include mq(lap) {
         margin-top: 0.5rem;
         font-size: 0.875rem;
@@ -308,6 +323,7 @@
     &Inner {
       margin: 20px auto 0;
       max-width: 540px;
+
       @include mq(lap) {
         margin: 0;
       }
@@ -317,10 +333,12 @@
       img {
         width: 100%;
         border-radius: 5px 5px 0 0;
+
         @include mq(lap) {
           border-radius: 0;
         }
       }
+
       @include mq(lap) {
         display: none;
       }
@@ -345,6 +363,7 @@
       // font-size: ;
       $font-size: 26px;
       font-size: set-size($font-size);
+
       @include mq(lap) {
         text-align: left;
         font-size: 2rem;
@@ -354,6 +373,7 @@
     &Text {
       margin: 1.125rem 0 1rem;
       font-size: 0.75rem;
+
       @include mq(lap) {
         font-size: 0.875rem;
         margin: 1.3rem 0 1.5rem;
@@ -372,6 +392,7 @@
       display: grid;
       gap: 40px 0;
       margin-top: 2rem;
+
       @include mq(lap) {
         margin-top: 5rem;
         grid-template-columns: repeat(3, 1fr);
@@ -391,6 +412,7 @@
         text-align: center;
         margin-top: 0.5rem;
         font-size: 0.875rem;
+
         @include mq(lap) {
           margin-top: 1.125vvrem;
           font-size: 1.125rem;
@@ -450,6 +472,7 @@
       &:hover {
         i {
           background-color: $color-white;
+
           .arrow-wrap {
             width: 100%;
             height: 100%;
@@ -491,6 +514,7 @@
       @include mq(lap) {
         margin: 2rem auto 0;
       }
+
       .arrow {
         position: absolute;
         top: 0;
@@ -505,6 +529,7 @@
         overflow: hidden;
         transition-property: transform stroke;
         transition: $easing-heart 0.3s;
+
         @include mq(lap) {
           width: 23px;
           height: 7px;
@@ -568,7 +593,7 @@
       position: relative;
     }
 
-    & > .inner {
+    &>.inner {
       @include mq(lap) {
         display: flex;
         justify-content: space-between;
@@ -606,6 +631,7 @@
       position: relative;
       display: block;
       text-decoration: none;
+
       &:hover {
         dl {
           &::after {
@@ -680,11 +706,13 @@
           time {
             font-family: $font-set-en;
             color: $color-lightGray2;
+
             @include mq(lap) {
               font-size: 1rem;
               display: inline-block;
               margin-right: 1rem;
             }
+
             &.purple {
               color: $color-purple;
             }
@@ -697,6 +725,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
           width: calc(100% - 50px);
+
           @include mq(lap) {
             font-size: 1rem;
             width: calc(100% - 210px);
@@ -732,6 +761,7 @@
         &.-Brown {
           stroke: $accent-color;
         }
+
         &.-purple {
           stroke: $color-purple;
         }
@@ -741,6 +771,7 @@
     &ButtonWrap {
       text-align: right;
       margin-top: 2rem;
+
       @include mq(lap) {
         text-align: left;
         top: 100px;
@@ -760,6 +791,7 @@
     &Button {
       text-decoration: underline;
       color: $primary-text-color;
+
       &:hover {
         color: $accent-color;
       }
@@ -775,12 +807,15 @@
       0% {
         transform: translateX(0);
       }
+
       50% {
         transform: translateX(100%);
       }
+
       50.1% {
         transform: translateX(-100%);
       }
+
       100% {
         transform: translateX(0);
       }
@@ -804,18 +839,22 @@
     }
 
     &.-info {
+
       .circle::before,
       .note::before {
         margin: 12px 0 0 0;
+
         @include mq(lap) {
           margin: 16px 0 0 0;
         }
       }
 
       .table-r02 {
+
         .circle::before,
         .note::before {
           margin: 12px 0 0 0;
+
           @include mq(lap) {
             margin: 24px 0 0 0;
           }
@@ -842,6 +881,7 @@
           margin-top: 20px;
           margin-bottom: -11px;
           writing-mode: vertical-rl;
+
           @include mq(lap) {
             writing-mode: horizontal-tb;
             width: 40px;
@@ -921,6 +961,7 @@
     .none,
     .triangle {
       position: relative;
+
       &::before {
         position: absolute;
         top: 0;
@@ -962,6 +1003,7 @@
 
     &.-hero {
       display: none;
+
       @include mq(lap) {
         font-size: 0.875rem;
         display: block;
@@ -1011,6 +1053,7 @@
             padding-right: 1.75rem;
           }
         }
+
         &:not(:first-child) {
           width: 44px;
         }
@@ -1021,23 +1064,27 @@
       @include mq(lap) {
         font-size: 1rem;
       }
+
       tbody {
         tr {
           td {
             vertical-align: top;
             text-align: center;
             white-space: nowrap;
+
             @include mq(lap) {
               white-space: normal;
               vertical-align: baseline;
             }
 
             span {
-              display: block; /* [1]Safariで幅が広がるのを防止 */
+              display: block;
+              /* [1]Safariで幅が広がるのを防止 */
               margin: 0 auto;
               -webkit-writing-mode: vertical-rl;
               writing-mode: vertical-rl;
               width: 21px;
+
               @include mq(lap) {
                 width: auto;
                 writing-mode: inherit;
@@ -1046,11 +1093,13 @@
           }
         }
       }
+
       th {
         padding: 10px;
 
         &:first-child {
           padding: 0.5rem 0.25rem 0.5rem 0;
+
           @include mq(lap) {
             padding: 1.5rem 3rem 0.5rem 0;
           }
@@ -1059,6 +1108,7 @@
 
       td {
         padding: 8px;
+
         @include mq(lap) {
           padding: 24px;
         }
@@ -1076,6 +1126,7 @@
 
       .text {
         padding: 32px 8px 8px 8px;
+
         @include mq(lap) {
           padding: 50px 32px 32px 32px;
         }
@@ -1091,14 +1142,17 @@
     .table-note {
       text-align: right;
       max-width: 344px;
+
       @include mq(lap) {
         max-width: 396px;
       }
+
       span {
         position: relative;
         padding-left: 1rem;
         margin-top: 0.5rem;
         display: inline-block;
+
         &::before {
           position: absolute;
           content: "";

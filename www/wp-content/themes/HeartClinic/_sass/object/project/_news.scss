@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   news
 */
@@ -12,7 +11,7 @@
         display: none;
       }
 
-      .p-news__listItem a > span {
+      .p-news__listItem a>span {
         margin-bottom: 0.5rem;
       }
 
@@ -22,12 +21,14 @@
 
       .p-news__list {
         margin-top: 2rem;
+
         @include mq(lap) {
           margin-top: 3rem;
         }
       }
     }
   }
+
   &__cat {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -64,6 +65,7 @@
         height: 3px;
         background-color: $accent-color;
         display: inline-block;
+
         @include mq(lap) {
           top: auto;
           bottom: -1rem;
@@ -81,6 +83,7 @@
       color: $primary-text-color;
       font-weight: 700;
       display: block;
+
       &:hover {
         opacity: 0.5;
         transition: 0.3s $easing-heart;
@@ -112,19 +115,20 @@
     }
   }
 
-  &__list {
-  }
+  &__list {}
 
   &__listItem {
     border-bottom: 1px solid #e2e0e0;
     padding-top: 2rem;
     padding-bottom: 2rem;
+
     a {
       color: $primary-text-color;
       text-decoration: none;
       position: relative;
       display: block;
       cursor: pointer;
+
       @include mq(lap) {
         padding: 0 1rem;
       }
@@ -141,11 +145,13 @@
         width: 20px;
         height: 16px;
         display: inline-block;
+
         @include mq(lap) {
           right: 1rem;
         }
       }
-      & > span {
+
+      &>span {
         @include mq(lap) {
           display: flex;
           align-items: center;
@@ -162,6 +168,7 @@
       .cat {
         display: inline-block;
         margin-left: 0.5rem;
+
         @include mq(lap) {
           margin: 0 0.5rem 0 0;
         }
@@ -174,16 +181,17 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+
         @include mq(lap) {
           width: 65%;
           margin-top: 0;
         }
       }
     }
-    @include mq(lap) {
-    }
-    &:not(:first-child) {
-    }
+
+    @include mq(lap) {}
+
+    &:not(:first-child) {}
   }
 
   &__listContent {

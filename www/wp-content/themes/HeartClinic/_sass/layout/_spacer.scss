@@ -1,10 +1,10 @@
-@charset 'UTF-8';
 /*
   Spacer
 -----------------------------------------------------*/
 
 .l-spacer {
   padding: 4.5rem 0;
+
   @include mq(lap) {
     padding: 9.5rem 0;
   }
@@ -15,6 +15,7 @@
 
   &.-sub {
     padding: 3rem 0 0 0;
+
     @include mq(lap) {
       padding: 6rem 0 0 0;
     }
@@ -22,6 +23,7 @@
 
   &.-sizeL {
     padding: 4.5rem 0;
+
     @include mq(lap) {
       padding: 11.25rem 0;
     }
@@ -29,6 +31,7 @@
 
   &.-top {
     padding: 4.5rem 0 0 0;
+
     @include mq(lap) {
       padding: 9.5rem 0 0 0;
     }
@@ -36,6 +39,7 @@
 
   &.-sizeLtop {
     padding: 4.5rem 0 0 0;
+
     @include mq(lap) {
       padding: 11.25rem 0 0 0;
     }
@@ -43,6 +47,7 @@
 
   &.-bottom {
     padding: 0 0 4.5rem 0;
+
     @include mq(lap) {
       padding: 0 0 9.5rem 0;
     }
@@ -50,6 +55,7 @@
 
   &.-sizeLbottom {
     padding: 4.5rem 0;
+
     @include mq(lap) {
       padding: 9.5rem 0 15.5rem;
     }
@@ -61,6 +67,7 @@
 
   &.-footer {
     padding: 4.5rem 0;
+
     @include mq(lap) {
       padding: 9.5rem 0 4.5rem;
     }
@@ -68,6 +75,7 @@
 
   &.-map {
     padding: 4.5rem 0 0;
+
     @include mq(lap) {
       padding: 9.5rem 0;
     }
@@ -76,6 +84,7 @@
   &.-under {
     padding: 1rem 0 0 0;
     background-color: $color-white;
+
     @include mq(lap) {
       padding: 3rem 0 0 0;
     }

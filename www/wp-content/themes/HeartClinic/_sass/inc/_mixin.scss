@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 //============================================
 //  MIXIN
 //============================================
@@ -13,13 +12,15 @@
 //  Clear Fix
 //--------------------------------------------
 @mixin clearfix($mode: overflow) {
-  @if $mode == pie {
+  @if $mode ==pie {
     &:after {
       display: table;
       clear: both;
       content: "";
     }
-  } @else {
+  }
+
+  @else {
     overflow: hidden;
   }
 }
@@ -28,13 +29,16 @@
 //--------------------------------------------
 @mixin mq($breakpoint, $type: min) {
   @if map-has-key($breakpoints, $breakpoint) {
-    @if ($type == max) {
+    @if ($type ==max) {
       $width: map-get($breakpoints, $breakpoint);
       $width: $width - 1;
+
       @media screen and (max-width: #{$width}) {
         @content;
       }
-    } @else if($type == min) {
+    }
+
+    @else if($type ==min) {
       @media screen and (min-width: #{map-get($breakpoints, $breakpoint)}) {
         @content;
       }

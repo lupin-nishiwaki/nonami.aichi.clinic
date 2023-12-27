@@ -1,4 +1,3 @@
-@charset 'UTF-8';
 /*
   Pagination
 */
@@ -6,6 +5,7 @@
 .pagination {
   margin: 2rem 0;
   text-align: center;
+
   @include mq(lap) {
     margin: 5rem 0;
   }
@@ -36,6 +36,7 @@
   &[href]:hover {
     opacity: 0.5;
   }
+
   &.current {
     background-color: $accent-color;
     color: $color-white;
@@ -88,7 +89,7 @@
     }
   }
 
-  & + & {
+  &+& {
     margin-left: 0.5rem;
 
     @include mq(lap) {
@@ -117,6 +118,7 @@
   &-previous {
     float: left;
   }
+
   &-next {
     float: right;
     text-align: right;

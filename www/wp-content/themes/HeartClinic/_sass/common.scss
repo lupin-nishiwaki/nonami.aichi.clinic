@@ -1,33 +1,30 @@
-@charset 'UTF-8';
-
 /* =====================================================
   1.0 - Foundation
 ===================================================== */
-@import "inc/setting";
-@import "inc/functions";
-@import "inc/mixin";
-@import "inc/mixlupin";
-@import "foundation/reset";
-@import "foundation/base";
+@use "inc/setting";
+@use "inc/functions";
+@use "inc/mixin";
+@use "inc/mixlupin";
+@use "foundation/reset";
+@use "foundation/base";
 
 /* =====================================================
   2.0 - Layout
 ===================================================== */
-@import "Layout/centering";
-@import "Layout/header";
-// @import "Layout/contents";
-@import "Layout/main";
-@import "Layout/spacer";
-@import "Layout/under";
-// @import "Layout/sub";
-@import "Layout/footer";
+// @use "Layout/centering";
+// @use "Layout/header";
+// @use "Layout/main";
+// @use "Layout/spacer";
+// @use "Layout/under";
+// @use "Layout/footer";
+@use "Layout";
 
 /* =====================================================
   3.0 - javascript
 ===================================================== */
-@import "javascript/js";
-// @import "javascript/oreroll";
-@import "javascript/swiper";
+// @use "javascript/js";
+// @use "javascript/swiper";
+@use "javascript";
 
 /* =====================================================
   4.0 - Object
@@ -36,38 +33,32 @@
 /*
   4.1 - Component
 -----------------------------------------------------*/
-// @import "object/component/grid";
-@import "object/component/button";
-// @import "object/component/media";
-@import "object/component/card";
-@import "object/component/heading";
+// @use "object/component/button";
+// @use "object/component/card";
+// @use "object/component/heading";
+@use "object/component/";
 
 /*
   4.2 - Project
 -----------------------------------------------------*/
-@import "object/project/header";
-@import "object/project/global-nav";
-@import "object/project/logo";
-@import "object/project/hero";
-// @import "object/project/project";
-// @import "object/project/article";
-// @import "object/project/author";
-// @import "object/project/comments";
-@import "object/project/pagination";
-// @import "object/project/post-categories";
-// @import "object/project/searchform";
-@import "object/project/hamburger";
-// @import "object/project/widget";
-@import "object/project/footer";
-@import "object/project/form";
-@import "object/project/main";
-@import "object/project/under";
-@import "object/project/navigation";
+// @use "object/project/header";
+// @use "object/project/global-nav";
+// @use "object/project/logo";
+// @use "object/project/hero";
+// @use "object/project/pagination";
+// @use "object/project/hamburger";
+// @use "object/project/footer";
+// @use "object/project/form";
+// @use "object/project/main";
+// @use "object/project/under";
+// @use "object/project/navigation";
+@use "object/project/";
 
 /*
   4.2 - Utility
 -----------------------------------------------------*/
-@import "object/utility/margin";
-@import "object/utility/break";
-@import "object/utility/screen-reader-text";
-@import "object/utility/item";
+// @use "object/utility/margin";
+// @use "object/utility/break";
+// @use "object/utility/screen-reader-text";
+// @use "object/utility/item";
+@use "object/utility/";
