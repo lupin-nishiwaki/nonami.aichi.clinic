@@ -1,51 +1,50 @@
 <?php get_header(); ?>
-<main>
-  <div class="l-under -main">
-    <div class="l-under__sideMenu">
-      <div class="p-under__sideMenu">
-        <div class="p-under__sideInner"></div>
-        <!-- /.p-under__sideInner -->
-      </div>
-    </div>
-    <!-- /.p-under__sideMenu -->
 
-    <section class="l-spacer -under l-under__main p-under__main">
+<div id="page_404">
+  <div class="columnSeparate">
+    <!-- .sideContents -->
+    <div class="sideContents"></div>
+    <!-- /.sideContents -->
 
-      <div class="p-under__container -secondary">
-        <?php get_template_part("/template-parts/pankuzu") ?>
-        <div class="l-spacer -bottom">
-          <div class="p-under__notFound">
-            <h3>
-              <em>404</em>
-              <span>Not Found</span>
-            </h3>
-
-            <p class="text">
-              お探しのページは見つかりません。<br>
-              一時的にアクセスできない状況にあるか、<br class="pc-hide">
-              移動もしくは削除された可能性があります。
-            </p>
-
-            <div class="c-button__wrap -center">
-              <a href="<?php echo esc_url( home_url( ) ); ?>" class="c-button -colorAccentWhite -center -primary">
-                <span class="inner">TOPへ戻る</span>
-                <div class="svg-wrap">
-                  <svg class="arrow -brown" viewBox="0 0 23 7.206">
-                    <g transform="translate(-125.801 -6.294)">
-                      <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-                    </g>
-                  </svg>
-                </div>
-              </a>
-            </div>
+    <!-- .mainContents -->
+    <div class="mainContents">
+      <!-- #pageTtl -->
+      <section id="pageTtl">
+        <div class="top">
+          <div class="m_box_fixed -under">
+            <h1>
+              <span class="en">Not Found</span>
+              404
+            </h1>
           </div>
         </div>
-      </div>
-      <!-- /.l-spacer -->
+      </section>
+      <!-- /#pageTtl -->
 
+      <!-- #notfound -->
+      <section id="notfound">
+        <div class="m_box_fixed -under">
+          <h2 class="m_txt_ttl">
+            <em class="ja">お探しのページは見つかりません。</em>
+          </h2>
 
-    </section>
-    <!-- /.l-under__main -->
+          <p class="lead">
+            申し訳ございませんが、お探しのページが見つかりませんでした。<br>
+            一時的にアクセスできない状況にあるか、 移動もしくは削除された可能性があります。
+          </p>
+
+          <p class="btn m_btn_main">
+            <a href="/">
+              トップページへ戻る
+              <i></i>
+            </a>
+          </p>
+        </div>
+      </section>
+      <!-- /#notfound -->
+    </div>
+    <!-- /.mainContents -->
   </div>
-  <!-- /.l-sub -->
-  <?php get_footer(); ?>
+</div>
+
+<?php get_footer(); ?>
