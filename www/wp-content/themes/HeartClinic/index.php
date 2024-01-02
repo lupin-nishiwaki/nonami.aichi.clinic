@@ -5,49 +5,30 @@
   <section id="mv">
     <div class="wrapper">
       <div class="ttlBox js_anim_load">
-        <h1 class="catch">カテーテル治療を<br class="tablet">専門とする<br>有床循環器<br class="pc-hide">クリニック</h1>
-        <p class="category">循環器科 / 心臓血管外科 / 内科 / 外科 / 麻酔科 /<br>心臓カテーテル治療 / 下肢静脈瘤治療 / <br class="pc-hide">透析シャント治療 / 美容</p>
+        <p class="open"><span>2024年4月開院</span></p>
+        <h1 class="catch">笑顔になれる<br class="pc-hide">アットホームな<br>循環器クリニック</h1>
+        <p class="category">循環器科 / 足の外来 / 内科 / 禁煙外来 /<br class="pc-hide"> 睡眠時無呼吸症候群治療/ 発熱外来 / 美容</p>
       </div>
 
       <div class="main">
         <div class="visual js_top_swiper_mv">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
-            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual02@sp.webp"><img src="/asset/img/top/mv_visual02.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
-            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual03@sp.webp"><img src="/asset/img/top/mv_visual03.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
-            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual04@sp.webp"><img src="/asset/img/top/mv_visual04.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
+            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
           </div>
         </div>
 
+        <!--
         <div class="news js_top_swiper_news">
           <div class="swiper-wrapper">
-
-            <?php
-            $args = array(
-              'post_type' => 'importantnews',
-              'posts_per_page' => 5,
-            );
-            ?>
-            <?php $the_query = new WP_Query( $args ); ?>
-            <?php if( $the_query->have_posts() ): ?>
-              <?php while( $the_query->have_posts() ): ?>
-                <?php $the_query->the_post(); ?>
-
-                <div class="swiper-slide">
-                  <a href="<?php the_permalink(); ?>">
-                    <span class="day"><?php the_time( 'Y.m.d' ); ?></span>
-                    <span class="ttl"><?php the_title(); ?></span>
-                  </a>
-                </div>
-
-              <?php endwhile; ?>
-              <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
-
+            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
+            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
+            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
           </div>
           <div class="swiper-button-prev js_top_swiper_news_prev"></div>
           <div class="swiper-button-next js_top_swiper_news_next"></div>
         </div>
+        -->
       </div>
 
       <div class="side">
@@ -56,6 +37,7 @@
       </div>
     </div>
 
+    <!--
     <div class="calender m_table_calender">
       <table>
         <thead>
@@ -72,67 +54,89 @@
         初診受付は午前は11:30まで、午後は17:30までとなります。
       </p>
     </div>
+    -->
   </section>
   <!-- /#mv -->
 
-  <!-- #guidance -->
-  <section id="guidance">
+  <!-- #message -->
+  <section id="message">
+    <div class="m_box_fixed">
+      <h2 class="m_txt_ttl js_anim_scroll">
+        <span class="en">message</span>
+        <em class="ja">院長ごあいさつ</em>
+      </h2>
+
+      <p class="lead js_anim_scroll">
+      私が医師になってから約18年の月日が経ちました。<br>
+      色々な縁があり循環器内科医を志し、<br class="sp-hide">多大な御力添えをいただきながら、循環器内科専門医としてこれまで病院勤務を続けて参りました。<br>
+      私が医師として働き始めたころよりお世話になり、循環器内科医となるきっかけにもなった、<br class="sp-hide">あいちハートクリニック知立院の村瀬副院長から開業のお話をいただき、<br class="sp-hide">深谷院長とも名古屋ハートセンターで一緒に働いていたこともあり、この縁を大切にしたいと思い、<br class="sp-hide">2024年4月にあいちハートクリニック野並院を開業することとなりました。<br>
+      循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、<br class="sp-hide">これまで培ってきたキャリアを存分に生かし、地域の皆様の支えになれるよう努力していく所存です。<br>
+      「あいちハートクリニック野並」をどうぞよろしくお願い申し上げます。<br>
+      <br>
+      院長　竹谷 昌直
+      </p>
+    </div>
+  </section>
+  <!-- #message -->
+
+  <!-- #treatment -->
+  <section id="treatment">
     <div class="m_box_fixed">
       <div class="ttlBox js_anim_scroll">
         <h2 class="m_txt_ttl">
-          <span class="en">guidance</span>
+          <span class="en">treatment</span>
           <em class="ja">診療案内</em>
         </h2>
 
         <p class="lead">
-          当クリニックでは、一般内科·外科の診療も行っております。<br class="sp-hide">かかりつけ医（家庭医）としての役割を意識し、明るく落ち着いた癒しの空間で、<br class="sp-hide">ホスピタリティーを重視した医療サービスの提供に努めて参ります。
+          当クリニックでは、以下の診療や美容メニューをおこなう予定です。<br class="sp-hide">明るく落ち着いた癒しの空間でホスピタリティーを重視した<br class="sp-hide">医療サービスの提供に努めて参ります。
         </p>
       </div>
 
       <ul class="link js_anim_scroll_group">
         <li>
           <a href="/cardiology/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link01.svg" alt="循環器科" width="92" height="92"></picture>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link01.svg" alt="循環器科" width="92" height="92"></picture>
             <h3 class="hd">循環器科</h3>
-            <p>カテーテル検査·治療の他、<br>心臓検査や血管外科手術も対応。</p>
+            <p>カテーテル検査・治療の他、<br>心臓検査や血管外科手術も対応。</p>
           </a>
         </li>
 
         <li>
           <a href="/varix/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link02.svg" alt="足の外来" width="92" height="92"></picture>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link02.svg" alt="足の外来" width="92" height="92"></picture>
             <h3 class="hd">足の外来</h3>
-            <p>高周波治療（血管内焼灼術）は、<br>出血や術後の痛みが軽度。</p>
+            <p>カテーテル治療、外科治療、<br>創の処置やまた歩き方の指導なども。</p>
           </a>
         </li>
 
         <li>
           <a href="/shunt/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link03.svg" alt="透析シャント治療" width="92" height="92"></picture>
-            <h3 class="hd">透析シャント治療</h3>
-            <p>透析で使用する血管のトラブルに対し、<br>カテーテル治療や血管外科手術で対応。</p>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link03.svg" alt="一般内科" width="92" height="92"></picture>
+            <h3 class="hd">一般内科</h3>
+            <p>かかりつけ医（家庭医）として、<br>内科・外科全般についても対応。</p>
           </a>
         </li>
 
         <li>
           <a href="/general/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link04.svg" alt="一般内科·外科" width="92" height="92"></picture>
-            <h3 class="hd">一般内科·外科</h3>
-            <p>かかりつけ医（家庭医） として<br>内科·外科全般についても対応。</p>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link04.svg" alt="禁煙外来" width="92" height="92"></picture>
+            <h3 class="hd">禁煙外来</h3>
+            <p>外来日を含め3ヶ月で終了。<br>計5回の通院で病気のリスクを軽減。</p>
           </a>
         </li>
 
         <li>
           <a href="/no-smoking/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link05.svg" alt="禁煙外来" width="92" height="92"></picture>
-              <h3 class="hd">禁煙外来</h3>
-              <p>外来日を含め3ヶ月で終了。<br>計5回の通院で病気のリスクを軽減。</p>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link05.svg" alt="睡眠時無呼吸症候群" width="92" height="92"></picture>
+              <h3 class="hd">睡眠時無呼吸症候群</h3>
+              <p>睡眠時無呼吸症候群に関する検査、<br>治療を対応。</p>
           </a>
         </li>
 
         <li>
           <a href="/fever/">
-            <picture><img loading="lazy" src="/asset/img/top/guidance_link06.svg" alt="発熱外来" width="92" height="92"></picture>
+            <picture><img loading="lazy" src="/asset/img/top/treatment_link06.svg" alt="発熱外来" width="92" height="92"></picture>
             <h3 class="hd">発熱外来</h3>
             <p>発熱や咳倦怠感などがある<br>患者様は予約制で診察。</p>
           </a>
@@ -140,9 +144,27 @@
       </ul>
     </div>
   </section>
-  <!-- /#guidance -->
+  <!-- /#treatment -->
 
-  <!-- #beauty -->
+  <!-- #recruit -->
+  <section id="recruit" class="js_anim_scroll">
+    <div class="m_box_fixed">
+      <a href="/recruit/">
+        <h2>
+          <span class="en">reqruitment</span>
+          <em class="ja">採用情報はこちら</em>
+        </h2>
+
+        <picture class="bg">
+          <source media="(max-width:767px)" srcset="/asset/img/top/recruit_bg@sp.webp">
+          <img src="/asset/img/top/recruit_bg.webp" alt="採用情報" width="1920" height="1116">
+        </picture>
+      </a>
+    </div>
+  </section>
+  <!-- /#recruit -->
+
+  <!-- #beauty
   <section id="beauty">
     <div class="m_box_fixed">
       <div class="wrap js_anim_scroll">
@@ -163,9 +185,9 @@
       </div>
     </div>
   </section>
-  <!-- /#beauty -->
+  /#beauty -->
 
-  <!-- #about -->
+  <!-- #about
   <section id="about">
     <div class="m_box_fixed">
       <h2 class="m_txt_ttl js_anim_scroll">
@@ -202,9 +224,9 @@
       </p>
     </div>
   </section>
-  <!-- /#about -->
+  /#about -->
 
-  <!-- #link -->
+  <!-- #link
   <section id="link">
     <div class="wrapper">
       <div class="wrap m_box_fixed js_anim_scroll_group">
@@ -230,9 +252,9 @@
       </div>
     </div>
   </section>
-  <!-- /#link -->
+  /#link -->
 
-  <!-- #news -->
+  <!-- #news
   <section id="news">
     <div class="wrapper m_box_fixed js_anim_scroll">
       <h2 class="m_txt_ttl">
@@ -242,30 +264,29 @@
 
       <div class="newsBox">
         <ul class="m_list_news">
+          <li>
+            <a href="">
+              <div class="day">2023.12.07</div>
+              <div class="ttl">年末年始の休診日のお知らせ年末年始の休診日のお知らせ年末年始の休診日のお知らせ</div>
+              <i></i>
+            </a>
+          </li>
 
-          <?php
-          $args = array(
-            'post_type' => 'news',
-            'posts_per_page' => 3
-          );
-          ?>
-          <?php $the_query = new WP_Query( $args ); ?>
-          <?php if( $the_query->have_posts() ): ?>
-            <?php while( $the_query->have_posts() ): ?>
-              <?php $the_query->the_post(); ?>
+          <li>
+            <a href="">
+              <div class="day">2023.12.07</div>
+              <div class="ttl">年末年始の休診日のお知らせ</div>
+              <i></i>
+            </a>
+          </li>
 
-              <li>
-                <a href="<?php the_permalink(); ?>">
-                  <div class="day"><?php the_time( 'Y.m.d' ); ?></div>
-                  <div class="ttl"><?php the_title(); ?></div>
-                  <i></i>
-                </a>
-              </li>
-
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-          <?php endif; ?>
-
+          <li>
+            <a href="">
+              <div class="day">2023.12.07</div>
+              <div class="ttl">年末年始の休診日のお知らせ</div>
+              <i></i>
+            </a>
+          </li>
         </ul>
 
         <p class="btn">
@@ -274,7 +295,7 @@
       </div>
     </div>
   </section>
-  <!-- /#news -->
+  /#news -->
 </div>
 
 <?php get_footer() ?>

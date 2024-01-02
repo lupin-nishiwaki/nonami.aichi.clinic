@@ -5,153 +5,50 @@
   <footer id="l_footer">
     <!-- #fixedCta -->
     <section id="fixedCta" class="js_anim_load -delay">
-      <?php if(is_page('beauty')): ?>
-        <p class="line">
-          <a href="https://page.line.me/954bntwp?openQrModal=true" target="_blank" rel="noopener noreferrer">
-            <span>LINEでご予約</span>
-          </a>
-        </p>
-      <?php else: ?>
-        <p class="contact">
-          <a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">
-            <span>初診のご予約</span>
-          </a>
-        </p>
-      <?php endif; ?>
+      <p class="recruit">
+        <a href="/recruit/">
+          <span>採用情報</span>
+        </a>
+      </p>
     </section>
     <!-- /#fixedCta -->
 
     <!-- #clinic -->
-    <?php if(!is_page('information')): ?>
-      <section id="clinic">
-        <div class="m_box_fixed">
-          <div class="overview js_anim_scroll">
-            <picture class="imgBox">
-              <img loading="lazy" src="/asset/img/footer_clinic.webp" alt="あいちハートクリニック" width="1080" height="854">
-            </picture>
+    <section id="clinic">
+      <div class="m_box_fixed">
+        <div class="overview js_anim_scroll">
+          <div class="txtBox">
+            <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34"><span>野並院</span></p>
+            <p class="address">
+              〒468-0046 愛知県名古屋市天白区古川町158<br>
+              B&D野並メディカルステーション1F
+            </p>
 
-            <div class="txtBox">
-              <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34"></p>
-              <p class="address">〒472-0054 愛知県知立市東上重原6-70</p>
-              <p class="tel"><a href="tel:0566-91-5810">0566-91-5810</a></p>
-              <p class="fax">FAX 0566-91-5816</p>
+            <div class="calender m_table_calender">
+              <table>
+                <thead>
+                  <tr><th class="item01">診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
+                </thead>
 
-              <?php if(is_page('beauty')): ?>
-                <div class="calender m_table_calender">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th class="item01">診療時間</th>
-                        <th>月</th>
-                        <th>火</th>
-                        <th>水</th>
-                        <th>木</th>
-                        <th>金</th>
-                        <th>土</th>
-                        <th>日</th>
-                      </tr>
-                    </thead>
+                <tbody>
+                  <tr><th class="item01">9:00-<br class="pc-hide">13:00</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
+                  <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●</td><td>●</td><td>－</td><td>●</td><td>●</td><td>－</td><td>－</td></tr>
+                </tbody>
+              </table>
 
-                    <tbody>
-                      <tr>
-                        <th class="item01">9:00-<br class="pc-hide">12:00</th>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>▲</td>
-                        <td>－</td>
-                      </tr>
-
-                      <tr>
-                        <th class="item01">14:00-<br class="pc-hide">18:00</th>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>▲</td>
-                        <td>－</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <p class="iconDesc">
-                    ▲ 不定期 9:00 - 16:00
-                  </p>
-
-                  <p class="time">
-                    電話のご予約は13:00-17:00に受け付けております。<br>
-                    土曜日は9:00-13:00、14:00-18:00の受付となっております。
-                  </p>
-
-                  <p class="notes">
-                    ※一般診療の受付時間は異なります。<a href="/information/#doctor">詳しくはこちら</a>をご覧ください。
-                  </p>
-                </div>
-
-              <?php else: ?>
-                <div class="calender m_table_calender">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th class="item01">診療時間</th>
-                        <th>月</th>
-                        <th>火</th>
-                        <th>水</th>
-                        <th>木</th>
-                        <th>金</th>
-                        <th>土</th>
-                        <th>日</th>
-                      </tr>
-                    </thead>
-
-                    <tbody>
-                      <tr>
-                        <th class="item01">9:00-<br class="pc-hide">12:00</th>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>－</td>
-                      </tr>
-
-                      <tr>
-                        <th class="item01">15:00-<br class="pc-hide">18:00</th>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>●</td>
-                        <td>－</td>
-                        <td>－</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                  <p class="time">
-                    ご予約は診療時間内に電話で受け付けております。<br>
-                    初診予約はWebから24時間受け付けております。<br>
-                    初診受付は午前は11:30まで、午後は17:30までとなります。
-                  </p>
-
-                  <p class="notes">
-                    ※美容の受付時間は異なります。<a href="/beauty/#clinic">詳しくはこちら</a>をご覧ください。
-                  </p>
-                </div>
-              <?php endif; ?>
+              <p class="time">
+                ※月曜日午後は19:30まで、土曜日午前は9:30~13:00<br>
+                ※木曜日午後は深谷Dr.の足の外来
+              </p>
             </div>
           </div>
 
-          <div class="map js_anim_scroll">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.24414519866!2d137.0325245757576!3d35.00059307281462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049c4149874f99%3A0xddd6e3de79bf2928!2z44CSNDcyLTAwNTQg5oSb55-l55yM55-l56uL5biC5p2x5LiK6YeN5Y6f77yW5LiB55uu77yX77yQ!5e0!3m2!1sja!2sjp!4v1703834566009!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="mapBox">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d816.0498228418087!2d136.95431842853736!3d35.10173419549292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b7917d52ca5%3A0xadedc4a721bfa65!2zQiZE6Kq_5Ymk6Jas5bGAIOmHjuS4puW6lw!5e0!3m2!1sja!2sjp!4v1704224060959!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
-      </section>
-    <?php endif; ?>
+      </div>
+    </section>
     <!-- /#clinic -->
 
     <!-- #contact -->
@@ -159,36 +56,23 @@
       <div class="m_box_fixed">
         <h2 class="m_txt_ttl js_anim_scroll">
           <span class="en">contact</span>
-          <em class="ja">初診ご予約·<br class="pc-hide">お問い合わせ</em>
+          <em class="ja">お問い合わせはこちら</em>
         </h2>
 
         <p class="lead js_anim_scroll">
-          お体の不調にお悩みの場合は、<br class="pc-hide">あいちハートクリニックまで。<br>
-          どこの診療科に行ったら良いかわからない方も、<br class="pc-hide">お気軽にご相談ください。
+          お体の不調にお悩みの場合は、あいちハートクリニックまで。<br class="sp-hide">どこの診療科に行ったら良いかわからない方も、お気軽にご相談ください。
         </p>
 
-        <div class="row js_anim_scroll_group">
-          <div>
-            <p class="btn m_btn_cta">
-              <a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">
-                初診ご予約はこちら<i></i>
-              </a>
-            </p>
-          </div>
-
-          <div>
-            <p class="btn m_btn_cta -gray">
-              <a href="/contact/">
-                メールで相談·お問い合わせ<i></i>
-              </a>
-            </p>
-          </div>
-        </div>
+        <p class="btn m_btn_cta js_anim_scroll">
+          <a href="/contact/">
+            メールで相談・お問い合わせ<i></i>
+          </a>
+        </p>
       </div>
     </section>
     <!-- /#contact -->
 
-    <!-- #sitemap -->
+    <!-- #sitemap
     <section id="sitemap">
       <div class="m_box_fixed">
         <div class="top js_anim_scroll">
@@ -267,7 +151,17 @@
         </div>
       </div>
     </section>
-    <!-- #sitemap -->
+    #sitemap -->
+
+    <!-- #credit -->
+    <section id="credit">
+      <div class="wrapper m_box_fixed">
+        <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34"></p>
+        <p class="privacy"><a href="/privacy/">プライバシーポリシー</a></p>
+        <p class="copy">&copy;2023 あいちハートクリニック野並院</p>
+      </div>
+    </section>
+    <!-- #credit -->
   </footer>
   <!-- /#l_footer -->
 

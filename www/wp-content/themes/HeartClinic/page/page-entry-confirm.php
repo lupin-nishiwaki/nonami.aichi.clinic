@@ -1,12 +1,12 @@
 <?php
 /**
- * Template Name: お問い合わせ
+ * Template Name: 採用エントリー（確認）
  */
 
 get_header();
 ?>
 
-<div id="page_contact">
+<div id="page_entry">
   <div class="columnSeparate">
     <!-- .sideContents -->
     <div class="sideContents"></div>
@@ -19,34 +19,33 @@ get_header();
         <div class="top">
           <div class="m_box_fixed -under">
             <h1>
-              <span class="en">contact</span>
-              ご相談·お問い合わせ
+              <span class="en">entry</span>
+              採用エントリー
             </h1>
           </div>
         </div>
       </section>
       <!-- /#pageTtl -->
 
-      <!-- #contact -->
-      <section id="contact">
+      <!-- #entry -->
+      <section id="entry">
         <div class="m_box_fixed -under">
           <p class="lead">
-            ご相談したいことやお悩みがありましたら、お気軽に本お問い合わせフォームよりご連絡くださいませ。<br>
-            予約 / 予約変更 / 予約キャンセル / 営業活動に関するお問い合わせについてはお受けできません。
+            ご応募は下記フォームよりお願いいたします。<br>
+            ご不明点やご相談事項がありましたら、備考欄へご記入ください。
           </p>
 
           <ul class="progress m_form_progress">
-            <li class="is-cur">入力</li>
-            <li>確認</li>
+            <li>入力</li>
+            <li class="is-cur">確認</li>
             <li>完了</li>
           </ul>
 
           <p class="guid m_form_guide">
-            フォームに必要項目を入力の上、｢確認画面へ進む｣ボタンを押してください。
-            <span class="req">※のついている項目は必須項目となります。</span>
+            フォームの入力情報をご確認の上、｢送信する｣ボタンを押してください。
           </p>
 
-          <div class="m_form_format">
+          <div class="m_form_format confirm">
             <?php if( have_posts() ): ?>
               <?php while( have_posts() ): ?>
                 <?php the_post(); ?>
