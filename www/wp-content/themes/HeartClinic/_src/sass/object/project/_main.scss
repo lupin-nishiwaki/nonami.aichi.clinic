@@ -24,10 +24,11 @@
 
   &__map {
     &Contents {
-      display: flex;
-      flex-direction: column-reverse;
+      display: block;
+      // flex-direction: column-reverse;
 
       @include mq(lap) {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
@@ -216,43 +217,42 @@
       border: 1px solid $color-lightGray2;
       border-radius: $border-radius;
       position: relative;
-      cursor: pointer;
+      // cursor: pointer;
       overflow: hidden;
       transition: 0.3s $easing-heart box-shadow;
 
-      @include mq(lap) {}
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   height: 5px;
+      //   width: 100%;
+      //   background-color: $accent-color;
+      //   display: inline-block;
+      //   transform: scale(0, 1);
 
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 5px;
-        width: 100%;
-        background-color: $accent-color;
-        display: inline-block;
-        transform: scale(0, 1);
+      //   transform-origin: right top;
+      //   transition: 0.3s $easing-heart transform;
+      // }
 
-        transform-origin: right top;
-        transition: 0.3s $easing-heart transform;
-      }
+      // &:hover {
+      //   box-shadow: 0px 0px 15px #f0ece4;
 
-      &:hover {
-        box-shadow: 0px 0px 15px #f0ece4;
+      //   .p-main__treatmentTitle {
+      //     transition: 0.3s $easing-heart;
+      //     color: $accent-color;
+      //   }
 
-        .p-main__treatmentTitle {
-          transition: 0.3s $easing-heart;
-          color: $accent-color;
-        }
+      //   &::before {
+      //     transform: scale(1, 1);
+      //     transform-origin: left top;
+      //     transition: 0.3s $easing-heart transform;
+      //   }
+      // }
 
-        &::before {
-          transform: scale(1, 1);
-          transform-origin: left top;
-          transition: 0.3s $easing-heart transform;
-        }
-      }
-
-      &>a {
+      &>a,
+      &>.inner {
         display: flex;
         align-items: center;
         padding: 1.25rem 0.5rem;
@@ -297,6 +297,7 @@
     }
 
     &Arrow {
+      display: none;
       position: absolute;
       stroke: $accent-color;
       width: 23px;

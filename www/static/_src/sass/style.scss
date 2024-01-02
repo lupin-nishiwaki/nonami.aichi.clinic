@@ -1,0 +1,26 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+@use "unique/top";
+@use "unique/about";
+@use "unique/beauty";
+@use "unique/cardiology";
+@use "unique/entry";
+@use "unique/contact";
+@use "unique/equipment";
+@use "unique/fever";
+@use "unique/general";
+@use "unique/information";
+@use "unique/news";
+@use "unique/beautynews";
+@use "unique/no-smoking";
+@use "unique/notfound";
+@use "unique/privacy";
+@use "unique/recruit";
+@use "unique/shunt";
+@use "unique/varix";

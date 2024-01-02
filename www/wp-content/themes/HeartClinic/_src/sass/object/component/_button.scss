@@ -167,7 +167,7 @@
 
   &.-colorGray {
     span {
-      background-color: $color-lightGray;
+      background-color: $color-gray;
       color: $color-white;
 
       &::before {
@@ -177,11 +177,11 @@
 
     &:hover {
       span {
-        color: $color-lightGray;
+        color: $color-gray;
       }
 
       .arrow.-whiteGray {
-        stroke: $color-lightGray;
+        stroke: $color-gray;
       }
     }
   }
@@ -227,6 +227,15 @@
 
     &.-center {
       text-align: center;
+
+      a {
+        display: inline-block;
+        width: 100%;
+
+        @include mq(lap) {
+          width: 514px;
+        }
+      }
     }
 
     &.-secondary {

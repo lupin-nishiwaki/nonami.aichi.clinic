@@ -1,0 +1,122 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+.m_txt_ttl {
+  @include fontFamily('serif');
+  line-height: 1.6;
+  margin-bottom: 5rem;
+
+  @media #{$breakS} {
+    margin-bottom: 3rem;
+  }
+
+  span.en {
+    @include fontFamily('gothic');
+    display: block;
+    font-size: 2rem;
+    color: $colorDarkGray;
+    margin-bottom: 1rem;
+
+    @media #{$breakS} {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  em.ja {
+    display: block;
+    font-size: 4.5rem;
+    font-weight: $fontMedium;
+
+    @media #{$breakS} {
+      font-size: 2.8rem;
+    }
+  }
+
+  &:after {
+    @include icoInline();
+    width: 4rem;
+    height: 1px;
+    background: $colorBlack;
+    line-height: 0;
+    margin-top: 4rem;
+
+    @media #{$breakS} {
+      width: 3rem;
+      margin-top: 2.5rem;
+    }
+  }
+}
+
+.m_txt_hd_label {
+  @include fontFamily('serif');
+  font-size: 2.4rem;
+  background: $colorDarkGray;
+  color: $colorWhite;
+  padding: .5rem 1.5rem .6rem;
+  margin-bottom: 6rem;
+  box-shadow: inset 0 -.2rem 0 rgba(0, 0, 0, .1);
+
+  @media #{$breakS} {
+    font-size: 1.8rem;
+    padding: .5rem 1.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.m_txt_hd_underline {
+  @include fontFamily('serif');
+  font-size: 2.2rem;
+  border-bottom: 1px solid $colorLightGray;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+
+  @media #{$breakS} {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+
+    @media #{$breakS} {
+      display: block;
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.m_txt_hd_group {
+  @include fontFamily('serif');
+  font-size: 2.8rem;
+  margin-bottom: 5rem;
+
+  @media #{$breakS} {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.m_txt_hd_small {
+  @include fontFamily('serif');
+  font-size: 2rem;
+  margin-bottom: 2rem;
+
+  @media #{$breakS} {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.m_txt_catch {
+  @include fontFamily('serif');
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  letter-spacing: .125em;
+  line-height: $lineHeight;
+
+  @media #{$breakS} {
+    font-size: 2.2rem;
+  }
+}

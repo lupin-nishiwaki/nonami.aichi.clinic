@@ -1,0 +1,505 @@
+#page_top #mv .wrapper{padding-left:8rem}
+#page_top #mv .wrapper .ttlBox{position:absolute;top:16rem;left:16rem;z-index:5}
+#page_top #mv .wrapper .ttlBox .open{font-family:'Noto Serif JP';font-size:2.2rem;line-height:1.6;margin-bottom:1.5rem}
+#page_top #mv .wrapper .ttlBox .open span{display:inline-block;border:1px solid #48453a;padding:.2rem 2rem .4rem}
+#page_top #mv .wrapper .ttlBox h1.catch{font-family:'Noto Serif JP';font-size:5rem}
+#page_top #mv .wrapper .ttlBox h1.catch br.tablet{display:none}
+#page_top #mv .wrapper .ttlBox .category{position:relative;margin-top:2.5rem;padding-left:5rem;letter-spacing:.15em}
+#page_top #mv .wrapper .ttlBox .category:before{content:'';position:absolute;margin:auto;top:1.5rem;left:.2rem;width:3rem;height:1px;background:#48453a}
+#page_top #mv .wrapper .main{position:relative;border-radius:.5rem 0 0 .5rem;overflow:hidden;max-height:82rem}
+#page_top #mv .wrapper .main .visual .swiper-slide img{width:100%}
+#page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-active img,#page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-duplicate-active img,#page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-prev img{animation:zoom 6s linear}
+#page_top #mv .wrapper .main .news{position:absolute;bottom:0;left:0;z-index:5;width:100%;height:5rem;padding:0 10rem 0 67rem;overflow:hidden;background:#8b8780;white-space:nowrap}
+#page_top #mv .wrapper .main .news .swiper-slide a{display:flex;height:100%;align-items:center;color:#fff;overflow:hidden}
+#page_top #mv .wrapper .main .news .swiper-slide a span.day{flex-shrink:0;width:12rem}
+#page_top #mv .wrapper .main .news .swiper-button-next,#page_top #mv .wrapper .main .news .swiper-button-prev{top:0;left:auto;right:0;width:5rem;height:5rem;margin:0;background:url(/asset/img/i_arr02_wh.svg) rgba(0,0,0,.1) no-repeat center;background-size:2rem auto}
+#page_top #mv .wrapper .main .news .swiper-button-next:after,#page_top #mv .wrapper .main .news .swiper-button-prev:after{display:none}
+#page_top #mv .wrapper .main .news .swiper-button-prev{right:5.1rem;transform:rotate(180deg)}
+#page_top #mv .wrapper .side{display:flex;flex-direction:column;justify-content:center;align-items:center;position:absolute;top:0;left:0;z-index:5;width:8rem;height:100%}
+#page_top #mv .wrapper .side .name{-ms-writing-mode:tb-rl;writing-mode:vertical-rl;color:#8b8780;font-size:1.2rem;letter-spacing:.8rem}
+#page_top #mv .wrapper .side .visual-swiper-pagination{display:flex;flex-flow:column;align-items:center;margin-top:2rem}
+#page_top #mv .wrapper .side .visual-swiper-pagination span{background:#f7f7f7;opacity:1;width:.6rem;height:.6rem}
+#page_top #mv .wrapper .side .visual-swiper-pagination span+span{margin-top:1rem}
+#page_top #mv .wrapper .side .visual-swiper-pagination span.swiper-pagination-bullet-active{background:#8b8780}
+#page_top #mv .calender{position:absolute;bottom:0;left:8rem;z-index:10;background:#fff;padding:3rem 8rem 1rem;border-radius:0 .5rem 0 0}
+#page_top #message{text-align:center}
+#page_top #treatment .ttlBox{display:flex;align-items:center;margin-bottom:5rem}
+#page_top #treatment .ttlBox h2{flex-shrink:0;width:28rem;margin:0}
+#page_top #treatment ul.link{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:3rem;row-gap:3rem;text-align:center}
+#page_top #treatment ul.link li a{pointer-events:none;position:relative;display:block;border:1px solid #f7f7f7;border-radius:.5rem;background:#fff;padding:5rem 0;transition:.3s box-shadow}
+#page_top #treatment ul.link li a:before{content:'';position:absolute;margin:auto;bottom:0;left:0;height:.5rem;width:100%;background-color:#ae9373;display:inline-block;transition:transform .3s cubic-bezier(.22,0,.53,1);transform:scale(0,1);transform-origin:right top}
+#page_top #treatment ul.link li a:after{display:none}
+#page_top #treatment ul.link li a:hover{box-shadow:0 0 1.5rem #f7f7f7}
+#page_top #treatment ul.link li a:hover:before{transform:scale(1,1);transform-origin:left top;transition:transform .3s cubic-bezier(.22,0,.53,1)}
+#page_top #treatment ul.link li a .hd{font-family:'Noto Serif JP';font-size:2.4rem;margin:1rem 0 1.5rem}
+#page_top #treatment ul.link li a p{line-height:1.8}
+#page_top #recruit a{display:block;position:relative;overflow:hidden}
+#page_top #recruit a:hover picture{transform:scale(1.1)}
+#page_top #recruit a h2{font-family:'Noto Serif JP';color:#fff;line-height:1.2;position:absolute;top:7.5rem;left:7rem;z-index:5}
+#page_top #recruit a h2 span.en{font-family:Lato,'Noto Sans JP',YuGothic,'Yu Gothic',Meiryo,'メイリオ','MS PGothic','ＭＳ Ｐゴシック',sans-serif;display:block;font-size:2rem;margin-bottom:1rem}
+#page_top #recruit a h2 em.ja{display:block;font-size:3.4rem;font-weight:500}
+#page_top #recruit a picture{position:relative;z-index:1;transition:transform .5s cubic-bezier(.165,.84,.44,1)}
+#page_top #beauty .wrap{background:url(/asset/img/top/beauty_bg.webp) no-repeat center;background-size:cover;border-radius:.5rem;color:#fff;overflow:hidden}
+#page_top #beauty .wrap .txtBox{padding:9rem 12rem}
+#page_top #beauty .wrap .txtBox h2{font-family:'Noto Serif JP';font-size:3rem;margin-bottom:1rem}
+#page_top #beauty .wrap .txtBox .btn{margin-top:2rem}
+#page_top #about{text-align:center}
+#page_top #about .row{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:3rem;row-gap:3rem;margin-top:5rem}
+#page_top #about .row picture{border-radius:.5rem;overflow:hidden}
+#page_top #about .row .txt{margin-top:1.5rem;line-height:1.8}
+#page_top #link .wrapper{border-top:2px solid #f7f7f7;border-bottom:2px solid #f7f7f7}
+#page_top #link .wrap{display:flex;text-align:center}
+#page_top #link .wrap>*{width:50%;padding:15rem 0}
+#page_top #link .wrap .cooperation{border-left:2px solid #f7f7f7}
+#page_top #link .wrap h3{font-family:'Noto Serif JP';font-size:2.4rem;line-height:1.2}
+#page_top #link .wrap h3 span.en{font-family:Lato,'Noto Sans JP',YuGothic,'Yu Gothic',Meiryo,'メイリオ','MS PGothic','ＭＳ Ｐゴシック',sans-serif;display:block;font-size:1.5rem;color:#8b8780;margin-bottom:1rem}
+#page_top #news .wrapper{display:flex}
+#page_top #news .wrapper h2{flex-shrink:0;width:28rem}
+#page_top #news .wrapper .newsBox{width:100%}
+#page_top #news .wrapper .btn{position:absolute;top:18rem;left:0}
+#page_top #news .wrapper .btn a{text-decoration:underline}
+#page_about #feature .feature{display:flex;align-items:center}
+#page_about #feature .feature+.feature{margin-top:15rem}
+#page_about #feature .feature.-reverse{flex-direction:row-reverse}
+#page_about #feature .feature.-reverse .imgBox{border-radius:.5rem 0 0 .5rem}
+#page_about #feature .feature.-reverse .txtBox{padding:0 5% 0 15%}
+#page_about #feature .feature .imgBox{width:40%;height:58.4rem;overflow:hidden;border-radius:0 .5rem .5rem 0}
+#page_about #feature .feature .imgBox img{width:100%;height:100%}
+#page_about #feature .feature .txtBox{flex-shrink:0;width:60%;padding:0 15% 0 5%}
+#page_about #feature .feature .txtBox .no{font-size:6rem;color:#f7f7f7;line-height:.75}
+#page_about #feature .feature .txtBox h3{font-family:'Noto Serif JP';position:relative;font-size:2.8rem;margin:2.5rem 0 3rem;padding-bottom:3rem}
+#page_about #feature .feature .txtBox h3:after{content:'';position:absolute;margin:auto;bottom:0;left:0;width:2rem;height:1px;background:#48453a}
+#page_about #doctor .profile,#page_about #officeWork .profile{position:relative}
+#page_about #doctor .profile+.profile,#page_about #officeWork .profile+.profile{margin-top:15rem}
+#page_about #doctor .profile .person,#page_about #officeWork .profile .person{display:flex;align-items:flex-start}
+#page_about #doctor .profile .person .imgBox,#page_about #officeWork .profile .person .imgBox{border-radius:.5rem;overflow:hidden;flex-shrink:0;width:21rem;margin-right:6rem;border-radius:.5rem;overflow:hidden}
+#page_about #doctor .profile .person .txtBox .name,#page_about #officeWork .profile .person .txtBox .name{font-family:'Noto Serif JP';display:flex;align-items:flex-end;font-size:2.8rem;margin-bottom:2.5rem}
+#page_about #doctor .profile .person .txtBox .name .en,#page_about #officeWork .profile .person .txtBox .name .en{font-family:Lato,'Noto Sans JP',YuGothic,'Yu Gothic',Meiryo,'メイリオ','MS PGothic','ＭＳ Ｐゴシック',sans-serif;position:relative;bottom:.2rem;color:#8b8780;font-size:1.4rem;margin-left:2rem}
+#page_about #doctor .profile .person .txtBox .img,#page_about #officeWork .profile .person .txtBox .img{border-radius:.5rem;overflow:hidden}
+#page_about #doctor .profile .data,#page_about #officeWork .profile .data{display:flex;flex-direction:row-reverse;column-gap:7rem;margin-top:6rem;font-size:1.3rem}
+#page_about #doctor .profile .data>*,#page_about #officeWork .profile .data>*{width:50%}
+#page_about #doctor .profile .data dl,#page_about #officeWork .profile .data dl{display:flex;line-height:1.6}
+#page_about #doctor .profile .data dl+dl,#page_about #officeWork .profile .data dl+dl{margin-top:.8rem}
+#page_about #doctor .profile .data dl dt,#page_about #officeWork .profile .data dl dt{flex-shrink:0;width:9.8rem}
+#page_about #doctor .profile .data .affiliation,#page_about #officeWork .profile .data .affiliation{margin-top:5rem}
+#page_about #doctor .doctorsFile,#page_about #doctor .innabiNet,#page_about #officeWork .doctorsFile,#page_about #officeWork .innabiNet{margin-top:15rem}
+#page_about #doctor .doctorsFile a,#page_about #doctor .innabiNet a,#page_about #officeWork .doctorsFile a,#page_about #officeWork .innabiNet a{display:block}
+#page_about #doctor{margin-top:0}
+#page_about #doctor .takeya .data{flex-direction:row}
+#page_about #facility h3{font-family:'Noto Serif JP';font-size:2.8rem;margin-bottom:3rem}
+#page_about #facility .lead{margin-bottom:4rem}
+#page_about #facility ul{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:4rem;row-gap:4rem}
+#page_about #facility ul li a{display:block}
+#page_about #facility ul li a picture{border-radius:.5rem;overflow:hidden;margin-bottom:3rem}
+#page_about #facility ul li a picture img{width:100%}
+#page_about #facility ul li a .company{display:inline-block;font-size:1.3rem;line-height:1.4;background:#c4baba;color:#fff;padding:.5rem 1rem;margin-bottom:1.5rem}
+#page_about #facility ul li a .name{font-family:'Noto Serif JP';position:relative;font-size:2rem;text-decoration:underline;line-height:1.4}
+#page_about #facility ul li a .name:after{content:'';display:inline-block;position:relative;top:-.2rem;width:1.4rem;height:1.4rem;margin-left:1rem;background:url(/asset/img/i_blank_bk.svg) no-repeat center;background-size:100% auto}
+#page_about #facility ul li a .iso,#page_about #facility ul li a .medical{font-size:1.3rem;line-height:1.6;margin-top:2rem}
+#page_about #facility .local,#page_about #facility .partner{margin-top:10rem}
+#page_beauty #news .wrapper{display:flex}
+#page_beauty #news .wrapper h2{flex-shrink:0;width:28rem}
+#page_beauty #news .wrapper .newsBox{width:100%}
+#page_beauty #news .wrapper .btn{position:absolute;top:18rem;left:0}
+#page_beauty #news .wrapper .btn a{text-decoration:underline}
+#page_beauty #menu .menu{padding-top:7rem}
+#page_beauty #menu .menu .box{display:flex;margin-top:7rem}
+#page_beauty #menu .menu .box .imgBox{flex-shrink:0;width:28rem;position:relative;top:1rem;border-radius:.5rem;overflow:hidden;margin-right:4rem}
+#page_beauty #menu .menu .box .txtBox .item+.item{margin-top:4rem}
+#page_beauty #menu .menu .box .txtBox .caution,#page_beauty #menu .menu .box .txtBox .machine,#page_beauty #menu .menu .box .txtBox .price,#page_beauty #menu .menu .box .txtBox .remarks,#page_beauty #menu .menu .box .txtBox .risk,#page_beauty #menu .menu .box .txtBox .surgery{margin-top:3rem;line-height:1.6}
+#page_beauty #menu .menu .box .txtBox .caution h5,#page_beauty #menu .menu .box .txtBox .machine h5,#page_beauty #menu .menu .box .txtBox .price h5,#page_beauty #menu .menu .box .txtBox .remarks h5,#page_beauty #menu .menu .box .txtBox .risk h5,#page_beauty #menu .menu .box .txtBox .surgery h5{margin-bottom:1rem;line-height:1}
+#page_beauty #menu .menu .box .txtBox .caution h5,#page_beauty #menu .menu .box .txtBox .machine h5,#page_beauty #menu .menu .box .txtBox .remarks h5,#page_beauty #menu .menu .box .txtBox .risk h5{font-size:1.3rem;color:#8b8780}
+#page_beauty #menu .menu .box .txtBox .caution p,#page_beauty #menu .menu .box .txtBox .machine p,#page_beauty #menu .menu .box .txtBox .remarks p,#page_beauty #menu .menu .box .txtBox .risk p{font-size:1.3rem}
+#page_beauty #menu .menu .box .txtBox .price h5,#page_beauty #menu .menu .box .txtBox .surgery h5{font-size:1.6rem;color:#b096b2;border-left:.3rem solid #b096b2;padding-left:1rem}
+#page_beauty #menu .menu .box .txtBox .surgery dl{display:flex}
+#page_beauty #menu .menu .box .txtBox .surgery dl+dl{margin-top:.5rem}
+#page_beauty #menu .menu .box .txtBox .surgery dl dt{flex-shrink:0;margin-right:.5rem}
+#page_beauty #menu .menu .box .txtBox .price h6{color:#b096b2;margin-top:2rem}
+#page_beauty #menu .menu .box .txtBox .price h6+dl{margin-top:1rem}
+#page_beauty #menu .menu .box .txtBox .price dl{display:flex;justify-content:space-between;position:relative;margin-top:2rem}
+#page_beauty #menu .menu .box .txtBox .price dl+dl{margin-top:1rem}
+#page_beauty #menu .menu .box .txtBox .price dl:before{content:'';position:absolute;margin:auto;top:1.1rem;left:0;z-index:1;width:100%;height:1px;border-top:1px dotted #c4baba}
+#page_beauty #menu .menu .box .txtBox .price dl dd,#page_beauty #menu .menu .box .txtBox .price dl dt{position:relative;z-index:5;background:#fff}
+#page_beauty #menu .menu .box .txtBox .price dl dt{padding-right:1rem}
+#page_beauty #menu .menu .box .txtBox .price dl dd{padding-left:1rem;text-align:right}
+#page_beauty #menu .menu .box .txtBox .price p.notes{margin-top:.5rem;font-size:1.3rem}
+#page_beauty #menu .menu .box .txtBox .caution{border:1px solid #f7f7f7;padding:1.3rem 2rem 1.6rem}
+#page_beauty #menu .menu .box .txtBox .caution dl dt{font-size:1.3rem;color:#8b8780;line-height:1}
+#page_beauty #menu .menu .box .txtBox .caution dl dt:after{content:'';display:inline-block;position:relative;top:.3rem;width:1.5rem;height:1.5rem;margin-left:.5rem;background:url(/asset/img/i_arr02_gy.svg) no-repeat center;background-size:100% auto;transform:rotate(90deg);transition:transform .3s}
+#page_beauty #menu .menu .box .txtBox .caution dl dt.is-active:after{transform:rotate(-90deg)}
+#page_beauty #menu .menu .box .txtBox .caution dl dd{margin-top:1rem}
+#page_beauty #menu .menu .box .txtBox .caution dl dd ul li{line-height:1.6;font-size:1.3rem}
+#page_beauty #menu .menu .box .txtBox .caution dl dd ul li:before{top:.8rem}
+#page_beauty #menu .menu .box .txtBox .beforeAfter{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:1.5rem;row-gap:0;margin-top:2rem;line-height:1.6;text-align:center}
+#page_beauty #menu .menu .box .txtBox .beforeAfter p{margin-top:.5rem}
+#page_beauty #flow .tabBtn{grid-template-columns:repeat(2,minmax(0,50%))}
+#page_beauty #line{text-align:center}
+#page_beauty #line h2{font-family:'Noto Serif JP';font-size:2.4rem;margin-bottom:5rem}
+#page_beauty #line h2 img{width:6rem}
+#page_beauty #line h2 span{display:block;margin-top:1rem}
+#page_cardiology #about .target{margin-top:5rem}
+#page_cardiology #catheter .flow,#page_cardiology #catheter .info,#page_cardiology #catheter .machine{margin-top:7rem}
+#page_cardiology #catheter .info{border:1px solid #f7f7f7;padding:6rem;border-radius:.5rem}
+#page_cardiology #catheter .info .room{margin-top:4rem}
+#page_cardiology #catheter .info .room .row{display:flex}
+#page_cardiology #catheter .info .room .row picture{flex-shrink:0;position:relative;top:.6rem;width:28rem;border-radius:.5rem;overflow:hidden;margin-right:2rem}
+#page_cardiology #heartSurgery .overview .lead:after{content:'';display:block;clear:both}
+#page_cardiology #heartSurgery .overview .lead img{float:right;position:relative;top:.8rem;width:40rem;border-radius:.5rem;overflow:hidden;margin:0 0 3rem 3rem}
+#page_cardiology #heartSurgery .overview .lead a{text-decoration:underline;color:#8b8780}
+#page_cardiology #heartSurgery .disease{margin-top:5rem}
+#page_entry .thanks{font-size:1.8rem;margin-top:6rem}
+#page_contact .thanks{font-size:1.8rem;margin-top:6rem}
+#page_equipment #radiation ul{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:4rem;row-gap:4rem}
+#page_equipment #menstruation .vivid{margin-top:4rem}
+#page_equipment #menstruation .vivid .imgBox{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:4rem;row-gap:4rem}
+#page_equipment #menstruation .vivid .imgBox picture{border-radius:.5rem;overflow:hidden}
+#page_equipment #menstruation .vivid .imgBox picture img{width:100%}
+#page_equipment #menstruation .vivid .txtBox{margin-top:2.5rem}
+#page_equipment #menstruation .vivid .name{font-family:'Noto Serif JP';font-size:2rem;line-height:1.4;margin-bottom:2rem}
+#page_equipment #menstruation .vivid .name span{display:block;font-size:1.3rem;color:#8b8780;margin-top:.5rem}
+#page_fever #fever .point{margin-top:3rem}
+#page_fever #visit .flow{margin-top:5rem}
+#page_general #internal table,#page_general #surgery table{margin-top:2.5rem;border-top:1px solid #f7f7f7;border-bottom:1px solid #f7f7f7}
+#page_general #internal table tr+tr th,#page_general #surgery table tr+tr th{border-top:1px solid #fff}
+#page_general #internal table tr+tr td,#page_general #surgery table tr+tr td{border-top:1px solid #f7f7f7}
+#page_general #internal table tr td,#page_general #internal table tr th,#page_general #surgery table tr td,#page_general #surgery table tr th{padding:2rem;vertical-align:middle}
+#page_general #internal table tr th,#page_general #surgery table tr th{font-family:'Noto Serif JP';width:25rem;font-size:1.5rem;background:#f7f7f7;text-align:center}
+#page_general #internal .allergy{margin-top:5rem}
+#page_general #surgery .oneDay{border:1px solid #f7f7f7;border-radius:.5rem;padding:3rem 6rem;margin-top:5rem}
+#page_information #overview .row{display:flex;align-items:flex-start}
+#page_information #overview .row .txtBox{width:100%;margin-right:5rem;line-height:1.6}
+#page_information #overview .row .txtBox dl{display:flex}
+#page_information #overview .row .txtBox dl+dl{margin-top:2rem;padding-top:2rem;border-top:1px solid #f7f7f7}
+#page_information #overview .row .txtBox dl dt{flex-shrink:0;width:9rem}
+#page_information #overview .row .txtBox .pay .credit,#page_information #overview .row .txtBox .pay .qr{margin-top:1.5rem}
+#page_information #overview .row .txtBox .pay .credit ul,#page_information #overview .row .txtBox .pay .qr ul{display:grid;grid-template-columns:repeat(6,minmax(0,16.6666666667%));column-gap:1rem;row-gap:1rem;margin-top:.3rem}
+#page_information #overview .row .imgBox{flex-shrink:0;width:31.1rem;border-radius:.5rem;overflow:hidden}
+#page_information #access{padding:0}
+#page_information #access iframe{width:100%;height:50rem}
+#page_information #doctor table td,#page_information #doctor table th{text-align:center;padding:2rem 0;vertical-align:middle;width:10%}
+#page_information #doctor table td+td,#page_information #doctor table td+th,#page_information #doctor table th+td,#page_information #doctor table th+th{border-left:1px solid #f7f7f7}
+#page_information #doctor table td.item01,#page_information #doctor table th.item01{width:20%}
+#page_information #doctor table tr:last-child td,#page_information #doctor table tr:last-child th{border-top:1px solid #f7f7f7}
+#page_information #doctor .txt{margin-top:3rem}
+#page_information #doctor .btn{text-align:center}
+#page_information #gallery .gallery{position:relative;border-radius:.5rem;overflow:hidden}
+#page_information #gallery .gallery img{width:100%}
+#page_information #gallery .gallery .swiper-button-next,#page_information #gallery .gallery .swiper-button-prev{top:calc(50% - 2rem);width:4rem;height:4rem;margin:0;background:url(/asset/img/i_arr02_wh.svg) no-repeat;background-size:100% auto;transform:rotate(0)}
+#page_information #gallery .gallery .swiper-button-next:after,#page_information #gallery .gallery .swiper-button-prev:after{display:none}
+#page_information #gallery .gallery .swiper-button-prev{transform:rotate(180deg)}
+#page_information #gallery .gallery .swiper-pagenation{display:none}
+#page_information #gallery .galleryThumb{overflow:hidden;margin-top:2rem}
+#page_information #gallery .galleryThumb .swiper-slide{border-radius:.5rem;overflow:hidden;cursor:pointer;background:#48453a}
+#page_information #gallery .galleryThumb .swiper-slide img{opacity:.4}
+#page_information #gallery .galleryThumb .swiper-slide.swiper-slide-thumb-active img{opacity:1}
+#page_news #archive .tabBtn{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:1px;text-align:center;font-size:1.8rem;color:#8b8780;line-height:1.6;margin-bottom:5rem}
+#page_news #archive .tabBtn>div a,#page_news #archive .tabBtn>div span{display:block;background:#f7f7f7;padding:3.5rem 0}
+#page_news #archive .tabBtn>div.is-tab a,#page_news #archive .tabBtn>div.is-tab span{background:#fff;color:#48453a;border-top:.3rem solid #8b8780}
+#page_news #archive .tabBtn.-purple>div.is-tab a,#page_news #archive .tabBtn.-purple>div.is-tab span{border-top:.3rem solid #b096b2}
+#page_beautynews #archive .tabBtn{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:1px;text-align:center;font-size:1.8rem;color:#8b8780;line-height:1.6;margin-bottom:5rem}
+#page_beautynews #archive .tabBtn>div a,#page_beautynews #archive .tabBtn>div span{display:block;background:#f7f7f7;padding:3.5rem 0}
+#page_beautynews #archive .tabBtn>div.is-tab a,#page_beautynews #archive .tabBtn>div.is-tab span{background:#fff;color:#48453a;border-top:.3rem solid #8b8780}
+#page_beautynews #archive .tabBtn.-purple>div.is-tab a,#page_beautynews #archive .tabBtn.-purple>div.is-tab span{border-top:.3rem solid #b096b2}
+#page_no-smoking #about .point{margin:3rem 0}
+#page_no-smoking #merit picture{border:1px solid #f7f7f7;border-radius:.5rem;padding:6rem;margin:3rem 0}
+#page_no-smoking #target .insurance{border:1px solid #f7f7f7;border-radius:.5rem;padding:3rem 6rem;margin:3rem 0}
+#page_no-smoking #target .insurance .notes{margin-top:1rem;line-height:1.6}
+#page_no-smoking #treatment .continuation,#page_no-smoking #treatment .schedule,#page_no-smoking #treatment .test{padding-top:7rem}
+#page_no-smoking #treatment .continuation h3,#page_no-smoking #treatment .schedule h3,#page_no-smoking #treatment .test h3{margin-bottom:3rem}
+#page_no-smoking #treatment .schedule{margin-top:5rem}
+#page_no-smoking #treatment .schedule .box{border:1px solid #f7f7f7;border-radius:.5rem;padding:5rem 6rem 3rem}
+#page_no-smoking #treatment .schedule .box picture{margin-bottom:4rem}
+#page_no-smoking #treatment .continuation picture{margin-bottom:3rem;border:1px solid #f7f7f7;border-radius:.5rem;padding:5rem 6rem 3rem}
+#page_no-smoking #treatment .continuation dl{display:flex;margin-top:1rem}
+#page_no-smoking #treatment .continuation dl dt{flex-shrink:0;margin-right:1rem}
+#page_no-smoking #treatment .continuation .credit{text-align:right;margin-top:1rem}
+#page_no-smoking #treatment .test .box{border:1px solid #f7f7f7;border-radius:.5rem;padding:3rem 6rem;margin-top:3rem}
+#page_privacy #privacy h4{margin-top:7rem}
+#page_recruit #guidelines .lead{margin-bottom:7rem}
+#page_recruit #guidelines dl{display:flex;border-bottom:1px solid #48453a;padding-bottom:3rem}
+#page_recruit #guidelines dl+dl{margin-top:3rem}
+#page_recruit #guidelines dl dt{flex-shrink:0;width:19rem}
+#page_recruit #guidelines .entry{margin-top:7rem;text-align:center}
+#page_recruit #guidelines .entry .row{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:2rem;row-gap:0;margin-top:5rem;padding:0 3rem}
+#page_recruit #guidelines .entry .row .form a{min-width:100%}
+#page_recruit #guidelines .entry .row .tel a{display:block;height:9.6rem;border-radius:.5rem;box-shadow:0 3px 6px rgba(0,0,0,.16);color:#8b8780}
+#page_recruit #guidelines .entry .row .tel a span{display:block}
+#page_recruit #guidelines .entry .row .tel a span.num{font-size:3.4rem;line-height:1;padding-top:1.8rem}
+#page_recruit #guidelines .entry .row .tel a span.num:before{content:'';display:inline-block;position:relative;top:-.1rem;width:2rem;height:2rem;margin-right:.7rem;background:url(/asset/img/i_tel_gy.svg) no-repeat center;background-size:100% auto}
+#page_shunt #trouble .trouble{margin-top:5rem}
+#page_shunt #treatment .treatment{margin-top:5rem}
+#page_varix #varicoseVeins .symptoms{margin-top:5rem}
+#page_varix #varicoseVeins .symptoms .cap{margin-bottom:1rem}
+#page_varix #varicoseVeinsCause .cause{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:4rem;row-gap:4rem;text-align:center}
+#page_varix #varicoseVeinsCause .cause li{position:relative;border-radius:.5rem;border:1px solid #f7f7f7;padding:3rem}
+#page_varix #varicoseVeinsCause .cause li picture img{width:6rem}
+#page_varix #varicoseVeinsCause .cause li h3{font-family:'Noto Serif JP';font-size:1.8rem;margin:1rem 0 1.5rem}
+#page_varix #varicoseVeinsCause .cause li p{line-height:1.8;text-align:left}
+#page_varix #varicoseVeinsClinic .point{margin-top:5rem;font-size:1.8rem}
+#page_varix #varicoseVeinsTreatment .treatment{margin-top:7rem}
+#page_varix #varicoseVeinsTreatment .treatment01 .row,#page_varix #varicoseVeinsTreatment .treatment03 .row,#page_varix #varicoseVeinsTreatment .treatment05 .row{display:flex;flex-direction:row-reverse}
+#page_varix #varicoseVeinsTreatment .treatment01 .row .video,#page_varix #varicoseVeinsTreatment .treatment03 .row .video,#page_varix #varicoseVeinsTreatment .treatment05 .row .video{flex-shrink:0;width:30rem;position:relative;top:.5rem;margin-right:2.5rem}
+#page_varix #varicoseVeinsTreatment .treatment01 .row .txt,#page_varix #varicoseVeinsTreatment .treatment03 .row .txt,#page_varix #varicoseVeinsTreatment .treatment05 .row .txt{width:100%}
+#page_varix #varicoseVeinsTreatment .treatment01{margin-top:5rem}
+#page_varix #varicoseVeinsTreatment .treatment02 .video{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:3rem;row-gap:0;margin-top:2.5rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress{margin-top:2rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:8rem;row-gap:0;text-align:center}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li{position:relative}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li+li:before{content:'';position:absolute;margin:auto;top:11.5rem;left:-5.4rem;z-index:5;width:2.8rem;height:2.8rem;background:url(/asset/img/i_arr_be.svg) no-repeat center;width:100% auto}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li picture{border-radius:.5rem;overflow:hidden;margin-bottom:1rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li picture img{width:100%}
+#page_varix #varicoseCase .tblCover{margin-top:5rem;border:1px solid #f7f7f7;border-radius:.5rem;overflow:hidden;padding:3rem;overflow-x:scroll}
+#page_varix #varicoseCase .tblCover table{min-width:86.6rem;font-size:1.8rem}
+#page_varix #varicoseCase .tblCover table td,#page_varix #varicoseCase .tblCover table th{border-bottom:1px solid #f7f7f7;font-weight:500;text-align:right;padding:.5rem 0}
+#page_varix #varicoseCase .tblCover table thead th{border-bottom:none}
+#page_varix #varicoseCase .tblCover table tbody th{width:20%;text-align:left}
+#page_varix #varicoseCase .tblCover table tbody td{width:13.3%}
+#page_varix #varicoseCase .tblCover .cap{text-align:right;margin-top:1rem}
+#page_varix #varicoseCase .tblCover .scroll{display:none}
+#page_varix #varicoseFaq dl{font-size:1.8rem;border-top:1px solid #f7f7f7}
+#page_varix #varicoseFaq dl:last-child{border-bottom:1px solid #f7f7f7}
+#page_varix #varicoseFaq dl dt{position:relative;padding:2.5rem 6rem}
+#page_varix #varicoseFaq dl dt:before{content:'';position:absolute;margin:auto;content:'Q';top:2.1rem;left:2rem;color:#8b8780;font-size:2rem}
+#page_varix #varicoseFaq dl dt i{position:absolute;top:0;bottom:0;right:3rem;margin:auto;width:1.5rem;height:1.5rem}
+#page_varix #varicoseFaq dl dt i:after,#page_varix #varicoseFaq dl dt i:before{content:'';position:absolute;margin:auto;top:0;bottom:0;left:0;right:0;width:1.5rem;height:1px;background:#8b8780;transition:opacity .3s}
+#page_varix #varicoseFaq dl dt i:after{transform:rotate(90deg)}
+#page_varix #varicoseFaq dl dt.is-active i:after{opacity:0}
+#page_varix #varicoseFaq dl dd{position:relative;padding:0 6rem 3.5rem}
+#page_varix #varicoseFaq dl dd:before{content:'';position:absolute;margin:auto;content:'A';top:-.2rem;left:2rem;color:#8b8780;font-size:2rem}
+#page_varix #varicoseFaq dl dd h5{position:relative;margin:2rem 0 .5rem;padding-left:1.2em}
+#page_varix #varicoseFaq dl dd h5:before{content:'';position:absolute;margin:auto;top:.8rem;left:0;width:.6em;height:.6em;border-radius:1rem;background:#48453a}
+#page_varix #varicoseFaq dl dd .txt{font-size:1.5rem}
+#page_varix #pad .btn{display:flex;margin-top:3rem}
+#page_varix #pad .btn div+div{margin-left:2rem}
+#page_varix #cvi .case,#page_varix #cvi .symptoms,#page_varix #cvi .treatment{margin-top:5rem}
+#page_varix #cvi .case .img{display:flex;margin-top:2.7rem}
+#page_varix #cvi .case .img picture{width:29rem;border-radius:.5rem;overflow:hidden;margin-right:2rem}
+#page_varix #cvi .case .img picture img{width:100%}
+#page_varix #cvi .case .txt{margin-top:2rem}
+#page_varix #dvt .symptoms,#page_varix #dvt .treatment{margin-top:5rem}
+#page_varix #other ul{margin-top:3rem}
+@media screen and (max-width:1220px){
+#page_top #mv .wrapper .ttlBox{top:9rem}
+#page_top #mv .wrapper .ttlBox h1.catch br.tablet{display:block}
+#page_about #feature .feature.-reverse .txtBox{padding:0 7% 0 7.5%}
+#page_about #feature .feature .imgBox{height:40rem}
+#page_about #feature .feature .txtBox{padding:0 7.5% 0 7%}
+}
+@media screen and (max-width:767px){
+#page_top #mv .wrapper{padding:5.5rem 0 0 2rem}
+#page_top #mv .wrapper .ttlBox{top:4.2rem;left:5rem}
+#page_top #mv .wrapper .ttlBox .open{font-size:1.3rem;margin-bottom:1rem}
+#page_top #mv .wrapper .ttlBox .open span{padding:.2rem 1rem}
+#page_top #mv .wrapper .ttlBox h1.catch{font-size:3rem}
+#page_top #mv .wrapper .ttlBox .category{font-size:1.1rem;margin-top:1rem;padding-left:2rem}
+#page_top #mv .wrapper .ttlBox .category:before{top:.8rem;left:0;width:1rem}
+#page_top #mv .wrapper .main{height:48rem}
+#page_top #mv .wrapper .main .news{height:4rem;padding:0 6rem 0 0}
+#page_top #mv .wrapper .main .news .swiper-slide a{font-size:1.2rem;padding:0 2rem}
+#page_top #mv .wrapper .main .news .swiper-slide a span.day{width:8rem}
+#page_top #mv .wrapper .main .news .swiper-button-next,#page_top #mv .wrapper .main .news .swiper-button-prev{width:3rem;height:4rem;background-size:1.6rem auto}
+#page_top #mv .wrapper .main .news .swiper-button-prev{right:3.1rem}
+#page_top #mv .wrapper .side{display:none}
+#page_top #mv .calender{position:static;padding:0 2rem;margin-top:2rem}
+#page_top #message{text-align:left}
+#page_top #treatment .ttlBox{display:block;margin-bottom:3rem}
+#page_top #treatment .ttlBox h2{margin-bottom:3rem}
+#page_top #treatment ul.link{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
+#page_top #treatment ul.link{text-align:left}
+#page_top #treatment ul.link li a{padding:2rem 2rem 2rem 9rem}
+#page_top #treatment ul.link li a:before{display:none}
+#page_top #treatment ul.link li a:after{display:block;content:'';position:absolute;margin:auto;top:2.2rem;right:2rem;width:2.5rem;height:2.5rem;background:url(/asset/img/i_arr_be.svg) no-repeat center;background-size:100% auto}
+#page_top #treatment ul.link li a picture{position:absolute;top:0;bottom:0;left:1.5rem;z-index:5;width:6rem;height:6rem;margin:auto}
+#page_top #treatment ul.link li a .hd{font-size:2rem;margin:0 0 .5rem}
+#page_top #treatment ul.link li a p{font-size:1.1rem}
+#page_top #recruit a h2{top:5rem;left:3rem}
+#page_top #recruit a h2 span.en{font-size:1.5rem;margin-bottom:1rem}
+#page_top #recruit a h2 em.ja{font-size:2.8rem}
+#page_top #beauty .wrap{background:#8b8780}
+#page_top #beauty .wrap .txtBox{padding:2rem}
+#page_top #beauty .wrap .txtBox h2{font-size:2.2rem;text-align:center}
+#page_top #beauty .wrap .txtBox .btn{margin-top:1rem}
+#page_top #about .lead{text-align:left}
+#page_top #about .row{grid-template-columns:repeat(1,minmax(0,100%));row-gap:3rem}
+#page_top #about .row{margin-top:3rem}
+#page_top #about .row .txt{margin-top:1rem}
+#page_top #link .wrap{padding:0}
+#page_top #link .wrap>*{padding:5rem 0}
+#page_top #link .wrap picture img{width:6rem}
+#page_top #link .wrap h3{font-size:2rem}
+#page_top #link .wrap h3 span.en{font-size:1.1rem;margin-bottom:.5rem}
+#page_top #link .wrap .btn{margin-top:2rem}
+#page_top #link .wrap .btn a{width:4.5rem;min-width:4.5rem;height:4.5rem;text-indent:-999rem;border-radius:5rem;border:none;padding:0;background:url(/asset/img/i_arr_wh.svg) #8b8780 no-repeat center;background-size:1.5rem}
+#page_top #link .wrap .btn a i{display:none}
+#page_top #news .wrapper{display:block}
+#page_top #news .wrapper h2{width:100%;margin-bottom:.5rem}
+#page_top #news .wrapper .btn{position:static;text-align:right;margin-top:2.5rem}
+#page_about #feature .feature{display:block}
+#page_about #feature .feature+.feature{margin-top:7rem}
+#page_about #feature .feature.-reverse .imgBox{margin-left:2rem}
+#page_about #feature .feature.-reverse .txtBox{padding:0 2rem}
+#page_about #feature .feature .imgBox{width:100%;height:25rem;margin-left:-2rem}
+#page_about #feature .feature .txtBox{width:100%;padding:0 2rem;margin-top:3rem}
+#page_about #feature .feature .txtBox .no{font-size:4rem}
+#page_about #feature .feature .txtBox h3{font-size:2.5rem;margin:2rem 0 3rem;padding-bottom:3rem}
+#page_about #doctor .profile+.profile,#page_about #officeWork .profile+.profile{margin-top:7rem}
+#page_about #doctor .profile .person .txtBox .name,#page_about #officeWork .profile .person .txtBox .name{margin-bottom:2rem;font-size:2.5rem}
+#page_about #doctor .profile .person .txtBox .name .en,#page_about #officeWork .profile .person .txtBox .name .en{margin-left:1.5rem}
+#page_about #doctor .profile .person .txtBox .message,#page_about #officeWork .profile .person .txtBox .message{margin-top:2rem}
+#page_about #doctor .profile .data,#page_about #officeWork .profile .data{display:block;margin-top:3rem}
+#page_about #doctor .profile .data>*,#page_about #officeWork .profile .data>*{width:100%}
+#page_about #doctor .profile .data dl+dl,#page_about #officeWork .profile .data dl+dl{margin-top:.7rem}
+#page_about #doctor .profile .data dl dt,#page_about #officeWork .profile .data dl dt{width:9rem}
+#page_about #doctor .profile .data .affiliation,#page_about #officeWork .profile .data .affiliation{margin-top:3rem}
+#page_about #doctor .profile .data .licence,#page_about #officeWork .profile .data .licence{margin-top:3rem}
+#page_about #doctor .doctorsFile,#page_about #doctor .innabiNet,#page_about #officeWork .doctorsFile,#page_about #officeWork .innabiNet{margin-top:7rem}
+#page_about #facility h3{font-size:2rem;margin-bottom:2.5rem}
+#page_about #facility .lead{margin-bottom:2.5rem}
+#page_about #facility ul{grid-template-columns:repeat(1,minmax(0,100%));row-gap:3rem}
+#page_about #facility ul li a{display:flex}
+#page_about #facility ul li a picture{flex-shrink:0;width:9.5rem;height:9.5rem;margin-bottom:0}
+#page_about #facility ul li a picture img{height:100%}
+#page_about #facility ul li a .txtBox{margin-left:2rem}
+#page_about #facility ul li a .company{font-size:1rem;margin-bottom:1rem}
+#page_about #facility ul li a .type{font-size:1.1rem}
+#page_about #facility ul li a .name{font-size:1.8rem;margin-top:0}
+#page_about #facility ul li a .name:after{width:1rem;height:1rem;margin-left:.5rem}
+#page_about #facility ul li a .iso,#page_about #facility ul li a .medical{font-size:1.2rem;margin-top:1rem}
+#page_about #facility .local,#page_about #facility .partner{margin-top:5rem}
+#page_about #facility .local a{display:block}
+#page_beauty #news .wrapper{display:block}
+#page_beauty #news .wrapper h2{width:100%;margin-bottom:.5rem}
+#page_beauty #news .wrapper .btn{position:static;text-align:right;margin-top:2.5rem}
+#page_beauty #menu .menu .box{display:block;margin-top:5rem}
+#page_beauty #menu .menu .box .imgBox{position:static;width:100%;margin:0 0 2rem}
+#page_beauty #menu .menu .box .txtBox .item+.item{margin-top:5rem}
+#page_beauty #menu .menu .box .txtBox .caution,#page_beauty #menu .menu .box .txtBox .machine,#page_beauty #menu .menu .box .txtBox .price,#page_beauty #menu .menu .box .txtBox .remarks,#page_beauty #menu .menu .box .txtBox .risk,#page_beauty #menu .menu .box .txtBox .surgery{margin-top:2rem}
+#page_beauty #menu .menu .box .txtBox .price h5,#page_beauty #menu .menu .box .txtBox .surgery h5{font-size:1.5rem;margin-bottom:1.5rem}
+#page_beauty #menu .menu .box .txtBox .price{margin-top:2.5rem}
+#page_beauty #menu .menu .box .txtBox .price dl{flex-flow:column;margin-top:2rem}
+#page_beauty #menu .menu .box .txtBox .price dl+dl{margin-top:.5rem}
+#page_beauty #menu .menu .box .txtBox .price dl:before{top:auto;bottom:.9rem}
+#page_beauty #menu .menu .box .txtBox .price dl dt{padding:0}
+#page_beauty #menu .menu .box .txtBox .price dl dd{margin-left:auto;line-height:1.4}
+#page_beauty #menu .menu .box .txtBox .beforeAfter{grid-template-columns:repeat(2,minmax(0,50%));column-gap:1rem;row-gap:0}
+#page_beauty #menu .menu .box .txtBox .beforeAfter{margin-top:3rem;font-size:1.3rem}
+#page_beauty #menu .lazer{margin-top:5rem}
+#page_beauty #line h2{font-size:2rem;margin-bottom:3rem}
+#page_beauty #line h2 img{width:4rem}
+#page_cardiology #about .target{margin-top:3rem}
+#page_cardiology #about picture{margin-top:3rem;border-radius:.5rem;overflow:hidden}
+#page_cardiology #catheter .flow,#page_cardiology #catheter .info,#page_cardiology #catheter .machine{margin-top:4rem}
+#page_cardiology #catheter .info{padding:3rem}
+#page_cardiology #catheter .info .room{margin-top:2rem}
+#page_cardiology #catheter .info .room .row{display:block}
+#page_cardiology #catheter .info .room .row picture{width:100%;margin:0 0 2rem}
+#page_cardiology #heartSurgery .overview .lead img{float:none;position:static;width:100%;margin:0 0 1.5rem}
+#page_cardiology #heartSurgery .disease{margin-top:3rem}
+#page_entry .thanks{font-size:1.4rem;margin-top:5rem}
+#page_contact .thanks{font-size:1.4rem;margin-top:5rem}
+#page_equipment #radiation ul{grid-template-columns:repeat(1,minmax(0,100%));row-gap:5rem}
+#page_equipment #radiation ul li{padding:0}
+#page_equipment #radiation ul li picture{position:static;width:100%}
+#page_equipment #menstruation .vivid{display:flex;margin-top:2rem}
+#page_equipment #menstruation .vivid .imgBox{grid-template-columns:repeat(1,minmax(0,100%));row-gap:3rem}
+#page_equipment #menstruation .vivid .imgBox{display:block;flex-shrink:0;width:11rem;margin-right:2rem}
+#page_equipment #menstruation .vivid .imgBox picture+picture{margin-top:1rem}
+#page_equipment #menstruation .vivid .txtBox{margin:0}
+#page_equipment #menstruation .vivid .name{font-size:1.8rem;margin-bottom:1rem}
+#page_equipment #menstruation .vivid .name span{font-size:1.1rem;margin-top:.5rem}
+#page_equipment #menstruation .vivid .desc{font-size:1.3rem;line-height:1.8}
+#page_fever #fever .point{margin-top:2rem}
+#page_fever #visit .flow{margin-top:4rem}
+#page_general #internal table,#page_general #surgery table{margin-top:2rem;border-top:none;border-bottom:none}
+#page_general #internal table tr+tr th,#page_general #surgery table tr+tr th{border:none}
+#page_general #internal table tr+tr td,#page_general #surgery table tr+tr td{border:none}
+#page_general #internal table tr td,#page_general #internal table tr th,#page_general #surgery table tr td,#page_general #surgery table tr th{display:block;padding:1rem 0 2rem;line-height:1.6}
+#page_general #internal table tr th,#page_general #surgery table tr th{width:100%;padding:.2rem 1.5rem;font-size:1.4rem;text-align:left}
+#page_general #internal .allergy{margin-top:2rem}
+#page_general #surgery .oneDay{padding:3rem;margin-top:1rem}
+#page_information #overview .row{display:block}
+#page_information #overview .row .txtBox{margin:0 0 3rem}
+#page_information #overview .row .txtBox dl+dl{margin-top:1.5rem;padding-top:1.5rem}
+#page_information #overview .row .txtBox dl dt{width:7rem}
+#page_information #overview .row .txtBox .pay .credit ul,#page_information #overview .row .txtBox .pay .qr ul{grid-template-columns:repeat(4,minmax(0,25%));column-gap:.5rem;row-gap:.5rem;padding-right:5rem}
+#page_information #overview .row .imgBox{width:100%}
+#page_information #access iframe{height:20rem}
+#page_information #doctor table td,#page_information #doctor table th{padding:1.2rem 0;-ms-writing-mode:tb-rl;writing-mode:vertical-rl;font-size:1.3rem;text-align:left;letter-spacing:.2em}
+#page_information #doctor table td.item01,#page_information #doctor table th.item01{line-height:1.4}
+#page_information #doctor .txt{margin-top:2rem}
+#page_information #gallery .gallery .swiper-button-next,#page_information #gallery .gallery .swiper-button-prev{top:9.5rem;width:3rem;height:3rem}
+#page_information #gallery .gallery .swiper-button-prev{left:0}
+#page_information #gallery .gallery .swiper-button-next{right:0}
+#page_information #gallery .gallery .swiper-pagenation{display:block;text-align:center;margin-top:.5rem}
+#page_information #gallery .galleryThumb{display:none}
+#page_news #archive .tabBtn{font-size:1.4rem;margin:0 -2rem 1rem}
+#page_news #archive .tabBtn>div a,#page_news #archive .tabBtn>div span{padding:2rem 0}
+#page_beautynews #archive .tabBtn{font-size:1.4rem;margin:0 -2rem 1rem}
+#page_beautynews #archive .tabBtn>div a,#page_beautynews #archive .tabBtn>div span{padding:2rem 0}
+#page_no-smoking #about .point{margin:2rem 0}
+#page_no-smoking #merit picture{padding:3rem;margin:2rem 0}
+#page_no-smoking #target .insurance{padding:3rem;margin-top:2rem}
+#page_no-smoking #treatment .continuation,#page_no-smoking #treatment .schedule,#page_no-smoking #treatment .test{padding-top:5rem}
+#page_no-smoking #treatment .continuation h3,#page_no-smoking #treatment .schedule h3,#page_no-smoking #treatment .test h3{margin-bottom:2rem}
+#page_no-smoking #treatment .schedule .box{padding:3rem}
+#page_no-smoking #treatment .schedule .box picture{margin-bottom:3rem}
+#page_no-smoking #treatment .continuation picture{padding:3rem;margin-bottom:2rem}
+#page_no-smoking #treatment .continuation dl{margin-top:1.5rem;line-height:1.8}
+#page_no-smoking #treatment .continuation .credit{text-align:left;margin-top:1.5rem;line-height:1.8}
+#page_no-smoking #treatment .test .box{padding:3rem;margin-top:2rem}
+#page_privacy #privacy h4{margin-top:3rem}
+#page_recruit #guidelines dl{display:block}
+#page_recruit #guidelines dl dt{width:100%;margin-bottom:1rem}
+#page_recruit #guidelines .entry{margin-top:5rem}
+#page_recruit #guidelines .entry .row{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
+#page_recruit #guidelines .entry .row{margin-top:3rem;padding:0}
+#page_recruit #guidelines .entry .row .tel a{height:7.4rem}
+#page_recruit #guidelines .entry .row .tel a span.num{font-size:2.4rem;padding-top:1.5rem}
+#page_recruit #guidelines .entry .row .tel a span.num:before{top:.1rem;width:1.5rem;height:1.5rem}
+#page_recruit #guidelines .entry .row .tel a span.charge{font-size:1.1rem}
+#page_shunt #trouble .trouble{margin-top:3rem}
+#page_shunt #treatment .treatment{margin-top:3rem}
+#page_varix #varicoseVeins .symptoms{margin-top:2rem}
+#page_varix #varicoseVeinsCause .cause{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
+#page_varix #varicoseVeinsCause .cause{text-align:left}
+#page_varix #varicoseVeinsCause .cause li{padding:2rem 2rem 2rem 9rem}
+#page_varix #varicoseVeinsCause .cause li picture{position:absolute;top:0;bottom:0;left:1.5rem;z-index:5;width:6rem;height:6rem;margin:auto}
+#page_varix #varicoseVeinsCause .cause li h3{font-size:1.6rem;margin:0 0 .5rem}
+#page_varix #varicoseVeinsCause .cause li p{font-size:1.1rem}
+#page_varix #varicoseVeinsClinic .point{margin-top:2rem;font-size:1.4rem;display:block}
+#page_varix #varicoseVeinsClinic .point li{padding:2rem 0}
+#page_varix #varicoseVeinsClinic .point li+li{margin-top:1rem}
+#page_varix #varicoseVeinsTreatment .treatment{margin-top:5rem}
+#page_varix #varicoseVeinsTreatment .treatment01 .row,#page_varix #varicoseVeinsTreatment .treatment03 .row,#page_varix #varicoseVeinsTreatment .treatment05 .row{display:block}
+#page_varix #varicoseVeinsTreatment .treatment01 .row .video,#page_varix #varicoseVeinsTreatment .treatment03 .row .video,#page_varix #varicoseVeinsTreatment .treatment05 .row .video{width:100%;position:static;margin:1.5rem 0 0}
+#page_varix #varicoseVeinsTreatment .treatment01{margin-top:3rem}
+#page_varix #varicoseVeinsTreatment .treatment02 .video{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
+#page_varix #varicoseVeinsTreatment .treatment02 .video{margin-top:2rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow{grid-template-columns:repeat(1,minmax(0,100%));row-gap:5rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li{padding:0 5rem}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li+li:before{transform:rotate(90deg);top:-4.3rem;left:0;right:0}
+#page_varix #varicoseVeinsTreatment .treatment06 .progress .flow li picture{margin-bottom:.5rem}
+#page_varix #varicoseCase .tblCover{margin-top:2rem;padding:2rem 3rem}
+#page_varix #varicoseCase .tblCover table{min-width:55rem;font-size:1.4rem}
+#page_varix #varicoseCase .tblCover .cap{font-size:1.1rem;text-align:left}
+#page_varix #varicoseCase .tblCover .scroll{display:block;font-size:1.1rem}
+#page_varix #varicoseFaq dl{font-size:1.4rem}
+#page_varix #varicoseFaq dl dt{padding:2rem 3rem}
+#page_varix #varicoseFaq dl dt:before{font-size:1.8rem;top:1.4rem;left:0}
+#page_varix #varicoseFaq dl dt i{right:0}
+#page_varix #varicoseFaq dl dd{padding:0 3rem 3rem}
+#page_varix #varicoseFaq dl dd:before{top:-.6rem;left:0}
+#page_varix #varicoseFaq dl dd h5{margin:1.5rem 0 .5rem}
+#page_varix #varicoseFaq dl dd .txt{font-size:1.3rem;line-height:1.8}
+#page_varix #pad .btn{display:block;margin-top:2rem}
+#page_varix #pad .btn div+div{margin:1rem 0 0}
+#page_varix #cvi .case,#page_varix #cvi .symptoms,#page_varix #cvi .treatment{margin-top:3rem}
+#page_varix #cvi .case .img{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:1rem}
+#page_varix #cvi .case .img picture{width:auto;margin-right:0}
+#page_varix #dvt .symptoms,#page_varix #dvt .treatment{margin-top:3rem}
+#page_varix #other ul{margin-top:2rem}
+}
+@media screen and (max-width:767px) and (max-width:767px){
+#page_top #treatment ul.link li a:after{display:none}
+#page_information #doctor table td.item01,#page_information #doctor table th.item01{-ms-writing-mode:lr-tb;writing-mode:horizontal-tb}
+}

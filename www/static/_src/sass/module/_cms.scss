@@ -1,0 +1,412 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+.m_cms_day {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+
+  @media #{$breakS} {
+    font-size: 1.3rem;
+  }
+}
+
+.m_cms_ttl {
+  @include fontFamily('serif');
+  font-size: 5rem;
+  line-height: 1.4;
+  margin-bottom: 7rem;
+
+  @media #{$breakS} {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.m_cms_wysiwyg {
+  font-size: 1.8rem;
+  line-height: 2;
+
+  @media #{$breakS} {
+    font-size: 1.5rem;
+  }
+
+  >* {
+    margin-top: 3rem;
+
+    @media #{$breakS} {
+      margin-top: 2rem;
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    @include fontFamily('serif');
+    font-size: 3rem;
+    margin-top: 7rem;
+    line-height: 1.8;
+
+    @media #{$breakS} {
+      font-size: 2rem;
+      margin-top: 5rem;
+    }
+  }
+
+  h3 {
+    @include fontFamily('serif');
+    font-size: 2.6rem;
+    margin-top: 7rem;
+    line-height: 1.8;
+
+    @media #{$breakS} {
+      font-size: 1.8rem;
+      margin-top: 5rem;
+    }
+  }
+
+  h4 {
+    @include fontFamily('serif');
+    position: relative;
+    font-size: 2.2rem;
+    line-height: 2;
+    margin-top: 4rem;
+    padding-top: 4rem;
+
+    &:after {
+      @include icoPosition();
+      top: 0;
+      left: 0;
+      width: 5rem;
+      height: 1px;
+      background: $colorBlack;
+    }
+
+    @media #{$breakS} {
+      font-size: 1.6rem;
+      margin-top: 3rem;
+      padding-top: 3rem;
+      line-height: 1.8;
+    }
+  }
+
+  h5 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    line-height: 1.8;
+    color: $colorDarkGray;
+
+    @media #{$breakS} {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+  }
+
+  h6 {
+    font-size: 1.3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    padding: .7rem 1rem;
+    background: $colorDarkGray;
+    color: $colorWhite;
+
+    @media #{$breakS} {
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      padding: .9rem 1rem .7rem;
+      line-height: 1.6;
+    }
+  }
+
+  ul {
+    margin-top: 3rem;
+    line-height: 1.8;
+
+    @media #{$breakS} {
+      margin-top: 2rem;
+    }
+
+    li {
+      position: relative;
+      margin-top: 1rem;
+      padding-left: 1em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:before {
+        @include icoPosition();
+        top: 1.4rem;
+        left: 0;
+        width: .4rem;
+        height: .4rem;
+        border-radius: 50%;
+        background: $colorBlack;
+
+        @media #{$breakS} {
+          top: 1.1rem;
+        }
+      }
+    }
+  }
+
+  ol {
+    counter-reset: no;
+    margin-top: 3rem;
+    line-height: 1.8;
+
+    @media #{$breakS} {
+      margin-top: 2rem;
+    }
+
+    li {
+      position: relative;
+      margin-top: 1rem;
+      padding-left: 1.5em;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:before {
+        counter-increment: no;
+        content: counter(no)".";
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  blockquote {
+    padding: 3rem 6rem;
+    border: 1px solid $colorLightGray;
+    border-radius: $radius;
+    margin: 3rem 0;
+
+    @media #{$breakS} {
+      padding: 3rem;
+    }
+
+    * {
+      margin-top: 1.5rem;
+
+      @media #{$breakS} {
+        margin-top: 1rem;
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+  p {
+    @include clearfix();
+
+    strong {
+      font-weight: $fontBold !important;
+    }
+
+    em {}
+
+    del {}
+  }
+
+  a {
+    text-decoration: underline;
+    transition: all .3s;
+    color: $colorDarkGray;
+
+    &:hover {
+      opacity: .6;
+    }
+
+    &[target="_blank"] {
+      &:after {
+        @include icoInline();
+        top: -.3rem;
+        width: 1rem;
+        height: 1rem;
+        margin: 0 .7rem;
+        background: url('#{$imgPath}i_blank_be.svg');
+        background-size: 100% auto;
+
+        @media #{$breakS} {
+          top: -.2rem;
+        }
+      }
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+
+    &.size-thumbnail {
+      width: 37.5rem;
+
+      @media #{$breakS} {
+        width: 100%;
+      }
+    }
+
+    &.size-medium {
+      width: 37.5rem;
+
+      @media #{$breakS} {
+        width: 100%;
+      }
+    }
+
+    &.size-full {
+      width: 100%;
+    }
+  }
+
+  .aligncenter {
+    margin: 0 auto;
+  }
+
+  .alignright {
+    float: right;
+    margin: .8rem 0 0 1rem;
+
+    @media #{$breakS} {
+      float: none;
+      margin: 0 0 1.5rem 0;
+    }
+  }
+
+  .alignleft {
+    float: left;
+    margin: .8rem 1.5rem 0 0;
+
+    @media #{$breakS} {
+      float: none;
+      margin: 0 0 1.5rem 0;
+    }
+  }
+
+  div.aligncenter {
+    margin: 2.5rem 0 0 0;
+    text-align: center;
+
+    @media #{$breakS} {
+      margin: 1rem 0 1.5rem 0;
+    }
+
+    img {
+      display: inline;
+    }
+  }
+
+  div.alignright {
+    margin: 2.4rem 0 2rem 1rem;
+
+    @media #{$breakS} {
+      margin: 1rem 0 1.5rem 0;
+    }
+  }
+
+  div.alignleft {
+    margin: 2.4rem 1rem 2rem 0;
+
+    @media #{$breakS} {
+      margin: 1rem 0 1.5rem 0;
+    }
+  }
+
+  .wp-caption-text {
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    line-height: 1.4;
+  }
+
+  .wp-playlist {
+    margin-top: 3rem;
+
+    .wp-playlist-current-item {
+      img {
+        @media #{$breakS} {
+          width: auto;
+          height: 6rem;
+        }
+      }
+    }
+
+    .wp-playlist-item {
+      padding: 0;
+
+      .wp-playlist-caption {
+        padding: .5rem 0;
+      }
+
+      .wp-playlist-item-length {
+        top: .6rem;
+      }
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0 2rem -1rem;
+
+    .gallery-item {
+      padding: 1rem 0 0 1rem;
+      text-align: left !important;
+
+      a {
+        display: block;
+        line-height: 0;
+
+        figure {
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+          figcaption {
+            font-size: 1.2rem;
+            margin-top: .5rem;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+
+  @for $i from 1 through 9 {
+    .gallery-columns-#{$i} {
+      .gallery-item {
+        width: calc(100%/$i);
+
+        @media #{$breakS} {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 42rem;
+
+    @media #{$breakS} {
+      height: 21rem;
+    }
+  }
+
+  // * ----------------------------------------
+  // * エディタ内のスタイル
+  .mceTemp {
+    .wp-caption {
+      width: auto !important;
+    }
+  }
+
+}

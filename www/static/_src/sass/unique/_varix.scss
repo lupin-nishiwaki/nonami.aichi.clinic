@@ -1,0 +1,508 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_varix {
+  #varicoseVeins {
+    .symptoms {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+      }
+
+      .cap {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  #varicoseVeinsCause {
+    .cause {
+      @include boxRow(3, 4rem, 4rem, 1rem);
+      text-align: center;
+
+      @media #{$breakS} {
+        text-align: left;
+      }
+
+      li {
+        position: relative;
+        border-radius: $radius;
+        border: 1px solid $colorLightGray;
+        padding: 3rem;
+
+        @media #{$breakS} {
+          padding: 2rem 2rem 2rem 9rem;
+        }
+
+        picture {
+          @media #{$breakS} {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 1.5rem;
+            z-index: 5;
+            width: 6rem;
+            height: 6rem;
+            margin: auto;
+          }
+
+          img {
+            width: 6rem;
+          }
+        }
+
+        h3 {
+          @include fontFamily('serif');
+          font-size: 1.8rem;
+          margin: 1rem 0 1.5rem;
+
+          @media #{$breakS} {
+            font-size: 1.6rem;
+            margin: 0 0 .5rem;
+          }
+        }
+
+        p {
+          line-height: 1.8;
+          text-align: left;
+
+          @media #{$breakS} {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #varicoseVeinsClinic {
+    .point {
+      margin-top: 5rem;
+      font-size: 1.8rem;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+        font-size: 1.4rem;
+        display: block;
+      }
+
+      li {
+        @media #{$breakS} {
+          padding: 2rem 0;
+        }
+
+        &+li {
+          @media #{$breakS} {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #varicoseVeinsTreatment {
+    .treatment {
+      margin-top: 7rem;
+
+      @media #{$breakS} {
+        margin-top: 5rem;
+      }
+    }
+
+    .treatment01,
+    .treatment03,
+    .treatment05 {
+      .row {
+        display: flex;
+        flex-direction: row-reverse;
+
+        @media #{$breakS} {
+          display: block;
+        }
+
+        .video {
+          flex-shrink: 0;
+          width: 30rem;
+          position: relative;
+          top: .5rem;
+          margin-right: 2.5rem;
+
+          @media #{$breakS} {
+            width: 100%;
+            position: static;
+            margin: 1.5rem 0 0;
+          }
+        }
+
+        .txt {
+          width: 100%;
+        }
+      }
+    }
+
+    .treatment01 {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+
+    .treatment02 {
+      .video {
+        @include boxRow(3, 0, 3rem, 1rem);
+        margin-top: 2.5rem;
+
+        @media #{$breakS} {
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .treatment06 {
+      .progress {
+        margin-top: 2rem;
+
+        .flow {
+          @include boxRow(3, 0, 8rem, 5rem);
+          text-align: center;
+
+          li {
+            position: relative;
+
+            @media #{$breakS} {
+              padding: 0 5rem;
+            }
+
+            &+li {
+              &:before {
+                @include icoPosition();
+                top: 11.5rem;
+                left: -5.4rem;
+                z-index: 5;
+                width: 2.8rem;
+                height: 2.8rem;
+                background: url('#{$imgPath}i_arr_be.svg') no-repeat center;
+                width: 100% auto;
+
+                @media #{$breakS} {
+                  transform: rotate(90deg);
+                  top: -4.3rem;
+                  left: 0;
+                  right: 0;
+                }
+              }
+            }
+
+            picture {
+              border-radius: $radius;
+              overflow: hidden;
+              margin-bottom: 1rem;
+
+              @media #{$breakS} {
+                margin-bottom: .5rem;
+              }
+
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #varicoseCase {
+    .tblCover {
+      margin-top: 5rem;
+      border: 1px solid $colorLightGray;
+      border-radius: $radius;
+      overflow: hidden;
+      padding: 3rem;
+      overflow-x: scroll;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+        padding: 2rem 3rem;
+      }
+
+      table {
+        min-width: 86.6rem;
+        font-size: 1.8rem;
+
+        @media #{$breakS} {
+          min-width: 55rem;
+          font-size: 1.4rem;
+        }
+
+        th,
+        td {
+          border-bottom: 1px solid $colorLightGray;
+          font-weight: $fontMedium;
+          text-align: right;
+          padding: .5rem 0;
+        }
+
+        thead {
+          th {
+            border-bottom: none;
+          }
+        }
+
+        tbody {
+          th {
+            width: 20%;
+            text-align: left;
+          }
+
+          td {
+            width: 13.3%;
+          }
+        }
+      }
+
+      .cap {
+        text-align: right;
+        margin-top: 1rem;
+
+        @media #{$breakS} {
+          font-size: 1.1rem;
+          text-align: left;
+        }
+      }
+
+      .scroll {
+        display: none;
+
+        @media #{$breakS} {
+          display: block;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  #varicoseFaq {
+    dl {
+      font-size: 1.8rem;
+      border-top: 1px solid $colorLightGray;
+
+      @media #{$breakS} {
+        font-size: 1.4rem;
+      }
+
+      &:last-child {
+        border-bottom: 1px solid $colorLightGray;
+      }
+
+      dt {
+        position: relative;
+        padding: 2.5rem 6rem;
+
+        @media #{$breakS} {
+          padding: 2rem 3rem;
+        }
+
+        &:before {
+          @include icoPosition();
+          content: "Q";
+          top: 2.1rem;
+          left: 2rem;
+          color: $colorDarkGray;
+          font-size: 2rem;
+
+          @media #{$breakS} {
+            font-size: 1.8rem;
+            top: 1.4rem;
+            left: 0;
+          }
+        }
+
+        i {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 3rem;
+          margin: auto;
+          width: 1.5rem;
+          height: 1.5rem;
+
+          @media #{$breakS} {
+            right: 0;
+          }
+
+          &:before,
+          &:after {
+            @include icoPosition();
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 1.5rem;
+            height: 1px;
+            background: $colorDarkGray;
+            transition: opacity .3s;
+          }
+
+          &:after {
+            transform: rotate(90deg);
+          }
+        }
+
+        &.is-active {
+          i {
+            &:after {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      dd {
+        position: relative;
+        padding: 0 6rem 3.5rem;
+
+        @media #{$breakS} {
+          padding: 0 3rem 3rem;
+        }
+
+        &:before {
+          @include icoPosition();
+          content: "A";
+          top: -.2rem;
+          left: 2rem;
+          color: $colorDarkGray;
+          font-size: 2rem;
+
+          @media #{$breakS} {
+            top: -.6rem;
+            left: 0;
+          }
+        }
+
+        h5 {
+          position: relative;
+          margin: 2rem 0 .5rem;
+          padding-left: 1.2em;
+
+          @media #{$breakS} {
+            margin: 1.5rem 0 .5rem;
+          }
+
+          &:before {
+            @include icoPosition();
+            top: .8rem;
+            left: 0;
+            width: 0.6em;
+            height: 0.6em;
+            border-radius: 1rem;
+            background: $colorBlack;
+          }
+        }
+
+        .txt {
+          font-size: 1.5rem;
+
+          @media #{$breakS} {
+            font-size: 1.3rem;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+
+  #pad {
+    .btn {
+      display: flex;
+      margin-top: 3rem;
+
+      @media #{$breakS} {
+        display: block;
+        margin-top: 2rem;
+      }
+
+      div+div {
+        margin-left: 2rem;
+
+        @media #{$breakS} {
+          margin: 1rem 0 0;
+        }
+      }
+    }
+  }
+
+  #cvi {
+
+    .symptoms,
+    .treatment,
+    .case {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+
+    .case {
+      .img {
+        display: flex;
+        margin-top: 2.7rem;
+
+        @media #{$breakS} {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 50%));
+          column-gap: 1rem;
+        }
+
+        picture {
+          width: 29rem;
+          border-radius: $radius;
+          overflow: hidden;
+          margin-right: 2rem;
+
+          @media #{$breakS} {
+            width: auto;
+            margin-right: 0;
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .txt {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  #dvt {
+
+    .symptoms,
+    .treatment {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  #other {
+    ul {
+      margin-top: 3rem;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

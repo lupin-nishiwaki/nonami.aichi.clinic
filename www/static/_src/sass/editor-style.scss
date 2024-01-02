@@ -1,0 +1,45 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// モジュール
+@use "module/cms";
+
+// * ----------------------------------------
+// *  style
+// * ----------------------------------------
+#tinymce {
+  @extend .m_cms_wysiwyg;
+  padding: 30px !important;
+
+  * {
+    font-family: 'Noto Sans Japanese';
+  }
+
+  img {
+    pointer-events: auto;
+  }
+}
+
+// * フォント（微調整の為、ウェイトと読み込むスタイルを変更）
+// @import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.woff) format('woff'),
+    url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.woff) format('woff'),
+    url(https://fonts.gstatic.com/ea/notosansjapanese/v6/NotoSansJP-Bold.otf) format('opentype');
+}

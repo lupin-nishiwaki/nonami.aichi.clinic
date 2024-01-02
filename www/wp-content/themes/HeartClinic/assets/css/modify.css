@@ -1,0 +1,117 @@
+.m_cms_wysiwyg{margin-top:40px}
+.m_cms_wysiwyg>*{margin-top:10px}
+.m_cms_wysiwyg>:first-child{margin:0}
+.m_cms_wysiwyg time{font-weight:700;line-height:1}
+.m_cms_wysiwyg h1,.m_cms_wysiwyg h2,.m_cms_wysiwyg h3,.m_cms_wysiwyg h4,.m_cms_wysiwyg h5,.m_cms_wysiwyg h6{font-family:'Noto Sans JP','游ゴシック','Yu Gothic','游ゴシック体',YuGothic,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','Meiryo UI','メイリオ',Meiryo,sans-serif;color:#48453a}
+.m_cms_wysiwyg h1{font-size:1.375rem;border-bottom:1px solid #48453a;padding-bottom:1.25rem;margin-bottom:2rem;line-height:1.25}
+.m_cms_wysiwyg h2{font-size:1.125rem;margin-top:30px;position:relative;padding-bottom:1.25rem;font-weight:500}
+.m_cms_wysiwyg h2::before{position:absolute;content:'';background-color:#8b8780;width:100%;height:3px;bottom:0;left:0}
+.m_cms_wysiwyg h3{font-size:1.125rem;margin-top:20px;padding:4px 10px;position:relative}
+.m_cms_wysiwyg h3::before{position:absolute;content:'';background-color:#8b8780;width:3px;height:88%;top:11px;left:0}
+.m_cms_wysiwyg h4{margin-top:30px;padding:6px 15px 7px;border:1px solid #8b8780;font-size:1rem}
+.m_cms_wysiwyg h5{margin-top:20px;padding:10px;font-size:1rem;background-color:#8b8780;color:#fff}
+.m_cms_wysiwyg h6{font-size:12px;margin-top:30px;display:inline-block;padding:7px 10px;background:#8b8780;line-height:1.6;color:#fff}
+.m_cms_wysiwyg p{color:#48453a}
+.m_cms_wysiwyg ul{margin-top:20px;color:#333}
+.m_cms_wysiwyg ul li{position:relative;margin-top:8px;padding-left:1em;color:#333}
+.m_cms_wysiwyg ul li:first-child{margin-top:0}
+.m_cms_wysiwyg ul li:before{content:'';position:absolute;margin:auto;top:8px;left:0;width:4px;height:4px;border-radius:50%;background:#48453a}
+.m_cms_wysiwyg ol{counter-reset:no;color:#48453a;margin-top:20px}
+.m_cms_wysiwyg ol li{color:#48453a;position:relative;margin-top:8px;padding-left:1.9em}
+.m_cms_wysiwyg ol li:first-child{margin-top:0}
+.m_cms_wysiwyg ol li:before{color:#8b8780;counter-increment:no;content:'0' counter(no) '.';position:absolute;top:0;left:0}
+.m_cms_wysiwyg blockquote{border:1px solid #48453a;padding:15px;color:#333}
+.m_cms_wysiwyg blockquote *{margin-top:10px}
+.m_cms_wysiwyg blockquote :first-child{margin:0}
+.m_cms_wysiwyg p:after{content:'';display:block;clear:both}
+.m_cms_wysiwyg p strong{color:#333;font-weight:700!important}
+.m_cms_wysiwyg a{text-decoration:underline;transition:all .3s;font-weight:700;color:#8b8780}
+.m_cms_wysiwyg a:hover{opacity:.6}
+.m_cms_wysiwyg a[target=_blank]{color:#48453a}
+.m_cms_wysiwyg a[target=_blank]:after{content:'';display:inline-block;position:relative;width:10px;height:10px;margin:0 7px;background:url(/wp-content/themes/taterunara/assets/images/common/arrow-target.svg) no-repeat;background-size:10px}
+.m_cms_wysiwyg img{display:block;height:auto;width:100%;aspect-ratio:16/9;object-fit:cover}
+.m_cms_wysiwyg img.size-thumbnail{width:375px}
+.m_cms_wysiwyg img.size-medium{width:375px}
+.m_cms_wysiwyg img.size-full{width:100%}
+.m_cms_wysiwyg .aligncenter{margin:0 auto}
+.m_cms_wysiwyg .alignright{float:none;margin:0 0 15px 0}
+.m_cms_wysiwyg .alignleft{float:left;margin:8px 15px 0 0}
+.m_cms_wysiwyg div.aligncenter{margin:10px 0 15px 0;text-align:center}
+.m_cms_wysiwyg div.aligncenter img{display:inline}
+.m_cms_wysiwyg div.alignright{margin:10px 0 15px 0}
+.m_cms_wysiwyg div.alignleft{margin:10px 0 15px 0}
+.m_cms_wysiwyg .wp-caption-text{font-size:12px;margin-top:5px;line-height:1.4}
+.m_cms_wysiwyg .wp-playlist{margin-top:30px}
+.m_cms_wysiwyg .wp-playlist .wp-playlist-item{padding:0;border-bottom:1px solid #48453a}
+.m_cms_wysiwyg .wp-playlist .wp-playlist-item .wp-playlist-caption{padding:5px 0}
+.m_cms_wysiwyg .wp-playlist .wp-playlist-item .wp-playlist-item-length{top:6px}
+.m_cms_wysiwyg .gallery{display:flex;flex-wrap:wrap;margin:10px 0 20px -10px}
+.m_cms_wysiwyg .gallery .gallery-item{padding:10px 0 0 10px;text-align:left!important}
+.m_cms_wysiwyg .gallery .gallery-item a{display:block;line-height:0}
+.m_cms_wysiwyg .gallery .gallery-item a figure img{width:100%;height:auto}
+.m_cms_wysiwyg .gallery .gallery-item a figure figcaption{font-size:12px;margin-top:5px;line-height:1.4}
+.m_cms_wysiwyg .gallery-columns-1 .gallery-item{width:50%}
+.m_cms_wysiwyg .gallery-columns-2 .gallery-item{width:25%}
+.m_cms_wysiwyg .gallery-columns-3 .gallery-item{width:16.6666666667%}
+.m_cms_wysiwyg .gallery-columns-4 .gallery-item{width:12.5%}
+.m_cms_wysiwyg .gallery-columns-5 .gallery-item{width:10%}
+.m_cms_wysiwyg .gallery-columns-6 .gallery-item{width:8.3333333333%}
+.m_cms_wysiwyg .gallery-columns-7 .gallery-item{width:7.1428571429%}
+.m_cms_wysiwyg .gallery-columns-8 .gallery-item{width:6.25%}
+.m_cms_wysiwyg .gallery-columns-9 .gallery-item{width:5.5555555556%}
+.m_cms_wysiwyg iframe{width:100%;height:210px}
+.m_cms_wysiwyg .mceTemp .wp-caption{width:auto!important}
+.m_cms_wysiwyg-time{font-family:Lato,sans-serif;font-size:.875rem}
+.m_cms_time{font-family:Lato,sans-serif}
+.l-header{border-bottom:1px solid #e6e5e4}
+.l-header .p-header__info .p-header__title a.p-logo{color:#48453a;font-family:'Noto Serif JP',serif;font-weight:500;max-width:100%;font-size:17px}
+.l-header .p-header__info .p-header__title a.p-logo span{display:inline-block;margin-left:7px}
+.p-hero .p-hero__body .p-hero__time,.p-hero .swiper-topNews{display:none}
+.p-hero .p-hero__body .p-hero__copy{top:8vw}
+.p-hero .p-hero__body .p-hero__copy .open{text-align:left;margin-bottom:1.3333333333vw}
+.p-hero .p-hero__body .p-hero__copy .open span{display:inline-block;font-family:'Noto Serif JP',serif;font-weight:500;border:1px solid #48453a;line-height:1;font-size:2.6666666667vw;padding:1.3333333333vw}
+.p-hero .p-hero__pagination .p-hero__swiperText{color:#48453a}
+.p-hero .p-hero__pagination .swiper-pagination span{background:#e2e1df}
+.p-hero .p-hero__pagination .swiper-pagination span.swiper-pagination-bullet-active{background:#48453a}
+.p-main__message .p-main__messageText{line-height:1.8;margin-top:30px}
+.p-main__recruit{display:block;background:url(/wp-content/themes/HeartClinic/assets/images/recruit_bg-sp.jpg) no-repeat center;background-size:cover!important;text-decoration:none;padding:45px 20px}
+.p-main__recruit:hover{opacity:.6!important}
+.p-main__recruit .p-main__recruitHeading{text-decoration:none;color:#fff;padding:0}
+.p-main__recruit .p-main__recruitHeading span.en{color:#fff}
+.p-main__mapContents .p-main__mapBody .p-main__mapHead h2{display:flex;align-items:flex-end;color:#48453a;font-family:'Noto Serif JP',serif;font-weight:500;width:100%;font-size:20px;line-height:1;margin-bottom:15px}
+.p-main__mapContents .p-main__mapBody .p-main__mapHead h2 img{width:220px}
+.p-main__mapContents .p-main__mapBody .p-main__mapHead h2 span{display:inline-block;margin-left:7px}
+.p-main__mapContents .p-main__mapBody .p-main__timeTable{margin-top:15px}
+.p-main__mapContents .p-main__mapImage{margin:50px -20% 0}
+.p-main__mapContents .p-main__mapImage iframe{display:block;width:100%;height:250px}
+.l-footer{background:#fff;padding:50px 0}
+.l-footer .wrapper{display:block}
+.l-footer .wrapper .logo{margin-bottom:40px}
+.l-footer .wrapper .logo img{width:216px}
+.l-footer .wrapper .sub{color:#48453a}
+.l-footer .wrapper .sub a{text-decoration:none;color:#48453a}
+.l-footer .wrapper .sub .copy{margin-top:10px}
+@media screen and (min-width:1024px){
+.l-header{border-bottom:none}
+.l-header .p-header__nav{padding-left:300px}
+.l-header .p-header__nav .p-globalNav{text-align:left}
+.l-header .p-header__nav .p-globalNav li+li{margin-left:50px}
+.l-header .p-header__nav .p-globalNav li a{margin:0;padding:8px 0 0}
+.p-hero .p-hero__body .p-hero__copy .open{margin-bottom:25px}
+.p-hero .p-hero__body .p-hero__copy .open span{font-size:16px;padding:10px 15px}
+.p-main__message .p-main__messageText{font-size:16px;margin-top:60px;text-align:center}
+.p-main__recruit{background:url(/wp-content/themes/HeartClinic/assets/images/recruit_bg.jpg) no-repeat center;padding:75px 50px}
+.p-main__mapContents .p-main__mapBody{width:50%}
+.p-main__mapContents .p-main__mapBody .p-main__mapHead h2{font-size:32px}
+.p-main__mapContents .p-main__mapBody .p-main__mapHead h2 img{width:350px}
+.p-main__mapContents .p-main__mapImage{width:50%;margin:0}
+.p-main__mapContents .p-main__mapImage iframe{height:350px}
+.l-footer{padding:60px 0}
+.l-footer .wrapper{display:flex;align-items:center}
+.l-footer .wrapper .logo{margin-bottom:0}
+.l-footer .wrapper .sub{margin-left:auto;display:flex;font-size:14px}
+.l-footer .wrapper .sub .copy{margin:0 0 0 50px}
+}
+@media screen and (min-width:1450px){
+.p-hero .p-hero__body .p-hero__copy .open span{font-size:26px}
+}

@@ -1,0 +1,104 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_equipment {
+  #radiation {
+    ul {
+      @include boxRow(2, 4rem, 4rem, 5rem);
+
+      li {
+        @media #{$breakS} {
+          padding: 0;
+        }
+
+        picture {
+          @media #{$breakS} {
+            position: static;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  #menstruation {
+    .vivid {
+      margin-top: 4rem;
+
+      @media #{$breakS} {
+        display: flex;
+        margin-top: 2rem;
+      }
+
+      .imgBox {
+        @include boxRow(3, 4rem, 4rem, 3rem);
+
+        @media #{$breakS} {
+          display: block;
+          flex-shrink: 0;
+          width: 11rem;
+          margin-right: 2rem;
+        }
+
+        picture {
+          border-radius: $radius;
+          overflow: hidden;
+
+          &+picture {
+            @media #{$breakS} {
+              margin-top: 1rem;
+            }
+          }
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .txtBox {
+        margin-top: 2.5rem;
+
+        @media #{$breakS} {
+          margin: 0;
+        }
+      }
+
+      .name {
+        @include fontFamily('serif');
+        font-size: 2rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+
+        @media #{$breakS} {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+
+        span {
+          display: block;
+          font-size: 1.3rem;
+          color: $colorDarkGray;
+          margin-top: 0.5rem;
+
+          @media #{$breakS} {
+            font-size: 1.1rem;
+            margin-top: .5rem;
+          }
+        }
+      }
+
+      .desc {
+        @media #{$breakS} {
+          font-size: 1.3rem;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,580 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+#l_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background: $colorWhite;
+  transition: box-shadow .5s;
+  box-shadow: 0 0 0 rgba(0, 0, 0, .05);
+
+  &.is-fixed {
+    box-shadow: 0 1px 0 $colorLightGray;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+
+    @media #{$breakS} {
+      padding: 1.4rem 2rem 2rem;
+    }
+
+    .logo {
+      flex-shrink: 0;
+      width: 20rem;
+
+      @media #{$breakS} {
+        width: 14rem;
+      }
+    }
+
+    .drawerBtn {
+      display: none;
+
+      @media #{$breakS} {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        width: 6rem;
+        height: 6rem;
+        text-align: center;
+      }
+
+      &.is-open {
+        span.line {
+          i {
+            @media #{$breakS} {
+              top: 2.4rem !important;
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+              @media #{$breakS} {
+                opacity: 0;
+              }
+            }
+
+            &:nth-child(3) {
+              @media #{$breakS} {
+                transform: rotate(-45deg);
+              }
+            }
+          }
+        }
+
+        span.txt {
+          i {
+            @media #{$breakS} {
+              top: -100%;
+            }
+
+            &:nth-child(2) {
+              @media #{$breakS} {
+                top: 0;
+              }
+            }
+          }
+        }
+      }
+
+      span.line {
+        i {
+          @media #{$breakS} {
+            position: absolute;
+            top: 1.8rem;
+            left: 1.5rem;
+            width: 3rem;
+            height: 1px;
+            background: $colorDarkGray;
+            transition: top .3s, transform .3s, opacity .3s;
+          }
+
+          &:nth-child(2) {
+            @media #{$breakS} {
+              top: 2.5rem;
+            }
+          }
+
+          &:nth-child(3) {
+            @media #{$breakS} {
+              top: 3.2rem;
+            }
+          }
+        }
+      }
+
+      span.txt {
+        @media #{$breakS} {
+          position: absolute;
+          bottom: 1rem;
+          left: 0;
+          width: 100%;
+          height: 1.6rem;
+          font-size: 1rem;
+          overflow: hidden;
+        }
+
+        i {
+          @media #{$breakS} {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: top .5s;
+          }
+
+          &:nth-child(2) {
+            @media #{$breakS} {
+              top: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .gnav {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      @media #{$breakS} {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 50;
+        background: $colorWhite;
+        padding: 6rem 2rem 2rem;
+        overflow-y: scroll;
+        transition: opacity .5s, visibility .5s;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      &.is-open {
+        @media #{$breakS} {
+          opacity: 1;
+          visibility: visible;
+        }
+
+        ul.main {
+          >li {
+            @media #{$breakS} {
+              transform: translateY(0);
+              opacity: 1;
+            }
+
+            @for $i from 1 through 5 {
+              &:nth-child(#{$i}) {
+                @media #{$breakS} {
+                  transition-delay: ($i - 1) * 80ms;
+                }
+              }
+            }
+          }
+        }
+
+        ul.cta {
+          li {
+            @media #{$breakS} {
+              transform: translateY(0);
+              opacity: 1;
+            }
+
+            @for $i from 1 through 5 {
+              &:nth-child(#{$i}) {
+                @media #{$breakS} {
+                  transition-delay: ($i - 1) * 80ms + 320ms;
+                }
+              }
+            }
+          }
+        }
+
+        .instagram {
+          @media #{$breakS} {
+            transition-delay: 480ms;
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
+      }
+
+      ul.main {
+        display: flex;
+        align-items: center;
+
+        @media #{$breakS} {
+          display: block;
+        }
+
+        >li {
+          @media #{$breakS} {
+            border-bottom: 1px solid $colorLightGray;
+            transition: transform .7s $easeOutQuart, opacity .3s;
+            transform: translateY(5rem);
+            opacity: 0;
+          }
+
+          >a {
+            display: inline-block;
+            padding: 3rem 2rem;
+
+            @media #{$breakS} {
+              padding: 2rem 0;
+            }
+          }
+
+          dl {
+            position: relative;
+
+            &:after {
+              content: "";
+              position: fixed;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, .1);
+              pointer-events: none;
+              transition: opacity .3s, visibility .3s;
+              opacity: 0;
+              visibility: hidden;
+
+              @media #{$breakS} {
+                display: none;
+              }
+            }
+
+            &:hover {
+              box-shadow: 0 0 5rem rgba(0, 0, 0, .1);
+
+              @media #{$breakS} {
+                box-shadow: none;
+              }
+
+              &:after {
+                opacity: 1;
+                visibility: visible;
+              }
+
+              dt {
+                background: $colorWhite;
+              }
+
+              dd {
+                opacity: 1;
+                visibility: visible;
+                box-shadow: 0 5rem 5rem rgba(0, 0, 0, .1);
+
+                @media #{$breakS} {
+                  box-shadow: none;
+                }
+              }
+            }
+
+            dt {
+              position: relative;
+              z-index: 10;
+              padding: 3rem 1.5rem;
+              cursor: pointer;
+              transition: background .5s;
+
+              @media #{$breakS} {
+                padding: 2rem 0;
+              }
+
+              &:before,
+              &:after {
+                @media #{$breakS} {
+                  @include icoPosition();
+                  top: 0;
+                  bottom: 0;
+                  right: 1rem;
+                  width: 1.3rem;
+                  height: 1px;
+                  background: $colorBlack;
+                  transition: opacity .3s;
+                }
+              }
+
+              &:after {
+                @media #{$breakS} {
+                  transform: rotate(90deg);
+                }
+              }
+
+              &.is-active {
+                &:after {
+                  @media #{$breakS} {
+                    opacity: 0;
+                  }
+                }
+              }
+            }
+
+            dd {
+              position: absolute;
+              top: 100%;
+              left: -10rem;
+              z-index: 10;
+              display: flex;
+              width: 80rem;
+              padding: 3rem;
+              background: $colorWhite;
+              border-radius: $radius;
+              transition: opacity .3s, visibility .3s;
+              opacity: 0;
+              visibility: hidden;
+
+              @media #{$breakS} {
+                display: none;
+                position: static;
+                width: 100%;
+                padding: 0;
+                opacity: 1;
+                visibility: visible;
+              }
+
+              picture {
+                flex-shrink: 0;
+                width: 17rem;
+                overflow: hidden;
+
+                @media #{$breakS} {
+                  display: none;
+                }
+
+                img {
+                  width: auto;
+                  height: 100%;
+                }
+              }
+
+              .box {
+                width: 100%;
+                padding-left: 3rem;
+
+                @media #{$breakS} {
+                  padding: 0 0 4rem;
+                }
+
+                ul.parent {
+                  @include boxRow(3, 2rem, .5rem, 2rem);
+                  text-decoration: underline;
+                  margin-top: 2rem;
+
+                  &:first-child {
+                    margin-top: 0;
+                  }
+                }
+
+                ul.child {
+                  @include boxRow(3, .0rem, .0rem, .5rem);
+                  margin-top: .5rem;
+
+                  @media #{$breakS} {
+                    margin-top: .7rem;
+                  }
+
+                  li {
+                    position: relative;
+                    padding-left: 1em;
+
+                    &:after {
+                      @include icoPosition();
+                      top: .7rem;
+                      left: -.4rem;
+                      width: 1.6rem;
+                      height: 1.6rem;
+                      background: url('#{$imgPath}i_arr02_be.svg') no-repeat center;
+                      background-size: 100% auto;
+
+                      @media #{$breakS} {
+                        top: .6rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      ul.cta {
+        display: none;
+
+        @media #{$breakS} {
+          display: block;
+          text-align: center;
+          margin-top: 3rem;
+        }
+
+        li {
+          @media #{$breakS} {
+            transition: transform 1.2s $easeOutQuart, opacity .5s;
+            transform: translateY(5rem);
+            opacity: 0;
+          }
+
+          &+li {
+            @media #{$breakS} {
+              margin-top: 1rem;
+            }
+          }
+
+          a {
+            @media #{$breakS} {
+              display: block;
+              background: $colorDarkGray;
+              border-radius: $radius;
+              color: $colorWhite;
+              padding: 1.5rem;
+              box-shadow: 0px 3px 3px rgba(0, 0, 0, .16);
+            }
+          }
+
+          &.contact {
+            a {
+              @media #{$breakS} {
+                background: $colorDarkGray;
+              }
+            }
+          }
+        }
+      }
+
+      .instagram {
+        margin-left: 1.5rem;
+
+        @media #{$breakS} {
+          margin: 3rem 0 0;
+          transition: transform 1.2s $easeOutQuart, opacity .5s;
+          transform: translateY(5rem);
+          opacity: 0;
+        }
+
+        a {
+          @include boxCenter();
+          width: 3.6rem;
+          height: 3.6rem;
+          border-radius: 5rem;
+          background: $colorDarkGray;
+          text-align: center;
+
+          img {
+            width: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .instagramSp {
+      display: none;
+
+      @media #{$breakS} {
+        display: block;
+        position: absolute;
+        top: 1.2rem;
+        right: 10.5rem;
+        z-index: 100;
+        margin: 0;
+        padding: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        line-height: 1.9;
+        padding-top: 0.1rem;
+      }
+
+      a {
+        @media #{$breakS} {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 5rem;
+          background: $colorDarkGray;
+          text-align: center;
+        }
+
+        img {
+          @media #{$breakS} {
+            width: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .tel {
+      position: relative;
+      line-height: 1.3;
+      padding-left: 2.8rem;
+      margin-left: 3rem;
+
+      @media #{$breakS} {
+        position: absolute;
+        top: 1.2rem;
+        right: 6rem;
+        z-index: 100;
+        margin: 0;
+        padding: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      dt {
+        a {
+          display: inline-block;
+          font-size: 3rem;
+          color: $colorDarkGray;
+
+          @media #{$breakS} {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('#{$imgPath}i_tel_wh.svg') $colorDarkGray no-repeat center;
+            background-size: 1.5rem auto;
+            border-radius: 3rem;
+            overflow: hidden;
+            text-indent: -99rem;
+          }
+
+          &:before {
+            @include icoPosition();
+            top: 1rem;
+            left: 0;
+            width: 2rem;
+            height: 2rem;
+            background: url('#{$imgPath}i_tel_be.svg') no-repeat center;
+            background-size: 100% auto;
+
+            @media #{$breakS} {
+              display: none;
+            }
+          }
+        }
+      }
+
+      dd {
+        font-size: 1.2rem;
+
+        @media #{$breakS} {
+          display: none;
+        }
+      }
+    }
+  }
+}

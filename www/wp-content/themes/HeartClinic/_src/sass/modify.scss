@@ -1,0 +1,270 @@
+@use "inc" as *;
+
+// ------------------------------
+// header
+.l-header {
+  border-bottom: 1px solid #E6E5E4;
+
+  @include mq(lap) {
+    border-bottom: none;
+  }
+
+  .p-header__info {
+    .p-header__title {
+      a.p-logo {
+        color: $color-gray;
+        font-family: $font-set-serif;
+        font-weight: 500;
+        max-width: 100%;
+        font-size: 17px;
+
+        span {
+          display: inline-block;
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+
+  .p-header__nav {
+    @include mq(lap) {
+      padding-left: 300px;
+    }
+
+    .p-globalNav {
+      @include mq(lap) {
+        text-align: left;
+      }
+
+      li {
+        &+li {
+          @include mq(lap) {
+            margin-left: 50px;
+          }
+        }
+
+        a {
+          @include mq(lap) {
+            margin: 0;
+            padding: 8px 0 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ------------------------------
+// [top] hero
+.p-hero {
+
+  .swiper-topNews,
+  .p-hero__body .p-hero__time {
+    display: none;
+  }
+
+  .p-hero__body {
+    .p-hero__copy {
+      top: vw(30);
+
+      .open {
+        text-align: left;
+        margin-bottom: vw(5);
+
+        @include mq(lap) {
+          margin-bottom: 25px;
+        }
+
+        span {
+          display: inline-block;
+          font-family: $font-set-serif;
+          font-weight: 500;
+          border: 1px solid $color-gray;
+          line-height: 1;
+          font-size: vw(10);
+          padding: vw(5);
+
+          @include mq(lap) {
+            font-size: 16px;
+            padding: 10px 15px;
+          }
+
+          @include mq(l-lap) {
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .p-hero__pagination {
+    .p-hero__swiperText {
+      color: $color-gray;
+    }
+
+    .swiper-pagination {
+      span {
+        background: #e2e1df;
+
+        &.swiper-pagination-bullet-active {
+          background: $color-gray;
+        }
+      }
+    }
+  }
+}
+
+.p-main__message {
+  .p-main__messageText {
+    line-height: 1.8;
+    margin-top: 30px;
+
+    @include mq(lap) {
+      font-size: 16px;
+      margin-top: 60px;
+      text-align: center;
+    }
+  }
+}
+
+.p-main__recruit {
+  display: block;
+  background: url(/wp-content/themes/HeartClinic/assets/images/recruit_bg-sp.jpg) no-repeat center;
+  background-size: cover !important;
+  text-decoration: none;
+  padding: 45px 20px;
+
+  @include mq(lap) {
+    background: url(/wp-content/themes/HeartClinic/assets/images/recruit_bg.jpg) no-repeat center;
+    padding: 75px 50px;
+  }
+
+  &:hover {
+    opacity: .6 !important;
+  }
+
+  .p-main__recruitHeading {
+    text-decoration: none;
+    color: #fff;
+    padding: 0;
+
+    span.en {
+      color: #fff;
+    }
+  }
+}
+
+.p-main__mapContents {
+  .p-main__mapBody {
+    @include mq(lap) {
+      width: 50%;
+    }
+
+    .p-main__mapHead {
+      h2 {
+        display: flex;
+        align-items: flex-end;
+        color: $color-gray;
+        font-family: $font-set-serif;
+        font-weight: 500;
+        width: 100%;
+        font-size: 20px;
+        line-height: 1;
+        margin-bottom: 15px;
+
+        @include mq(lap) {
+          font-size: 32px;
+        }
+
+        img {
+          width: 220px;
+
+          @include mq(lap) {
+            width: 350px;
+          }
+        }
+
+        span {
+          display: inline-block;
+          margin-left: 7px;
+        }
+      }
+    }
+
+    .p-main__timeTable {
+      margin-top: 15px;
+    }
+  }
+
+  .p-main__mapImage {
+    margin: 50px -20% 0;
+
+    @include mq(lap) {
+      width: 50%;
+      margin: 0;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 250px;
+
+      @include mq(lap) {
+        height: 350px;
+      }
+    }
+  }
+}
+
+.l-footer {
+  background: $base-color;
+  padding: 50px 0;
+
+  @include mq(lap) {
+    padding: 60px 0;
+  }
+
+  .wrapper {
+    display: block;
+
+    @include mq(lap) {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      margin-bottom: 40px;
+
+      @include mq(lap) {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 216px;
+      }
+    }
+
+    .sub {
+      color: $primary-text-color;
+
+      @include mq(lap) {
+        margin-left: auto;
+        display: flex;
+        font-size: 14px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $primary-text-color;
+      }
+
+      .copy {
+        margin-top: 10px;
+
+        @include mq(lap) {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
+}

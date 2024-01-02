@@ -1,0 +1,341 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+
+// ----------------------------------------
+// 個別
+#page_beauty {
+  #news {
+    .wrapper {
+      display: flex;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      h2 {
+        flex-shrink: 0;
+        width: 28rem;
+
+        @media #{$breakS} {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .newsBox {
+        width: 100%;
+      }
+
+      .btn {
+        position: absolute;
+        top: 18rem;
+        left: 0;
+
+        @media #{$breakS} {
+          position: static;
+          text-align: right;
+          margin-top: 2.5rem;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  #menu {
+    .menu {
+      padding-top: 7rem;
+
+      .box {
+        display: flex;
+        margin-top: 7rem;
+
+        @media #{$breakS} {
+          display: block;
+          margin-top: 5rem;
+        }
+
+        .imgBox {
+          flex-shrink: 0;
+          width: 28rem;
+          position: relative;
+          top: 1rem;
+          border-radius: $radius;
+          overflow: hidden;
+          margin-right: 4rem;
+
+          @media #{$breakS} {
+            position: static;
+            width: 100%;
+            margin: 0 0 2rem;
+          }
+        }
+
+        .txtBox {
+
+          .item {
+            &+.item {
+              margin-top: 4rem;
+
+              @media #{$breakS} {
+                margin-top: 5rem;
+              }
+            }
+          }
+
+          .price,
+          .risk,
+          .machine,
+          .caution,
+          .surgery,
+          .remarks {
+            margin-top: 3rem;
+            line-height: 1.6;
+
+            @media #{$breakS} {
+              margin-top: 2rem;
+            }
+
+            h5 {
+              margin-bottom: 1rem;
+              line-height: 1;
+            }
+          }
+
+          .risk,
+          .machine,
+          .caution,
+          .remarks {
+            h5 {
+              font-size: 1.3rem;
+              color: $colorDarkGray;
+            }
+
+            p {
+              font-size: 1.3rem;
+            }
+          }
+
+          .surgery,
+          .price {
+            h5 {
+              font-size: 1.6rem;
+              color: $colorPurple;
+              border-left: .3rem solid $colorPurple;
+              padding-left: 1rem;
+
+              @media #{$breakS} {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+              }
+            }
+          }
+
+          .surgery {
+            dl {
+              display: flex;
+
+              &+dl {
+                margin-top: 0.5rem;
+              }
+
+              dt {
+                flex-shrink: 0;
+                margin-right: .5rem;
+              }
+            }
+          }
+
+          .price {
+
+            @media #{$breakS} {
+              margin-top: 2.5rem;
+            }
+
+            h6 {
+              color: $colorPurple;
+              margin-top: 2rem;
+
+              &+dl {
+                margin-top: 1rem;
+              }
+            }
+
+            dl {
+              display: flex;
+              justify-content: space-between;
+              position: relative;
+              margin-top: 2rem;
+
+              @media #{$breakS} {
+                flex-flow: column;
+                margin-top: 2rem;
+              }
+
+              &+dl {
+                margin-top: 1rem;
+
+                @media #{$breakS} {
+                  margin-top: .5rem;
+                }
+              }
+
+              &:before {
+                @include icoPosition();
+                top: 1.1rem;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                height: 1px;
+                border-top: 1px dotted $colorGray;
+
+                @media #{$breakS} {
+                  top: auto;
+                  bottom: .9rem;
+                }
+              }
+
+              dt,
+              dd {
+                position: relative;
+                z-index: 5;
+                background: $colorWhite;
+              }
+
+              dt {
+                padding-right: 1rem;
+
+                @media #{$breakS} {
+                  padding: 0;
+                }
+              }
+
+              dd {
+                padding-left: 1rem;
+                text-align: right;
+
+                @media #{$breakS} {
+                  margin-left: auto;
+                  line-height: 1.4;
+                }
+              }
+            }
+
+            p.notes {
+              margin-top: 0.5rem;
+              font-size: 1.3rem;
+            }
+          }
+
+          .caution {
+            border: 1px solid $colorLightGray;
+            padding: 1.3rem 2rem 1.6rem;
+
+            dl {
+              dt {
+                font-size: 1.3rem;
+                color: $colorDarkGray;
+                line-height: 1;
+
+                &:after {
+                  @include icoInline();
+                  top: .3rem;
+                  width: 1.5rem;
+                  height: 1.5rem;
+                  margin-left: 0.5rem;
+                  background: url('#{$imgPath}i_arr02_gy.svg') no-repeat center;
+                  background-size: 100% auto;
+                  transform: rotate(90deg);
+                  transition: transform .3s;
+                }
+
+                &.is-active {
+                  &:after {
+                    transform: rotate(-90deg);
+                  }
+                }
+              }
+
+              dd {
+                margin-top: 1rem;
+
+                ul {
+                  li {
+                    line-height: 1.6;
+                    font-size: 1.3rem;
+
+                    &:before {
+                      top: .8rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .beforeAfter {
+            @include boxCol(2, 0, 1.5rem, 0, 1rem);
+            margin-top: 2rem;
+            line-height: 1.6;
+            text-align: center;
+
+            @media #{$breakS} {
+              margin-top: 3rem;
+              font-size: 1.3rem;
+            }
+
+            p {
+              margin-top: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .lazer {
+      @media #{$breakS} {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  #flow {
+    .tabBtn {
+      grid-template-columns: repeat(2, minmax(0, math.div(100%, 2)));
+    }
+  }
+
+  #line {
+    text-align: center;
+
+    h2 {
+      @include fontFamily('serif');
+      font-size: 2.4rem;
+      margin-bottom: 5rem;
+
+      @media #{$breakS} {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+
+      img {
+        width: 6rem;
+
+        @media #{$breakS} {
+          width: 4rem;
+        }
+      }
+
+      span {
+        display: block;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

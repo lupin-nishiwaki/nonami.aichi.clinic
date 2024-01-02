@@ -1,0 +1,353 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+%m_form_txt-style {
+  @include placeholder($colorGray);
+  border: 1px solid #e6e5e4;
+  background: #fcfcfc;
+  line-height: 1.8;
+}
+
+.m_form_progress {
+  @include fontFamily('serif');
+  font-size: 1.8rem;
+  position: relative;
+  display: flex;
+  margin-top: 5rem;
+  text-align: center;
+  background: #E6E5E4;
+  overflow: hidden;
+
+  @media #{$breakS} {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+  }
+
+  li {
+    position: relative;
+    width: 33.3%;
+    padding: .5rem;
+
+    @media #{$breakS} {
+      padding: .5rem 0 .5rem 1rem;
+    }
+
+    &:after {
+      @include icoPosition();
+      top: 0;
+      bottom: 0;
+      right: -1.6rem;
+      z-index: 10;
+      width: 3.6rem;
+      height: 3.6rem;
+      background: #E6E5E4;
+      transform: rotate(45deg);
+      transform-origin: center;
+      border-top: .3rem solid $colorWhite;
+      border-right: .3rem solid $colorWhite;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+    &.is-cur {
+      background: $colorDarkGray;
+      color: $colorWhite;
+
+      &:after {
+        background: $colorDarkGray;
+      }
+    }
+  }
+}
+
+.m_form_guide {
+  @include fontFamily('serif');
+  font-size: 1.8rem;
+  margin-top: 6rem;
+
+  @media #{$breakS} {
+    font-size: 1.4rem;
+    margin-top: 4rem;
+  }
+
+  .req {
+    @include fontFamily('gothic');
+    display: block;
+    color: #E02727;
+    font-size: 1.5rem;
+
+    @media #{$breakS} {
+      font-size: 1.2rem;
+      margin-top: 0.3rem;
+    }
+  }
+}
+
+.m_form_txt {
+  @extend %m_form_txt-style;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.m_form_textarea {
+  @extend %m_form_txt-style;
+  width: 100%;
+  height: 30rem;
+  padding: 1.4rem 1.5rem;
+
+  @media #{$breakS} {
+    height: 20rem;
+  }
+}
+
+.m_form_select {
+  position: relative;
+
+  &:after {
+    @include icoPosition();
+    top: 0;
+    bottom: 0;
+    right: 2rem;
+    height: 0;
+    border-style: solid;
+    border-width: .8rem .5rem 0 .5rem;
+    border-color: $colorBlack transparent transparent transparent;
+  }
+
+  select {
+    @extend %m_form_txt-style;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+.m_form_agree {
+  margin-top: 6rem;
+  text-align: center;
+
+  @media #{$breakS} {
+    margin-top: 3.5rem;
+  }
+
+  .inner {
+    @include boxCenter();
+
+    span {
+      display: inline-block;
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.5rem;
+
+      @media #{$breakS} {
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 1rem;
+      }
+
+      label {
+        display: inline-block;
+        width: 2.4rem;
+        height: 2.4rem;
+        cursor: pointer;
+
+        @media #{$breakS} {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+
+        input {
+          display: none;
+
+          &:checked+span {
+            border: 1px solid $colorGray;
+            background: url('#{$imgPath}i_check_be.svg') no-repeat;
+            background-size: 100% auto;
+          }
+        }
+
+        span {
+          border: 1px solid $colorGray;
+          text-indent: -999rem;
+          overflow: hidden;
+        }
+      }
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.m_form_btn {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 6rem;
+
+  @media #{$breakS} {
+    margin-top: 4rem;
+  }
+
+  button {
+    position: relative;
+    z-index: 1;
+    width: 50rem;
+    padding: 1.5rem;
+    background: $colorDarkGray;
+    border-radius: $radius;
+    border: 1px solid $colorDarkGray;
+    overflow: hidden;
+    font-size: 1.8rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .16);
+    transition: color .5s;
+    color: $colorWhite;
+
+    @media #{$breakS} {
+      width: 100%;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      color: $colorDarkGray;
+      opacity: 1;
+
+      &:before {
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+    }
+
+    &:before {
+      @include icoPosition();
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: $colorWhite;
+      transition: transform .4s cubic-bezier(0.22, 0, 0.53, 1);
+      transform: scale(0, 1);
+      transform-origin: right top;
+    }
+
+    &.back {
+      margin: 0 2rem 0 0;
+      background: $colorGray;
+      border: 1px solid $colorGray;
+
+      @media #{$breakS} {
+        margin: 0 1rem 0 0;
+      }
+
+      &:hover {
+        color: $colorGray;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.m_form_format {
+  margin-top: 6rem;
+
+  @media #{$breakS} {
+    margin-top: 3rem;
+  }
+
+  dl {
+    display: flex;
+    width: 100%;
+
+    @media #{$breakS} {
+      display: block;
+    }
+
+    &+dl {
+      margin-top: 4rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+
+    dt {
+      flex-shrink: 0;
+      width: 28rem;
+      padding-top: 1rem;
+
+      @media #{$breakS} {
+        width: 100%;
+        padding-top: 0;
+        margin-bottom: .7rem;
+      }
+
+      .req {
+        color: #E02727;
+        margin-right: 0.5rem;
+      }
+    }
+
+    dd {
+      width: 100%;
+
+      >*:nth-child(n+2) {
+        margin-top: 15px;
+
+        @media #{$breakS} {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  &.confirm {
+    .conf-hide {
+      display: none;
+    }
+
+    dt {
+      padding: 0;
+    }
+
+    dd {
+      >*:nth-child(n+2) {
+        margin-top: 5px;
+      }
+
+      .m_form_select {
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .error {
+    font-size: 1.3rem !important;
+    display: block;
+    margin-top: 1rem !important;
+    color: #E02727 !important;
+    line-height: 1.6;
+
+    @media #{$breakS} {
+      font-size: 1.1rem !important;
+    }
+
+    +.error {
+      margin-top: 0;
+    }
+  }
+}

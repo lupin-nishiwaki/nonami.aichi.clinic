@@ -1,0 +1,244 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_information {
+  #overview {
+    .row {
+      display: flex;
+      align-items: flex-start;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      .txtBox {
+        width: 100%;
+        margin-right: 5rem;
+        line-height: 1.6;
+
+        @media #{$breakS} {
+          margin: 0 0 3rem;
+        }
+
+        dl {
+          display: flex;
+
+          &+dl {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid $colorLightGray;
+
+            @media #{$breakS} {
+              margin-top: 1.5rem;
+              padding-top: 1.5rem;
+            }
+          }
+
+          dt {
+            flex-shrink: 0;
+            width: 9rem;
+
+            @media #{$breakS} {
+              width: 7rem;
+            }
+          }
+        }
+
+        .pay {
+
+          .credit,
+          .qr {
+            margin-top: 1.5rem;
+
+            ul {
+              display: grid;
+              grid-template-columns: repeat(6, minmax(0, math.div(100%, 6)));
+              column-gap: 1rem;
+              row-gap: 1rem;
+              margin-top: 0.3rem;
+
+              @media #{$breakS} {
+                grid-template-columns: repeat(4, minmax(0, math.div(100%, 4)));
+                column-gap: .5rem;
+                row-gap: .5rem;
+                padding-right: 5rem;
+              }
+            }
+          }
+        }
+      }
+
+      .imgBox {
+        flex-shrink: 0;
+        width: 31.1rem;
+        border-radius: $radius;
+        overflow: hidden;
+
+        @media #{$breakS} {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  #access {
+    padding: 0;
+
+    iframe {
+      width: 100%;
+      height: 50rem;
+
+      @media #{$breakS} {
+        height: 20rem;
+      }
+    }
+  }
+
+  #doctor {
+    table {
+
+      th,
+      td {
+        text-align: center;
+        padding: 2rem 0;
+        vertical-align: middle;
+        width: 10%;
+
+        @media #{$breakS} {
+          padding: 1.2rem 0;
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          font-size: 1.3rem;
+          text-align: left;
+          letter-spacing: .2em;
+        }
+
+        &+th,
+        &+td {
+          border-left: 1px solid $colorLightGray;
+        }
+
+        &.item01 {
+          width: 20%;
+
+          @media #{$breakS} {
+            line-height: 1.4;
+
+            @media #{$breakS} {
+              -ms-writing-mode: lr-tb;
+              writing-mode: horizontal-tb;
+            }
+          }
+        }
+      }
+
+      tr:last-child {
+
+        th,
+        td {
+          border-top: 1px solid $colorLightGray;
+        }
+      }
+    }
+
+    .txt {
+      margin-top: 3rem;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+      }
+    }
+
+    .btn {
+      text-align: center;
+    }
+  }
+
+  #gallery {
+    .gallery {
+      position: relative;
+      border-radius: $radius;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        top: calc(50% - 2rem);
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+        background: url('#{$imgPath}i_arr02_wh.svg') no-repeat;
+        background-size: 100% auto;
+        transform: rotate(0deg);
+
+        @media #{$breakS} {
+          top: 9.5rem;
+          width: 3rem;
+          height: 3rem;
+        }
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .swiper-button-prev {
+        transform: rotate(180deg);
+
+        @media #{$breakS} {
+          left: 0;
+        }
+      }
+
+      .swiper-button-next {
+        @media #{$breakS} {
+          right: 0;
+        }
+      }
+
+      .swiper-pagenation {
+        display: none;
+
+        @media #{$breakS} {
+          display: block;
+          text-align: center;
+          margin-top: .5rem;
+        }
+      }
+    }
+
+    .galleryThumb {
+      overflow: hidden;
+      margin-top: 2rem;
+
+      @media #{$breakS} {
+        display: none;
+      }
+
+      .swiper-slide {
+        border-radius: $radius;
+        overflow: hidden;
+        cursor: pointer;
+        background: $colorBlack;
+
+        img {
+          opacity: .4;
+        }
+
+        &.swiper-slide-thumb-active {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,655 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_top {
+  #mv {
+    .wrapper {
+      padding-left: 8rem;
+
+      @media #{$breakS} {
+        padding: 5.5rem 0 0 2rem;
+      }
+
+      .ttlBox {
+        position: absolute;
+        top: 16rem;
+        left: 16rem;
+        z-index: 5;
+
+        @media #{$breakL} {
+          top: 9rem;
+        }
+
+        @media #{$breakS} {
+          top: 4.2rem;
+          left: 5rem;
+        }
+
+        .open {
+          @include fontFamily('serif');
+          font-size: 2.2rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+
+          @media #{$breakS} {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+          }
+
+          span {
+            display: inline-block;
+            border: 1px solid $colorBlack;
+            padding: .2rem 2rem .4rem;
+
+            @media #{$breakS} {
+              padding: .2rem 1rem;
+            }
+          }
+        }
+
+        h1.catch {
+          @include fontFamily('serif');
+          font-size: 5rem;
+
+          @media #{$breakS} {
+            font-size: 3rem;
+          }
+
+          br.tablet {
+            display: none;
+
+            @media #{$breakL} {
+              display: block;
+            }
+          }
+        }
+
+        .category {
+          position: relative;
+          margin-top: 2.5rem;
+          padding-left: 5rem;
+          letter-spacing: .15em;
+
+          @media #{$breakS} {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            padding-left: 2rem;
+          }
+
+          &:before {
+            @include icoPosition();
+            top: 1.5rem;
+            left: .2rem;
+            width: 3rem;
+            height: 1px;
+            background: $colorBlack;
+
+            @media #{$breakS} {
+              top: .8rem;
+              left: 0;
+              width: 1rem;
+            }
+          }
+        }
+      }
+
+      .main {
+        position: relative;
+        border-radius: $radius 0 0 $radius;
+        overflow: hidden;
+        max-height: 82rem;
+
+        @media #{$breakS} {
+          height: 48rem;
+        }
+
+        .visual {
+          .swiper-slide {
+            img {
+              width: 100%;
+            }
+
+            &.swiper-slide-active,
+            &.swiper-slide-duplicate-active,
+            &.swiper-slide-prev {
+              img {
+                animation: zoom 6s linear;
+              }
+            }
+          }
+        }
+
+        .news {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 5;
+          width: 100%;
+          height: 5rem;
+          padding: 0 10rem 0 67rem;
+          overflow: hidden;
+          background: $colorDarkGray;
+          white-space: nowrap;
+
+          @media #{$breakS} {
+            height: 4rem;
+            padding: 0 6rem 0 0;
+          }
+
+          .swiper-slide {
+            a {
+              display: flex;
+              height: 100%;
+              align-items: center;
+              color: $colorWhite;
+              overflow: hidden;
+
+              @media #{$breakS} {
+                font-size: 1.2rem;
+                padding: 0 2rem;
+              }
+
+              span.day {
+                flex-shrink: 0;
+                width: 12rem;
+
+                @media #{$breakS} {
+                  width: 8rem;
+                }
+              }
+            }
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            top: 0;
+            left: auto;
+            right: 0;
+            width: 5rem;
+            height: 5rem;
+            margin: 0;
+            background: url('#{$imgPath}i_arr02_wh.svg') rgba(0, 0, 0, .1) no-repeat center;
+            background-size: 2rem auto;
+
+            @media #{$breakS} {
+              width: 3rem;
+              height: 4rem;
+              background-size: 1.6rem auto;
+            }
+
+            &:after {
+              display: none;
+            }
+          }
+
+          .swiper-button-prev {
+            right: 5.1rem;
+            transform: rotate(180deg);
+
+            @media #{$breakS} {
+              right: 3.1rem;
+            }
+          }
+        }
+      }
+
+      .side {
+        @include boxVerticalCenter();
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        width: 8rem;
+        height: 100%;
+
+        @media #{$breakS} {
+          display: none;
+        }
+
+        .name {
+          -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+          color: $colorDarkGray;
+          font-size: 1.2rem;
+          letter-spacing: .8rem;
+        }
+
+        .visual-swiper-pagination {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          margin-top: 2rem;
+
+          span {
+            background: $colorLightGray;
+            opacity: 1;
+            width: 0.6rem;
+            height: 0.6rem;
+
+            &+span {
+              margin-top: 1rem;
+            }
+
+            &.swiper-pagination-bullet-active {
+              background: $colorDarkGray;
+            }
+          }
+        }
+      }
+    }
+
+    .calender {
+      position: absolute;
+      bottom: 0;
+      left: 8rem;
+      z-index: 10;
+      background: $colorWhite;
+      padding: 3rem 8rem 1rem;
+      border-radius: 0 $radius 0 0;
+
+      @media #{$breakS} {
+        position: static;
+        padding: 0 2rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  #message {
+    text-align: center;
+
+    @media #{$breakS} {
+      text-align: left;
+    }
+  }
+
+  #treatment {
+    .ttlBox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5rem;
+
+      @media #{$breakS} {
+        display: block;
+        margin-bottom: 3rem;
+      }
+
+      h2 {
+        flex-shrink: 0;
+        width: 28rem;
+        margin: 0;
+
+        @media #{$breakS} {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+
+    ul.link {
+      @include boxRow(3, 3rem, 3rem, 1rem);
+      text-align: center;
+
+      @media #{$breakS} {
+        text-align: left;
+      }
+
+      li {
+        a {
+          pointer-events: none;
+          position: relative;
+          display: block;
+          border: 1px solid $colorLightGray;
+          border-radius: $radius;
+          background: $colorWhite;
+          padding: 5rem 0;
+          transition: .3s box-shadow;
+
+          @media #{$breakS} {
+            padding: 2rem 2rem 2rem 9rem;
+          }
+
+          &:before {
+            @include icoPosition();
+            bottom: 0;
+            left: 0;
+            height: .5rem;
+            width: 100%;
+            background-color: #ae9373;
+            display: inline-block;
+            transition: transform .3s cubic-bezier(0.22, 0, 0.53, 1);
+            transform: scale(0, 1);
+            transform-origin: right top;
+
+            @media #{$breakS} {
+              display: none;
+            }
+          }
+
+          &:after {
+            display: none;
+
+            @media #{$breakS} {
+              display: block;
+              @include icoPosition();
+              top: 2.2rem;
+              right: 2rem;
+              width: 2.5rem;
+              height: 2.5rem;
+              background: url('#{$imgPath}i_arr_be.svg') no-repeat center;
+              background-size: 100% auto;
+
+              @media #{$breakS} {
+                display: none;
+              }
+            }
+          }
+
+          &:hover {
+            box-shadow: 0 0 1.5rem $colorLightGray;
+
+            &:before {
+              transform: scale(1, 1);
+              transform-origin: left top;
+              transition: transform .3s cubic-bezier(0.22, 0, 0.53, 1);
+            }
+          }
+
+          picture {
+            @media #{$breakS} {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 1.5rem;
+              z-index: 5;
+              width: 6rem;
+              height: 6rem;
+              margin: auto;
+            }
+          }
+
+          .hd {
+            @include fontFamily('serif');
+            font-size: 2.4rem;
+            margin: 1rem 0 1.5rem;
+
+            @media #{$breakS} {
+              font-size: 2rem;
+              margin: 0 0 .5rem;
+            }
+          }
+
+          p {
+            line-height: 1.8;
+
+            @media #{$breakS} {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #recruit {
+    a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        picture {
+          transform: scale(1.1);
+        }
+      }
+
+      h2 {
+        @include fontFamily('serif');
+        color: $colorWhite;
+        line-height: 1.2;
+        position: absolute;
+        top: 7.5rem;
+        left: 7rem;
+        z-index: 5;
+
+        @media #{$breakS} {
+          top: 5rem;
+          left: 3rem;
+        }
+
+        span.en {
+          @include fontFamily('gothic');
+          display: block;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+
+          @media #{$breakS} {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+          }
+        }
+
+        em.ja {
+          display: block;
+          font-size: 3.4rem;
+          font-weight: $fontMedium;
+
+          @media #{$breakS} {
+            font-size: 2.8rem;
+          }
+        }
+      }
+
+      picture {
+        position: relative;
+        z-index: 1;
+        transition: transform .5s $easeOutQuart;
+      }
+    }
+  }
+
+  #beauty {
+    .wrap {
+      background: url('#{$imgPath}top/beauty_bg.webp') no-repeat center;
+      background-size: cover;
+      border-radius: $radius;
+      color: $colorWhite;
+      overflow: hidden;
+
+      @media #{$breakS} {
+        background: $colorDarkGray;
+      }
+
+      .txtBox {
+        padding: 9rem 12rem;
+
+        @media #{$breakS} {
+          padding: 2rem;
+        }
+
+        h2 {
+          @include fontFamily('serif');
+          font-size: 3rem;
+          margin-bottom: 1rem;
+
+          @media #{$breakS} {
+            font-size: 2.2rem;
+            text-align: center;
+          }
+        }
+
+        .btn {
+          margin-top: 2rem;
+
+          @media #{$breakS} {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    text-align: center;
+
+    .lead {
+      @media #{$breakS} {
+        text-align: left;
+      }
+    }
+
+    .row {
+      @include boxRow(3, 3rem, 3rem, 3rem);
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+
+      picture {
+        border-radius: $radius;
+        overflow: hidden;
+      }
+
+      .txt {
+        margin-top: 1.5rem;
+        line-height: 1.8;
+
+        @media #{$breakS} {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  #link {
+    .wrapper {
+      border-top: 2px solid $colorLightGray;
+      border-bottom: 2px solid $colorLightGray;
+    }
+
+    .wrap {
+      display: flex;
+      text-align: center;
+
+      @media #{$breakS} {
+        padding: 0;
+      }
+
+      >* {
+        width: 50%;
+        padding: 15rem 0;
+
+        @media #{$breakS} {
+          padding: 5rem 0;
+        }
+      }
+
+      .cooperation {
+        border-left: 2px solid $colorLightGray;
+      }
+
+      picture {
+        img {
+          @media #{$breakS} {
+            width: 6rem;
+          }
+        }
+      }
+
+      h3 {
+        @include fontFamily('serif');
+        font-size: 2.4rem;
+        line-height: 1.2;
+
+        @media #{$breakS} {
+          font-size: 2rem;
+        }
+
+        span.en {
+          @include fontFamily('gothic');
+          display: block;
+          font-size: 1.5rem;
+          color: $colorDarkGray;
+          margin-bottom: 1rem;
+
+          @media #{$breakS} {
+            font-size: 1.1rem;
+            margin-bottom: .5rem;
+          }
+        }
+      }
+
+      .btn {
+        @media #{$breakS} {
+          margin-top: 2rem;
+        }
+
+        a {
+          @media #{$breakS} {
+            width: 4.5rem;
+            min-width: 4.5rem;
+            height: 4.5rem;
+            text-indent: -999rem;
+            border-radius: 5rem;
+            border: none;
+            padding: 0;
+            background: url('#{$imgPath}i_arr_wh.svg') $colorDarkGray no-repeat center;
+            background-size: 1.5rem;
+          }
+
+          i {
+            @media #{$breakS} {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #news {
+    .wrapper {
+      display: flex;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      h2 {
+        flex-shrink: 0;
+        width: 28rem;
+
+        @media #{$breakS} {
+          width: 100%;
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .newsBox {
+        width: 100%;
+      }
+
+      .btn {
+        position: absolute;
+        top: 18rem;
+        left: 0;
+
+        @media #{$breakS} {
+          position: static;
+          text-align: right;
+          margin-top: 2.5rem;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

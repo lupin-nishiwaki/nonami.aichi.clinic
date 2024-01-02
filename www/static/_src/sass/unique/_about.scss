@@ -1,0 +1,413 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_about {
+  #feature {
+    .feature {
+      display: flex;
+      align-items: center;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      &+.feature {
+        margin-top: 15rem;
+
+        @media #{$breakS} {
+          margin-top: 7rem;
+        }
+      }
+
+      &.-reverse {
+        flex-direction: row-reverse;
+
+        .imgBox {
+          border-radius: $radius 0 0 $radius;
+
+          @media #{$breakS} {
+            margin-left: 2rem;
+          }
+        }
+
+        .txtBox {
+          padding: 0 5% 0 15%;
+
+          @media #{$breakL} {
+            padding: 0 7% 0 7.5%;
+          }
+
+          @media #{$breakS} {
+            padding: 0 2rem;
+          }
+        }
+      }
+
+      .imgBox {
+        width: 40%;
+        height: 58.4rem;
+        overflow: hidden;
+        border-radius: 0 $radius $radius 0;
+
+        @media #{$breakL} {
+          height: 40rem;
+        }
+
+        @media #{$breakS} {
+          width: 100%;
+          height: 25rem;
+          margin-left: -2rem;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .txtBox {
+        flex-shrink: 0;
+        width: 60%;
+        padding: 0 15% 0 5%;
+
+        @media #{$breakL} {
+          padding: 0 7.5% 0 7%;
+        }
+
+        @media #{$breakS} {
+          width: 100%;
+          padding: 0 2rem;
+          margin-top: 3rem;
+        }
+
+        .no {
+          font-size: 6rem;
+          color: $colorLightGray;
+          line-height: 0.75;
+
+          @media #{$breakS} {
+            font-size: 4rem;
+          }
+        }
+
+        h3 {
+          @include fontFamily('serif');
+          position: relative;
+          font-size: 2.8rem;
+          margin: 2.5rem 0 3rem;
+          padding-bottom: 3rem;
+
+          @media #{$breakS} {
+            font-size: 2.5rem;
+            margin: 2rem 0 3rem;
+            padding-bottom: 3rem;
+          }
+
+          &:after {
+            @include icoPosition();
+            bottom: 0;
+            left: 0;
+            width: 2rem;
+            height: 1px;
+            background: $colorBlack;
+          }
+        }
+      }
+    }
+  }
+
+  #doctor,
+  #officeWork {
+    .profile {
+      position: relative;
+
+      &+.profile {
+        margin-top: 15rem;
+
+        @media #{$breakS} {
+          margin-top: 7rem;
+        }
+      }
+
+      .person {
+        display: flex;
+        align-items: flex-start;
+
+        .imgBox {
+          border-radius: $radius;
+          overflow: hidden;
+          flex-shrink: 0;
+          width: 21rem;
+          margin-right: 6rem;
+          border-radius: $radius;
+          overflow: hidden;
+        }
+
+        .txtBox {
+          .name {
+            @include fontFamily('serif');
+            display: flex;
+            align-items: flex-end;
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+
+            @media #{$breakS} {
+              margin-bottom: 2rem;
+              font-size: 2.5rem;
+            }
+
+            .en {
+              @include fontFamily('gothic');
+              position: relative;
+              bottom: .2rem;
+              color: $colorDarkGray;
+              font-size: 1.4rem;
+              margin-left: 2rem;
+
+              @media #{$breakS} {
+                margin-left: 1.5rem;
+              }
+            }
+          }
+
+          .img {
+            border-radius: $radius;
+            overflow: hidden;
+          }
+
+          .message {
+            @media #{$breakS} {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+
+      .data {
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 7rem;
+        margin-top: 6rem;
+        font-size: 1.3rem;
+
+        @media #{$breakS} {
+          display: block;
+          margin-top: 3rem;
+        }
+
+        >* {
+          width: 50%;
+
+          @media #{$breakS} {
+            width: 100%;
+          }
+        }
+
+        dl {
+          display: flex;
+          line-height: 1.6;
+
+          &+dl {
+            margin-top: .8rem;
+
+            @media #{$breakS} {
+              margin-top: .7rem;
+            }
+          }
+
+          dt {
+            flex-shrink: 0;
+            width: 9.8rem;
+
+            @media #{$breakS} {
+              width: 9rem;
+            }
+          }
+        }
+
+        .affiliation {
+          margin-top: 5rem;
+
+          @media #{$breakS} {
+            margin-top: 3rem;
+          }
+        }
+
+        .licence {
+          @media #{$breakS} {
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+
+    .doctorsFile,
+    .innabiNet {
+      margin-top: 15rem;
+
+      @media #{$breakS} {
+        margin-top: 7rem;
+      }
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  #doctor {
+    margin-top: 0;
+
+    .takeya {
+      .data {
+        flex-direction: row;
+      }
+    }
+  }
+
+  #facility {
+    h3 {
+      @include fontFamily('serif');
+      font-size: 2.8rem;
+      margin-bottom: 3rem;
+
+      @media #{$breakS} {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    .lead {
+      margin-bottom: 4rem;
+
+      @media #{$breakS} {
+        margin-bottom: 2.5rem;
+      }
+    }
+
+    ul {
+      @include boxRow(3, 4rem, 4rem, 3rem);
+
+      li {
+        a {
+          display: block;
+
+          @media #{$breakS} {
+            display: flex;
+          }
+
+          picture {
+            border-radius: $radius;
+            overflow: hidden;
+            margin-bottom: 3rem;
+
+            @media #{$breakS} {
+              flex-shrink: 0;
+              width: 9.5rem;
+              height: 9.5rem;
+              margin-bottom: 0;
+            }
+
+            img {
+              width: 100%;
+
+              @media #{$breakS} {
+                height: 100%;
+              }
+            }
+          }
+
+          .txtBox {
+            @media #{$breakS} {
+              margin-left: 2rem;
+            }
+          }
+
+          .company {
+            display: inline-block;
+            font-size: 1.3rem;
+            line-height: 1.4;
+            background: $colorGray;
+            color: $colorWhite;
+            padding: .5rem 1rem;
+            margin-bottom: 1.5rem;
+
+            @media #{$breakS} {
+              font-size: 1rem;
+              margin-bottom: 1rem;
+            }
+          }
+
+          .type {
+            @media #{$breakS} {
+              font-size: 1.1rem;
+            }
+          }
+
+          .name {
+            @include fontFamily('serif');
+            position: relative;
+            font-size: 2rem;
+            text-decoration: underline;
+            line-height: 1.4;
+
+            @media #{$breakS} {
+              font-size: 1.8rem;
+              margin-top: 0;
+            }
+
+            &:after {
+              @include icoInline();
+              top: -.2rem;
+              width: 1.4rem;
+              height: 1.4rem;
+              margin-left: 1rem;
+              background: url('#{$imgPath}i_blank_bk.svg') no-repeat center;
+              background-size: 100% auto;
+
+              @media #{$breakS} {
+                width: 1rem;
+                height: 1rem;
+                margin-left: .5rem;
+              }
+            }
+          }
+
+          .iso,
+          .medical {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            margin-top: 2rem;
+
+            @media #{$breakS} {
+              font-size: 1.2rem;
+              margin-top: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .partner,
+    .local {
+      margin-top: 10rem;
+
+      @media #{$breakS} {
+        margin-top: 5rem;
+      }
+    }
+
+    .local {
+      a {
+        @media #{$breakS} {
+          display: block;
+        }
+      }
+    }
+  }
+}

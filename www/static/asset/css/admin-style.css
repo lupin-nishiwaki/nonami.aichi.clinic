@@ -1,0 +1,48 @@
+#contextual-help-link-wrap,#wpadminbar #wp-admin-bar-clear-cache{display:none}
+#wpadminbar{border-bottom:1px solid #666}
+#wpadminbar #wp-admin-bar-new_item_in_admin_bar .ab-item{border-left:1px solid #666}
+.media-menu .media-menu-item#menu-item-playlist,.media-menu .media-menu-item#menu-item-video-playlist{display:none}
+#adminmenu,#adminmenu .wp-submenu,#adminmenuback,#adminmenuwrap{width:200px}
+#adminmenu .opensub .wp-submenu{left:200px;width:200px}
+#wpcontent,#wpfooter{margin-left:200px}
+#adminmenu .menu-icon-appearance .wp-submenu .hide-if-no-customize{display:none}
+#screen-options-wrap label[for=wp_welcome_panel-hide],.welcome-panel-close{display:none}
+#welcome-panel{display:block}
+.welcome-panel{padding:20px;background:#fff}
+.welcome-panel:before{display:none}
+.welcome-panel h2{color:#1d2327;font-size:20px;margin-bottom:10px}
+.welcome-panel ul{display:flex;flex-wrap:wrap;margin:-10px 0 0 -10px}
+.welcome-panel ul+h2{margin-top:25px}
+.welcome-panel ul li{box-sizing:border-box;width:20%;margin-bottom:0;padding:10px 0 0 10px}
+.welcome-panel .welcome-panel-content{display:none}
+.welcome-panel .button{position:relative;width:100%;height:auto;padding:50px 10px 15px;font-size:15px;text-align:center}
+.welcome-panel .button:before{position:absolute;top:6px;left:50%;font-size:28px;font-family:dashicons;transform:translateX(-50%)}
+.welcome-panel .post-summary:before{content:'\f322'}
+.welcome-panel .post-article:before{content:'\f464'}
+.welcome-panel .post-taxonomy:before{content:'\f323'}
+.welcome-panel .post-page:before{content:'\f105'}
+#dashboard-widgets-wrap #dashboard_right_now ul li{float:none;width:100%}
+#dashboard-widgets-wrap #dashboard_right_now ul li.comment-count,#dashboard-widgets-wrap #dashboard_right_now ul li.comment-mod-count hidden,#dashboard-widgets-wrap #dashboard_right_now ul li.post-count:first-child{display:none}
+#dashboard-widgets-wrap #dashboard_right_now #wp-version-message{display:none}
+#dashboard-widgets-wrap #dashboard_activity #latest-comments{display:none}
+#dashboard-widgets-wrap #dashboard_activity #published-posts ul li span{min-width:85px}
+#dashboard-widgets-wrap .empty-container{border:none}
+.fixed .column-date,.fixed .column-postid,.fixed .column-thumbnail,.fixed .column-thumbnail img{width:110px}
+.fixed .column-category{width:150px}
+.fixed .column-thumbnail{text-align:center}
+#screen-options-wrap label[for=tax_newsdiv-hide]{display:none}
+#tax_newsdiv{display:none}
+#acf-group_63070c5a264a2 .categorychecklist-holder{border:none}
+#acf-group_63070c5a264a2 .categorychecklist-holder ul.acf-checkbox-list{display:flex;flex-wrap:wrap;margin:-5px 0 0 -20px;padding:0}
+#acf-group_63070c5a264a2 .categorychecklist-holder ul.acf-checkbox-list li{padding:5px 0 0 20px;box-sizing:border-box}
+#cpt_info_box{display:none}
+.attachment-details label[data-setting=album],.attachment-details label[data-setting=caption],.attachment-details label[data-setting=description]{display:none}
+.media-sidebar .gallery-settings .setting:nth-child(2),.media-sidebar .gallery-settings .setting:nth-child(4),.media-sidebar .gallery-settings .setting:nth-child(5){display:none}
+@media screen and (max-width:767px){
+.welcome-panel h2{font-size:18px;margin-bottom:7px}
+.welcome-panel ul{display:block;margin:0}
+.welcome-panel ul+h2{margin-top:20px}
+.welcome-panel ul li{width:100%;padding:3px 0 0 0}
+.welcome-panel .button{padding:7px 0}
+.welcome-panel .button:before{display:none}
+}

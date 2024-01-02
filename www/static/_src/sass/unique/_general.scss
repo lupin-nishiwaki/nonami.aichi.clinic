@@ -1,0 +1,96 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_general {
+
+  #internal,
+  #surgery {
+    table {
+      margin-top: 2.5rem;
+      border-top: 1px solid $colorLightGray;
+      border-bottom: 1px solid $colorLightGray;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+        border-top: none;
+        border-bottom: none;
+      }
+
+      tr {
+        &+tr {
+          th {
+            border-top: 1px solid $colorWhite;
+
+            @media #{$breakS} {
+              border: none;
+            }
+          }
+
+          td {
+            border-top: 1px solid $colorLightGray;
+
+            @media #{$breakS} {
+              border: none;
+            }
+          }
+        }
+
+        th,
+        td {
+          padding: 2rem;
+          vertical-align: middle;
+
+          @media #{$breakS} {
+            display: block;
+            padding: 1rem 0 2rem;
+            line-height: 1.6;
+          }
+        }
+
+        th {
+          @include fontFamily('serif');
+          width: 25rem;
+          font-size: 1.5rem;
+          background: $colorLightGray;
+          text-align: center;
+
+          @media #{$breakS} {
+            width: 100%;
+            padding: .2rem 1.5rem;
+            font-size: 1.4rem;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  #internal {
+    .allergy {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  #surgery {
+    .oneDay {
+      border: 1px solid $colorLightGray;
+      border-radius: $radius;
+      padding: 3rem 6rem;
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        padding: 3rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

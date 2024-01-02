@@ -1,0 +1,377 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+.m_btn_main {
+  margin-top: 5rem;
+
+  @media #{$breakS} {
+    margin-top: 3rem;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    background: $colorWhite;
+    border-radius: $radius;
+    min-width: 32rem;
+    text-align: center;
+    padding: 1.8rem;
+    border-radius: $radius;
+    border: 1px solid $colorDarkGray;
+    overflow: hidden;
+    transition: color .5s;
+    color: $colorDarkGray;
+
+    @media #{$breakS} {
+      min-width: 100%;
+    }
+
+    &:hover {
+      color: $colorWhite !important;
+      opacity: 1;
+
+      &:before {
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+
+      i {
+        &:before {
+          animation: btnArr .6s cubic-bezier(0.22, 0, 0.53, 1) .2s;
+          background: url('#{$imgPath}i_arr_wh.svg') no-repeat center !important;
+        }
+      }
+    }
+
+    &:before {
+      @include icoPosition();
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: $colorDarkGray;
+      transition: transform .4s cubic-bezier(0.22, 0, 0.53, 1);
+      transform: scale(0, 1);
+      transform-origin: right top;
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 2rem;
+      margin: auto;
+      width: 2.3rem;
+      height: 2.3rem;
+      overflow: hidden;
+
+      &:before {
+        @include icoInline();
+        width: 2.3rem;
+        height: 2.3rem;
+        transition: background .5s;
+        background: url('#{$imgPath}i_arr_be.svg') no-repeat center;
+        background-size: 100% auto !important;
+      }
+    }
+  }
+
+  &.-purple {
+    a {
+      border: 1px solid $colorPurple;
+      color: $colorPurple;
+
+      &:before {
+        background: $colorPurple;
+      }
+
+      i {
+        &:before {
+          background: url('#{$imgPath}i_arr_pl.svg') no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.m_btn_cta {
+  a {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    background: $colorBlack;
+    border-radius: $radius;
+    min-width: 50rem;
+    text-align: center;
+    padding: 3rem;
+    overflow: hidden;
+    transition: color .5s;
+    color: $colorWhite;
+    font-size: 1.8rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .16);
+
+    @media #{$breakS} {
+      min-width: 100%;
+      font-size: 1.4rem;
+      padding: 2.3rem;
+    }
+
+    &:hover {
+      color: $colorBlack;
+      opacity: 1;
+
+      &:before {
+        transform: scale(1, 1);
+        transform-origin: left top;
+      }
+
+      i {
+        &:before {
+          animation: btnArr .6s cubic-bezier(0.22, 0, 0.53, 1) .2s;
+          background: url('#{$imgPath}i_arr_gy.svg') no-repeat center;
+        }
+      }
+    }
+
+    &:before {
+      @include icoPosition();
+      top: 0;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: $colorWhite;
+      transition: transform .4s cubic-bezier(0.22, 0, 0.53, 1);
+      transform: scale(0, 1);
+      transform-origin: right top;
+    }
+
+    i {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 2rem;
+      margin: auto;
+      width: 2.3rem;
+      height: 2.3rem;
+      overflow: hidden;
+
+      &:before {
+        @include icoInline();
+        width: 2.3rem;
+        height: 2.3rem;
+        transition: background .5s;
+        background: url('#{$imgPath}i_arr_wh.svg') no-repeat center;
+        background-size: 100% auto !important;
+      }
+    }
+  }
+
+  &.-gray {
+    a {
+      background: $colorDarkGray;
+      color: $colorWhite;
+
+      &:hover {
+        color: $colorDarkGray;
+
+        i {
+          &:before {
+            background: url('#{$imgPath}i_arr_gy.svg') no-repeat center;
+          }
+        }
+      }
+
+      &:before {
+        background: $colorWhite;
+      }
+
+      i {
+        &:before {
+          background: url('#{$imgPath}i_arr_wh.svg') no-repeat center;
+        }
+      }
+    }
+  }
+}
+
+.m_btn_video {
+  display: block;
+  position: relative;
+  border-radius: $radius;
+  overflow: hidden;
+  font-size: 1.3rem;
+  line-height: 1.6;
+
+  @media #{$breakS} {
+    font-size: 1.4rem;
+  }
+
+  &.-pretense {
+    &:before {
+      display: none;
+    }
+  }
+
+  &:before {
+    @include icoPosition();
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 30%;
+    height: 30%;
+    background: url('#{$imgPath}i_play_wh.svg') no-repeat center;
+    background-size: auto 100%;
+  }
+
+  .cap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding: 1rem 1rem 0;
+    color: $colorWhite;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.m_btn_pager {
+  margin-top: 7rem;
+
+  @media #{$breakS} {
+    margin-top: 5rem;
+  }
+
+  >div {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    span,
+    a {
+      position: relative;
+      background: $colorLightGray;
+      width: 5rem;
+      height: 5rem;
+      margin: 0 .5rem;
+      border-radius: 5rem;
+      padding-top: .9rem;
+
+      @media #{$breakS} {
+        width: 4rem;
+        height: 4rem;
+        margin: 0 .3rem;
+        font-size: 1.1rem;
+      }
+    }
+
+    span {
+      border: 1px solid $colorLightGray;
+      background: none;
+    }
+
+    .previouspostslink,
+    .nextpostslink {
+      background: none;
+
+      &:after {
+        @include icoPosition();
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        background: url('#{$imgPath}i_arr02_bk.svg') no-repeat;
+        background-size: 2rem;
+
+        @media #{$breakS} {
+          background-size: 1.8rem;
+        }
+      }
+    }
+
+    .previouspostslink {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.m_btn_page-around {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 7rem;
+
+  li {
+    width: 20rem;
+
+    @media #{$breakS} {
+      width: 33%;
+      font-size: 1.1rem;
+    }
+
+    &+li {
+      border-left: 1px solid $colorLightGray;
+    }
+
+    a {
+      display: block;
+      position: relative;
+    }
+
+    &.prev,
+    &.next {
+      a {
+        &:after {
+          @include icoPosition();
+          top: 0;
+          bottom: 0;
+          width: 1.8rem;
+          height: 1.8rem;
+          background: url('#{$imgPath}i_arr_bk.svg') no-repeat;
+          background-size: 100% auto;
+
+          @media #{$breakS} {
+            bottom: .4rem;
+          }
+        }
+      }
+    }
+
+    &.prev {
+      a {
+        &:after {
+          left: 2rem;
+          transform: scale(-1, 1);
+
+          @media #{$breakS} {
+            left: 0;
+          }
+        }
+      }
+    }
+
+    &.next {
+      a {
+        &:after {
+          right: 2rem;
+
+          @media #{$breakS} {
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}

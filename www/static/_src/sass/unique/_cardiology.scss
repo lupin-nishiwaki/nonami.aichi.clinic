@@ -1,0 +1,119 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_cardiology {
+  #about {
+    .target {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+
+    picture {
+      @media #{$breakS} {
+        margin-top: 3rem;
+        border-radius: $radius;
+        overflow: hidden;
+      }
+    }
+  }
+
+  #catheter {
+
+    .flow,
+    .machine,
+    .info {
+      margin-top: 7rem;
+
+      @media #{$breakS} {
+        margin-top: 4rem;
+      }
+    }
+
+    .info {
+      border: 1px solid $colorLightGray;
+      padding: 6rem;
+      border-radius: $radius;
+
+      @media #{$breakS} {
+        padding: 3rem;
+      }
+
+      .room {
+        margin-top: 4rem;
+
+        @media #{$breakS} {
+          margin-top: 2rem;
+        }
+
+        .row {
+          display: flex;
+
+          @media #{$breakS} {
+            display: block;
+          }
+
+          picture {
+            flex-shrink: 0;
+            position: relative;
+            top: .6rem;
+            width: 28rem;
+            border-radius: $radius;
+            overflow: hidden;
+            margin-right: 2rem;
+
+            @media #{$breakS} {
+              width: 100%;
+              margin: 0 0 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #heartSurgery {
+    .overview {
+      .lead {
+        @include clearfix();
+
+        img {
+          float: right;
+          position: relative;
+          top: .8rem;
+          width: 40rem;
+          border-radius: $radius;
+          overflow: hidden;
+          margin: 0 0 3rem 3rem;
+
+          @media #{$breakS} {
+            float: none;
+            position: static;
+            width: 100%;
+            margin: 0 0 1.5rem;
+          }
+        }
+
+        a {
+          text-decoration: underline;
+          color: $colorDarkGray;
+        }
+      }
+    }
+
+    .disease {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+  }
+}

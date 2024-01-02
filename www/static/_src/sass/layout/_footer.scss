@@ -1,0 +1,459 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+#l_footer {
+  position: relative;
+  z-index: 5;
+
+  #fixedCta {
+    position: fixed;
+    bottom: 10rem;
+    right: 3rem;
+    z-index: 90;
+    text-align: center;
+    color: $colorWhite;
+    font-size: 1.6rem;
+
+    @media #{$breakS} {
+      bottom: 1rem;
+      right: 1rem;
+      font-size: 1.1rem;
+    }
+
+    &:hover {
+      p {
+        box-shadow: 0 .3rem 2rem rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    p {
+      display: block;
+      background: $colorDarkGray;
+      width: 15rem;
+      height: 15rem;
+      border-radius: 15rem;
+      transition: box-shadow .3s;
+      box-shadow: 0 .3rem .6rem rgba(0, 0, 0, 0.16);
+
+      @media #{$breakS} {
+        width: 10.5rem;
+        height: 10.5rem;
+      }
+
+      &.line {
+        background: $colorPurple;
+
+        a {
+          &:before {
+            background: url('#{$imgPath}i_social_line_wh.svg') no-repeat center;
+          }
+        }
+      }
+
+      a {
+        @include fontFamily('serif');
+        @include boxVerticalCenter();
+        align-items: center;
+        height: 100%;
+
+        &:before {
+          @include icoInline();
+          width: 3rem;
+          height: 3rem;
+          background: url('#{$imgPath}i_mail_wh.svg') no-repeat center;
+          background-size: 100% auto !important;
+
+          @media #{$breakS} {
+            width: 2.5rem;
+            height: 2.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  #clinic {
+    padding: 15rem 0;
+    border-top: 1px solid $colorLightGray;
+
+    @media #{$breakS} {
+      padding: 7rem 0 0;
+    }
+
+    .overview {
+      display: flex;
+      justify-content: space-between;
+      // flex-direction: row-reverse;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      .mapBox {
+        flex-shrink: 0;
+        width: 57rem;
+        border-radius: $radius;
+        overflow: hidden;
+
+        @media #{$breakS} {
+          width: calc(100% + 4rem);
+          margin: 3rem -2rem 0;
+          border-radius: 0;
+        }
+
+        iframe {
+          width: 100%;
+          height: 100%;
+
+          @media #{$breakS} {
+            height: 20rem;
+          }
+        }
+      }
+
+      .txtBox {
+        .logo {
+          @include fontFamily('serif');
+          display: flex;
+          align-items: flex-end;
+          margin-bottom: 2rem;
+          font-size: 3.1rem;
+          line-height: 1;
+
+          @media #{$breakS} {
+            font-size: 2.2rem;
+          }
+
+          img {
+            width: 36.4rem;
+
+            @media #{$breakS} {
+              width: 23rem;
+            }
+          }
+
+          span {
+            position: relative;
+            top: -.1rem;
+            margin-left: 1rem;
+
+            @media #{$breakS} {
+              top: 0rem;
+            }
+          }
+        }
+
+        .address,
+        .tel,
+        .fax {
+          line-height: 1.6;
+        }
+
+        .tel {
+          a {
+            position: relative;
+            display: inline-block;
+            font-size: 3rem;
+            color: $colorDarkGray;
+            padding-left: 2.5rem;
+
+            &:before {
+              @include icoPosition();
+              top: 1.5rem;
+              left: 0;
+              width: 1.8rem;
+              height: 1.8rem;
+              background: url('#{$imgPath}i_tel_be.svg') no-repeat center;
+              background-size: 100% auto !important;
+            }
+          }
+        }
+
+        .calender {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+
+    .map {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin: 3rem -2rem 0;
+      }
+
+      iframe {
+        width: 100%;
+        height: 40rem;
+
+        @media #{$breakS} {
+          height: 20rem;
+        }
+      }
+    }
+  }
+
+  #contact {
+    text-align: center;
+    padding: 15rem 0;
+    background: $colorLightGray;
+
+    @media #{$breakS} {
+      padding: 7rem 0;
+    }
+
+    .lead {
+      @media #{$breakS} {
+        text-align: left;
+      }
+    }
+
+    .btn {
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        margin-top: 3rem;
+      }
+    }
+
+    // .row {
+    //   @include boxRow(2, 0, 5rem, 1rem);
+    //   margin-top: 5rem;
+
+    //   @media #{$breakS} {
+    //     margin-top: 3rem;
+    //   }
+
+    //   .btn {
+    //     a {
+    //       width: 100%;
+    //     }
+    //   }
+    // }
+  }
+
+  #sitemap {
+    background: url('#{$imgPath}footer_bg.webp') no-repeat center left;
+    background-size: cover;
+    padding: 15rem 0 10rem;
+    color: $colorWhite;
+
+    @media #{$breakS} {
+      padding: 7rem 0;
+    }
+
+    .top {
+      display: flex;
+
+      @media #{$breakS} {
+        display: block;
+      }
+
+      .logo {
+        flex-shrink: 0;
+        width: 22rem;
+        margin: 0 5rem 0 0;
+
+        @media #{$breakS} {
+          width: 23rem;
+          margin: 0 0 3rem;
+        }
+      }
+
+      .sitemap {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, math.div(100%, 4)));
+        column-gap: 2rem;
+        row-gap: 2rem;
+        width: 100%;
+
+        @media #{$breakS} {
+          display: block;
+        }
+
+        >div {
+          &+div {
+            @media #{$breakS} {
+              margin-top: 3rem;
+            }
+          }
+
+          &:last-child {
+            @media #{$breakS} {
+              margin-top: 0;
+            }
+          }
+        }
+
+        h4 {
+          font-size: 1.8rem;
+          margin-bottom: 2rem;
+
+          @media #{$breakS} {
+            font-size: 1.5rem;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid $colorDarkGray;
+          }
+        }
+
+        dl {
+          dt {
+            margin: 2rem 0 1rem;
+
+            @media #{$breakS} {
+              margin: 1rem 0;
+            }
+
+            &:first-child {
+              margin: 0 0 1rem;
+            }
+          }
+
+          dd {
+            a {
+              position: relative;
+              display: block;
+              padding-left: 1em;
+
+              &:before {
+                @include icoPosition();
+                top: .7rem;
+                left: -.4rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                background: url('#{$imgPath}i_arr02_be.svg') no-repeat center;
+                background-size: 100% auto;
+
+                @media #{$breakS} {
+                  top: .6rem;
+                }
+              }
+
+              &+a {
+                margin-top: .5rem;
+              }
+            }
+          }
+        }
+
+        ul {
+          li {
+            font-size: 1.8rem;
+
+            @media #{$breakS} {
+              font-size: 1.5rem;
+              border-bottom: 1px solid $colorDarkGray;
+            }
+
+            &+li {
+              margin-top: 2rem;
+
+              @media #{$breakS} {
+                margin-top: 0;
+              }
+            }
+
+            a {
+              display: block;
+
+              @media #{$breakS} {
+                padding: 1rem 0;
+              }
+            }
+          }
+        }
+
+        .instagram {
+          margin-top: 2.5rem;
+
+          a {
+            @include boxCenter();
+            width: 3.6rem;
+            height: 3.6rem;
+            border-radius: 5rem;
+            background: $colorWhite;
+            text-align: center;
+
+            img {
+              width: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-top: 5rem;
+
+      @media #{$breakS} {
+        display: block;
+        margin-top: 4rem;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+
+      .copy {
+        width: 27rem;
+
+        @media #{$breakS} {
+          width: auto;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  #credit {
+    padding: 6rem 0;
+
+    @media #{$breakS} {
+      padding: 4rem 0;
+    }
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+
+      @media #{$breakS} {
+        display: block;
+        font-size: 1.3rem;
+      }
+
+      .logo {
+        display: flex;
+
+        img {
+          flex-shrink: 0;
+          width: 21.8rem;
+        }
+      }
+
+      .privacy {
+        margin-left: auto;
+
+        @media #{$breakS} {
+          margin: 4rem 0 0;
+        }
+
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      .copy {
+        margin-left: 5rem;
+
+        @media #{$breakS} {
+          margin: 1rem 0 0;
+        }
+      }
+    }
+  }
+}

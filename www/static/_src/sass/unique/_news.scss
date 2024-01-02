@@ -1,0 +1,63 @@
+// ----------------------------------------
+// 初期設定・リセット
+@use "sass:math";
+@use "core/variable" as *;
+@use "core/mixin" as *;
+
+// ----------------------------------------
+// 個別
+#page_news {
+  #archive {
+    .tabBtn {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, math.div(100%, 2)));
+      column-gap: 1px;
+      text-align: center;
+      font-size: 1.8rem;
+      color: $colorDarkGray;
+      line-height: 1.6;
+      margin-bottom: 5rem;
+
+      @media #{$breakS} {
+        font-size: 1.4rem;
+        margin: 0 -2rem 1rem;
+      }
+
+      >div {
+
+        a,
+        span {
+          display: block;
+          background: $colorLightGray;
+          padding: 3.5rem 0;
+
+          @media #{$breakS} {
+            padding: 2rem 0;
+          }
+        }
+
+        &.is-tab {
+
+          a,
+          span {
+            background: $colorWhite;
+            color: $colorBlack;
+            border-top: .3rem solid $colorDarkGray;
+          }
+        }
+      }
+
+      &.-purple {
+        >div {
+          &.is-tab {
+
+            a,
+            span {
+              border-top: .3rem solid $colorPurple;
+            }
+          }
+        }
+      }
+    }
+  }
+}

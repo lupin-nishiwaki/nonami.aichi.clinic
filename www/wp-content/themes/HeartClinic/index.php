@@ -7,48 +7,48 @@
         <ul class="swiper-wrapper">
           <li class="swiper-slide -top">
             <picture class="p-hero__swiperImage">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc03@2x.jpg" media="(min-width: 768px)">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-sp03@2x.jpg" alt="ハートクリニックの外観画像" decoding="async">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" media="(min-width: 768px)">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" alt="ハートクリニックの外観画像" decoding="async">
             </picture>
           </li>
 
           <li class="swiper-slide -top">
             <picture class="p-hero__swiperImage">
               <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" media="(min-width: 768px)">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-sp01@2x.jpg" alt="診療をしている様子" decoding="async">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" alt="ハートクリニックの外観画像" decoding="async">
             </picture>
           </li>
 
           <li class="swiper-slide -top">
             <picture class="p-hero__swiperImage">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc02@2x.jpg" media="(min-width: 768px)">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-sp02@2x.jpg" alt="ハートクリニックの院内画像" decoding="async">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" media="(min-width: 768px)">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" alt="ハートクリニックの外観画像" decoding="async">
             </picture>
           </li>
 
-
           <li class="swiper-slide -top">
             <picture class="p-hero__swiperImage">
-              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc04@2x.jpg" media="(min-width: 768px)">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-sp04@2x.jpg" alt="ハートクリニックの院内画像" decoding="async">
+              <source srcset="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" media="(min-width: 768px)">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/mv-pc01@2x.jpg" alt="ハートクリニックの外観画像" decoding="async">
             </picture>
           </li>
         </ul>
       </div>
 
-
       <?php
-        $args = [
+        $args =
+        [
           'post_type' => 'importantnews', // 投稿タイプを指定
           'posts_per_page' => 5, // １ページあたりの投稿数を指定
           'paged' => $paged,
-          ];
-           $the_query = new WP_Query( $args );
-          ?>
-      <?php  if ( $the_query->have_posts() ) : ?>
+        ];
+        $the_query = new WP_Query( $args );
+        if ( $the_query->have_posts() ) :
+      ?>
       <div class="swiper-container -topNews swiper-topNews">
         <ul class="swiper-wrapper -topNews">
-          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+          <?php while ( $the_query->have_posts() ) : ?>
+          <?php $the_query->the_post(); ?>
           <li class="swiper-slide -topNews">
             <a href="<?php the_permalink(); ?>">
               <div class="inner">
@@ -58,21 +58,19 @@
             </a>
           </li>
           <?php endwhile; ?>
-
-
         </ul>
         <div class="swiper-button-prev prevTopNews -topnews"></div>
         <div class="swiper-button-next nextTopNews -topnews"></div>
       </div>
-      <?php endif;  wp_reset_postdata(); ?>
-
+      <?php endif; ?>
+      <?php wp_reset_postdata(); ?>
     </div>
-    <!-- /.p-hero__inner -->
 
     <div class="p-hero__body">
       <div class="p-hero__copy">
-        <em class="main"><span class="br">カテーテル治療を専門とする</span><span class="br-sp">有床循環器</span>クリニック</em>
-        <span class="item">循環器科 / 心臓血管外科 / 内科 / 外科 / 麻酔科 /<br> 心臓カテーテル治療 / 下肢静脈瘤治療 / 透析シャント治療 / 美容</span>
+        <p class="open"><span>2024年4月開院</span></p>
+        <em class="main">笑顔になれる<br class="pc-hide">アットホームな<br>循環器クリニック</em>
+        <span class="item">循環器科 / 足の外来 / 内科 / 禁煙外来 / 睡眠時無呼吸症候群治療/ 発熱外来 / 美容</span>
       </div>
 
       <div class="p-hero__time p-main__timeTable -hero">
@@ -120,6 +118,7 @@
     </div>
   </div>
 
+  <!--
   <div class="p-main__timeTableWrap">
     <div class="l-container l-spacer -topS">
       <div class="p-main__timeTable -map -top">
@@ -160,121 +159,136 @@
         <p class="p-hero__time__note-text">初診受付は午前は11:30まで、午後は17:30までとなります。</p>
       </div>
     </div>
-    <!-- /.l-container -->
   </div>
+  -->
+
+  <section class="l-spacer -sizeLtop">
+    <div class="l-container">
+      <div class="p-main__message">
+        <h2 class="c-heading -center p-main__messageHeading">
+          <span class="en">message</span>
+          院長ごあいさつ
+        </h2>
+
+        <p class="p-main__messageText">
+          私が医師になってから約18年の月日が経ちました。<br>
+          色々な縁があり循環器内科医を志し、<br class="sp-hide">多大な御力添えをいただきながら、循環器内科専門医としてこれまで病院勤務を続けて参りました。<br>
+          私が医師として働き始めたころよりお世話になり、循環器内科医となるきっかけにもなった、<br class="sp-hide">あいちハートクリニック知立院の村瀬副院長から開業のお話をいただき、<br class="sp-hide">深谷院長とも名古屋ハートセンターで一緒に働いていたこともあり、この縁を大切にしたいと思い、<br class="sp-hide">2024年4月にあいちハートクリニック野並院を開業することとなりました。<br>
+          循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、<br class="sp-hide">これまで培ってきたキャリアを存分に生かし、地域の皆様の支えになれるよう努力していく所存です。<br>
+          「あいちハートクリニック野並」をどうぞよろしくお願い申し上げます。<br>
+          <br>
+          院長　竹谷 昌直
+        </p>
+      </div>
+    </div>
+  </section>
 
   <section class="l-spacer -sizeLtop">
     <div class="l-container">
       <div class="p-main__treatmentHead js-scrollFade">
         <h2 class="c-heading p-main__treatmentHeading">
-              <span class="en">guidance</span>
-              診療案内
-            </h2>
+          <span class="en">treatment</span>
+          診療案内
+        </h2>
 
         <p class="p-main__lead p-main__treatmentHeadText">
-              当クリニックでは、一般内科&middot;外科の診療も行っております。<br class="sp-hide" />
-              かかりつけ医（家庭医）としての役割を意識し、明るく落ち着いた癒しの空間で、<br class="sp-hide" />
-              ホスピタリティーを重視した医療サービスの提供に努めて参ります。
-            </p>
+        当クリニックでは、以下の診療や美容メニューをおこなう予定です。<br class="sp-hide" />
+        明るく落ち着いた癒しの空間でホスピタリティーを重視した<br class="sp-hide" />医療サービスの提供に努めて参ります。
+        </p>
       </div>
-
 
       <ul class="p-main__treatmentList js-parentFadeMulti">
         <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/cardiology/">
+          <div class="inner">
             <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-heart.svg" alt="心臓のアイコン" />
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-heart.svg" alt="循環器科" />
             </figure>
             <div class="p-main__treatmentBody">
               <h3 class="p-main__treatmentTitle">循環器科</h3>
-              <p class="p-main__treatmentText">カテーテル検査&middot;治療の他、<br>心臓検査や血管外科手術も対応。</p>
+              <p class="p-main__treatmentText">カテーテル検査・治療の他、<br>心臓検査や血管外科手術も対応。</p>
             </div>
-
             <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
               <g transform="translate(-125.801 -6.294)">
                 <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </g>
             </svg>
-          </a>
+          </div>
         </li>
 
-
         <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/varix/">
+          <div class="inner">
             <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-leg.svg" alt="足の外来のアイコン" />
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-leg.svg" alt="足の外来" />
             </figure>
             <div class="p-main__treatmentBody">
               <h3 class="p-main__treatmentTitle">足の外来</h3>
-              <p class="p-main__treatmentText">高周波治療（血管内焼灼術）は、<br>出血や術後の痛みが軽度。</p>
+              <p class="p-main__treatmentText">カテーテル治療、外科治療、<br>創の処置やまた歩き方の指導なども。</p>
             </div>
             <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
               <g transform="translate(-125.801 -6.294)">
                 <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </g>
             </svg>
-          </a>
+          </div>
         </li>
 
         <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/shunt/">
+          <div class="inner">
             <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-arm.svg" alt="透析シャントのアイコン" />
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-sinryou.svg" alt="一般内科" />
             </figure>
             <div class="p-main__treatmentBody">
-              <h3 class="p-main__treatmentTitle">透析シャント治療</h3>
-              <p class="p-main__treatmentText">透析で使用する血管のトラブルに対し、<br>カテーテル治療や血管外科手術で対応。</p>
+              <h3 class="p-main__treatmentTitle">一般内科</h3>
+              <p class="p-main__treatmentText">かかりつけ医（家庭医） として、<br>内科・外科全般についても対応。</p>
             </div>
             <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
               <g transform="translate(-125.801 -6.294)">
                 <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </g>
             </svg>
-          </a>
+          </div>
         </li>
 
         <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/general/">
+          <div class="inner">
             <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-sinryou.svg" alt="聴診器のアイコン" />
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-tabako.svg" alt="禁煙外来" />
             </figure>
-
-            <div class="p-main__treatmentBody">
-              <h3 class="p-main__treatmentTitle">一般内科&middot;外科</h3>
-              <p class="p-main__treatmentText">かかりつけ医（家庭医） として<br>内科&middot;外科全般についても対応。</p>
-            </div>
-
-            <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
-              <g transform="translate(-125.801 -6.294)">
-                <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-              </g>
-            </svg>
-          </a>
-        </li>
-
-        <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/no-smoking/">
-            <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-tabako.svg" alt="タバコのアイコン" />
-            </figure>
-
             <div class="p-main__treatmentBody">
               <h3 class="p-main__treatmentTitle">禁煙外来</h3>
               <p class="p-main__treatmentText">外来日を含め3ヶ月で終了。<br>計5回の通院で病気のリスクを軽減。</p>
             </div>
+            <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
+              <g transform="translate(-125.801 -6.294)">
+                <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+              </g>
+            </svg>
+          </div>
+        </li>
+
+        <li class="p-main__treatmentItem js-scrollFadeMulti">
+          <div class="inner">
+            <figure class="p-main__treatmentIcon">
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-sleep.svg" alt="睡眠時無呼吸症候群" />
+            </figure>
+
+            <div class="p-main__treatmentBody">
+              <h3 class="p-main__treatmentTitle">睡眠時無呼吸症候群</h3>
+              <p class="p-main__treatmentText">睡眠時無呼吸症候群に関する検査、<br>治療を対応。</p>
+            </div>
 
             <svg class="arrow -brown p-main__treatmentArrow" viewBox="0 0 23 7.206">
               <g transform="translate(-125.801 -6.294)">
                 <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </g>
             </svg>
-          </a>
+          </div>
         </li>
 
         <li class="p-main__treatmentItem js-scrollFadeMulti">
-          <a href="<?php echo esc_url(get_theme_file_uri()); ?>/fever/">
+          <div class="inner">
             <figure class="p-main__treatmentIcon">
-              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-mask.svg" alt="マスクのアイコン" />
+              <img src="<?php echo esc_url(get_theme_file_uri()); ?>/assets/images/icon-mask.svg" alt="発熱外来" />
             </figure>
             <div class="p-main__treatmentBody">
               <h3 class="p-main__treatmentTitle">発熱外来</h3>
@@ -285,10 +299,11 @@
                 <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
               </g>
             </svg>
-          </a>
+          </div>
         </li>
       </ul>
 
+      <!--
       <article class="p-main__beauty">
         <div class="p-main__beautyInner">
           <figure class="p-main__beautyImage">
@@ -299,10 +314,9 @@
             <div class="js-scrollFade">
               <h3 class="p-main__beautyTitle">美容施術メニュー</h3>
               <p class="p-main__beautyText">
-                    医師&middot;看護師による、美肌のためのスキンケア治療を<br
-                      class="sp-hide"
-                    />低価格でご提供しております。<br class="pc-hide" />お気軽にご相談ください。
-                  </p>
+                医師&middot;看護師による、美肌のためのスキンケア治療を<br class="sp-hide">
+                低価格でご提供しております。<br class="pc-hide" />お気軽にご相談ください。
+              </p>
 
               <a href="<?php echo esc_url(get_theme_file_uri()); ?>/beauty/" class="c-button -colorAccentWhite -center -primary">
                 <span class="inner">詳しくはこちら</span>
@@ -317,11 +331,23 @@
             </div>
           </div>
         </div>
-        <!-- /.p-main__beautyInner -->
       </article>
+      -->
     </div>
   </section>
 
+  <section class="l-spacer">
+    <div class="l-container">
+      <a href="/recruit/" class="p-main__recruit js-scrollFade">
+        <h2 class="c-heading -sizeM p-main__recruitHeading">
+          <span class="en">reqruitment</span>
+          採用情報はこちら
+        </h2>
+      </a>
+    </div>
+  </section>
+
+  <!--
   <section class="l-spacer -sizeL">
     <div class="l-container">
       <div class="js-scrollFade">
@@ -466,52 +492,51 @@
       <div class="p-main__news">
         <div class="inner">
           <h2 class="c-heading p-main__newsTitle -top">
-                <span class="en">news</span>
-                お知らせ
-              </h2>
+            <span class="en">news</span>
+            お知らせ
+          </h2>
 
           <?php
-          $args = [
-            'post_type' => 'news', // 投稿タイプを指定
-            'posts_per_page' => 3, // １ページあたりの投稿数を指定
-            'paged' => $paged,
+          $args =
+            [
+              'post_type' => 'news', // 投稿タイプを指定
+              'posts_per_page' => 3, // １ページあたりの投稿数を指定
+              'paged' => $paged,
             ];
-             $the_query = new WP_Query( $args );
-            ?>
-
+          $the_query = new WP_Query( $args );
+          ?>
 
           <div class="p-main__newsContent">
             <?php  if ( $the_query->have_posts() ) : ?>
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-            <a href="<?php the_permalink(); ?>" class="p-main__newsLink">
-              <dl>
-                <dt>
-                  <time><time datetime="<?php the_time( DATE_W3C ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time></time>
-                </dt>
-                <dd><?php the_title(); ?></dd>
-              </dl>
-              <i>
-                <svg class="arrow -whiteBrown" viewBox="0 0 23 7.206">
-                  <g transform="translate(-125.801 -6.294)">
-                    <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
-                  </g>
-                </svg>
-              </i>
-            </a>
-            <?php endwhile; ?>
+              <?php while ( $the_query->have_posts() ) : ?>
+                <?php $the_query->the_post(); ?>
+                <a href="<?php the_permalink(); ?>" class="p-main__newsLink">
+                  <dl>
+                    <dt><time><time datetime="<?php the_time( DATE_W3C ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time></time></dt>
+                    <dd><?php the_title(); ?></dd>
+                  </dl>
+
+                  <i>
+                    <svg class="arrow -whiteBrown" viewBox="0 0 23 7.206">
+                      <g transform="translate(-125.801 -6.294)">
+                        <path d="M714.911,14.75l5.5,6h-22" transform="translate(-572.11 -7.75)" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
+                      </g>
+                    </svg>
+                  </i>
+                </a>
+              <?php endwhile; ?>
             <?php else : ?>
-            <p class="p-main__newsContent-postText">まだ投稿がありません。</p>
+              <p class="p-main__newsContent-postText">まだ投稿がありません。</p>
             <?php endif;  wp_reset_postdata(); ?>
           </div>
-
-          <!-- /.p-main__newsInner -->
         </div>
+
         <div class="p-main__newsButtonWrap -top">
           <a href="<?php echo esc_url( home_url( ) ); ?>/news/" class="p-main__newsButton">一覧を見る</a>
         </div>
       </div>
     </div>
   </section>
-
+  -->
 
   <?php get_footer() ?>

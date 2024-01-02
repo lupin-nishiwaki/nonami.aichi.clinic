@@ -1,0 +1,31 @@
+@use "sass:math";
+@use "../core/variable" as *;
+@use "../core/mixin" as *;
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes btnArr {
+  0% {
+    transform: translateX(0)
+  }
+
+  50% {
+    transform: translateX(100%)
+  }
+
+  50.1% {
+    transform: translateX(-100%)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}

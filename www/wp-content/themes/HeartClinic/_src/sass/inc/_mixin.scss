@@ -4,10 +4,13 @@
 //============================================
 //  FUNCTIONS
 //============================================
-
-// 関数の登録
 @function sizeRem($size, $base-font-size: 16px) {
   @return math.div($size , $base-font-size) * 1rem;
+}
+
+@function vw($size, $viewport: 375) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
 }
 
 //============================================
