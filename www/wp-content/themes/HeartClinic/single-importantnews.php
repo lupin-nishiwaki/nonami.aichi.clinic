@@ -12,9 +12,9 @@
       <section id="pageTtl">
         <div class="top">
           <div class="m_box_fixed -under">
-            <h1 class="-purple">
-              <span class="en">beauty news</span>
-              美容のお知らせ
+            <h1>
+              <span class="en">news</span>
+              お知らせ
             </h1>
           </div>
         </div>
@@ -45,7 +45,7 @@
                     </li>
                   <?php endif; ?>
 
-                  <li class="list"><a href="/beautynews/">一覧へ戻る</a></li>
+                  <li class="list"><a href="/news/">一覧へ戻る</a></li>
 
                   <?php if( !empty( $next_post ) ): ?>
                     <li class="next">
