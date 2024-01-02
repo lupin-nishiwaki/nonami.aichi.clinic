@@ -28,6 +28,18 @@ function plugin_validation_rule( $Validation ){
 }
 add_filter( 'mwform_validation_mw-wp-form-59', 'plugin_validation_rule');
 
+function plugin_validation_rule02( $Validation, $data, $Data ){
+  $Validation->set_rule( 'your-type', 'noEmpty', array( 'message' => '※お問い合わせ種別を選択ください。' ) );
+  $Validation->set_rule( 'your-name', 'noEmpty', array( 'message' => '※「お名前」は必ず入力してください。' ) );
+  $Validation->set_rule( 'your-email', 'noEmpty', array( 'message' => '※「メールアドレス」は必ず入力してください。' ) );
+  $Validation->set_rule( 'your-email-confirm', 'noEmpty', array( 'message' => '※「メールアドレス(確認)」は必ず入力してください。' ) );
+  $Validation->set_rule( 'remarks', 'noEmpty', array( 'message' => '※「内容」は必ず入力してください。' ) );
+  $Validation->set_rule( 'check', 'required', array( 'message' => '※プライバシーポリシーに同意の上、チェックをしてください。' ) );
+  return $Validation;
+}
+add_filter( 'mwform_validation_mw-wp-form-91', 'plugin_validation_rule02', 10, 3 );
+
+
 /*======================================
   アップデートの非表示
 ======================================*/
