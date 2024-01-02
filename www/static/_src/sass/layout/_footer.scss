@@ -59,14 +59,14 @@
 
         &:before {
           @include icoInline();
-          width: 3rem;
-          height: 3rem;
-          background: url('#{$imgPath}i_mail_wh.svg') no-repeat center;
+          width: 6rem;
+          height: 6rem;
+          background: url('#{$imgPath}footer_fixedCta_cta.svg') no-repeat center;
           background-size: 100% auto !important;
 
           @media #{$breakS} {
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 5rem;
+            height: 5rem;
           }
         }
       }

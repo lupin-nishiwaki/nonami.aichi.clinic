@@ -5,19 +5,11 @@
   <footer id="l_footer">
     <!-- #fixedCta -->
     <section id="fixedCta" class="js_anim_load -delay">
-      <p class="contact">
-        <a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">
-          <span>初診のご予約</span>
+      <p class="recruit">
+        <a href="/recruit/">
+          <span>採用情報</span>
         </a>
       </p>
-
-      <!--
-      <p class="line">
-        <a href="https://page.line.me/954bntwp?openQrModal=true" target="_blank" rel="noopener noreferrer">
-          <span>LINEでご予約</span>
-        </a>
-      </p>
-      -->
     </section>
     <!-- /#fixedCta -->
 

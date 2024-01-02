@@ -34,7 +34,7 @@
 #l_footer #fixedCta p.line{background:#b096b2}
 #l_footer #fixedCta p.line a:before{background:url(/asset/img/i_social_line_wh.svg) no-repeat center}
 #l_footer #fixedCta p a{font-family:'Noto Serif JP';display:flex;flex-direction:column;justify-content:center;align-items:center;height:100%}
-#l_footer #fixedCta p a:before{content:'';display:inline-block;position:relative;width:3rem;height:3rem;background:url(/asset/img/i_mail_wh.svg) no-repeat center;background-size:100% auto!important}
+#l_footer #fixedCta p a:before{content:'';display:inline-block;position:relative;width:6rem;height:6rem;background:url(/asset/img/footer_fixedCta_cta.svg) no-repeat center;background-size:100% auto!important}
 #l_footer #clinic{padding:15rem 0;border-top:1px solid #f7f7f7}
 #l_footer #clinic .overview{display:flex;justify-content:space-between}
 #l_footer #clinic .overview .mapBox{flex-shrink:0;width:57rem;border-radius:.5rem;overflow:hidden}
@@ -132,7 +132,7 @@
 #l_container .columnSeparate .mainContents #secImg picture img{width:100%;height:100%}
 #l_footer #fixedCta{bottom:1rem;right:1rem;font-size:1.1rem}
 #l_footer #fixedCta p{width:10.5rem;height:10.5rem}
-#l_footer #fixedCta p a:before{width:2.5rem;height:2.5rem}
+#l_footer #fixedCta p a:before{width:5rem;height:5rem}
 #l_footer #clinic{padding:7rem 0 0}
 #l_footer #clinic .overview{display:block}
 #l_footer #clinic .overview .mapBox{width:calc(100% + 4rem);margin:3rem -2rem 0;border-radius:0}
