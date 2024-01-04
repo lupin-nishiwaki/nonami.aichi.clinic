@@ -4,18 +4,27 @@
   <!-- #mv -->
   <section id="mv">
     <div class="wrapper">
-      <div class="ttlBox js_anim_load">
+      <div class="ttlBox js_anim_load -delay01">
         <p class="open"><span>2024年4月開院</span></p>
         <h1 class="catch">笑顔になれる<br class="pc-hide">アットホームな<br>循環器クリニック</h1>
         <p class="category">循環器科 / 足の外来 / 内科 / 禁煙外来 /<br class="pc-hide"> 睡眠時無呼吸症候群治療/ 発熱外来 / 美容</p>
       </div>
 
       <div class="main">
+        <!--
         <div class="visual js_top_swiper_mv">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
             <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
           </div>
+        </div>
+        -->
+
+        <div class="visual js_anim_load">
+          <picture>
+            <source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp">
+            <img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116">
+          </picture>
         </div>
 
         <!--
@@ -33,7 +42,7 @@
 
       <div class="side">
         <p class="name">aichi heart clinic</p>
-        <div class="visual-swiper-pagination js_top_swiper_mv_pagination"></div>
+        <!-- <div class="visual-swiper-pagination js_top_swiper_mv_pagination"></div> -->
       </div>
     </div>
 

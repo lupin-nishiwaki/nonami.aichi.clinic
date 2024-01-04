@@ -23,8 +23,12 @@
     opacity: 1;
   }
 
-  &.-delay {
-    transition-delay: .25s;
+  &.-delay01 {
+    transition-delay: 1.25s;
+  }
+
+  &.-delay02 {
+    transition-delay: 1.5s;
   }
 }
 

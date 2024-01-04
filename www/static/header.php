@@ -44,10 +44,25 @@
   <!-- Google Tag Manager (noscript) -->
   <!-- End Google Tag Manager (noscript) -->
 
+  <?php
+    $url = '';
+    $judge = '';
+    $url .= $_SERVER['REQUEST_URI'];
+
+    if(strpos($url,'contact') !== false || strpos($url,'recruit') !== false){
+      $judge = '/';
+    }
+  ?>
+
   <!-- #l_header -->
   <header id="l_header" class="js_header">
     <div class="wrapper">
-      <p class="logo"><a href="/"><img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34"></a></p>
+      <p class="logo">
+        <a href="/">
+          <img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34">
+          <span>野並院</span>
+        </a>
+      </p>
 
       <p class="drawerBtn js_drawr_btn">
         <span class="line"><i></i><i></i><i></i></span>
@@ -56,10 +71,10 @@
 
       <nav class="gnav js_drawr">
         <ul class="main">
-          <li><a href="/#message">院長ごあいさつ</a></li>
-          <li><a href="/#treatment">診療案内</a></li>
-          <li><a href="/recruit/">採用情報</a></li>
-          <li><a href="/contact/">お問い合わせ</a></li>
+          <li><a href="<?php echo $judge; ?>#message">院長ごあいさつ</a></li>
+          <li><a href="<?php echo $judge; ?>#treatment">診療案内</a></li>
+          <li><a href="<?php echo $judge; ?>recruit/">採用情報</a></li>
+          <li><a href="<?php echo $judge; ?>contact/">お問い合わせ</a></li>
         </ul>
 
         <!--

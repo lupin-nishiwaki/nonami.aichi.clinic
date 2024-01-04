@@ -6,9 +6,14 @@
 #page_top #mv .wrapper .ttlBox h1.catch br.tablet{display:none}
 #page_top #mv .wrapper .ttlBox .category{position:relative;margin-top:2.5rem;padding-left:5rem;letter-spacing:.15em}
 #page_top #mv .wrapper .ttlBox .category:before{content:'';position:absolute;margin:auto;top:1.5rem;left:.2rem;width:3rem;height:1px;background:#48453a}
-#page_top #mv .wrapper .main{position:relative;border-radius:.5rem 0 0 .5rem;overflow:hidden;max-height:82rem}
+#page_top #mv .wrapper .main{position:relative;border-radius:.5rem 0 0 .5rem;overflow:hidden;max-height:82rem;display:flex;align-items:center}
+#page_top #mv .wrapper .main .visual{transform:translateY(0);transition:opacity 1s}
+#page_top #mv .wrapper .main .visual picture{display:flex;align-items:flex-end}
+#page_top #mv .wrapper .main .visual picture img{transition:transform 4s}
 #page_top #mv .wrapper .main .visual .swiper-slide img{width:100%}
 #page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-active img,#page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-duplicate-active img,#page_top #mv .wrapper .main .visual .swiper-slide.swiper-slide-prev img{animation:zoom 6s linear}
+#page_top #mv .wrapper .main .visual.is-load{opacity:1}
+#page_top #mv .wrapper .main .visual.is-load img{transform:scale(1.1)}
 #page_top #mv .wrapper .main .news{position:absolute;bottom:0;left:0;z-index:5;width:100%;height:5rem;padding:0 10rem 0 67rem;overflow:hidden;background:#8b8780;white-space:nowrap}
 #page_top #mv .wrapper .main .news .swiper-slide a{display:flex;height:100%;align-items:center;color:#fff;overflow:hidden}
 #page_top #mv .wrapper .main .news .swiper-slide a span.day{flex-shrink:0;width:12rem}
@@ -286,14 +291,14 @@
 #page_about #feature .feature .txtBox{padding:0 7.5% 0 7%}
 }
 @media screen and (max-width:767px){
-#page_top #mv .wrapper{padding:5.5rem 0 0 2rem}
+#page_top #mv .wrapper{padding:0 0 0 2rem}
 #page_top #mv .wrapper .ttlBox{top:4.2rem;left:5rem}
 #page_top #mv .wrapper .ttlBox .open{font-size:1.3rem;margin-bottom:1rem}
 #page_top #mv .wrapper .ttlBox .open span{padding:.2rem 1rem}
 #page_top #mv .wrapper .ttlBox h1.catch{font-size:3rem}
 #page_top #mv .wrapper .ttlBox .category{font-size:1.1rem;margin-top:1rem;padding-left:2rem}
 #page_top #mv .wrapper .ttlBox .category:before{top:.8rem;left:0;width:1rem}
-#page_top #mv .wrapper .main{height:48rem}
+#page_top #mv .wrapper .main{height:48rem;display:block}
 #page_top #mv .wrapper .main .news{height:4rem;padding:0 6rem 0 0}
 #page_top #mv .wrapper .main .news .swiper-slide a{font-size:1.2rem;padding:0 2rem}
 #page_top #mv .wrapper .main .news .swiper-slide a span.day{width:8rem}

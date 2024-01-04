@@ -47,9 +47,12 @@
                 <dd>
                   <div class="m_form_select">
                     <select name="f_xxx">
-                      <option value="選択肢">選択肢</option>
-                      <option value="選択肢">選択肢</option>
-                      <option value="選択肢">選択肢</option>
+                      <option value="循環器科">循環器科</option>
+                      <option value="足の外来">足の外来</option>
+                      <option value="一般内科">一般内科</option>
+                      <option value="禁煙外来">禁煙外来</option>
+                      <option value="睡眠時無呼吸症候群治療">睡眠時無呼吸症候群治療</option>
+                      <option value="発熱外来">発熱外来</option>
                     </select>
                   </div>
                   <span class="error">※「テキスト」は必ず入力してください。</span>

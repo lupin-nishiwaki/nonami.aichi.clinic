@@ -12,7 +12,7 @@
       padding-left: 8rem;
 
       @media #{$breakS} {
-        padding: 5.5rem 0 0 2rem;
+        padding: 0 0 0 2rem;
       }
 
       .ttlBox {
@@ -103,12 +103,27 @@
         border-radius: $radius 0 0 $radius;
         overflow: hidden;
         max-height: 82rem;
+        display: flex;
+        align-items: center;
 
         @media #{$breakS} {
           height: 48rem;
+          display: block;
         }
 
         .visual {
+          transform: translateY(0);
+          transition: opacity 1s;
+
+          picture {
+            display: flex;
+            align-items: flex-end;
+
+            img {
+              transition: transform 4s;
+            }
+          }
+
           .swiper-slide {
             img {
               width: 100%;
@@ -120,6 +135,14 @@
               img {
                 animation: zoom 6s linear;
               }
+            }
+          }
+
+          &.is-load {
+            opacity: 1;
+
+            img {
+              transform: scale(1.1)
             }
           }
         }

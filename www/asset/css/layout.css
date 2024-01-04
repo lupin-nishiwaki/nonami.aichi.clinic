@@ -79,7 +79,10 @@
 #l_header{position:fixed;top:0;left:0;z-index:100;width:100%;background:#fff;transition:box-shadow .5s;box-shadow:0 0 0 rgba(0,0,0,.05)}
 #l_header.is-fixed{box-shadow:0 1px 0 #f7f7f7}
 #l_header .wrapper{display:flex;align-items:center;padding:0 3rem}
-#l_header .wrapper .logo{flex-shrink:0;width:20rem}
+#l_header .wrapper .logo{flex-shrink:0}
+#l_header .wrapper .logo a{display:flex;align-items:flex-end}
+#l_header .wrapper .logo a img{width:20rem}
+#l_header .wrapper .logo a span{font-family:'Noto Serif JP';position:relative;top:.9rem;font-size:1.7rem;margin-left:1rem}
 #l_header .wrapper .drawerBtn{display:none}
 #l_header .wrapper .gnav{display:flex;align-items:center;margin-left:auto}
 #l_header .wrapper .gnav ul.main{display:flex;align-items:center}
@@ -164,7 +167,8 @@
 #l_footer #credit .wrapper .privacy{margin:4rem 0 0}
 #l_footer #credit .wrapper .copy{margin:1rem 0 0}
 #l_header .wrapper{padding:1.4rem 2rem 2rem}
-#l_header .wrapper .logo{width:14rem}
+#l_header .wrapper .logo a img{width:14rem}
+#l_header .wrapper .logo a span{top:.5rem;font-size:1.1rem;margin-left:.5rem}
 #l_header .wrapper .drawerBtn{display:block;position:absolute;top:0;right:0;z-index:100;width:6rem;height:6rem;text-align:center}
 #l_header .wrapper .drawerBtn.is-open span.line i{top:2.4rem!important;transform:rotate(45deg)}
 #l_header .wrapper .drawerBtn.is-open span.line i:nth-child(2){opacity:0}

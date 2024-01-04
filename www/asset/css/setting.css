@@ -72,7 +72,8 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .js_load_page.is-load{opacity:1;pointer-events:auto}
 .js_anim_load{transition:transform 1.2s cubic-bezier(.23,1,.32,1),opacity .3s;transform:translateY(4rem);opacity:0}
 .js_anim_load.is-load{transform:translateY(0);opacity:1}
-.js_anim_load.-delay{transition-delay:.25s}
+.js_anim_load.-delay01{transition-delay:1.25s}
+.js_anim_load.-delay02{transition-delay:1.5s}
 .js_accordion dt{transition:opacity .3s;cursor:pointer}
 .js_accordion dt:hover{opacity:.6}
 .js_accordion dd{display:none}

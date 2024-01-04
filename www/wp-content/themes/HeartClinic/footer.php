@@ -4,7 +4,7 @@
   <!-- #l_footer -->
   <footer id="l_footer">
     <!-- #fixedCta -->
-    <section id="fixedCta" class="js_anim_load -delay">
+    <section id="fixedCta" class="js_anim_load -delay02">
       <p class="recruit">
         <a href="/recruit/">
           <span>採用情報</span>
