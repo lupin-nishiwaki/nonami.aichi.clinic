@@ -70,11 +70,6 @@ get_header();
             </dd>
           </dl>
 
-          <dl>
-            <dt>福利厚生</dt>
-            <dd>あいちハートクリニックでの<br class="pc-hide">美容施術の職員価格での利用</dd>
-          </dl>
-
           <div class="entry">
             <p class="txt">
               下記エントリーフォームもしくは<br class="pc-hide">お電話にてお問い合わせください。<br>
