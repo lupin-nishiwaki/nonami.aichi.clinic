@@ -87,8 +87,7 @@
     <div class="wrapper">
       <p class="logo">
         <a href="/">
-          <img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック" width="218" height="34">
-          <span>野並院</span>
+          <img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="40">
         </a>
       </p>
 

@@ -33,24 +33,12 @@
         align-items: flex-end;
 
         img {
-          width: 20rem;
+          width: 26rem;
 
           @media #{$breakS} {
-            width: 14rem;
-          }
-        }
-
-        span {
-          @include fontFamily('serif');
-          position: relative;
-          top: .9rem;
-          font-size: 1.7rem;
-          margin-left: 1rem;
-
-          @media #{$breakS} {
-            top: .5rem;
-            font-size: 1.1rem;
-            margin-left: .5rem;
+            position: relative;
+            top: .4rem;
+            width: 15rem;
           }
         }
       }

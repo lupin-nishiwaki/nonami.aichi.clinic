@@ -126,20 +126,10 @@
           }
 
           img {
-            width: 36.4rem;
+            width: 40rem;
 
             @media #{$breakS} {
               width: 23rem;
-            }
-          }
-
-          span {
-            position: relative;
-            top: -.1rem;
-            margin-left: 1rem;
-
-            @media #{$breakS} {
-              top: 0rem;
             }
           }
         }
@@ -252,7 +242,7 @@
 
       .logo {
         flex-shrink: 0;
-        width: 22rem;
+        width: 25rem;
         margin: 0 5rem 0 0;
 
         @media #{$breakS} {
@@ -432,6 +422,10 @@
         img {
           flex-shrink: 0;
           width: 21.8rem;
+
+          @media #{$breakS} {
+            width: 20rem;
+          }
         }
       }
 
