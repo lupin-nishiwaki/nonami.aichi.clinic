@@ -18,7 +18,7 @@
       <div class="m_box_fixed">
         <div class="overview js_anim_scroll">
           <div class="txtBox">
-            <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="40"></p>
+            <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30"></p>
             <p class="address">
               〒468-0046 愛知県名古屋市天白区古川町158<br>
               B&D野並メディカルステーション1F
@@ -156,7 +156,7 @@
     <!-- #credit -->
     <section id="credit">
       <div class="wrapper m_box_fixed">
-        <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="40"></p>
+        <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30"></p>
         <p class="privacy"><a href="/privacy/">プライバシーポリシー</a></p>
         <p class="copy">&copy;2023 あいちハートクリニック野並院</p>
       </div>

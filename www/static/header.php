@@ -59,7 +59,7 @@
     <div class="wrapper">
       <p class="logo">
         <a href="/">
-          <img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="40">
+          <img src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30">
         </a>
       </p>
 
