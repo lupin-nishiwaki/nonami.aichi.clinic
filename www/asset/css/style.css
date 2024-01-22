@@ -30,7 +30,8 @@
 #page_top #message{text-align:center}
 #page_top #treatment .ttlBox{display:flex;align-items:center;margin-bottom:5rem}
 #page_top #treatment .ttlBox h2{flex-shrink:0;width:28rem;margin:0}
-#page_top #treatment ul.link{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:3rem;row-gap:3rem;text-align:center}
+#page_top #treatment ul.link{display:flex;justify-content:center;flex-wrap:wrap;margin:-3rem 0 0 -3rem;text-align:center}
+#page_top #treatment ul.link li{width:33.3%;padding:3rem 0 0 3rem}
 #page_top #treatment ul.link li a{pointer-events:none;position:relative;display:block;border:1px solid #f7f7f7;border-radius:.5rem;background:#fff;padding:5rem 0;transition:.3s box-shadow}
 #page_top #treatment ul.link li a:before{content:'';position:absolute;margin:auto;bottom:0;left:0;height:.5rem;width:100%;background-color:#ae9373;display:inline-block;transition:transform .3s cubic-bezier(.22,0,.53,1);transform:scale(0,1);transform-origin:right top}
 #page_top #treatment ul.link li a:after{display:none}
@@ -309,8 +310,8 @@
 #page_top #message{text-align:left}
 #page_top #treatment .ttlBox{display:block;margin-bottom:3rem}
 #page_top #treatment .ttlBox h2{margin-bottom:3rem}
-#page_top #treatment ul.link{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
-#page_top #treatment ul.link{text-align:left}
+#page_top #treatment ul.link{margin:-1rem 0 0 0}
+#page_top #treatment ul.link li{width:100%;padding:1rem 0 0 0}
 #page_top #treatment ul.link li a{padding:2rem 2rem 2rem 9rem}
 #page_top #treatment ul.link li a:before{display:none}
 #page_top #treatment ul.link li a:after{display:block;content:'';position:absolute;margin:auto;top:2.2rem;right:2rem;width:2.5rem;height:2.5rem;background:url(/asset/img/i_arr_be.svg) no-repeat center;background-size:100% auto}

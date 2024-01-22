@@ -141,6 +141,7 @@
           </a>
         </li>
 
+        <!--
         <li>
           <a href="/fever/">
             <picture><img loading="lazy" src="/asset/img/top/treatment_link06.svg" alt="発熱外来" width="92" height="92"></picture>
@@ -148,6 +149,7 @@
             <p>発熱や咳倦怠感などがある<br>患者様は予約制で診察。</p>
           </a>
         </li>
+        -->
       </ul>
     </div>
   </section>
