@@ -9,10 +9,10 @@
     <?php
     global $page, $paged;
     if(is_front_page()):
-      bloginfo('name'); echo '｜ カテーテル治療を専門とする有床循環器クリニック';
+      bloginfo('name'); echo '｜ 循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献します';
 
     elseif(is_home()):
-      bloginfo('name'); wp_title('｜ カテーテル治療を専門とする有床循環器クリニック',true,'right');
+      bloginfo('name'); wp_title('｜ 循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献します',true,'right');
 
     elseif(is_page()):
       wp_title('｜',true,'right'); bloginfo('name');
@@ -33,10 +33,10 @@
     ?>
   </title>
 
-  <meta property="og:title" content="あいちハートクリニック | カテーテル治療を専門とする有床循環器クリニック">
+  <meta property="og:title" content="あいちハートクリニック野並 | 循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献します">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="あいちハートクリニック | カテーテル治療を専門とする有床循環器クリニック">
-  <meta property="og:description" content="あいちハートクリニックは、カテーテル治療を専門とする有床循環器クリニックとして、循環器科をはじめ、心臓血管外科、麻酔科、心臓カテーテル治療、下肢静脈瘤治療、透析シャント治療などの診療を行なっております。また、内科・外科や禁煙治療、美容施術も提供しており、地域のかかりつけ医として日々の診療を行なっております。">
+  <meta property="og:site_name" content="あいちハートクリニック野並 | 循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献します">
+  <meta property="og:description" content="あいちハートクリニック野並は、循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、皆様の支えになれるよう日々診療を行っております。">
   <meta property="og:url" content="https://aichi.clinic/">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:image" content="/asset/img/ogp.webp">
@@ -62,16 +62,21 @@
   <script defer src="/asset/js/vender.js"></script>
   <script defer src="/asset/js/app.js"></script>
 
-  <!-- Google Tag Manager -->
-  <!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8VCMXXFPP2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8VCMXXFPP2');
+  </script>
+  <!-- /Google tag (gtag.js) -->
 
   <?php page_description(); ?>
   <?php wp_head(); ?>
 </head>
 <body class="js_load_page">
-  <!-- Google Tag Manager (noscript) -->
-  <!-- End Google Tag Manager (noscript) -->
-
   <?php
     $url = '';
     $judge = '';
