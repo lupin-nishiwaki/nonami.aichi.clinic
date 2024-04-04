@@ -1,4 +1,8 @@
 
+# SSLリダイレクト
+RewriteEngine on
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 
 #SITEGUARD_PLUGIN_SETTINGS_START
@@ -11,6 +15,23 @@
     RewriteRule ^master-login(.*)$ wp-login.php$1 [L]
 </IfModule>
 #==== SITEGUARD_RENAME_LOGIN_SETTINGS_END
+#==== SITEGUARD_ADMIN_FILTER_SETTINGS_START
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+    RewriteRule ^404-siteguard - [L]
+    RewriteRule ^wp-admin/css - [L]
+    RewriteRule ^wp-admin/images - [L]
+    RewriteRule ^wp-admin/admin-ajax\.php - [L]
+    RewriteRule ^wp-admin/load-styles\.php - [L]
+    RewriteRule ^wp-admin/site-health\.php - [L]
+    RewriteCond %{REMOTE_ADDR} !^60\.101\.12\.56$
+    RewriteCond %{REMOTE_ADDR} !^162\.43\.120\.105$
+    RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+    RewriteCond %{REMOTE_ADDR} !^::1$
+    RewriteRule ^wp-admin 404-siteguard [L]
+</IfModule>
+#==== SITEGUARD_ADMIN_FILTER_SETTINGS_END
 #SITEGUARD_PLUGIN_SETTINGS_END
 
 # BEGIN WordPress

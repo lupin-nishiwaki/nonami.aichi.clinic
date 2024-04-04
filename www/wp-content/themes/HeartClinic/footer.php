@@ -18,10 +18,10 @@
       <div class="m_box_fixed">
         <div class="overview js_anim_scroll">
           <div class="txtBox">
-            <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30"></p>
+            <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック(知立）" width="218" height="30"></p>
             <p class="address">
               〒468-0046 愛知県名古屋市天白区古川町158<br>
-              B&D野並メディカルステーション1F
+              野並メディカルステーション1階
             </p>
 
             <div class="calender m_table_calender">
@@ -31,13 +31,13 @@
                 </thead>
 
                 <tbody>
-                  <tr><th class="item01">9:00-<br class="pc-hide">13:00</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
+                  <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
                   <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●</td><td>●</td><td>－</td><td>●</td><td>●</td><td>－</td><td>－</td></tr>
                 </tbody>
               </table>
 
               <p class="time">
-                ※月曜日午後は19:30まで、土曜日午前は9:30~13:00<br>
+                ※月曜日午後は19:30まで<br>
                 ※木曜日午後は深谷Dr.の足の外来
               </p>
             </div>
@@ -158,7 +158,7 @@
       <div class="wrapper m_box_fixed">
         <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30"></p>
         <p class="privacy"><a href="/privacy/">プライバシーポリシー</a></p>
-        <p class="copy">&copy;2023 あいちハートクリニック野並院</p>
+        <p class="copy">&copy;2023 あいちハートクリニック野並</p>
       </div>
     </section>
     <!-- #credit -->

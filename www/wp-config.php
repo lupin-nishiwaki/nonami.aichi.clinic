@@ -62,7 +62,7 @@ define('NONCE_SALT', '@b~7B--_yaz5iRQyJj6qX*]%4-z/z6XFGe07J(2L&CW0s0yl-Zy9!7ew46
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'XtJMD_';
+$table_prefix = 'xtjmd_';
 
 
 define('WP_ALLOW_MULTISITE', true);

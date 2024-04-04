@@ -1,0 +1,27 @@
+#page_top #message .flex-content p{
+  text-align:left;
+}
+#page_top #message .flex-content p+p{
+  text-align:right;
+  margin-top:1.25rem;
+}
+#message .flex-content{
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+@media (min-width:64rem){
+  #message .flex-content{
+    flex-direction:row;
+    gap:50px;
+  }
+  #message .flex-content > div:nth-of-type(1){
+    width:350px;
+  }
+  #message .flex-content > div:nth-of-type(2){
+    width:calc(100% - 400px);
+  }
+  #page_top #message .flex-content p+p{
+    margin-top:2.5rem;
+  }
+}

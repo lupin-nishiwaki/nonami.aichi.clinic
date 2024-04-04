@@ -54,6 +54,7 @@
   <link rel="stylesheet" media="all" href="/asset/css/setting.css">
   <link rel="stylesheet" media="all" href="/asset/css/layout.css">
   <link rel="stylesheet" media="all" href="/asset/css/style.css">
+  <link rel="stylesheet" media="all" href="/asset/css/custom-20240201.css">
   <style>
     .js_load_page{transition:opacity .7s;opacity:0;pointer-events:none}
     .js_load_page.is-load{opacity:1;pointer-events:auto}
