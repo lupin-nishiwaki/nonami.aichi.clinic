@@ -13,7 +13,7 @@ get_header();
       <ul class="lonav">
         <li class="js_lonav_current"><a href="#overview">医院情報・アクセス</a></li>
         <li class="js_lonav_current"><a href="#doctor">診療時間・担当医</a></li>
-        <li class="js_lonav_current"><a href="#gallery">医院ギャラリー</a></li>
+        <!-- <li class="js_lonav_current"><a href="#gallery">医院ギャラリー</a></li> -->
       </ul>
     </div>
     <!-- /.sideContents -->
@@ -32,7 +32,7 @@ get_header();
             <ul class="lonav">
               <li><a href="#overview">医院情報・アクセス</a></li>
               <li><a href="#doctor">診療時間・担当医</a></li>
-              <li><a href="#gallery">医院ギャラリー</a></li>
+              <!-- <li><a href="#gallery">医院ギャラリー</a></li> -->
             </ul>
           </div>
         </div>
@@ -44,10 +44,10 @@ get_header();
         <div class="m_box_fixed -under">
           <div class="row">
             <div class="txtBox">
-              <dl><dt>医院名</dt><dd>一般社団法人 生活習慣病予防センター<br>あいちハートクリニック</dd></dl>
-              <dl><dt>住所</dt><dd>〒472-0054 愛知県知立市東上重原6-70</dd></dl>
-              <dl><dt>電話</dt><dd>0566-91-5810（代表）</dd></dl>
-              <dl><dt>FAX</dt><dd>0566-91-5816</dd></dl>
+              <dl><dt>医院名</dt><dd>一般社団法人 生活習慣病予防センター<br>あいちハートクリニック 野並</dd></dl>
+              <dl><dt>住所</dt><dd>〒468-0046 愛知県名古屋市天白区古川町158<br>野並メディカルステーション1階</dd></dl>
+              <dl><dt>電話</dt><dd>052-846-3810</dd></dl>
+              <dl><dt>FAX</dt><dd>052-846-3809</dd></dl>
               <dl><dt>診療科目</dt><dd>循環器科・心臓血管外科・内科・外科・麻酔科</dd></dl>
 
               <dl class="pay">
@@ -77,7 +77,7 @@ get_header();
                 </dd>
               </dl>
 
-              <dl><dt>アクセス</dt><dd>電車でお越しの方<br>名鉄「知立駅」より徒歩約12分<br>お車でお越しの方（駐車場完備）<br>上重原インターより約5分</dd></dl>
+              <dl><dt>アクセス</dt><dd>電車でお越しの方<br>名古屋市営地下鉄桜通線「野並駅」より徒歩2分</dd></dl>
             </div>
 
             <picture class="imgBox">
@@ -91,7 +91,7 @@ get_header();
 
       <!-- #access -->
       <section id="access">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.24414519866!2d137.0325245757576!3d35.00059307281462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60049c4149874f99%3A0xddd6e3de79bf2928!2z44CSNDcyLTAwNTQg5oSb55-l55yM55-l56uL5biC5p2x5LiK6YeN5Y6f77yW5LiB55uu77yX77yQ!5e0!3m2!1sja!2sjp!4v1703834566009!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3264.1988907618784!2d136.9549729!3d35.101744200000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60037b6c3fcdd66b%3A0x64cb458fc8202dd1!2z44CSNDY4LTAwNDYg5oSb55-l55yM5ZCN5Y-k5bGL5biC5aSp55m95Yy65Y-k5bed55S677yR77yV77yY!5e0!3m2!1sja!2sjp!4v1712263335049!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
       <!-- /#access -->
 
@@ -104,15 +104,14 @@ get_header();
 
           <table>
             <tr><th class="item01">診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
-            <tr><th class="item01">9:00-<br class="pc-hide">12:00</th><td>●<br class="sp-hide">村瀬</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">村瀬</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">村瀬</td><td>●<br class="sp-hide">交代制</td><td>－</td></tr>
-            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●<br class="sp-hide">村瀬</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">村瀬</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">交代制</td><td>－</td><td>－</td></tr>
+            <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td></tr>
+            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">－</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>－</td></tr>
           </table>
 
           <p class="txt">
             ご予約は診療時間内に電話で受け付けております。<br>
-            初診予約はWebから24時間受け付けております。<br>
-            初診受付は午前は11:30まで、午後は17:30までとなります。<br>
-            ※美容の電話予約受付時間は、13時～17時となります。
+            ※月曜日午後は19:30まで<br>
+            ※木曜日午後は深谷Dr.の足の外来
           </p>
 
           <p class="btn m_btn_main">
@@ -124,7 +123,7 @@ get_header();
       </section>
       <!-- /#doctor -->
 
-      <!-- #gallery -->
+      <!-- #gallery
       <section id="gallery" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl">
@@ -173,7 +172,7 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- /#gallery -->
+      /#gallery -->
     </div>
     <!-- /.mainContents -->
   </div>

@@ -12,9 +12,8 @@ get_header();
     <div class="sideContents">
       <ul class="lonav">
         <li class="js_lonav_current"><a href="#about">心臓疾患について</a></li>
+        <li class="js_lonav_current"><a href="#arrhythmiaTreatment">不整脈治療について</a></li>
         <li class="js_lonav_current"><a href="#heartCheck">心臓検査</a></li>
-        <li class="js_lonav_current"><a href="#catheter">カテーテル検査·治療</a></li>
-        <li class="js_lonav_current"><a href="#heartSurgery">心臓血管外科手術</a></li>
       </ul>
     </div>
     <!-- /.sideContents -->
@@ -32,9 +31,8 @@ get_header();
 
             <ul class="lonav">
               <li><a href="#about">心臓疾患について</a></li>
+              <li><a href="#arrhythmiaTreatment">不整脈治療について</a></li>
               <li><a href="#heartCheck">心臓検査</a></li>
-              <li><a href="#catheter">カテーテル検査·治療</a></li>
-              <li><a href="#heartSurgery">心臓血管外科手術</a></li>
             </ul>
           </div>
         </div>
@@ -70,6 +68,23 @@ get_header();
           <picture class="pc-hide">
             <img src="/asset/img/cardiology/about_overview.webp" alt="心臓疾患について" width="400" height="414">
           </picture>
+        </div>
+      </section>
+      <!-- /#about -->
+
+      <!-- #about -->
+      <section id="arrhythmiaTreatment" class="js_lonav_current_target">
+        <div class="m_box_fixed -under">
+          <h2 class="m_txt_ttl">
+            <em class="ja">不整脈治療について</em>
+          </h2>
+
+          <div class="overview m_box_row -reverse">
+
+            <div class="txtBox">
+              <p>不整脈は心臓のリズムがおかしくなる病気です。当院の不整脈外来は10年以上の専門治療の経験を生かして、動悸や息切れ、めまいなどの症状のご相談からお薬の治療、ペースメーカー診療、カテーテル治療（カテーテルアブレーション）が可能です。個々の患者様の病状にあった治療を提案させていただきます。また必要な患者様は専門施設への紹介もさせて頂きます。</p>
+            </div>
+          </div>
         </div>
       </section>
       <!-- /#about -->
@@ -143,7 +158,7 @@ get_header();
       </section>
       <!-- /#heartCheck -->
 
-      <!-- #catheter -->
+      <!-- #catheter
       <section id="catheter" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl">
@@ -152,13 +167,14 @@ get_header();
 
           <div class="tab m_box_tab js_tab">
             <div class="tabBtn js_tab_btn">
-              <div class="is-tab">日帰り心臓<br class="pc-hide">カテーテル検査</div>
-              <div>心臓<br class="pc-hide">カテーテル治療</div>
-              <div>末梢動脈<br class="pc-hide">カテーテル治療</div>
+              <div class="is-tab">日帰り心臓<br>カテーテル検査</div>
+              <div>心臓<br>カテーテル治療</div>
+              <div>末梢動脈<br>カテーテル治療</div>
+              <div>不整脈<br>カテーテル治療</div>
             </div>
 
             <div class="tabContent js_tab_content">
-              <!-- 日帰り心臓カテーテル検査 -->
+              !-- 日帰り心臓カテーテル検査 --
               <div class="is-tab">
                 <div class="overview m_box_row -reverse">
                   <div class="txtBox">
@@ -219,9 +235,9 @@ get_header();
                   </div>
                 </div>
               </div>
-              <!-- /日帰り心臓カテーテル検査 -->
+              !-- /日帰り心臓カテーテル検査 --
 
-              <!-- 心臓カテーテル治療 -->
+              !-- 心臓カテーテル治療 --
               <div>
                 <div class="overview m_box_row -reverse">
                   <div class="txtBox">
@@ -339,9 +355,9 @@ get_header();
                   </div>
                 </div>
               </div>
-              <!-- /心臓カテーテル治療 -->
+              !-- /心臓カテーテル治療 --
 
-              <!-- 末梢動脈カテーテル治療 -->
+              !-- 末梢動脈カテーテル治療 --
               <div>
                 <div class="overview m_box_row -reverse">
                   <div class="txtBox">
@@ -418,22 +434,98 @@ get_header();
                   </div>
                 </div>
               </div>
-              <!-- /末梢動脈カテーテル治療 -->
+              !-- /末梢動脈カテーテル治療 --
+
+              !-- 不整脈カテーテル治療 --
+              <div>
+                <div class="overview m_box_row -reverse">
+                  <div class="txtBox">
+                    <p class="p-lead">カテーテル不整脈治療(カテーテルアブレーション)</p>
+                    <h3 class="m_txt_catch">頻脈性不整脈の根治を目指すカテーテル治療</h3>
+                    <p>不整脈は心臓のリズムがおかしくなる病気です。当院の不整脈外来は10年以上の専門治療の経験を生かして、動悸や息切れ、めまいなどの症状のご相談からお薬の治療、ペースメーカー診療、カテーテル治療（カテーテルアブレーション）が可能です。個々の患者様の病状にあった治療を提案させていただきます。また必要な患者様は専門施設への紹介もさせて頂きます。</p>
+                    <p class="p-lead last">カテーテル不整脈治療(カテーテルアブレーション)</p>
+                    <p>カテーテルアブレーションとは頻脈性不整脈に対して行われる治療で、経皮的カテーテル心筋焼灼術とも呼ばれます。<br />頻脈性不整脈は心臓内部の電気信号が乱れることで脈が異常に速くなる病気で、動悸や胸の不快感に加え、病状によっては脳梗塞や心不全などの危険な状態を招くこともあります。<br />心臓は規則的な電気信号を繰り返すことによって一定のリズムで拍動を繰り返していますが、頻脈性不整脈では心臓内部の電気信号が乱れるまたは不適切に速い状態となっています。カテーテルアブレーションは異常な電気信号が発生している部位に高周波電流を流すことで異常な電気信号を止め、正常な心臓のリズムに戻すことを目的とした治療です。カテーテルアブレーションが成功すれば、頻脈による症状が消失または軽減し、長期の服薬治療や頻繁な通院が不要になることもあります。<br />当院では経験豊富な医師が安全に努めて行います。1泊入院で行える時間的にも優しい治療です。<br />個々の症例によって最適な治療方法を考え、なるべく低侵襲の治療を目指しています。</p>
+                  </div>
+                </div>
+
+                <div class="flow">
+                  <h3 class="m_txt_hd_group">
+                    検査·治療の流れ
+                  </h3>
+
+                  <ol class="m_list_flow">
+                    <li>
+                      <picture class="icon"><img src="/asset/img/cardiology/catheter_oneDay_flow01.svg" alt="受付" width="92" height="92"></picture>
+                      <h4 class="name">受付</h4>
+                      <p class="txt">検査当日、受付後に病室へご案内します。当クリニックでは、プライバシーに配慮した快適な入院生活をお過ごしいただけますよう、全室個室（洗面所、トイレ完備）でご用意しております。また、テレビや冷蔵庫等も備えておりますのでご自由にお使い下さい。</p>
+                    </li>
+
+                    <li>
+                      <picture class="icon"><img src="/asset/img/cardiology/catheter_oneDay_flow02.svg" alt="血圧·脈拍測定、体調確認、点滴" width="92" height="92"></picture>
+                      <h4 class="name">血圧·脈拍測定、体調確認、点滴</h4>
+                      <p class="txt">検査着に着替えて脈拍·体調確認を行い、点滴を開始させていただきます。治療開始までリラックスしてお過ごしください。</p>
+                    </li>
+
+                    <li>
+                      <picture class="icon"><img src="/asset/img/cardiology/catheter_heart_flow03.svg" alt="治療" width="92" height="92"></picture>
+                      <h4 class="name">治療</h4>
+                      <p class="txt">カテーテル治療の専用台に座り、背中やお腹にカテーテル位置情報を認識するための、磁場パッチを貼ります。その後、横になり心電図等を貼り付けていきます。不整脈の種類で異なりますが、静脈麻酔でしっかりと寝ていただく場合やカテーテル挿入部位の局所麻酔のみで行うこともあります。カテーテルを足の血管から心臓内に挿入し不整脈の原因となる個所を高周波で焼灼し治療します。治療時間は心房細動では3時間程度、その他の不整脈では2時間程度となります。</p>
+                    </li>
+
+                    <li>
+                      <picture class="icon"><img src="/asset/img/cardiology/catheter_oneDay_flow04.svg" alt="治療後" width="92" height="92"></picture>
+                      <h4 class="name">治療後</h4>
+                      <p class="txt">療後は病室に戻り、穿刺部位の出血を防ぐため、安静の上、止血ベルトで2時間程度圧迫します。止血が確認できましたら、歩行テストを行い問題なければ、トイレ歩行等が可能になります。安静時間が終わりましたら、治療経過・結果等を説明いたします。</p>
+                    </li>
+
+                    <li>
+                      <picture class="icon"><img src="/asset/img/cardiology/catheter_oneDay_flow05.svg" alt="退院まで" width="92" height="92"></picture>
+                      <h4 class="name">退院まで</h4>
+                      <p class="txt">翌朝に全身状態の確認および、血液検査、心電図、レントゲンを行い、問題がなければ退院可能です。退院後は1週間程度は運動や力仕事等は避けていただきますが、通勤や運転、デスクワークなど日常生活は普段通りで構いません。</p>
+                    </li>
+                  </ol>
+                </div>
+
+                <div class="machine">
+                  <h3 class="m_txt_hd_group">
+                    使用機材
+                  </h3>
+
+                  <div class="flex-col-2">
+                    <div>
+                      <picture><img src="/asset/img/cardiology/carto03.jpg" alt="CARTO®3" width="475" height="315"></picture>
+                    </div>
+                    <div>
+                      <h3 class="name">CARTO®3</h3>
+                      <p class="desc">専用のカテーテル及び機器と連動し、不整脈の治療をする機械です。</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info">
+                  <div class="price">
+                  <h3 class="m_txt_hd_underline">検査費用について</h3>
+                  <p class="txt">不整脈カテーテル治療は全例高額医療となります。高額療養費制度の対象となりますので、所定で定められた自己負担額限度額以上の費用は、後日(2〜3ヶ月後）医療保険から払い戻しされます。<br />また、事前に手続きを済ませておきますと、入院分の費用に対して病院に支払う金額は自己負担分のみとなります(限度額適用認定証の発行）。<br />詳しくはお問い合わせ、ご相談ください。</p>
+                  </div>
+                </div>
+
+              </div>
+              !-- /不整脈カテーテル治療 --
             </div>
           </div>
         </div>
       </section>
-      <!-- /#catheter -->
+      /#catheter -->
 
-      <!-- #secImg -->
+      <!-- #secImg
       <section id="secImg">
         <picture>
           <img src="/asset/img/cardiology/secImg.webp" alt="診察室" width="1920" height="610">
         </picture>
       </section>
-      <!-- /#secImg -->
+      /#secImg -->
 
-      <!-- #heartSurgery -->
+      <!-- #heartSurgery
       <section id="heartSurgery" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl">
@@ -471,7 +563,7 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- /#heartSurgery -->
+      /#heartSurgery -->
     </div>
     <!-- /.mainContents -->
   </div>

@@ -11,10 +11,10 @@ get_header();
     <!-- .sideContents -->
     <div class="sideContents">
       <ul class="lonav">
-        <li class="js_lonav_current"><a href="#greeting">ごあいさつ</a></li>
-        <li class="js_lonav_current"><a href="#feature">当クリニックの特徴</a></li>
+        <!-- <li class="js_lonav_current"><a href="#greeting">ごあいさつ</a></li> -->
+        <!-- <li class="js_lonav_current"><a href="#feature">当クリニックの特徴</a></li> -->
         <li class="js_lonav_current"><a href="#doctor">医師紹介</a></li>
-        <li class="js_lonav_current"><a href="#officeWork">事務長紹介</a></li>
+        <!-- <li class="js_lonav_current"><a href="#officeWork">事務長紹介</a></li> -->
         <li class="js_lonav_current"><a href="#facility">各施設紹介</a></li>
       </ul>
     </div>
@@ -32,10 +32,10 @@ get_header();
             </h1>
 
             <ul class="lonav">
-              <li><a href="#greeting">ごあいさつ</a></li>
-              <li><a href="#feature">当クリニックの特徴</a></li>
+              <!-- <li><a href="#greeting">ごあいさつ</a></li> -->
+              <!-- <li><a href="#feature">当クリニックの特徴</a></li> -->
               <li><a href="#doctor">医師紹介</a></li>
-              <li><a href="#officeWork">事務長紹介</a></li>
+              <!-- <li><a href="#officeWork">事務長紹介</a></li> -->
               <li><a href="#facility">各施設紹介</a></li>
             </ul>
           </div>
@@ -47,7 +47,7 @@ get_header();
       </section>
       <!-- /#pageTtl -->
 
-      <!-- #greeting -->
+      <!-- #greeting
       <section id="greeting" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl">
@@ -61,9 +61,9 @@ get_header();
           </p>
         </div>
       </section>
-      <!-- /#greeting -->
+      /#greeting -->
 
-      <!-- #feature -->
+      <!-- #feature
       <section id="feature" class="js_lonav_current_target">
         <div class="ttlBox">
           <div class="m_box_fixed -under">
@@ -121,15 +121,15 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- #feature -->
+      #feature -->
 
-      <!-- #secImg -->
+      <!-- #secImg
       <section id="secImg">
         <picture>
           <img loading="lazy" src="/asset/img/about/secImg.webp" alt="診察室" width="1920" height="740">
         </picture>
       </section>
-      <!-- /#secImg -->
+      /#secImg -->
 
       <!-- #doctor -->
       <section id="doctor" class="js_lonav_current_target">
@@ -138,12 +138,41 @@ get_header();
             <em class="ja">医師紹介</em>
           </h2>
 
+          <div class="profile takeya">
+            <div class="person">
+              <picture class="imgBox sp-hide"><img loading="lazy" src="/asset/img/about/doctor_soon.webp" alt="竹谷 昌直" width="420" height="450"></picture>
+
+              <div class="txtBox">
+                <p class="position">野並院　院長</p>
+                <h3 class="name">竹谷 昌直<span class="en">Masanao Takeya</span></h3>
+                <picture class="img pc-hide"><img loading="lazy" src="/asset/img/about/doctor_soon.webp" alt="竹谷 昌直" width="420" height="450"></picture>
+                <p class="message">
+                  私が医師になってから約18年の月日が経ちました。色々な縁があり循環器内科医を志し、多大な御力添えをいただきながら、循環器内科専門医としてこれまで病院勤務を続けて参りました。医療は日々進歩しており、まだまだ医師として勉強している最中で至らない部分も多いかと思いますが、今回「あいちハートクリニック野並」の開業に携わることになりました。<br>
+                  私が医師として働き始めたころよりお世話になり、循環器内科医となるきっかけにもなった、あいちハートクリニック（知立市）の村瀬副院長から開業のお話をいただき、深谷院長とも名古屋ハートセンターで一緒に働いていたこともあり、この縁を大切にしたいと思い、クリニックの開業という新しい舞台での医療を決意しました。「あいちハートクリニック野並」では循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、あいちハートクリニック（知立市）では、循環器内科スペシャリストとして不整脈カテーテル治療を行います。これまで培ってきたキャリアを存分に生かし、地域の皆様の支えになれるよう努力していく所存です。「あいちハートクリニック野並」をどうぞよろしくお願い申し上げます。
+                </p>
+              </div>
+            </div>
+
+            <div class="data">
+              <div>
+                <div class="history">
+                  <h4 class="m_txt_hd_underline">経歴</h4>
+                  <dl><dt>2005年</dt><dd>三重大学卒業</dd></dl>
+                  <dl><dt>2005年</dt><dd>名古屋セントラル病院　臨床研修医</dd></dl>
+                  <dl><dt>2007年</dt><dd>木沢記念病院　循環器内科</dd></dl>
+                  <dl><dt>2013年</dt><dd>名古屋ハートセンター　循環器内科</dd></dl>
+                  <dl><dt>2016年</dt><dd>同循環器内科医長</dd></dl>
+                </div>
+              </div>
+            </div>
+          </div>
+
           <div class="profile fukaya">
             <div class="person">
               <picture class="imgBox sp-hide"><img loading="lazy" src="/asset/img/about/doctor_fukaya.webp" alt="深谷 俊介" width="420" height="450"></picture>
 
               <div class="txtBox">
-                <p class="position">院長</p>
+                <p class="position">知立院　院長</p>
                 <h3 class="name">深谷 俊介<span class="en">Shunsuke Fukaya</span></h3>
                 <picture class="img pc-hide"><img loading="lazy" src="/asset/img/about/doctor_fukaya.webp" alt="深谷 俊介" width="420" height="450"></picture>
                 <p class="message">
@@ -187,6 +216,7 @@ get_header();
             </div>
           </div>
 
+          <!--
           <div class="profile murase">
             <div class="person">
               <picture class="imgBox sp-hide"><img loading="lazy" src="/asset/img/about/doctor_murase.webp" alt="村瀨 傑" width="420" height="450"></picture>
@@ -232,36 +262,9 @@ get_header();
               </div>
             </div>
           </div>
+          -->
 
-          <div class="profile takeya">
-            <div class="person">
-              <picture class="imgBox sp-hide"><img loading="lazy" src="/asset/img/about/doctor_soon.webp" alt="竹谷 昌直" width="420" height="450"></picture>
-
-              <div class="txtBox">
-                <p class="position">野並院　院長</p>
-                <h3 class="name">竹谷 昌直<span class="en">Masanao Takeya</span></h3>
-                <picture class="img pc-hide"><img loading="lazy" src="/asset/img/about/doctor_soon.webp" alt="竹谷 昌直" width="420" height="450"></picture>
-                <p class="message">
-                  私が医師になってから約18年の月日が経ちました。色々な縁があり循環器内科医を志し、多大な御力添えをいただきながら、循環器内科専門医としてこれまで病院勤務を続けて参りました。医療は日々進歩しており、まだまだ医師として勉強している最中で至らない部分も多いかと思いますが、今回「あいちハートクリニック野並」の開業に携わることになりました。<br>
-                  私が医師として働き始めたころよりお世話になり、循環器内科医となるきっかけにもなった、あいちハートクリニック（知立市）の村瀬副院長から開業のお話をいただき、深谷院長とも名古屋ハートセンターで一緒に働いていたこともあり、この縁を大切にしたいと思い、クリニックの開業という新しい舞台での医療を決意しました。「あいちハートクリニック野並」では循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、あいちハートクリニック（知立市）では、循環器内科スペシャリストとして不整脈カテーテル治療を行います。これまで培ってきたキャリアを存分に生かし、地域の皆様の支えになれるよう努力していく所存です。「あいちハートクリニック野並」をどうぞよろしくお願い申し上げます。
-                </p>
-              </div>
-            </div>
-
-            <div class="data">
-              <div>
-                <div class="history">
-                  <h4 class="m_txt_hd_underline">経歴</h4>
-                  <dl><dt>2005年</dt><dd>三重大学卒業</dd></dl>
-                  <dl><dt>2005年</dt><dd>名古屋セントラル病院　臨床研修医</dd></dl>
-                  <dl><dt>2007年</dt><dd>木沢記念病院　循環器内科</dd></dl>
-                  <dl><dt>2013年</dt><dd>名古屋ハートセンター　循環器内科</dd></dl>
-                  <dl><dt>2016年</dt><dd>同循環器内科医長</dd></dl>
-                </div>
-              </div>
-            </div>
-          </div>
-
+          <!--
           <div class="doctorsFile">
             <a href="https://doctorsfile.jp/h/184676/df/1/" target="_blank" rel="noopnner,noreferrer">
               <picture>
@@ -270,11 +273,12 @@ get_header();
               </picture>
             </a>
           </div>
+          -->
         </div>
       </section>
       <!-- /#doctor -->
 
-      <!-- #officeWork -->
+      <!-- #officeWork
       <section id="officeWork" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl">
@@ -338,7 +342,7 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- /#officeWork -->
+      /#officeWork -->
 
       <!-- #facility -->
       <section id="facility" class="js_lonav_current_target">
@@ -352,31 +356,19 @@ get_header();
 
             <ul>
               <li>
-                <a href="http://villatopia.org/" target="_blank" rel="noopener noreferrer">
+                <a href="https://aichi.clinic/" target="_blank" rel="noopener noreferrer">
                   <picture><img loading="lazy" src="/asset/img/about/facility_relation01.webp" alt="特別養護老人ホーム ヴィラトピア知立" width="474" height="338"></picture>
                   <div class="txtBox">
-                    <p class="company">社会福祉法人富士会</p>
-                    <p class="type">特別養護老人ホーム</p>
-                    <p class="name">ヴィラトピア知立</p>
-                    <p class="iso">ISO 9001 認証取得</p>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="http://onesvilla.org/" target="_blank" rel="noopener noreferrer">
-                  <picture><img loading="lazy" src="/asset/img/about/facility_relation02.webp" alt="介護付有料老人ホーム ワンズヴィラ池鯉鮒" width="474" height="338"></picture>
-                  <div class="txtBox">
-                    <p class="company">愛知県指定·特定施設入所者生活介護</p>
-                    <p class="type">介護付有料老人ホーム</p>
-                    <p class="name">ワンズヴィラ池鯉鮒</p>
-                    <p class="iso">ISO 9001 認証取得</p>
+                    <p class="type">一般社団法人 生活習慣病予防センター</p>
+                    <p class="name">あいちハートクリニック（知立）</p>
+                    <p class="iso">循環器科 / 心臓血管外科 / 内科 / 外科 / 麻酔科</p>
                   </div>
                 </a>
               </li>
             </ul>
           </div>
 
+          <!--
           <div class="facility partner">
             <h3>関連施設</h3>
 
@@ -415,7 +407,9 @@ get_header();
               </li>
             </ul>
           </div>
+          -->
 
+          <!--
           <div class="facility local">
             <h3>地域連携登録施設</h3>
 
@@ -437,6 +431,7 @@ get_header();
               </li>
             </ul>
           </div>
+          -->
         </div>
       </section>
       <!-- /#facility -->

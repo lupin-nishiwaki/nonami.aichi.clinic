@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: 一般内科・外科
+ * Template Name: 一般内科
  */
 
 get_header();
@@ -12,7 +12,6 @@ get_header();
     <div class="sideContents">
       <ul class="lonav">
         <li class="js_lonav_current"><a href="#internal">一般内科</a></li>
-        <li class="js_lonav_current"><a href="#surgery">一般外科</a></li>
       </ul>
     </div>
     <!-- /.sideContents -->
@@ -24,19 +23,18 @@ get_header();
         <div class="top">
           <div class="m_box_fixed -under">
             <h1>
-              <span class="en">Internal medicine・surgery</span>
-              一般内科・外科
+              <span class="en">Internal medicine</span>
+              一般内科
             </h1>
 
             <ul class="lonav">
               <li><a href="#internal">一般内科</a></li>
-              <li><a href="#surgery">一般外科</a></li>
             </ul>
           </div>
         </div>
 
         <picture class="img">
-          <img src="/asset/img/general/pageTtl.webp" alt="一般内科・外科" width="1920" height="610">
+          <img src="/asset/img/general/pageTtl.webp" alt="一般内科" width="1920" height="610">
         </picture>
       </section>
       <!-- /#pageTtl -->
@@ -75,37 +73,6 @@ get_header();
         </div>
       </section>
       <!-- /#internal -->
-
-      <!-- #surgery -->
-      <section id="surgery" class="js_lonav_current_target">
-        <div class="m_box_fixed -under">
-          <h2 class="m_txt_ttl">
-            <em class="ja">一般外科</em>
-          </h2>
-
-          <p class="lead">
-            一般外科では、主に下記の疾患があげられます。
-          </p>
-
-          <table>
-            <tr><th>良性・悪性の腫瘍性の疾患</th><td>消化管（食道、胃、十二指腸、小腸、虫垂、大腸、直腸、肛門）<br>腹腔内臓器（肝臓、すい臓、胆のう、胆管）</td></tr>
-            <tr><th>炎症性疾患</th><td>胆嚢炎、胆石症、消化管穿孔、虫垂炎、腹膜炎、腹腔内膿瘍</td></tr>
-            <tr><th>腹壁疾患</th><td>ソケイヘルニア、大腿ヘルニア、腹壁瘢痕ヘルニアなど</td></tr>
-            <tr><th>末梢血管疾患</th><td>下肢静脈瘤など</td></tr>
-            <tr><th>外傷性疾患</th><td>交通事故、一般外傷、熱傷</td></tr>
-            <tr><th>その他</th><td>痔ろう・痔核、甲状腺疾患、乳腺疾患、副腎腫瘍、後腹膜腫瘍、良性の皮下腫瘤など</td></tr>
-          </table>
-
-          <div class="oneDay">
-            <h3 class="m_txt_hd_underline">当クリニックで日帰り治療、<br class="pc-hide">処置できる疾患</h3>
-            <p>
-              上記疾患の診療と術後通院は可能です。手術が必要な場合、当クリニックでの対応が困難な場合は近隣の専門医療機関へ紹介致します。<br>
-              転倒、交通事故による四肢、体幹の出血性の外傷は創縫合が必要になり、表在の外傷は即時対応させていただきます。重度のものは緊急入院、手術ができる施設をご紹介いたします。粉瘤・脂肪腫など良性の腫瘤も、処置や手術を行います。
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- /#surgery -->
     </div>
     <!-- /.mainContents -->
   </div>

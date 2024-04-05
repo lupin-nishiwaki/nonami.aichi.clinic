@@ -103,27 +103,51 @@
         border-radius: $radius 0 0 $radius;
         overflow: hidden;
         max-height: 82rem;
-        display: flex;
-        align-items: center;
+        // display: flex;
+        // align-items: center;
 
         @media #{$breakS} {
           height: 48rem;
-          display: block;
+          // display: block;
         }
 
+        // .visual {
+        //   transform: translateY(0);
+        //   transition: opacity 1s;
+
+        //   picture {
+        //     display: flex;
+        //     align-items: flex-end;
+
+        //     img {
+        //       transition: transform 4s;
+        //     }
+        //   }
+
+        //   .swiper-slide {
+        //     img {
+        //       width: 100%;
+        //     }
+
+        //     &.swiper-slide-active,
+        //     &.swiper-slide-duplicate-active,
+        //     &.swiper-slide-prev {
+        //       img {
+        //         animation: zoom 6s linear;
+        //       }
+        //     }
+        //   }
+
+        //   &.is-load {
+        //     opacity: 1;
+
+        //     img {
+        //       transform: scale(1.1)
+        //     }
+        //   }
+        // }
+
         .visual {
-          transform: translateY(0);
-          transition: opacity 1s;
-
-          picture {
-            display: flex;
-            align-items: flex-end;
-
-            img {
-              transition: transform 4s;
-            }
-          }
-
           .swiper-slide {
             img {
               width: 100%;
@@ -135,14 +159,6 @@
               img {
                 animation: zoom 6s linear;
               }
-            }
-          }
-
-          &.is-load {
-            opacity: 1;
-
-            img {
-              transform: scale(1.1)
             }
           }
         }
@@ -335,7 +351,7 @@
         }
 
         a {
-          pointer-events: none;
+          // pointer-events: none;
           position: relative;
           display: block;
           border: 1px solid $colorLightGray;

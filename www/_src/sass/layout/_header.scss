@@ -388,6 +388,14 @@
                   &:first-child {
                     margin-top: 0;
                   }
+
+                  li {
+                    a {
+                      &.noLink {
+                        pointer-events: none;
+                      }
+                    }
+                  }
                 }
 
                 ul.child {
@@ -568,7 +576,7 @@
             left: 0;
             width: 2rem;
             height: 2rem;
-            background: url('#{$imgPath}i_tel_be.svg') no-repeat center;
+            background: url('#{$imgPath}i_tel_gy.svg') no-repeat center;
             background-size: 100% auto;
 
             @media #{$breakS} {

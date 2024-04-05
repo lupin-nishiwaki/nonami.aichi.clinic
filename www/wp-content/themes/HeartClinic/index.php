@@ -11,42 +11,51 @@
       </div>
 
       <div class="main">
-        <!--
         <div class="visual js_top_swiper_mv">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
-            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp"><img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
+            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual02@sp.webp"><img src="/asset/img/top/mv_visual02.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
+            <div class="swiper-slide"><picture><source media="(max-width:767px)" srcset="/asset/img/top/mv_visual03@sp.webp"><img src="/asset/img/top/mv_visual03.webp" alt="ビジュアル画像" width="1920" height="1116"></picture></div>
           </div>
         </div>
-        -->
 
-        <div class="visual js_anim_load">
-          <picture>
-            <source media="(max-width:767px)" srcset="/asset/img/top/mv_visual01@sp.webp">
-            <img src="/asset/img/top/mv_visual01.webp" alt="ビジュアル画像" width="1920" height="1116">
-          </picture>
-        </div>
-
-        <!--
         <div class="news js_top_swiper_news">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
-            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
-            <div class="swiper-slide"><a href=""><span class="day">2023.12.01</span><span class="ttl">発熱や風邪症状の患者様へ</span></a></div>
+
+            <?php
+            $args = array(
+              'post_type' => 'importantnews',
+              'posts_per_page' => 5,
+            );
+            ?>
+            <?php $the_query = new WP_Query( $args ); ?>
+            <?php if( $the_query->have_posts() ): ?>
+              <?php while( $the_query->have_posts() ): ?>
+                <?php $the_query->the_post(); ?>
+
+                <div class="swiper-slide">
+                  <a href="<?php the_permalink(); ?>">
+                    <span class="day"><?php the_time( 'Y.m.d' ); ?></span>
+                    <span class="ttl"><?php the_title(); ?></span>
+                  </a>
+                </div>
+
+              <?php endwhile; ?>
+              <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+
           </div>
           <div class="swiper-button-prev js_top_swiper_news_prev"></div>
           <div class="swiper-button-next js_top_swiper_news_next"></div>
         </div>
-        -->
       </div>
 
       <div class="side">
         <p class="name">aichi heart clinic</p>
-        <!-- <div class="visual-swiper-pagination js_top_swiper_mv_pagination"></div> -->
+        <div class="visual-swiper-pagination js_top_swiper_mv_pagination"></div>
       </div>
     </div>
 
-    <!--
     <div class="calender m_table_calender">
       <table>
         <thead>
@@ -54,38 +63,18 @@
         </thead>
 
         <tbody>
-          <tr><th class="item01">9:00-<br class="pc-hide">12:00</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
-          <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td><td>－</td></tr>
+          <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
+          <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●</td><td>●</td><td>－</td><td>●</td><td>●</td><td>－</td><td>－</td></tr>
         </tbody>
       </table>
 
-      <p class="time">
-        初診受付は午前は11:30まで、午後は17:30までとなります。
+      <p class="notes">
+        ※ 月曜日午後は19:30まで<br>
+        ※ 木曜日午後は深谷Dr.の足の外来
       </p>
     </div>
-    -->
   </section>
   <!-- /#mv -->
-
-  <!-- #message -->
-  <section id="message">
-    <div class="m_box_fixed">
-      <h2 class="m_txt_ttl js_anim_scroll">
-        <span class="en">message</span>
-        <em class="ja">院長ごあいさつ</em>
-      </h2>
-      <div class="flex-content">
-        <div>
-          <picture><img loading="lazy" src="/asset/img/top/masanao-takeya.jpg" alt="院長　竹谷 昌直" width="350" height="420"></picture>
-        </div>
-        <div>
-          <p class="lead js_anim_scroll">私が医師になってから約18年の月日が経ちました。<br />色々な縁があり循環器内科医を志し、多大な御力添えをいただきながら、循環器内科専門医としてこれまで病院勤務を続けて参りました。医療は日々進歩しており、まだまだ医師として勉強している最中で至らない部分も多いかと思いますが、今回「あいちハートクリニック野並」の開業に携わることになりました。<br />私が医師として働き始めたころよりお世話になり、循環器内科医となるきっかけにもなった、あいちハートクリニック（知立市）の村瀬副院長から開業のお話をいただき、深谷院長とも名古屋ハートセンターで一緒に働いていたこともあり、この縁を大切にしたいと思い、クリニックの開業という新しい舞台での医療を決意しました。<br />「あいちハートクリニック野並」では循環器診療、一般内科診療、下肢静脈瘤治療などで地域医療に貢献し、あいちハートクリニック（知立市）では、循環器内科スペシャリストとして不整脈カテーテル治療を行います。<br />これまで培ってきたキャリアを存分に生かし、地域の皆様の支えになれるよう努力していく所存です。「あいちハートクリニック野並」をどうぞよろしくお願い申し上げます。</p>
-          <p>院長　竹谷 昌直</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- #message -->
 
   <!-- #treatment -->
   <section id="treatment">
@@ -119,7 +108,7 @@
         </li>
 
         <li>
-          <a href="/shunt/">
+          <a href="/general/">
             <picture><img loading="lazy" src="/asset/img/top/treatment_link03.svg" alt="一般内科" width="92" height="92"></picture>
             <h3 class="hd">一般内科</h3>
             <p>かかりつけ医（家庭医）として、<br>内科・外科全般についても対応。</p>
@@ -127,7 +116,7 @@
         </li>
 
         <li>
-          <a href="/general/">
+          <a href="/no-smoking/">
             <picture><img loading="lazy" src="/asset/img/top/treatment_link04.svg" alt="禁煙外来" width="92" height="92"></picture>
             <h3 class="hd">禁煙外来</h3>
             <p>外来日を含め3ヶ月で終了。<br>計5回の通院で病気のリスクを軽減。</p>
@@ -135,10 +124,10 @@
         </li>
 
         <li>
-          <a href="/no-smoking/">
+          <a href="/sleep-apnea-syndrome/">
             <picture><img loading="lazy" src="/asset/img/top/treatment_link05.svg" alt="睡眠時無呼吸症候群" width="92" height="92"></picture>
-              <h3 class="hd">睡眠時無呼吸症候群</h3>
-              <p>睡眠時無呼吸症候群に関する検査、<br>治療を対応。</p>
+            <h3 class="hd">睡眠時無呼吸症候群</h3>
+            <p>睡眠時無呼吸症候群に関する検査、<br>治療を対応。</p>
           </a>
         </li>
 

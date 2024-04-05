@@ -1,7 +1,7 @@
 // * ----------------------------------------
 // * 設定
 // * 作業用ディレクトリ
-var baseDir = 'www/static/';
+var baseDir = 'www/';
 
 // * プラグイン読み込み
 const path = require('path');                       // パス
@@ -34,13 +34,13 @@ const webp = require('gulp-webp');                  // [img]webp変換
 // * ブラウザの同期
 function siteSync() {
   connect.server({
-    base: 'www/static/',
+    base: 'www/',
     livereload: true,
     port: 5000,
   }, function () {
     browserSync.init({
       proxy: '127.0.0.1:5000',
-      baseDir: 'www/static/',
+      baseDir: 'www/',
       open: 'external',
       directory: true,
     });

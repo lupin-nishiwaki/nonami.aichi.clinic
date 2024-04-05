@@ -131,7 +131,7 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .m_box_tel dl{display:flex;justify-content:center;align-items:flex-end;color:#8b8780}
 .m_box_tel dl dt{font-size:1.8rem;margin-right:2rem}
 .m_box_tel dl dd a{display:inline-block;font-size:5rem;line-height:1}
-.m_box_tel dl dd a:before{content:'';display:inline-block;position:relative;top:-.2rem;width:3rem;height:3rem;margin-right:1rem;background:url(/asset/img/i_tel_be.svg) no-repeat center;background-size:100% auto}
+.m_box_tel dl dd a:before{content:'';display:inline-block;position:relative;top:-.2rem;width:3rem;height:3rem;margin-right:1rem;background:url(/asset/img/i_tel_gy.svg) no-repeat center;background-size:100% auto}
 .m_box_tel .welcome{margin-top:2rem}
 .m_box_tab .tabBtn{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:1px;text-align:center;font-size:1.8rem;color:#8b8780;line-height:1.6}
 .m_box_tab .tabBtn>div{background:#f7f7f7;padding:3.5rem 0}

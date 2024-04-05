@@ -4,12 +4,20 @@
   <!-- #l_footer -->
   <footer id="l_footer">
     <!-- #fixedCta -->
-    <section id="fixedCta" class="js_anim_load -delay02">
-      <p class="recruit">
-        <a href="/recruit/">
-          <span>採用情報</span>
-        </a>
-      </p>
+    <section id="fixedCta" class="js_anim_load -delay">
+      <?php if(is_page('beauty')): ?>
+        <p class="line">
+          <a href="https://page.line.me/954bntwp?openQrModal=true" target="_blank" rel="noopener noreferrer">
+            <span>LINEでご予約</span>
+          </a>
+        </p>
+      <?php else: ?>
+        <p class="contact">
+          <a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">
+            <span>初診のご予約</span>
+          </a>
+        </p>
+      <?php endif; ?>
     </section>
     <!-- /#fixedCta -->
 
@@ -56,27 +64,40 @@
       <div class="m_box_fixed">
         <h2 class="m_txt_ttl js_anim_scroll">
           <span class="en">contact</span>
-          <em class="ja">お問い合わせはこちら</em>
+          <em class="ja">初診ご予約·<br class="pc-hide">お問い合わせ</em>
         </h2>
 
         <p class="lead js_anim_scroll">
-          お体の不調にお悩みの場合は、あいちハートクリニックまで。<br class="sp-hide">どこの診療科に行ったら良いかわからない方も、お気軽にご相談ください。
+          お体の不調にお悩みの場合は、<br class="pc-hide">あいちハートクリニックまで。<br>
+          どこの診療科に行ったら良いかわからない方も、<br class="pc-hide">お気軽にご相談ください。
         </p>
 
-        <p class="btn m_btn_cta js_anim_scroll">
-          <a href="/contact/">
-            メールで相談・お問い合わせ<i></i>
-          </a>
-        </p>
+        <div class="row js_anim_scroll_group">
+          <div>
+            <p class="btn m_btn_cta">
+              <a href="https://ahc-nonami.reserve.ne.jp" target="_blank" rel="noopener noreferrer">
+                診察のご予約<i></i>
+              </a>
+            </p>
+          </div>
+
+          <div>
+            <p class="btn m_btn_cta -gray">
+              <a href="/contact/">
+                メールで相談·お問い合わせ<i></i>
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- /#contact -->
 
-    <!-- #sitemap
+    <!-- #sitemap -->
     <section id="sitemap">
       <div class="m_box_fixed">
         <div class="top js_anim_scroll">
-          <p class="logo"><img loading="lazy" src="/asset/img/logo_wh.svg" alt="あいちハートクリニック野並院" width="218" height="34"></p>
+          <p class="logo"><img loading="lazy" src="/asset/img/logo_wh.svg" alt="あいちハートクリニック野並" width="218" height="30"></p>
 
           <div class="sitemap">
             <div>
@@ -84,14 +105,14 @@
               <dl>
                 <dt><a href="/about">クリニックについて</a></dt>
                 <dd>
-                  <a href="/about#greeting">ごあいさつ</a>
-                  <a href="/about#feature">当クリニックの特徴</a>
+                  <!-- <a href="/about#greeting">ごあいさつ</a> -->
+                  <!-- <a href="/about#feature">当クリニックの特徴</a> -->
                   <a href="/about#doctor">医師紹介</a>
-                  <a href="/about#officeWork">事務長紹介</a>
+                  <!-- <a href="/about#officeWork">事務長紹介</a> -->
                   <a href="/about#facility">各施設紹介</a>
                 </dd>
 
-                <dt><a href="/equipment/">医療設備</a></dt>
+                <!-- <dt><a href="/equipment/">医療設備</a></dt> -->
               </dl>
             </div>
 
@@ -101,9 +122,10 @@
                 <dt><a href="/cardiology/">循環器科</a></dt>
                 <dd>
                   <a href="/cardiology#about">心臓疾患について</a>
+                  <a href="/cardiology#arrhythmiaTreatment">不整脈治療について</a>
                   <a href="/cardiology#heartCheck">心臓検査</a>
-                  <a href="/cardiology#catheter">カテーテル検査·治療</a>
-                  <a href="/cardiology#heartSurgery">血管外科手術</a>
+                  <!-- <a href="/cardiology#catheter">カテーテル検査·治療</a> -->
+                  <!-- <a href="/cardiology#heartSurgery">血管外科手術</a> -->
                 </dd>
 
                 <dt><a href="/varix/">足の外来</a></dt>
@@ -115,16 +137,16 @@
                   <a href="/varix#other">その他</a>
                 </dd>
 
-                <dt><a href="/shunt/">透析シャント治療</a></dt>
-                <dt><a href="/general/">一般内科·外科</a></dt>
+                <dt><a href="/general/">一般内科</a></dt>
                 <dt><a href="/no-smoking/">禁煙外来</a></dt>
-                <dt><a href="/fever/">発熱外来</a></dt>
+                <dt><a href="/sleep-apnea-syndrome/">睡眠時無呼吸症候群</a></dt>
+                <!-- <dt><a href="/fever/">発熱外来</a></dt> -->
               </dl>
             </div>
 
             <div>
               <ul>
-                <li><a href="/beauty/">美容案内</a></li>
+                <!-- <li><a href="/beauty/">美容案内</a></li> -->
                 <li><a href="/news/">お知らせ</a></li>
                 <li><a href="/information/">医院情報·アクセス</a></li>
               </ul>
@@ -133,14 +155,16 @@
             <div>
               <ul>
                 <li><a href="/contact/">お問い合わせ</a></li>
-                <li><a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">初診ご予約</a></li>
+                <!-- <li><a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">初診ご予約</a></li> -->
               </ul>
 
+              <!--
               <p class="instagram">
                 <a href="https://www.instagram.com/aichi.heart.clinic/" target="_balnk" rel="noonner,noreferrer">
                   <img loading="lazy" src="/asset/img/i_social_instagram_bk.svg" alt="Instagram" width="16" height="16">
                 </a>
               </p>
+              -->
             </div>
           </div>
         </div>
@@ -151,17 +175,7 @@
         </div>
       </div>
     </section>
-    #sitemap -->
-
-    <!-- #credit -->
-    <section id="credit">
-      <div class="wrapper m_box_fixed">
-        <p class="logo"><img loading="lazy" src="/asset/img/logo_bk.svg" alt="あいちハートクリニック野並院" width="218" height="30"></p>
-        <p class="privacy"><a href="/privacy/">プライバシーポリシー</a></p>
-        <p class="copy">&copy;2023 あいちハートクリニック野並</p>
-      </div>
-    </section>
-    <!-- #credit -->
+    <!-- #sitemap -->
   </footer>
   <!-- /#l_footer -->
 

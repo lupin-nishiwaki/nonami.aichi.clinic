@@ -167,6 +167,7 @@ get_header();
             </div>
           </div>
 
+          <!--
           <div class="treatment treatment02">
             <h3 class="m_txt_hd_underline">血管内焼灼術（ラジオ波、レーザー）</h3>
             <p class="txt">
@@ -189,6 +190,7 @@ get_header();
               </div>
             </div>
           </div>
+          -->
 
           <div class="treatment treatment03">
             <h3 class="m_txt_hd_underline">硬化療法</h3>
@@ -274,6 +276,7 @@ get_header();
           </h2>
 
           <ul class="m_list_machine">
+            <!--
             <li>
               <picture><img loading="lazy" src="/asset/img/varix/varicoseMachine_01.webp" alt="血管内焼灼用高周波治療機器（Medtronic社）" width="290" height="290"></picture>
               <h3 class="name">血管内焼灼用高周波治療機器<span>（Medtronic社）</span></h3>
@@ -283,6 +286,7 @@ get_header();
                 （登録番号：H00744）
               </p>
             </li>
+            -->
 
             <li>
               <picture><img loading="lazy" src="/asset/img/varix/varicoseMachine_02.webp" alt="VenaSeal クロージャー" width="290" height="290"></picture>
@@ -306,7 +310,7 @@ get_header();
       </section>
       <!-- /#varicoseMachine -->
 
-      <!-- #varicoseCase -->
+      <!-- #varicoseCase
       <section id="varicoseCase">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_ttl"><em class="ja">累計下肢静脈瘤<br class="pc-hide">手術件数</em></h2>
@@ -330,7 +334,7 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- /#varicoseCase -->
+      /#varicoseCase -->
 
       <!-- #varicoseFaq -->
       <section id="varicoseFaq">
@@ -397,11 +401,7 @@ get_header();
       <section id="pad" class="js_lonav_current_target">
         <div class="m_box_fixed -under">
           <h2 class="m_txt_hd_label">下肢動脈疾患（PAD）</h2>
-          <p class="lead">主に末梢動脈疾患（peripheral artery disease:PAD）と下肢閉塞性動脈疾患（lower extremity artery disease: LEAD）に対して、内科医が得意とするカテーテル治療、血管外科医が得意とするバイパスや血栓内膜摘除など、末梢血管に関する総合的な診療を行います。</p>
-          <div class="btn m_btn_main">
-            <div><a href="/cardiology/#catheter">カテーテル検査治療はこちら<i></i></a></div>
-            <div><a href="/cardiology/#heartSurgery">血管外科手術はこちら<i></i></a></div>
-          </div>
+          <p class="lead">主に末梢動脈疾患（peripheral artery disease:PAD）と下肢閉塞性動脈疾患（lower extremity artery disease: LEAD）に対して、総合的な診療を行います。治療が必要な場合は治療が可能な医療機関（あいちハートクリニック（知立）や周辺の専門医療機関）へ紹介します。</p>
         </div>
       </section>
       <!-- /#pad -->

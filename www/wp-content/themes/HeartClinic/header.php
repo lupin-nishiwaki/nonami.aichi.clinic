@@ -78,15 +78,8 @@
   <?php wp_head(); ?>
 </head>
 <body class="js_load_page">
-  <?php
-    $url = '';
-    $judge = '';
-    $url .= $_SERVER['REQUEST_URI'];
-
-    if(strpos($url,'contact') !== false || strpos($url,'recruit') !== false){
-      $judge = '/';
-    }
-  ?>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- #l_header -->
   <header id="l_header" class="js_header">
@@ -104,10 +97,73 @@
 
       <nav class="gnav js_drawr">
         <ul class="main">
-          <li><a href="<?php echo $judge; ?>#message">院長ごあいさつ</a></li>
-          <li><a href="<?php echo $judge; ?>#treatment">診療案内</a></li>
-          <li><a href="<?php echo $judge; ?>recruit/">採用情報</a></li>
-          <li><a href="<?php echo $judge; ?>contact/">お問い合わせ</a></li>
+          <li>
+            <dl class="js_accordion_sp">
+              <dt>医院紹介</dt>
+              <dd>
+                <picture><img src="/asset/img/header_gnav_main_about.webp" alt="医院紹介" width="396" height="396"></picture>
+                <div class="box">
+                  <ul class="parent">
+                    <li><a href="/about/">クリニックについて</a></li>
+                  </ul>
+
+                  <ul class="child">
+                    <!-- <li><a href="/about#greeting">ごあいさつ</a></li> -->
+                    <!-- <li><a href="/about#feature">当クリニックの特徴</a></li> -->
+                    <li><a href="/about#doctor">医師紹介</a></li>
+                    <!-- <li><a href="/about#officeWork">事務長紹介</a></li> -->
+                    <li><a href="/about#facility">各施設紹介</a></li>
+                  </ul>
+
+                  <ul class="parent">
+                    <li><a href="/equipment/" class="noLink">医療設備（準備中）</a></li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+          </li>
+
+          <li>
+            <dl class="js_accordion_sp">
+              <dt>診療案内</dt>
+              <dd>
+                <picture><img src="/asset/img/header_gnav_main_sinryo.webp" alt="診療案内" width="396" height="396"></picture>
+                <div class="box">
+                  <ul class="parent">
+                    <li><a href="/cardiology/">循環器科</a></li>
+                  </ul>
+
+                  <ul class="child">
+                    <li><a href="/cardiology#about">心臓疾患について</a></li>
+                    <li><a href="/cardiology#heartCheck">心臓検査</a></li>
+                  </ul>
+
+                  <ul class="parent">
+                    <li><a href="/varix/">足の外来</a></li>
+                  </ul>
+
+                  <ul class="child">
+                    <li><a href="/varix#varicoseVeins">下肢静脈瘤</a></li>
+                    <li><a href="/varix#pad">下肢動脈疾患(PAD)</a></li>
+                    <li><a href="/varix#cvi">慢性静脈不全(CVI)</a></li>
+                    <li><a href="/varix#dvt">深部静脈血栓(DVT)</a></li>
+                    <li><a href="/varix#other">その他</a></li>
+                  </ul>
+
+                  <ul class="parent">
+                    <li><a href="/general/">一般内科</a></li>
+                    <li><a href="/no-smoking/">禁煙外来</a></li>
+                    <li><a href="/sleep-apnea-syndrome/">睡眠時無呼吸症候群</a></li>
+                    <li><a href="/fever/" class="noLink">発熱外来（準備中）</a></li>
+                  </ul>
+                </div>
+              </dd>
+            </dl>
+          </li>
+
+          <!-- <li><a href="/beauty/">美容案内</a></li> -->
+          <li><a href="/news/">お知らせ</a></li>
+          <li><a href="/information/">医院情報·アクセス</a></li>
         </ul>
 
         <!--
@@ -124,7 +180,6 @@
         -->
       </nav>
 
-      <!--
       <p class="instagramSp">
         <a href="https://www.instagram.com/aichi.heart.clinic/" target="_balnk" rel="noonner,noreferrer">
           <img src="/asset/img/i_social_instagram_wh.svg" alt="Instagram" width="16" height="16">
@@ -132,10 +187,9 @@
       </p>
 
       <dl class="tel">
-        <dt><a href="tel:0566-91-5810">0566-91-5810</a></dt>
+        <dt><a href="tel:052-846-3810">052-846-3810</a></dt>
         <dd>診療時間内は受付可能です。</dd>
       </dl>
-      -->
     </div>
   </header>
   <!-- /#l_header -->
