@@ -145,7 +145,7 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .m_btn_main a:hover i:before{animation:btnArr .6s cubic-bezier(.22,0,.53,1) .2s;background:url(/asset/img/i_arr_wh.svg) no-repeat center!important}
 .m_btn_main a:before{content:'';position:absolute;margin:auto;top:0;left:0;z-index:-1;width:100%;height:100%;background:#8b8780;transition:transform .4s cubic-bezier(.22,0,.53,1);transform:scale(0,1);transform-origin:right top}
 .m_btn_main a i{position:absolute;top:0;bottom:0;right:2rem;margin:auto;width:2.3rem;height:2.3rem;overflow:hidden}
-.m_btn_main a i:before{content:'';display:inline-block;position:relative;width:2.3rem;height:2.3rem;transition:background .5s;background:url(/asset/img/i_arr_be.svg) no-repeat center;background-size:100% auto!important}
+.m_btn_main a i:before{content:'';display:inline-block;position:relative;width:2.3rem;height:2.3rem;transition:background .5s;background:url(/asset/img/i_arr_gy.svg) no-repeat center;background-size:100% auto!important}
 .m_btn_main.-purple a{border:1px solid #b096b2;color:#b096b2}
 .m_btn_main.-purple a:before{background:#b096b2}
 .m_btn_main.-purple a i:before{background:url(/asset/img/i_arr_pl.svg) no-repeat center}

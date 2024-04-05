@@ -45,8 +45,8 @@
 #l_footer #clinic .overview .txtBox .tel a{position:relative;display:inline-block;font-size:3rem;color:#8b8780;padding-left:2.5rem}
 #l_footer #clinic .overview .txtBox .tel a:before{content:'';position:absolute;margin:auto;top:1.5rem;left:0;width:1.8rem;height:1.8rem;background:url(/asset/img/i_tel_be.svg) no-repeat center;background-size:100% auto!important}
 #l_footer #clinic .overview .txtBox .calender{margin-top:1.5rem}
-#l_footer #clinic .map{margin-top:5rem}
-#l_footer #clinic .map iframe{width:100%;height:40rem}
+#l_footer #clinic .mapBox{margin-top:5rem}
+#l_footer #clinic .mapBox iframe{width:100%;height:40rem}
 #l_footer #contact{text-align:center;padding:15rem 0;background:#f7f7f7}
 #l_footer #contact .row{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:5rem;row-gap:0;margin-top:5rem}
 #l_footer #contact .row .btn a{width:100%}
@@ -142,8 +142,8 @@
 #l_footer #clinic .overview .imgBox iframe{height:20rem}
 #l_footer #clinic .overview .txtBox .logo{font-size:2.2rem}
 #l_footer #clinic .overview .txtBox .logo img{width:23rem}
-#l_footer #clinic .map{margin:3rem -2rem 0}
-#l_footer #clinic .map iframe{height:20rem}
+#l_footer #clinic .mapBox{margin:3rem -2rem 0}
+#l_footer #clinic .mapBox iframe{height:20rem}
 #l_footer #contact{padding:7rem 0}
 #l_footer #contact .row{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
 #l_footer #contact .row{margin-top:3rem}

@@ -105,7 +105,7 @@ get_header();
           <table>
             <tr><th class="item01">診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
             <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td></tr>
-            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">－</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>－</td></tr>
+            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>－</td></tr>
           </table>
 
           <p class="txt">

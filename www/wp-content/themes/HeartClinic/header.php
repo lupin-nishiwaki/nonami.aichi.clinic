@@ -180,11 +180,13 @@
         -->
       </nav>
 
+      <!--
       <p class="instagramSp">
         <a href="https://www.instagram.com/aichi.heart.clinic/" target="_balnk" rel="noonner,noreferrer">
           <img src="/asset/img/i_social_instagram_wh.svg" alt="Instagram" width="16" height="16">
         </a>
       </p>
+      -->
 
       <dl class="tel">
         <dt><a href="tel:052-846-3810">052-846-3810</a></dt>
