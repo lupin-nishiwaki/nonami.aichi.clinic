@@ -240,11 +240,11 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .m_cms_wysiwyg iframe{width:100%;height:42rem}
 .m_cms_wysiwyg .mceTemp .wp-caption{width:auto!important}
 .m_form_select select,.m_form_textarea,.m_form_txt{border:1px solid #e6e5e4;background:#fcfcfc;line-height:1.8}
-.m_form_select select:placeholder-shown,.m_form_textarea:placeholder-shown,.m_form_txt:placeholder-shown{color:#c4baba}
-.m_form_select select::-webkit-input-placeholder,.m_form_textarea::-webkit-input-placeholder,.m_form_txt::-webkit-input-placeholder{color:#c4baba}
-.m_form_select select:-moz-placeholder,.m_form_textarea:-moz-placeholder,.m_form_txt:-moz-placeholder{color:#c4baba;opacity:1}
-.m_form_select select::-moz-placeholder,.m_form_textarea::-moz-placeholder,.m_form_txt::-moz-placeholder{color:#c4baba;opacity:1}
-.m_form_select select:-ms-input-placeholder,.m_form_textarea:-ms-input-placeholder,.m_form_txt:-ms-input-placeholder{color:#c4baba}
+.m_form_select select:placeholder-shown,.m_form_textarea:placeholder-shown,.m_form_txt:placeholder-shown{color:#c7c7c7}
+.m_form_select select::-webkit-input-placeholder,.m_form_textarea::-webkit-input-placeholder,.m_form_txt::-webkit-input-placeholder{color:#c7c7c7}
+.m_form_select select:-moz-placeholder,.m_form_textarea:-moz-placeholder,.m_form_txt:-moz-placeholder{color:#c7c7c7;opacity:1}
+.m_form_select select::-moz-placeholder,.m_form_textarea::-moz-placeholder,.m_form_txt::-moz-placeholder{color:#c7c7c7;opacity:1}
+.m_form_select select:-ms-input-placeholder,.m_form_textarea:-ms-input-placeholder,.m_form_txt:-ms-input-placeholder{color:#c7c7c7}
 .m_form_progress{font-family:'Noto Serif JP';font-size:1.8rem;position:relative;display:flex;margin-top:5rem;text-align:center;background:#e6e5e4;overflow:hidden}
 .m_form_progress li{position:relative;width:33.3%;padding:.5rem}
 .m_form_progress li:after{content:'';position:absolute;margin:auto;top:0;bottom:0;right:-1.6rem;z-index:10;width:3.6rem;height:3.6rem;background:#e6e5e4;transform:rotate(45deg);transform-origin:center;border-top:.3rem solid #fff;border-right:.3rem solid #fff}
@@ -264,16 +264,16 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .m_form_agree .inner span{display:inline-block;width:2.4rem;height:2.4rem;margin-right:1.5rem}
 .m_form_agree .inner span label{display:inline-block;width:2.4rem;height:2.4rem;cursor:pointer}
 .m_form_agree .inner span label input{display:none}
-.m_form_agree .inner span label input:checked+span{border:1px solid #c4baba;background:url(/asset/img/i_check_be.svg) no-repeat;background-size:100% auto}
-.m_form_agree .inner span label span{border:1px solid #c4baba;text-indent:-999rem;overflow:hidden}
+.m_form_agree .inner span label input:checked+span{border:1px solid #c7c7c7;background:url(/asset/img/i_check_be.svg) no-repeat;background-size:100% auto}
+.m_form_agree .inner span label span{border:1px solid #c7c7c7;text-indent:-999rem;overflow:hidden}
 .m_form_agree .inner a{text-decoration:underline}
 .m_form_btn{display:flex;justify-content:center;text-align:center;margin-top:6rem}
 .m_form_btn button{position:relative;z-index:1;width:50rem;padding:1.5rem;background:#8b8780;border-radius:.5rem;border:1px solid #8b8780;overflow:hidden;font-size:1.8rem;box-shadow:0 3px 3px rgba(0,0,0,.16);transition:color .5s;color:#fff}
 .m_form_btn button:hover{color:#8b8780;opacity:1}
 .m_form_btn button:hover:before{transform:scale(1,1);transform-origin:left top}
 .m_form_btn button:before{content:'';position:absolute;margin:auto;top:0;left:0;z-index:-1;width:100%;height:100%;background:#fff;transition:transform .4s cubic-bezier(.22,0,.53,1);transform:scale(0,1);transform-origin:right top}
-.m_form_btn button.back{margin:0 2rem 0 0;background:#c4baba;border:1px solid #c4baba}
-.m_form_btn button.back:hover{color:#c4baba;opacity:1}
+.m_form_btn button.back{margin:0 2rem 0 0;background:#c7c7c7;border:1px solid #c7c7c7}
+.m_form_btn button.back:hover{color:#c7c7c7;opacity:1}
 .m_form_format{margin-top:6rem}
 .m_form_format dl{display:flex;width:100%}
 .m_form_format dl+dl{margin-top:4rem}
@@ -324,7 +324,7 @@ button:hover,input[type=button]:hover,input[type=reset]:hover,input[type=submit]
 .m_list_news li a{position:relative;display:flex;padding:3.5rem 6rem 3.5rem 0;border-bottom:1px solid #48453a;transition:color .5s,border .5s}
 .m_list_news li a:hover{opacity:1;color:#8b8780;border-bottom:1px solid #8b8780}
 .m_list_news li a:hover i:before{animation:btnArr .6s cubic-bezier(.22,0,.53,1) .2s}
-.m_list_news li a .day{flex-shrink:0;width:12rem;color:#c4baba}
+.m_list_news li a .day{flex-shrink:0;width:12rem;color:#c7c7c7}
 .m_list_news li a i{position:absolute;top:0;bottom:0;right:2rem;margin:auto;width:2.3rem;height:2.3rem;overflow:hidden}
 .m_list_news li a i:before{content:'';display:inline-block;position:relative;width:2.3rem;height:2.3rem;transition:background .5s;background:url(/asset/img/i_arr_be.svg) no-repeat center;background-size:100% auto!important}
 .m_table_calender table td,.m_table_calender table th{text-align:center;width:5rem;padding:1rem 0;vertical-align:middle}

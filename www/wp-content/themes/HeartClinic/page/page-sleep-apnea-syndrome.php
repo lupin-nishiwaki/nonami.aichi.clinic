@@ -52,7 +52,7 @@ get_header();
       </section>
       <!-- /#overview -->
 
-      <!-- #contact-section -->
+      <!-- #contact-section
       <section id="contact-section">
         <div class="m_box_fixed -under">
 
@@ -67,7 +67,7 @@ get_header();
           </div>
         </div>
       </section>
-      <!-- /#contact-section -->
+      /#contact-section -->
     </div>
     <!-- /.mainContents -->
   </div>

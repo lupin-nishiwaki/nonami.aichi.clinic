@@ -11,8 +11,8 @@
 #l_container .columnSeparate .sideContents ul.lonav li.under a:before{top:.9rem;width:1.8rem;height:1px}
 #l_container .columnSeparate .sideContents ul.lonav li.under.is-current a{color:#48453a}
 #l_container .columnSeparate .sideContents ul.lonav li.under.is-current a:before{background:#48453a}
-#l_container .columnSeparate .sideContents ul.lonav li a{position:relative;display:inline-block;padding-left:1.5em;color:#c4baba;transition:color .3s}
-#l_container .columnSeparate .sideContents ul.lonav li a:before{content:'';position:absolute;margin:auto;top:.6rem;left:0;width:.5rem;height:.5rem;border-radius:1rem;background:#c4baba;transition:background .3s}
+#l_container .columnSeparate .sideContents ul.lonav li a{position:relative;display:inline-block;padding-left:1.5em;color:#c7c7c7;transition:color .3s}
+#l_container .columnSeparate .sideContents ul.lonav li a:before{content:'';position:absolute;margin:auto;top:.6rem;left:0;width:.5rem;height:.5rem;border-radius:1rem;background:#c7c7c7;transition:background .3s}
 #l_container .columnSeparate .sideContents ul.lonav li.is-current a{color:#48453a}
 #l_container .columnSeparate .sideContents ul.lonav li.is-current a:before{background:#48453a}
 #l_container .columnSeparate .mainContents{width:100%;border-left:1px solid #f7f7f7;overflow:hidden}
@@ -45,8 +45,17 @@
 #l_footer #clinic .overview .txtBox .tel a{position:relative;display:inline-block;font-size:3rem;color:#8b8780;padding-left:2.5rem}
 #l_footer #clinic .overview .txtBox .tel a:before{content:'';position:absolute;margin:auto;top:1.5rem;left:0;width:1.8rem;height:1.8rem;background:url(/asset/img/i_tel_be.svg) no-repeat center;background-size:100% auto!important}
 #l_footer #clinic .overview .txtBox .calender{margin-top:1.5rem}
-#l_footer #clinic .mapBox{margin-top:5rem}
+#l_footer #clinic .mapBox{flex-shrink:0;width:57rem;border-radius:.5rem;overflow:hidden}
 #l_footer #clinic .mapBox iframe{width:100%;height:40rem}
+#l_footer #link{padding-bottom:15rem}
+#l_footer #link a{display:flex;border-radius:.5rem;overflow:hidden;background:#faf7f2}
+#l_footer #link a .img{flex-shrink:0;width:54rem}
+#l_footer #link a .txtBox{position:relative;width:100%;padding:3rem 4rem;line-height:1.6}
+#l_footer #link a .txtBox .logo img{width:auto!important;height:4.6rem}
+#l_footer #link a .txtBox .catch{font-family:'Noto Serif JP';font-size:2rem;margin-top:2rem}
+#l_footer #link a .txtBox .menu{font-size:1.2rem;margin-top:1.5rem}
+#l_footer #link a .txtBox .btn{position:absolute;bottom:0;left:0;width:100%;background:#ae9373;color:#fff;font-size:1.2rem;text-align:right;padding:.8rem 2rem}
+#l_footer #link a .txtBox .btn:after{content:'';display:inline-block;position:relative;top:-.1rem;width:2rem;height:.8rem;background:url(/asset/img/i_arr_wh.svg) no-repeat center;background-size:100% auto;margin-left:.8rem}
 #l_footer #contact{text-align:center;padding:15rem 0;background:#f7f7f7}
 #l_footer #contact .row{display:grid;grid-template-columns:repeat(2,minmax(0,50%));column-gap:5rem;row-gap:0;margin-top:5rem}
 #l_footer #contact .row .btn a{width:100%}
@@ -129,7 +138,7 @@
 #l_container .columnSeparate .mainContents #pageTtl .top ul.lonav>li>a{text-decoration:underline}
 #l_container .columnSeparate .mainContents #pageTtl .top ul.lonav>li.under{display:flex;width:100%}
 #l_container .columnSeparate .mainContents #pageTtl .top ul.lonav>li.under>a{flex-shrink:0;margin-right:2rem}
-#l_container .columnSeparate .mainContents #pageTtl .top ul.lonav>li.under ul{display:flex;flex-wrap:wrap;color:#c4baba}
+#l_container .columnSeparate .mainContents #pageTtl .top ul.lonav>li.under ul{display:flex;flex-wrap:wrap;color:#c7c7c7}
 #l_container .columnSeparate .mainContents #pageTtl picture.img{height:30rem}
 #l_container .columnSeparate .mainContents #secImg picture{height:30rem}
 #l_container .columnSeparate .mainContents #secImg picture img{width:100%;height:100%}
@@ -142,8 +151,16 @@
 #l_footer #clinic .overview .imgBox iframe{height:20rem}
 #l_footer #clinic .overview .txtBox .logo{font-size:2.2rem}
 #l_footer #clinic .overview .txtBox .logo img{width:23rem}
-#l_footer #clinic .mapBox{margin:3rem -2rem 0}
+#l_footer #clinic .mapBox{width:calc(100% + 4rem);margin:3rem -2rem 0;border-radius:0}
 #l_footer #clinic .mapBox iframe{height:20rem}
+#l_footer #link{padding:7rem 0}
+#l_footer #link a .img{width:12rem}
+#l_footer #link a .txtBox{padding:1.4rem;text-align:center}
+#l_footer #link a .txtBox .logo img{height:2.4rem}
+#l_footer #link a .txtBox .catch{font-family:Lato,'Noto Sans JP',YuGothic,'Yu Gothic',Meiryo,'メイリオ','MS PGothic','ＭＳ Ｐゴシック',sans-serif;font-size:1.2rem;margin-top:1rem}
+#l_footer #link a .txtBox .menu{display:none}
+#l_footer #link a .txtBox .btn{font-size:1rem;padding:.5rem 1rem .3rem}
+#l_footer #link a .txtBox .btn:after{width:1.2rem;height:.5rem;margin-left:.4rem}
 #l_footer #contact{padding:7rem 0}
 #l_footer #contact .row{grid-template-columns:repeat(1,minmax(0,100%));row-gap:1rem}
 #l_footer #contact .row{margin-top:3rem}

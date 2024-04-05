@@ -86,14 +86,13 @@
 #page_about #doctor .doctorsFile,#page_about #doctor .innabiNet,#page_about #officeWork .doctorsFile,#page_about #officeWork .innabiNet{margin-top:15rem}
 #page_about #doctor .doctorsFile a,#page_about #doctor .innabiNet a,#page_about #officeWork .doctorsFile a,#page_about #officeWork .innabiNet a{display:block}
 #page_about #doctor{margin-top:0}
-#page_about #doctor .takeya .data{flex-direction:row}
 #page_about #facility h3{font-family:'Noto Serif JP';font-size:2.8rem;margin-bottom:3rem}
 #page_about #facility .lead{margin-bottom:4rem}
 #page_about #facility ul{display:grid;grid-template-columns:repeat(3,minmax(0,33.3333333333%));column-gap:4rem;row-gap:4rem}
 #page_about #facility ul li a{display:block}
 #page_about #facility ul li a picture{border-radius:.5rem;overflow:hidden;margin-bottom:3rem}
 #page_about #facility ul li a picture img{width:100%}
-#page_about #facility ul li a .company{display:inline-block;font-size:1.3rem;line-height:1.4;background:#c4baba;color:#fff;padding:.5rem 1rem;margin-bottom:1.5rem}
+#page_about #facility ul li a .company{display:inline-block;font-size:1.3rem;line-height:1.4;background:#c7c7c7;color:#fff;padding:.5rem 1rem;margin-bottom:1.5rem}
 #page_about #facility ul li a .name{font-family:'Noto Serif JP';position:relative;font-size:2rem;text-decoration:underline;line-height:1.4}
 #page_about #facility ul li a .name:after{content:'';display:inline-block;position:relative;top:-.2rem;width:1.4rem;height:1.4rem;margin-left:1rem;background:url(/asset/img/i_blank_bk.svg) no-repeat center;background-size:100% auto}
 #page_about #facility ul li a .iso,#page_about #facility ul li a .medical{font-size:1.3rem;line-height:1.6;margin-top:2rem}
@@ -119,7 +118,7 @@
 #page_beauty #menu .menu .box .txtBox .price h6+dl{margin-top:1rem}
 #page_beauty #menu .menu .box .txtBox .price dl{display:flex;justify-content:space-between;position:relative;margin-top:2rem}
 #page_beauty #menu .menu .box .txtBox .price dl+dl{margin-top:1rem}
-#page_beauty #menu .menu .box .txtBox .price dl:before{content:'';position:absolute;margin:auto;top:1.1rem;left:0;z-index:1;width:100%;height:1px;border-top:1px dotted #c4baba}
+#page_beauty #menu .menu .box .txtBox .price dl:before{content:'';position:absolute;margin:auto;top:1.1rem;left:0;z-index:1;width:100%;height:1px;border-top:1px dotted #c7c7c7}
 #page_beauty #menu .menu .box .txtBox .price dl dd,#page_beauty #menu .menu .box .txtBox .price dl dt{position:relative;z-index:5;background:#fff}
 #page_beauty #menu .menu .box .txtBox .price dl dt{padding-right:1rem}
 #page_beauty #menu .menu .box .txtBox .price dl dd{padding-left:1rem;text-align:right}

@@ -164,6 +164,13 @@ get_header();
                   <dl><dt>2016年</dt><dd>同循環器内科医長</dd></dl>
                 </div>
               </div>
+
+              <div>
+                <div class="licence">
+                  <h4 class="m_txt_hd_underline">資格</h4>
+                  <p class="txt">日本循環器学会 循環器専門医 / 日本内科学会 認定内科医 / 日本禁煙学会 禁煙専門指導医</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -216,13 +223,12 @@ get_header();
             </div>
           </div>
 
-          <!--
           <div class="profile murase">
             <div class="person">
               <picture class="imgBox sp-hide"><img loading="lazy" src="/asset/img/about/doctor_murase.webp" alt="村瀨 傑" width="420" height="450"></picture>
 
               <div class="txtBox">
-                <p class="position">副院長</p>
+                <p class="position">知立院 副院長</p>
                 <h3 class="name">村瀨 傑<span class="en">Suguru Murase</span></h3>
                 <picture class="img pc-hide"><img loading="lazy" src="/asset/img/about/doctor_murase.webp" alt="村瀨 傑" width="420" height="450"></picture>
                 <p class="message">
@@ -262,7 +268,6 @@ get_header();
               </div>
             </div>
           </div>
-          -->
 
           <!--
           <div class="doctorsFile">

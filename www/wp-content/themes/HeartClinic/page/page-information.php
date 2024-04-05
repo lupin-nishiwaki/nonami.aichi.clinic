@@ -48,11 +48,14 @@ get_header();
               <dl><dt>住所</dt><dd>〒468-0046 愛知県名古屋市天白区古川町158<br>野並メディカルステーション1階</dd></dl>
               <dl><dt>電話</dt><dd>052-846-3810</dd></dl>
               <dl><dt>FAX</dt><dd>052-846-3809</dd></dl>
-              <dl><dt>診療科目</dt><dd>循環器科・心臓血管外科・内科・外科・麻酔科</dd></dl>
+              <dl><dt>診療科目</dt><dd>循環器科・心臓血管外科・内科</dd></dl>
 
               <dl class="pay">
                 <dt>お支払い</dt>
                 <dd>
+                  <p>現金のみとなります</p>
+
+                  <!--
                   <p>当院では、下記のキャッシュレス決済が可能です</p>
 
                   <div class="credit">
@@ -74,10 +77,22 @@ get_header();
                       <li><img loading="lazy" src="/asset/img/information/overview_pay_qr_linepay.webp" alt="LINE Pay" width="128" height="78"></li>
                     </ul>
                   </div>
+                  -->
                 </dd>
               </dl>
 
-              <dl><dt>アクセス</dt><dd>電車でお越しの方<br>名古屋市営地下鉄桜通線「野並駅」より徒歩2分</dd></dl>
+              <dl>
+                <dt>アクセス</dt>
+                <dd>
+                  電車でお越しの方<br>
+                  名古屋市営地下鉄桜通線「野並駅」より徒歩2分<br>
+                  <br>
+                  車でお越しの方<br>
+                  野並メディカルステーション敷地内に無料駐車場あり。<br>
+                  満車の場合は、建物西側の名鉄協商コインパーキングをご利用ください。<br>
+                  ※その際は駐車証明書を発行してください。
+                </dd>
+              </dl>
             </div>
 
             <picture class="imgBox">

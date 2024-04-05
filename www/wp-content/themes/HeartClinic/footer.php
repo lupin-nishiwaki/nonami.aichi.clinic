@@ -13,8 +13,8 @@
         </p>
       <?php else: ?>
         <p class="contact">
-          <a href="https://aichiheart.reserve.ne.jp/sp/index.php?" target="_blank" rel="noopener noreferrer">
-            <span>初診のご予約</span>
+          <a href="https://ahc-nonami.reserve.ne.jp" target="_blank" rel="noopener noreferrer">
+            <span>診察のご予約</span>
           </a>
         </p>
       <?php endif; ?>
@@ -59,12 +59,35 @@
     </section>
     <!-- /#clinic -->
 
+    <!-- #link -->
+    <section id="link">
+      <div class="m_box_fixed">
+        <div class="honin">
+          <a href="http://aichi.clinic/" target="_blank" rel="noopener noreferrer">
+            <picture class="img">
+              <source media="(max-width:767px)" srcset="/asset/img/footer_link_honin_img@sp.webp">
+              <img loading="lazy" src="/asset/img/footer_link_honin_img.webp" alt="あいちハートクリニック" width="1080" height="500">
+            </picture>
+
+            <div class="txtBox">
+              <p class="logo"><img loading="lazy" src="/asset/img/footer_link_honin_logo.svg" alt="あいちハートクリニック" width="218" height="34"></p>
+              <p class="catch">カテーテル治療専門の<br class="pc-hide">有床循環器クリニック</p>
+              <p class="menu">循環器科 / 心臓血管外科 / 内科 / 外科 / 麻酔科 /心臓カテーテル治療 / <br>下肢静脈瘤治療 / 透析シャント治療 / 美容</p>
+              <p class="btn pc-hide">ウェブサイトはこちら</p>
+              <p class="btn sp-hide">あいちハートクリニック知立のサイトはこちら</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- /#link -->
+
     <!-- #contact -->
     <section id="contact">
       <div class="m_box_fixed">
         <h2 class="m_txt_ttl js_anim_scroll">
           <span class="en">contact</span>
-          <em class="ja">初診ご予約·<br class="pc-hide">お問い合わせ</em>
+          <em class="ja">診察ご予約·<br class="pc-hide">お問い合わせ</em>
         </h2>
 
         <p class="lead js_anim_scroll">

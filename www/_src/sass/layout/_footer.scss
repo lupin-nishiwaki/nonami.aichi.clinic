@@ -167,10 +167,15 @@
     }
 
     .mapBox {
-      margin-top: 5rem;
+      flex-shrink: 0;
+      width: 57rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
 
       @media #{$breakS} {
+        width: calc(100% + 4rem);
         margin: 3rem -2rem 0;
+        border-radius: 0;
       }
 
       iframe {
@@ -179,6 +184,107 @@
 
         @media #{$breakS} {
           height: 20rem;
+        }
+      }
+    }
+  }
+
+  #link {
+    padding-bottom: 15rem;
+
+    @media #{$breakS} {
+      padding: 7rem 0;
+    }
+
+    a {
+      display: flex;
+      border-radius: .5rem;
+      overflow: hidden;
+      background: #FAF7F2;
+
+      .img {
+        flex-shrink: 0;
+        width: 54rem;
+
+        @media #{$breakS} {
+          width: 12rem;
+        }
+      }
+
+      .txtBox {
+        position: relative;
+        width: 100%;
+        padding: 3rem 4rem;
+        line-height: 1.6;
+
+        @media #{$breakS} {
+          padding: 1.4rem;
+          text-align: center;
+        }
+
+        .logo {
+          img {
+            width: auto !important;
+            height: 4.6rem;
+
+            @media #{$breakS} {
+              height: 2.4rem;
+            }
+          }
+        }
+
+        .catch {
+          @include fontFamily('serif');
+          font-size: 2rem;
+          margin-top: 2rem;
+
+          @media #{$breakS} {
+            @include fontFamily('gothic');
+            font-size: 1.2rem;
+            margin-top: 1rem;
+          }
+        }
+
+        .menu {
+          font-size: 1.2rem;
+          margin-top: 1.5rem;
+
+          @media #{$breakS} {
+            display: none;
+          }
+        }
+
+        .btn {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: #AE9373;
+          color: $colorWhite;
+          font-size: 1.2rem;
+          text-align: right;
+          padding: .8rem 2rem;
+
+          @media #{$breakS} {
+            font-size: 1rem;
+            padding: .5rem 1rem .3rem;
+          }
+
+          &:after {
+            @include icoInline();
+            top: -.1rem;
+            width: 2rem;
+            height: 0.8rem;
+            background: url('#{$imgPath}i_arr_wh.svg') no-repeat center;
+            background-size: 100% auto;
+            margin-left: 0.8rem;
+
+            @media #{$breakS} {
+              width: 1.2rem;
+              height: 0.5rem;
+              margin-left: 0.4rem;
+            }
+          }
         }
       }
     }

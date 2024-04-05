@@ -24,10 +24,12 @@
       <!-- #archive -->
       <section id="archive">
         <div class="m_box_fixed -under">
+          <!--
           <div class="tabBtn">
             <div class="is-tab"><span>一般診療のお知らせ</span></div>
-            <!-- <div><a href="/beautynews/">美容のお知らせ</a></div> -->
+            <div><a href="/beautynews/">美容のお知らせ</a></div>
           </div>
+          -->
 
           <ul class="m_list_news">
 

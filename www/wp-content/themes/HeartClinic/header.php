@@ -164,6 +164,7 @@
           <!-- <li><a href="/beauty/">美容案内</a></li> -->
           <li><a href="/news/">お知らせ</a></li>
           <li><a href="/information/">医院情報·アクセス</a></li>
+          <li><a href="/recruit/">採用情報</a></li>
         </ul>
 
         <!--
