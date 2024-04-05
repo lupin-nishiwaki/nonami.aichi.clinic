@@ -1,1 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"><defs><style>.cls-1{stroke:#48453a;}.cls-1,.cls-2{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.59px;}.cls-2{stroke:#ae9373;}</style></defs><path class="cls-1" d="m16.57,75.95v12.59h-5.31v-12.59"/><path class="cls-1" d="m78.46,75.95v12.59h-5.31v-12.59"/><path class="cls-1" d="m23.54,24.4V7.77c0-2.38,1.93-4.31,4.31-4.31h36.3c2.38,0,4.31,1.93,4.31,4.31v16.63"/><path class="cls-2" d="m39.39,11.47h13.22c3.15,0,5.71,2.56,5.71,5.71v5.2h-24.64v-5.2c0-3.16,2.56-5.71,5.71-5.71Z"/><path class="cls-1" d="m86.05,52.94v13.08c0,3.12-2.53,5.65-5.65,5.65H11.6c-3.12,0-5.65-2.53-5.65-5.65v-13.08"/><line class="cls-1" x1="14.66" y1="52.94" x2="76.94" y2="52.94"/><path class="cls-1" d="m5.95,52.94l14.2-23.62c2.07-4.25,6.39-6.95,11.11-6.95h29.47c4.73,0,9.04,2.7,11.11,6.95l14.2,23.62"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name=" レイヤー 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 92 92">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #48453a;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.6px;
+      }
+
+      .cls-2 {
+        stroke: #8b8780;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M16.6,75.9v12.6h-5.3v-12.6"/>
+  <path class="cls-1" d="M78.5,75.9v12.6h-5.3v-12.6"/>
+  <path class="cls-1" d="M23.5,24.4V7.8c0-2.4,1.9-4.3,4.3-4.3h36.3c2.4,0,4.3,1.9,4.3,4.3v16.6"/>
+  <path class="cls-2" d="M39.4,11.5h13.2c3.2,0,5.7,2.6,5.7,5.7v5.2h-24.6v-5.2c0-3.2,2.6-5.7,5.7-5.7Z"/>
+  <path class="cls-1" d="M86.1,52.9v13.1c0,3.1-2.5,5.7-5.7,5.7H11.6c-3.1,0-5.7-2.5-5.7-5.7v-13.1"/>
+  <line class="cls-1" x1="14.7" y1="52.9" x2="76.9" y2="52.9"/>
+  <path class="cls-1" d="M5.9,52.9l14.2-23.6c2.1-4.2,6.4-6.9,11.1-6.9h29.5c4.7,0,9,2.7,11.1,7l14.2,23.6"/>
+</svg>
