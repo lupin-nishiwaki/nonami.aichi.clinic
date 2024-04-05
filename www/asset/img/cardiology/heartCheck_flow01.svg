@@ -1,1 +1,38 @@
-<svg id="_レイヤー_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 92"><defs><style>.cls-1{stroke:#48453a}.cls-1,.cls-3{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.59px}.cls-4{stroke-width:0;fill:#ae9373}.cls-3{stroke:#ae9373}</style></defs><path d="M18.68 4.42h54.65c4.38 0 7.93 3.55 7.93 7.94v67.28c0 4.38-3.55 7.94-7.93 7.94H18.68c-4.38 0-7.93-3.55-7.93-7.94V12.36c0-4.38 3.55-7.94 7.93-7.94z" stroke-width="0" fill="none"/><path class="cls-1" d="M18.68 5.71h54.65c3.67 0 6.64 2.98 6.64 6.64v67.28c0 3.67-2.97 6.64-6.64 6.64H18.68c-3.67 0-6.64-2.98-6.64-6.64V12.36c0-3.67 2.97-6.64 6.64-6.64zm18.49 45.12h28.95M37.17 61.89h28.95M37.17 73.5h28.95"/><path class="cls-1" d="M62.93 11.13v5.21H29.07v-5.21"/><circle class="cls-4" cx="27.91" cy="50.83" r="2.03"/><circle class="cls-3" cx="27.91" cy="50.83" r=".74"/><circle class="cls-4" cx="27.92" cy="61.89" r="2.03"/><circle class="cls-3" cx="27.92" cy="61.89" r=".74"/><path class="cls-1" d="M37.17 28.58h28.95M37.17 39.64h28.95"/><circle class="cls-4" cx="27.91" cy="28.58" r="2.03"/><circle class="cls-3" cx="27.91" cy="28.58" r=".74"/><circle class="cls-4" cx="27.92" cy="39.64" r="2.03"/><circle class="cls-3" cx="27.92" cy="39.64" r=".74"/><circle class="cls-4" cx="27.91" cy="73.5" r="2.03"/><circle class="cls-3" cx="27.91" cy="73.5" r=".74"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name=" レイヤー 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 92 92">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8b8780;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-3 {
+        stroke: #48453a;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2.6px;
+      }
+    </style>
+  </defs>
+  <path class="cls-2" d="M18.7,4.4h54.7c4.4,0,7.9,3.6,7.9,7.9v67.3c0,4.4-3.6,7.9-7.9,7.9H18.7c-4.4,0-7.9-3.6-7.9-7.9V12.4c0-4.4,3.6-7.9,7.9-7.9Z"/>
+  <path class="cls-3" d="M18.7,5.7h54.7c3.7,0,6.6,3,6.6,6.6v67.3c0,3.7-3,6.6-6.6,6.6H18.7c-3.7,0-6.6-3-6.6-6.6V12.4c0-3.7,3-6.6,6.6-6.6h0Z"/>
+  <line class="cls-3" x1="37.2" y1="50.8" x2="66.1" y2="50.8"/>
+  <line class="cls-3" x1="37.2" y1="61.9" x2="66.1" y2="61.9"/>
+  <line class="cls-3" x1="37.2" y1="73.5" x2="66.1" y2="73.5"/>
+  <path class="cls-3" d="M62.9,11.1v5.2H29.1v-5.2"/>
+  <circle class="cls-1" cx="27.9" cy="50.8" r="2"/>
+  <circle class="cls-1" cx="27.9" cy="61.9" r="2"/>
+  <line class="cls-3" x1="37.2" y1="28.6" x2="66.1" y2="28.6"/>
+  <line class="cls-3" x1="37.2" y1="39.6" x2="66.1" y2="39.6"/>
+  <circle class="cls-1" cx="27.9" cy="28.6" r="2"/>
+  <circle class="cls-1" cx="27.9" cy="39.6" r="2"/>
+  <circle class="cls-1" cx="27.9" cy="73.5" r="2"/>
+</svg>
