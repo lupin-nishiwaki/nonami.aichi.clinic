@@ -31,24 +31,26 @@
           </div>
           -->
 
-          <ul class="m_list_news">
+          <?php if( have_posts() ): ?>
+            <ul class="m_list_news">
 
-            <?php if( have_posts() ): ?>
-              <?php while( have_posts() ): ?>
-                <?php the_post(); ?>
+                <?php while( have_posts() ): ?>
+                  <?php the_post(); ?>
+                  <li>
+                    <a href="<?php the_permalink(); ?>">
+                      <div class="day"><?php the_time( 'Y.m.d' ); ?></div>
+                      <div class="ttl"><?php the_title(); ?></div>
+                      <i></i>
+                    </a>
+                  </li>
+                <?php endwhile; ?>
 
-                <li>
-                  <a href="<?php the_permalink(); ?>">
-                    <div class="day"><?php the_time( 'Y.m.d' ); ?></div>
-                    <div class="ttl"><?php the_title(); ?></div>
-                    <i></i>
-                  </a>
-                </li>
+            </ul>
 
-              <?php endwhile; ?>
-            <?php endif; ?>
+          <?php else: ?>
+            <p>お知らせはありません。</p>
 
-          </ul>
+          <?php endif; ?>
 
           <!--
           <div class="m_btn_pager">
