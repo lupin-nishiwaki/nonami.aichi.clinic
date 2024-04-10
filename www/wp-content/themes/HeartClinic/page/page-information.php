@@ -119,11 +119,12 @@ get_header();
 
           <table>
             <tr><th class="item01">診療時間</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日</th></tr>
-            <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td></tr>
-            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●<br class="sp-hide">竹谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>●<br class="sp-hide">深谷</td><td>●<br class="sp-hide">竹谷</td><td>－</td><td>－</td></tr>
+            <tr><th class="item01">9:00-<br class="pc-hide">12:30</th><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>●</td><td>－</td></tr>
+            <tr><th class="item01">15:00-<br class="pc-hide">18:00</th><td>●</td><td>●</td><td>－</td><td>●</td><td>●</td><td>－</td><td>－</td></tr>
           </table>
 
           <p class="txt">
+            外来医師は<a href="/news/">お知らせ</a>をご覧ください。<br>
             ご予約は診療時間内に電話で受け付けております。<br>
             ※月曜日午後は19:30まで<br>
             ※木曜日午後は深谷Dr.の足の外来

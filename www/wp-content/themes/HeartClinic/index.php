@@ -111,7 +111,7 @@
           <a href="/general/">
             <picture><img loading="lazy" src="/asset/img/top/treatment_link03.svg" alt="一般内科" width="92" height="92"></picture>
             <h3 class="hd">一般内科</h3>
-            <p>かかりつけ医（家庭医）として、<br>内科・外科全般についても対応。</p>
+            <p>かかりつけ医（家庭医）として、<br>内科全般を対応。</p>
           </a>
         </li>
 

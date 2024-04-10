@@ -154,7 +154,7 @@
                     <li><a href="/general/">一般内科</a></li>
                     <li><a href="/no-smoking/">禁煙外来</a></li>
                     <li><a href="/sleep-apnea-syndrome/">睡眠時無呼吸症候群</a></li>
-                    <li><a href="/fever/" class="noLink">発熱外来（準備中）</a></li>
+                    <!-- <li><a href="/fever/" class="noLink">発熱外来（準備中）</a></li> -->
                   </ul>
                 </div>
               </dd>

@@ -181,6 +181,7 @@
 #page_information #doctor table td.item01,#page_information #doctor table th.item01{width:20%}
 #page_information #doctor table tr:last-child td,#page_information #doctor table tr:last-child th{border-top:1px solid #f7f7f7}
 #page_information #doctor .txt{margin-top:3rem}
+#page_information #doctor .txt a{text-decoration:underline}
 #page_information #doctor .btn{text-align:center}
 #page_information #gallery .gallery{position:relative;border-radius:.5rem;overflow:hidden}
 #page_information #gallery .gallery img{width:100%}
@@ -424,7 +425,7 @@
 #page_information #overview .row .txtBox .pay .credit ul,#page_information #overview .row .txtBox .pay .qr ul{grid-template-columns:repeat(4,minmax(0,25%));column-gap:.5rem;row-gap:.5rem;padding-right:5rem}
 #page_information #overview .row .imgBox{width:100%}
 #page_information #access iframe{height:20rem}
-#page_information #doctor table td,#page_information #doctor table th{padding:1.2rem 0;-ms-writing-mode:tb-rl;writing-mode:vertical-rl;font-size:1.3rem;text-align:left;letter-spacing:.2em}
+#page_information #doctor table td,#page_information #doctor table th{padding:1.2rem 0;font-size:1.3rem;letter-spacing:.2em}
 #page_information #doctor table td.item01,#page_information #doctor table th.item01{line-height:1.4}
 #page_information #doctor .txt{margin-top:2rem}
 #page_information #gallery .gallery .swiper-button-next,#page_information #gallery .gallery .swiper-button-prev{top:9.5rem;width:3rem;height:3rem}
@@ -501,5 +502,5 @@
 }
 @media screen and (max-width:767px) and (max-width:767px){
 #page_top #treatment ul.link li a:after{display:none}
-#page_information #doctor table td.item01,#page_information #doctor table th.item01{-ms-writing-mode:lr-tb;writing-mode:horizontal-tb}
+#page_information #doctor table td.item01,#page_information #doctor table th.item01{text-align:left}
 }

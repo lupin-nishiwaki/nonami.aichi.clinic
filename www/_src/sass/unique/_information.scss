@@ -111,10 +111,9 @@
 
         @media #{$breakS} {
           padding: 1.2rem 0;
-          -ms-writing-mode: tb-rl;
-          writing-mode: vertical-rl;
+          // -ms-writing-mode: tb-rl;
+          // writing-mode: vertical-rl;
           font-size: 1.3rem;
-          text-align: left;
           letter-spacing: .2em;
         }
 
@@ -130,8 +129,9 @@
             line-height: 1.4;
 
             @media #{$breakS} {
-              -ms-writing-mode: lr-tb;
-              writing-mode: horizontal-tb;
+              // -ms-writing-mode: lr-tb;
+              // writing-mode: horizontal-tb;
+              text-align: left;
             }
           }
         }
@@ -151,6 +151,10 @@
 
       @media #{$breakS} {
         margin-top: 2rem;
+      }
+
+      a {
+        text-decoration: underline;
       }
     }
 
